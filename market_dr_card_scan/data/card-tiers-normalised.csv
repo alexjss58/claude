@@ -1,0 +1,97 @@
+bank,card,tier,fee_amd_year,waiver_type,interest_rate,interest_threshold_amd,interest_via,deposit_uplift,atm_own_pct,atm_own_free,atm_other_pct,atm_other_free,atm_abroad_pct,atm_abroad_min,c2c_same_bank_pct,c2c_other_bank_pct,fx_markup_pct,fx_preferential,cashback_rules,cashback_promo,perk_tags,note
+Acba,ArCa Classic,free,3500.0,app,0.0,0,card,,0.0,,1.0,,n/a,n/a,0.5,0.5,,,arca 2.0% dom,,,
+Acba,ArCa Transfer,free,1000.0,app,0.0,0,card,,0.0,,1.0,,n/a,n/a,0.5,0.5,,,arca 2.0% dom,,,"Remittance-receiver card with a credit line of up to 500,000 AMD based on incoming transfers."
+Acba,Visa Benefactor,plus,4800,payroll,0.0,0,card,,0.0,,1.0,,1.0,1500,0.5,0.5,,,,,Charity,Charity affinity Visa Classic; placed in Plus at Alex's request.
+Acba,Visa Classic,plus,4500.0,payroll,0.0,0,card,,0.0,,1.0,,1.0,1500,0.5,0.5,,,,,,
+Acba,Mastercard Standard,plus,4500,payroll,0.0,0,card,,0.0,,1.0,,1.0,1500,0.5,0.5,,,,,,
+Acba,Visa Gold,plus,12000.0,payroll,0.0,0,card,,0.0,,1.0,,1.0,1500,0.5,0.5,,,,,Car rental; Entertainment; Merchant discounts; Travel & hotel partners,
+Acba,Mastercard Gold,plus,12000.0,payroll,0.0,0,card,,0.0,,1.0,,1.0,1500,0.5,0.5,,,,,,
+Acba,UnionPay Gold,plus,15000.0,app,0.0,0,card,,1.0,,1.0,,2.0,2000,0.5,0.5,,,,,,
+Acba,Mastercard World,premium,15000.0,payroll,0.0,0,card,,0.0,,1.0,,1.0,1500,0.5,0.5,,,,,Concierge; Fast Track; Lounge; Roaming data,
+Acba,Visa Signature,elite,40000.0,payroll,0.0,0,card,,0.0,,1.0,,1.0,1500,0.5,0.5,,,,,Car rental; Concierge; Fast Track; Lounge; Merchant discounts; Travel & hotel partners; Travel insurance,"Own-ATM fee: Armenian page 0% for AMD cards, English page 1%; Armenian page used."
+Acba,Visa Signature Limited Edition,elite,60000.0,none,0.0,0,card,,1.0,,n/p,n/p,n/p,n/p,n/p,n/p,,,,,Car rental; Concierge; Entertainment; Fast Track; Lounge; Roaming data; Taxi & transfers; Travel insurance,
+Acba,Mastercard World Elite,elite,65000.0,none,0.0,0,card,,0.0,,1.0,,1.0,1500,0.5,0.5,,,,,Concierge; Fast Track; Lounge; Roaming data; Travel & hotel partners; Travel insurance,
+Acba,American Express Cashback,free,0.0,free,0.0,0,card,,0.8,,1.5,,1.5,1500,1.5,1.5,,,bank 2.0% groc; bank 1.0% domx,,,The most generous bank-funded cashback in the market; Amex merchant acceptance in Armenia is narrower than Visa/Mastercard and is not modelled.
+Acba,American Express Gold Debit,elite,70000.0,none,0.0,0,card,,4.0,,n/p,n/p,4.0,2500,4.0,4.0,,,,,Fast Track; Lounge; Loyalty points; Taxi & transfers; Travel insurance,
+Acba,Visa Digital,free,2000.0,none,0.0,0,card,,1.0,,1.0,,1.0,1500,0.5,0.5,,,,,,ATM fees from the card's standalone tariff sheet (decoded from ArmSCII).
+Acba,Mastercard Digital First,free,2000.0,none,0.0,0,card,,1.0,,1.0,,1.0,1500,0.5,0.5,,,,,,ATM fees from the card's standalone tariff sheet (decoded from ArmSCII).
+Ameriabank,ArCa Classic,free,5000.0,app,0.0,0,card,,0.5,"300,000/month",1.0,,1.0,,0.3,0.5,,,arca 2.0% dom,,,
+Ameriabank,VISA Classic,plus,5000.0,app,0.0,0,card,,0.5,"300,000/month",1.0,,1.0,,0.3,0.5,2.0,,,,Card insurance; Referral,
+Ameriabank,Mastercard Standard,plus,5000.0,app,0.0,0,card,,0.5,"300,000/month",1.0,,1.0,,0.3,0.5,,,,"Campaign ""1% cashback for new Mastercard holders"" (dates and terms unreadable).",Card insurance; Referral,
+Ameriabank,VISA Classic Digital,free,1000.0,promo,0.0,0,card,,0.5,"300,000/month",1.0,,1.0,,0.3,0.5,2.0,,,"Welcome: up to 2,000 AMD for new clients (to 31 Dec 2026).",Card insurance,
+Ameriabank,Mastercard Standard Digital,free,1000.0,none,0.0,0,card,,0.5,"300,000/month",1.0,,1.0,,0.3,0.5,,,,,Card insurance,
+Ameriabank,Team Pay Visa Classic Digital,free,0.0,free,0.0,0,card,,0.5,"300,000/month",1.0,,1.0,,0.3,0.5,2.0,,,,Card insurance,Digital Visa Classic sold only through Team Pay; placed in Free at Alex's request.
+Ameriabank,VISA Gold,plus,20000.0,package,0.0,0,card,"Premium / Partner package: +0.25% / +0.35% on term deposits and +1% on AMD savings accounts. The packages need 40m / 120m AMD in average balances (ed. 22, 22 Aug 2026), so they are not tied to the card.",0.5,"500,000/month",1.0,,1.0,,0.3,0.5,2.0,True,,,Card insurance,
+Ameriabank,Mastercard Gold,plus,20000.0,package,0.0,0,card,"Premium / Partner package: +0.25% / +0.35% on term deposits and +1% on AMD savings accounts. The packages need 40m / 120m AMD in average balances (ed. 22, 22 Aug 2026), so they are not tied to the card.",0.5,"500,000/month",1.0,,1.0,,0.3,0.5,,,,,Card insurance,
+Ameriabank,VISA Gold Digital,plus,7500.0,package,0.0,0,card,,0.5,"500,000/month",1.0,,1.0,,0.3,0.5,2.0,,,,Card insurance,
+Ameriabank,Mastercard Gold Digital,plus,7500.0,package,0.0,0,card,,0.5,"500,000/month",1.0,,1.0,,0.3,0.5,,,,,Card insurance,
+Ameriabank,VISA Platinum,premium,30000.0,package,0.0,0,card,"Premium / Partner package: +0.25% / +0.35% on term deposits and +1% on AMD savings accounts. The packages need 40m / 120m AMD in average balances (ed. 22, 22 Aug 2026), so they are not tied to the card.",0.5,"700,000/month",1.0,,1.0,,0.3,0.5,2.0,True,,,Card insurance; Concierge; Fast Track; Lounge,
+Ameriabank,Mastercard World,premium,30000.0,package,0.0,0,card,"Premium / Partner package: +0.25% / +0.35% on term deposits and +1% on AMD savings accounts. The packages need 40m / 120m AMD in average balances (ed. 22, 22 Aug 2026), so they are not tied to the card.",0.5,"700,000/month",1.0,,1.0,,0.3,0.5,,,,,Card insurance; Concierge,
+Ameriabank,VISA Platinum Digital,premium,15000.0,package,0.0,0,card,,0.5,"700,000/month",1.0,,1.0,,0.3,0.5,2.0,,,,Card insurance; Concierge; Lounge,
+Ameriabank,Mastercard World Digital,premium,15000.0,package,0.0,0,card,,0.5,"700,000/month",1.0,,1.0,,0.3,0.5,,,,,Card insurance,
+Ameriabank,VISA Signature,elite,60000.0,package,0.0,0,card,"Premium / Partner package: +0.25% / +0.35% on term deposits and +1% on AMD savings accounts. The packages need 40m / 120m AMD in average balances (ed. 22, 22 Aug 2026), so they are not tied to the card.",0.5,"1,000,000/month",1.0,,1.0,,0.3,0.5,2.0,True,,,Card insurance; Concierge; Fast Track; Lounge; Taxi & transfers,
+Ameriabank,VISA Signature Digital,elite,40000.0,package,0.0,0,card,,0.5,"1,000,000/month",1.0,,1.0,,0.3,0.5,2.0,,,,Card insurance; Concierge; Lounge,
+Ardshinbank,Mastercard Debit,plus,4800.0,balance,2.0,5000000,card,,0.5,"100,000/day",1.5,"100,000/day",2.0,1500,0.0,n/p,,,,,Card insurance; Loyalty points,
+Ardshinbank,Visa Classic,plus,4800.0,balance,2.0,5000000,card,,0.5,"100,000/day",1.5,"100,000/day",2.0,1500,0.0,n/p,,,,,Card insurance; Loyalty points,
+Ardshinbank,Arca,free,4800.0,balance,2.0,5000000,card,,0.5,"100,000/day",1.5,"100,000/day",2.0,1500,0.0,n/p,,,arca 2.0% dom,,Card insurance; Loyalty points,
+Ardshinbank,Mastercard Debit (non-personalised / instant),free,0.0,free,2.0,5000000,card,,0.3,,1.0,,1.0,1500,0.0,n/p,,,,,Loyalty points,
+Ardshinbank,Visa Classic (non-personalised / instant),free,0.0,free,2.0,5000000,card,,0.3,,1.5,,2.0,1500,0.0,n/p,,,,,Loyalty points,
+Ardshinbank,Arca (non-personalised / instant),free,0.0,free,2.0,5000000,card,,0.3,,1.5,,2.0,1500,0.0,n/p,,,arca 2.0% dom,,Loyalty points,
+Ardshinbank,Visa Individual,plus,8400.0,balance,2.0,5000000,card,,0.5,"100,000/day",1.5,"100,000/day",2.0,1500,0.0,n/p,,,,,Loyalty points,Personal-design Visa Classic at 700 AMD a month; otherwise classic-tier terms.
+Ardshinbank,Visa Gold Debit,plus,24000.0,balance,3.0,5000000,card,,0.5,"100,000/day",1.5,"100,000/day",2.0,1500,0.0,n/p,,,,,Card insurance; Loyalty points; Merchant discounts,
+Ardshinbank,Visa Platinum Debit,premium,36000.0,balance,3.0,5000000,card,,0.5,"100,000/day",1.5,"100,000/day",2.0,1500,0.0,n/p,,,,,Car rental; Concierge; Fast Track; Lounge; Loyalty points; Taxi & transfers; Travel & hotel partners; Travel insurance,
+Ardshinbank,Mastercard World,premium,36000.0,balance,3.0,5000000,card,,0.5,"100,000/day",1.5,"100,000/day",2.0,1500,0.0,n/p,,,,,Card insurance; Loyalty points,
+Ardshinbank,Visa Signature Debit,elite,96000.0,balance,3.0,5000000,card,,0.5,"200,000/day",1.5,"200,000/day",2.0,1500,0.0,n/p,,,,,Car rental; Concierge; Entertainment; Fast Track; Lounge; Loyalty points; Taxi & transfers; Travel & hotel partners; Travel insurance,
+Ardshinbank,Mastercard World Black Edition,elite,96000.0,balance,3.0,5000000,card,,0.5,"100,000/day",1.5,"100,000/day",2.0,1500,0.0,n/p,,,,,Concierge; Lounge; Loyalty points; Travel insurance,"Abroad ATM fee taken from the non-resident twin (2%, min 1,500 AMD)."
+Ardshinbank,Visa Infinite Debit,elite,120000.0,none,3.0,10000000,card,,0.5,"200,000/day",1.5,"200,000/day",2.0,1500,0.0,n/p,,,,,Car rental; Concierge; Entertainment; Fast Track; Lounge; Loyalty points; Taxi & transfers; Travel & hotel partners; Travel insurance,
+Ardshinbank,Mastercard World Elite,elite,120000.0,none,3.0,10000000,card,,0.5,"200,000/day",1.5,,2.0,1500,0.0,n/p,,,,,Loyalty points,"Other-bank ATM fee published only as ""tiered up to 1.5%""; 1.5% used."
+Ardshinbank,Visa Gold Debit Digital Card,plus,0.0,free,3.0,5000000,card,,0.5,,1.5,,2.0,1500,0.0,n/p,,,,,Loyalty points; Merchant discounts,No free daily ATM allowance on the digital card.
+Ardshinbank,Mastercard Meghu Card,free,0.0,free,0.1,250000,card,,n/a,n/a,n/a,n/a,n/a,n/a,n/p,n/p,,,,,Loyalty points,Cashless-only card: cash withdrawal is switched off at every ATM (shown as n/a).
+Ardshinbank,Visa Classic for RA non-residents,plus,4800.0,none,2.0,5000000,card,,0.5,,1.5,,2.0,1500,0.0,n/p,,,,,Card insurance; Loyalty points,"Non-resident version: one-off issuance fee (10,000–50,000 AMD), no balance-based fee waiver and no free daily ATM allowance."
+Ardshinbank,Mastercard Debit for RA non-residents,plus,4800.0,none,2.0,5000000,card,,0.5,,1.5,,2.0,1500,0.0,n/p,,,,,Card insurance; Loyalty points,"Non-resident version: one-off issuance fee (10,000–50,000 AMD), no balance-based fee waiver and no free daily ATM allowance."
+Ardshinbank,ArCa card for RA non-residents,free,4800.0,none,2.0,5000000,card,,0.5,,1.5,,2.0,1500,0.0,n/p,,,arca 2.0% dom,,Card insurance; Loyalty points,"Non-resident version: one-off issuance fee (10,000–50,000 AMD), no balance-based fee waiver and no free daily ATM allowance."
+Ardshinbank,Visa Gold Debit for RA non-residents,plus,24000.0,none,3.0,5000000,card,,0.5,,1.5,,2.0,1500,0.0,n/p,,,,,Card insurance; Loyalty points; Merchant discounts,"Non-resident version: one-off issuance fee (10,000–50,000 AMD), no balance-based fee waiver and no free daily ATM allowance."
+Ardshinbank,Visa Gold Debit Digital Card for RA non-residents,plus,0.0,free,3.0,5000000,card,,0.5,,1.5,,2.0,1500,0.0,n/p,,,,,Loyalty points,"Non-resident version: one-off issuance fee (10,000–50,000 AMD), no balance-based fee waiver and no free daily ATM allowance."
+Ardshinbank,Mastercard World Black Edition for RA non-residents,elite,96000.0,none,3.0,5000000,card,,0.5,,1.5,,2.0,1500,0.0,n/p,,,,,Card insurance; Loyalty points,"Non-resident version: one-off issuance fee (10,000–50,000 AMD), no balance-based fee waiver and no free daily ATM allowance. The non-resident page publishes none of the resident twin's LoungeKey benefits."
+Ardshinbank,Visa Infinite Debit for RA non-residents,elite,120000.0,none,0.0,0,card,,0.5,,1.5,,2.0,1500,0.0,n/p,,,,,Loyalty points,"Non-resident version: one-off issuance fee (10,000–50,000 AMD), no balance-based fee waiver and no free daily ATM allowance. Premium benefits are referred to but not reproduced on the non-resident page."
+Conversebank,Arca Classic / ArCa-UnionPay,free,2500.0,package,4.0,50000,package,,0.2,,1.0,,3.2,,0.5,0.5,,,arca 2.0% dom,,Loyalty points,Abroad only through the UnionPay co-badge (3.2% AMD / 3.3% FX).
+Conversebank,Visa Electron,plus,2500.0,none,0.0,0,card,,0.2,,1.0,,1.0,1500,0.5,0.5,,,,,Loyalty points,
+Conversebank,Cirrus/Maestro,plus,2500.0,none,0.0,0,card,,0.2,,1.0,,1.0,1500,0.5,0.5,,,,,Loyalty points,
+Conversebank,Visa Classic,plus,3000.0,package,4.0,50000,package,,0.2,,1.0,,2.0,2500,0.5,0.5,,,,,Loyalty points,
+Conversebank,Mastercard Standard,plus,3000.0,package,4.0,50000,package,,0.2,,1.0,,2.0,2500,0.5,0.5,,,,,Loyalty points,
+Conversebank,Visa Gold (debit),plus,15000.0,package,4.0,50000,package,,0.5,,1.0,,2.0,2500,0.5,0.5,,,,,Lounge; Loyalty points,
+Conversebank,Mastercard Gold (debit),plus,15000.0,package,4.0,50000,package,,0.5,,1.0,,2.0,2500,0.5,0.5,,,,,Lounge; Loyalty points,
+Conversebank,Visa Virtual Account,free,0,package,n/p,,,,0.0,,n/p,n/p,n/p,n/p,0.5,0.5,,,,,Loyalty points,Online-payment card; one branch visit still required to issue.
+Conversebank,Arca Mir,free,2500.0,none,n/p,,,,0.2,,1.0,,1.5,,0.5,0.5,,,arca 2.0% dom,,Loyalty points,Abroad on the international Mir network only.
+Conversebank,Transfer Card,plus,2500.0,none,3.0,0,card,,0.0,,1.0,,2.0,2500,0.5,0.5,,,,,Loyalty points,Remittance-receiving card: can only be funded by incoming transfers.
+Conversebank,Visa PaySticker / MiniFob,plus,3000.0,none,n/p,,,,n/p,n/p,n/p,n/p,n/p,n/p,n/p,n/p,2.0,,,,Loyalty points,Contactless sticker / key-fob attached to an existing Converse card; cash and transfer fees follow the base card.
+Evocabank,Visa Digital,free,1000.0,none,4.0,0,card,,2.0,,2.5,,2.5,1500,0.0,0.5,,,bank 0.25% dom; bank 0.5% foreign,,Merchant discounts,
+Evocabank,Mastercard World Digital,premium,1000.0,promo,0.0,0,card,,2.0,,2.5,,2.5,1500,0.0,0.5,,,,,Merchant discounts,
+Evocabank,Visa Vision,plus,7200.0,none,4.0,0,card,,0.2,"2,000,000/month",1.0,,1.5,1500,0.3,0.5,,,bank 0.25% dom; bank 0.5% foreign,,Merchant discounts,Free own-ATM allowance of 2m AMD; period not stated in the tariff row (monthly assumed).
+Evocabank,Visa Classic,plus,5000.0,none,1.0,5000000,card,,0.2,"1,000,000/month",0.8,,1.0,1500,0.3,0.5,,,,,Merchant discounts,Own-ATM: shared tariff table says free to 1m AMD a month; the product tile says 0.2%. Table used.
+Evocabank,Mastercard Standard,plus,5000.0,none,1.0,5000000,card,,0.2,"1,000,000/month",0.8,,1.0,1500,0.3,0.5,,,,,Merchant discounts,Rate above the 1m AMD free allowance not published; 0.2% assumed as for Visa Classic.
+Evocabank,Mastercard Gold,plus,15000.0,payroll,1.0,5000000,card,,0.2,"2,000,000/month",0.8,,1.0,1500,0.3,0.5,,,,,Merchant discounts,Rate above the 2m AMD free allowance not published; 0.2% assumed.
+Evocabank,Evoca Visa Platinum,premium,30000.0,none,0.0,0,card,,0.5,,1.0,,1.5,1500,0.0,0.5,,,,,Concierge; Lounge; Merchant discounts; Travel insurance,
+Evocabank,Visa Infinite,elite,100000.0,none,2.0,0,card,,1.0,,1.2,,1.5,2500,1.0,1.2,,,bank 0.5% foreign,,Concierge; Lounge; Merchant discounts; Taxi & transfers; Travel insurance,
+Evocabank,UnionPay Gold,plus,15000.0,none,0.0,0,card,,0.2,"2,000,000/month",1.0,,1.5,2000,0.3,0.5,,,,,Merchant discounts,
+Evocabank,Arca Classic,free,1500.0,none,0.0,0,card,,0.2,"300,000/month",1.0,,n/a,n/a,0.3,n/p,0.5,,arca 2.0% dom,,Merchant discounts,
+Evocabank,Arca UnionPay Co-badge,free,2500.0,none,0.0,0,card,,0.2,"1,000,000/month",0.8,,1.0,1500,0.0,0.5,,,arca 2.0% dom,,Merchant discounts,"ArCa + UnionPay co-badged card (two payment networks, no outside partner), so it sits in Plus."
+Evocabank,Evoca Travel Card,premium,16000.0,payroll,0.0,0,card,,0.5,,1.0,,1.0,1500,0.0,0.5,,True,bank 1.5% trav; bank 0.5% foth,,Concierge; Fast Track; Lounge; Merchant discounts; Travel insurance,
+FastBank,Arca Classic,free,1500.0,promo,4.0,0,card,,0.2,,0.8,,n/a,n/a,0.0,0.5,,,arca 2.0% dom,,,
+FastBank,VISA Classic,plus,2000.0,deposit,4.0,0,card,,0.5,,1.2,,2.0,1500,0.0,0.5,,,,,Giveaways,
+FastBank,Visa Digital,free,0.0,free,4.0,0,card,,0.5,,1.2,,2.0,1500,0.0,0.5,,,,,,"Cash via Apple Pay / Google Pay at the Visa-card ATM rates (card tariff, 26.06.2026)."
+FastBank,VISA Gold,plus,4000.0,deposit,4.0,0,card,,0.5,,1.2,,2.0,1500,0.0,0.5,,,,,Entertainment; Giveaways; Merchant discounts; Travel & hotel partners,"Benefits are Visa Armenia network offers, mostly time-limited."
+FastBank,Mastercard World,premium,12000.0,deposit,4.0,0,card,,0.5,,1.2,,2.0,1500,0.0,0.5,,,,"Campaigns only: up to 25% on spend abroad / foreign online, capped 25,000 AMD (24 Nov–31 Dec); 12,000 AMD for 100k AMD spend on a new card (1 May–31 Jul).",Concierge; Fast Track; Lounge; Roaming data,
+FastBank,VISA INFINITE,elite,50000.0,deposit,4.0,0,card,,0.5,,1.2,,2.0,1500,0.0,0.5,,,,,Airport services; Car rental; Concierge; Entertainment; Fast Track; Giveaways; Lounge; Roaming data; Travel & hotel partners; Travel insurance,
+FastBank,Mastercard World Elite,elite,50000.0,deposit,4.0,0,card,,0.5,,1.2,,2.0,1500,0.0,0.5,,,,,Concierge; Fast Track; Lounge; Roaming data; Travel & hotel partners; Travel insurance,
+FastBank,Visa Infinite Metal,elite,150000.0,deposit,4.0,0,card,,0.5,,1.2,,2.0,1500,0.0,0.5,,,,,Airport services; Car rental; Concierge; Entertainment; Fast Track; Lounge; Roaming data; Travel & hotel partners; Travel insurance,
+IDBank,Arca Classic,free,2500.0,payroll,0.0,0,card,,1.0,,1.0,,n/a,n/a,0.0,0.75,,,arca 2.0% dom,,,
+IDBank,Visa Gold debit,plus,12000.0,balance,0.0,0,card,+0.5% on the savings-account rate (VISAGOLD package); term deposits are not lifted.,1.0,"500,000/month",1.0,"500,000/month",1.5,1500,0.0,0.75,,,,"VISAGOLD package: up to 5,000 idcoin a month from international transactions (rate not published).",Loyalty points; Merchant discounts,The 500k AMD free monthly allowance covers IDBank and other banks' ATMs together.
+IDBank,Visa Signature debit,elite,69900.0,payroll,0.0,0,card,,1.0,"2,500,000/month",1.0,"2,500,000/month",1.5,1500,0.0,0.75,,,bank 0.5% all; points 0.5% all,,Concierge; Fast Track; Lounge; Loyalty points; Taxi & transfers; Travel insurance,
+IDBank,Visa Infinite debit,elite,99900.0,payroll,0.0,0,card,,1.0,"5,000,000/month",1.0,"5,000,000/month",1.5,1500,0.0,0.75,,,bank 0.5% all; points 0.5% all,,Car rental; Concierge; Fast Track; Lounge; Loyalty points; Taxi & transfers; Travel & hotel partners; Travel insurance,
+IDBank,Visa Infinite Special Edition,elite,150000.0,none,0.0,0,card,,1.0,"5,000,000/month",1.0,,1.5,1500,0.0,0.75,,,bank 0.5% all; points 0.5% all,,Concierge; Fast Track; Lounge; Loyalty points; Private banking; Taxi & transfers; Travel insurance,
+IDBank,Mastercard World,premium,20000.0,app,0.0,0,card,,1.0,,1.0,,1.5,1500,0.0,0.75,,,,"Banner: 10,000 idcoin welcome on activation by 15.11; up to 25% idcoin on hotel bookings, capped 25,000 a month.",Concierge; Fast Track; Lounge; Loyalty points; Taxi & transfers; Travel insurance,
+IDBank,Travel Card (Visa Platinum),premium,20000.0,app,0.0,0,card,,1.0,,1.0,,1.5,1500,0.0,0.75,,,bank 1.5% foreign; bank 0.5% dom; points 0.5% all,,Airport services; Car rental; Concierge; Fast Track; Lounge; Loyalty points; Roaming data; Travel insurance,"Travel-positioned Visa Platinum with no outside partner, so it sits in Premium, not with the co-brands. The 1.5% / 0.5% split is read as international / local from the Russian marketing copy."
+IDBank,Mastercard Gold,plus,8000.0,payroll,0.0,0,card,,0.5,,1.0,,1.5,1500,0.0,0.75,,,,"Campaign (1 Feb–30 Apr, ended): 5% idcoin on international payments, cap 10,000 a month.",Loyalty points; Merchant discounts,
+IDBank,Mastercard Standard,plus,3000.0,payroll,0.0,0,card,,0.5,,1.0,,1.5,1500,0.0,0.75,,,,"Campaign (1 Feb–30 Apr, ended): 5% idcoin on international payments, cap 10,000 a month.",Loyalty points,
+IDBank,Mastercard Standard Instant,free,0.0,free,0.0,0,card,,1.0,,1.0,,1.5,1500,n/p,0.75,,,,,Loyalty points,

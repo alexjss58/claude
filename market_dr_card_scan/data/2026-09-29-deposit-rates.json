@@ -1,0 +1,199 @@
+{
+ "as_of": "2026-09-29",
+ "reference": {
+  "amount": 1000000,
+  "term_months": 12,
+  "currency": "AMD",
+  "basis": "Each bank's standard AMD term deposit for 1,000,000 AMD and 12 months, interest paid at maturity, opened in a branch; the headline adds any online-opening bonus. Card-linked uplifts are added only where a 1m AMD depositor qualifies."
+ },
+ "source": {
+  "name": "fininfo.am (Central Bank of Armenia comparison tool): AMD term deposits, 1,000,000 AMD, 1 year",
+  "url": "https://www.fininfo.am/avand?currency=1&currency_search=1&deposit_money=1000000&deposit_money_search=&deposit_term=1&term_search=1&time_type=3&time_type_search=3&deposit_type=1&deposit_type_search=1&capitalization_type_search=&capitalization_type=&deposit_interest_payment_type_search=&deposit_interest_payment_type="
+ },
+ "tax": "Interest is taxed at 10% at source.",
+ "guarantee": "AMD deposits are guaranteed by the Deposit Guarantee Fund up to 16m AMD per depositor per bank.",
+ "banks": {
+  "FastBank": {
+   "product": "Time Deposit with Replenishment",
+   "bucket": "181-366 days",
+   "maturity": 10.0,
+   "monthly": 9.5,
+   "monthly_apy": 9.92,
+   "online": 0,
+   "online_note": "Same rate in branches and in the app.",
+   "topup": true,
+   "notes": [
+    "Top-ups allowed; the only term deposit Fast Bank offers.",
+    "Early withdrawal: interest recalculated at 4% a year (31-366 days)."
+   ],
+   "src": [
+    [
+     "Fast Bank: Time Deposit with Replenishment (updated 13 Apr 2026)",
+     "https://www.fastbank.am/en/individual/deposits"
+    ]
+   ]
+  },
+  "Acba": {
+   "product": "Classic deposit",
+   "bucket": "12 months",
+   "maturity": 8.1,
+   "monthly": 8.1,
+   "monthly_apy": 8.41,
+   "online": 0,
+   "online_note": "No online bonus published.",
+   "topup": false,
+   "notes": [
+    "Monthly payout is a separate product, the Monthly deposit (8.10%, yield 8.41%)."
+   ],
+   "src": [
+    [
+     "Acba: deposits",
+     "https://www.acba.am/en/individuals/save-and-invest/deposits"
+    ]
+   ]
+  },
+  "Ameriabank": {
+   "product": "Ameria deposit",
+   "bucket": "181-365 days",
+   "maturity": 7.2,
+   "monthly": 7.0,
+   "monthly_apy": 7.23,
+   "online": 0.1,
+   "online_note": "+0.1% when opened in the MyAmeria app.",
+   "topup": false,
+   "pkg": "Premium +0.25% / Partner +0.35% on term deposits, but the packages need 40m / 120m AMD in average balances.",
+   "notes": [
+    "fininfo.am also lists option variants (top-up or partial withdrawal) at 6.4-7.7%, paid monthly.",
+    "Early withdrawal: interest recalculated at 0.1%."
+   ],
+   "src": [
+    [
+     "Ameriabank: Ameria deposit (terms from 29 Oct 2024)",
+     "https://ameriabank.am/en/personal/saving/deposits/ameria-deposit"
+    ],
+    [
+     "Ameriabank: Premium and Partner packages, ed. 22 (effective 22 Aug 2026)",
+     "https://ameriabank.am/Portals/0/files/premium-partner-persona/Terms_conditions_Partner_Premium_Persona_eng.pdf"
+    ]
+   ]
+  },
+  "Ardshinbank": {
+   "product": "Term deposit without top-up",
+   "bucket": "271-366 days",
+   "maturity": 7.75,
+   "monthly": 7.4,
+   "monthly_apy": 7.66,
+   "online": 0,
+   "online_note": "No online bonus published.",
+   "topup": false,
+   "notes": [
+    "Quarterly payout 7.50%.",
+    "The top-up version pays 8.25% but only for 367-549 days."
+   ],
+   "src": [
+    [
+     "Ardshinbank: deposits",
+     "https://ardshinbank.am/for-you/avand?lang=en"
+    ]
+   ]
+  },
+  "Conversebank": {
+   "product": "Progress",
+   "bucket": "12 months",
+   "maturity": 8.5,
+   "monthly": 8.0,
+   "monthly_apy": 8.3,
+   "online": 0,
+   "online_note": "The +0.25% online bonus applies only to terms over one year.",
+   "topup": false,
+   "notes": [
+    "Partial withdrawals allowed down to the minimum balance.",
+    "Karas deposit, 1 year: 8.00%.",
+    "fininfo.am still lists older rows for Progress (9.00% / 8.50%); the bank's page shows 8.50% / 8.00%."
+   ],
+   "src": [
+    [
+     "Converse Bank: Deposit Progress",
+     "https://www.conversebank.am/en/progress/"
+    ]
+   ]
+  },
+  "Evocabank": {
+   "product": "Classical deposit (Evoca Online pays the same)",
+   "bucket": "271-365 days",
+   "maturity": 8.0,
+   "monthly": 7.5,
+   "monthly_apy": 7.76,
+   "online": 0,
+   "online_note": "Evoca Online pays the same for this term.",
+   "topup": false,
+   "notes": [
+    "Quarterly payout 7.50%."
+   ],
+   "src": [
+    [
+     "Evocabank: deposits",
+     "https://www.evoca.am/en/deposits"
+    ]
+   ]
+  },
+  "IDBank": {
+   "product": "Safe, without top-up",
+   "bucket": "271-365 days",
+   "maturity": 8.2,
+   "monthly": 7.7,
+   "monthly_apy": 7.98,
+   "online": 0.3,
+   "online_note": "+0.3% when opened in the Idram&IDBank app or IDBanking.am.",
+   "topup": false,
+   "notes": [
+    "The top-up version pays 7.70% at maturity / 7.20% monthly."
+   ],
+   "src": [
+    [
+     "IDBank: Safe deposit, without top-up (updated 14 Sep 2026)",
+     "https://idbank.am/en/deposits/deposit_safe/noreplenish/"
+    ]
+   ]
+  }
+ },
+ "market_top": [
+  [
+   "Fast Bank",
+   10.0,
+   "at maturity"
+  ],
+  [
+   "VTB Bank (Armenia)",
+   9.75,
+   "at maturity"
+  ],
+  [
+   "Inecobank",
+   9.5,
+   "at maturity"
+  ],
+  [
+   "Unibank",
+   9.5,
+   "at maturity"
+  ],
+  [
+   "Artsakhbank",
+   9.5,
+   "monthly (yield 9.92%)"
+  ],
+  [
+   "Byblos Bank Armenia",
+   9.25,
+   "at maturity"
+  ]
+ ],
+ "market_n_banks": 16,
+ "uplift_notes": [
+  "Ameriabank: Premium / Partner packages add +0.25% / +0.35% to term deposits and +1% to AMD savings accounts, but need 40m / 120m AMD in average balances. They come with the premium cards, not the other way round.",
+  "IDBank: the VISAGOLD package (Visa Gold debit) adds +0.5% to a savings account, not to term deposits.",
+  "Converse Bank: the student card (outside the tiers) advertises better deposit terms without a published number.",
+  "Fast Bank: no deposit uplift; the link runs the other way, deposits waive the card's annual fee."
+ ]
+}

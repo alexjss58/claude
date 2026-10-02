@@ -1,0 +1,648 @@
+<meta charset="utf-8">
+<title>Cashback Engine Playbook</title>
+<meta name="description" content="Ten open decisions for launching choose-your-cashback on Fast Bank debit cards, with the pathways leading banks use, the recommended option and how the engine calculates menus and rates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f2f3ef; --surface:#fcfcfa; --surface-2:#f6f7f3; --sunk:#eceee8;
+  --ink:#14161a; --ink-2:#474b51; --muted:#7d8187; --line:#e0e2db; --line-2:#cdd0c8;
+  --fb:#1f4fd6; --fb-soft:#e4ebfd; --fb-ink:#1a43b8;
+  --good-ink:#0b6b0b; --good-soft:#e2f3e0;
+  --neutral-ink:#55595f; --neutral-soft:#ecede9;
+  --gap-ink:#7a5a00; --gap-soft:#f7efd6;
+  --shadow: 0 1px 2px rgba(20,22,26,.06), 0 4px 18px rgba(20,22,26,.06);
+  --font: "Schibsted Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#101214; --surface:#17191c; --surface-2:#1c1f23; --sunk:#131517;
+    --ink:#eef0ec; --ink-2:#b8bcc1; --muted:#868b91; --line:#292c31; --line-2:#383c42;
+    --fb:#6e90f2; --fb-soft:#1c2748; --fb-ink:#9db3f7;
+    --good-ink:#4bd24b; --good-soft:#15301a;
+    --neutral-ink:#b3b7bc; --neutral-soft:#24272b;
+    --gap-ink:#e2bf5a; --gap-soft:#33290f;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 22px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#101214; --surface:#17191c; --surface-2:#1c1f23; --sunk:#131517;
+  --ink:#eef0ec; --ink-2:#b8bcc1; --muted:#868b91; --line:#292c31; --line-2:#383c42;
+  --fb:#6e90f2; --fb-soft:#1c2748; --fb-ink:#9db3f7;
+  --good-ink:#4bd24b; --good-soft:#15301a;
+  --neutral-ink:#b3b7bc; --neutral-soft:#24272b;
+  --gap-ink:#e2bf5a; --gap-soft:#33290f;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 22px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:14px;line-height:1.45;margin:0}
+.wrap{max-width:1360px;margin:0 auto;padding-inline:clamp(16px,3vw,36px);padding-block:22px 64px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--fb);outline-offset:2px;border-radius:4px}
+a{color:var(--fb-ink)}
+.num{font-variant-numeric:tabular-nums}
+
+/* header */
+.top{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:flex-end;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+h1{font-size:clamp(24px,3vw,34px);line-height:1.08;margin:.2em 0 0;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+.lede{color:var(--ink-2);max-width:76ch;margin:.5em 0 0}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--ink-2);font-size:13px}
+.meta b{color:var(--ink);font-weight:600}
+.draft{display:inline-block;font-size:10.5px;font-weight:650;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:4px;background:var(--gap-soft);color:var(--gap-ink)}
+
+/* bank strip: one row of seven */
+.legendwrap{overflow-x:auto;margin:16px 0 4px}
+.legend{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;min-width:680px}
+.lg{display:flex;gap:8px;align-items:center;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 9px;cursor:pointer;min-width:0}
+.lg:hover{border-color:var(--line-2);background:var(--surface-2)}
+.lg .nm{display:block;font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lg .ct{display:block;font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lg>span:last-child{min-width:0}
+.mono{flex:none;display:inline-grid;place-items:center;width:30px;height:30px;border-radius:7px;border:1px dashed var(--line-2);background:var(--surface-2);font-weight:800;font-size:12px;color:var(--ink-2);letter-spacing:.02em}
+.mono.sm{width:20px;height:20px;border-radius:5px;font-size:9.5px}
+
+/* decided */
+details.decided{margin:14px 0 4px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+details.decided>summary{cursor:pointer;padding:11px 14px;font-weight:650;font-size:13.5px;display:flex;gap:10px;align-items:center;list-style:none}
+details.decided>summary::-webkit-details-marker{display:none}
+details.decided>summary::before{content:"";width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg)}
+details.decided[open]>summary::before{transform:rotate(45deg)}
+details.decided>summary .hint{font-weight:400;color:var(--muted)}
+.dec{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px 22px;padding:2px 16px 16px;margin:0;list-style:none}
+.dec li{display:grid;gap:3px;padding:8px 0;border-top:1px solid var(--line)}
+.dec .k{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:650}
+.dec .v{font-size:13px;color:var(--ink-2)}
+.dec .v b{color:var(--ink)}
+
+/* tabs */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);display:flex;gap:4px;flex-wrap:wrap;align-items:center;padding:12px 0 10px;border-bottom:1px solid var(--line)}
+.tab{border:1px solid transparent;background:none;padding:7px 12px;border-radius:999px;cursor:pointer;font-weight:600;font-size:13.5px;color:var(--ink-2)}
+.tab:hover{background:var(--sunk);color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.tabsep{width:1px;align-self:stretch;background:var(--line-2);margin:4px 6px}
+.jumps{display:flex;gap:4px;flex-wrap:wrap}
+.jump{border:1px solid var(--line-2);background:var(--surface);padding:4px 9px;border-radius:999px;cursor:pointer;font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.jump:hover{border-color:var(--ink-2);color:var(--ink)}
+
+/* blocks */
+.block{margin:30px 0 0;scroll-margin-top:76px}
+.bhead{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:baseline}
+.bnum{font-size:13px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+h2{font-size:22px;margin:0;font-weight:750;letter-spacing:-.01em;text-wrap:balance}
+.q{grid-column:2;font-size:15.5px;font-weight:600;color:var(--ink);margin:2px 0 0;max-width:80ch;text-wrap:pretty}
+.why{grid-column:2;color:var(--ink-2);font-size:13px;margin:4px 0 0;max-width:86ch}
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:14px}
+.path{position:relative;display:flex;flex-direction:column;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:12px 13px;box-shadow:var(--shadow)}
+.path.prop{border-color:var(--fb);box-shadow:0 0 0 1px var(--fb) inset, var(--shadow)}
+.ptop{display:flex;gap:8px;align-items:flex-start;padding-right:4px}
+.plet{flex:none;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;background:var(--sunk);font-weight:800;font-size:12px;color:var(--ink-2)}
+.path.prop .plet{background:var(--fb);color:#fff}
+.pname{font-weight:700;font-size:14px;line-height:1.25}
+.ptag{position:absolute;top:-9px;right:12px;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:4px;background:var(--fb);color:#fff}
+.pcap{font-size:12.5px;color:var(--ink-2);margin:0}
+.pm{display:grid;grid-template-columns:auto 1fr;gap:3px 8px;font-size:12px;margin:0}
+.pm dt{font-weight:650;color:var(--muted)}
+.pm dd{margin:0;color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:2px}
+.bchip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-2);background:var(--surface-2);border-radius:999px;padding:3px 10px 3px 4px;cursor:pointer;font-size:12.5px;font-weight:600;color:var(--ink)}
+.bchip:hover{border-color:var(--ink-2)}
+
+/* schematic visuals */
+.vis{position:relative;height:142px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);padding:9px 10px;overflow:hidden;font-size:10.5px;line-height:1.25;color:var(--ink-2);display:flex;flex-direction:column;gap:4px}
+.vis .sch{position:absolute;top:6px;right:8px;font-size:8.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.vh{font-weight:700;color:var(--ink);font-size:11px;padding-right:56px}
+.vr{display:flex;align-items:center;gap:6px;padding:2px 6px;border-radius:5px;background:var(--surface);min-width:0}
+.vr.on{background:var(--fb-soft);color:var(--ink)}
+.ck{width:11px;height:11px;border-radius:3px;border:1px solid var(--line-2);display:inline-grid;place-items:center;font-size:8px;flex:none;line-height:1}
+.vr.on .ck{background:var(--fb);border-color:var(--fb);color:#fff}
+.vr .l{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vr .p{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pt{font-size:8.5px;padding:0 4px;border-radius:3px;background:var(--gap-soft);color:var(--gap-ink);font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.vgrid{display:grid;gap:3px}
+.vt{padding:4px 2px;border-radius:4px;background:var(--surface);border:1px solid var(--line);text-align:center;font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vt.on{background:var(--fb-soft);border-color:var(--fb);color:var(--ink);font-weight:650}
+.vt.mer{border-style:dashed;border-color:var(--gap-ink);color:var(--gap-ink)}
+.vbl{display:flex;justify-content:space-between;gap:6px;font-size:10px}
+.vbl b{color:var(--ink);font-variant-numeric:tabular-nums}
+.vbar{height:7px;border-radius:4px;background:var(--sunk);overflow:hidden;flex:none}
+.vbar>i{display:block;height:100%;background:var(--fb);border-radius:4px}
+.vbar.am>i{background:var(--gap-ink)}
+.vbar.gr>i{background:var(--good-ink)}
+.vbar.open>i{background:linear-gradient(90deg,var(--fb),transparent)}
+.vcols{display:grid;grid-template-columns:1fr 1fr;gap:6px;flex:1;min-height:0}
+.vcol{display:flex;flex-direction:column;gap:3px;min-width:0}
+.vcol .who{font-size:9.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.vban{padding:4px 6px;border-radius:5px;background:var(--good-soft);color:var(--good-ink);font-weight:650;text-align:center}
+.vban.grey{background:var(--sunk);color:var(--muted)}
+.vbig{font-size:18px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.vprice{display:flex;align-items:baseline;gap:8px}
+.vprice s{color:var(--muted)}
+.vprice b{font-size:16px;color:var(--good-ink)}
+.vrow{display:flex;gap:8px;align-items:center}
+.wheel{flex:none;width:74px;height:74px;border-radius:50%;background:conic-gradient(var(--fb) 0 60deg,var(--fb-soft) 60deg 120deg,var(--gap-soft) 120deg 180deg,var(--sunk) 180deg 240deg,var(--good-soft) 240deg 300deg,var(--line-2) 300deg 360deg);border:2px solid var(--surface);box-shadow:0 0 0 1px var(--line-2);position:relative}
+.wheel::after{content:"";position:absolute;top:-6px;left:50%;margin-left:-5px;border:5px solid transparent;border-top:8px solid var(--ink)}
+.doc{flex:1;border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:6px 8px;display:flex;flex-direction:column;gap:4px}
+.doc i{display:block;height:4px;border-radius:2px;background:var(--sunk)}
+.doc .hl{background:var(--gap-soft);color:var(--gap-ink);border-radius:4px;padding:3px 5px;font-weight:650;font-size:9.5px}
+.vbtn{align-self:flex-start;padding:4px 10px;border-radius:999px;background:var(--sunk);color:var(--muted);font-weight:650;text-decoration:line-through}
+.dots{display:flex;gap:3px;align-items:flex-end;height:26px}
+.dots i{flex:1;background:var(--fb);border-radius:2px 2px 0 0;opacity:.75}
+.vtl{display:flex;align-items:center;gap:4px;font-size:9.5px}
+.vtl .seg{flex:1;height:18px;border-radius:4px;display:grid;place-items:center;font-weight:650}
+
+.logo{flex:none;width:30px;height:30px;border-radius:7px;object-fit:contain;background:#fff;border:1px solid var(--line)}
+.logo.sm{width:20px;height:20px;border-radius:5px}
+.vis.real{padding:0;background:#fff}
+.vis.real img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.vis.real .sch{top:auto;bottom:6px;right:6px;background:rgba(20,22,26,.72);color:#fff;padding:2px 6px;border-radius:4px;letter-spacing:.04em}
+.appshot{margin:0;display:grid;gap:6px;justify-items:start}
+.appshot img{width:min(280px,100%);border-radius:12px;border:1px solid var(--line);display:block}
+.appshot figcaption{font-size:12px;color:var(--ink-2);max-width:48ch}
+.decision{margin-top:36px;scroll-margin-top:76px;background:var(--gap-soft);border:1.5px solid var(--gap-ink);border-radius:14px;padding:18px 18px 20px}
+.decision .dtag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:3px 8px;border-radius:4px;background:var(--gap-ink);color:var(--surface)}
+.decision h2{margin-top:8px}
+.decision p{margin:6px 0 0;max-width:96ch;color:var(--ink)}
+.dopts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}
+@media (max-width:980px){.dopts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.dopts{grid-template-columns:1fr}}
+.dopt{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;display:grid;gap:6px;align-content:start}
+.dopt .dk{display:flex;gap:8px;align-items:center;font-weight:750;font-size:14px}
+.dopt .dk span{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;background:var(--gap-ink);color:var(--surface);font-size:12px;font-weight:800;flex:none}
+.dopt dl{display:grid;grid-template-columns:auto 1fr;gap:4px 8px;margin:0;font-size:12.5px}
+.dopt dt{color:var(--muted);font-weight:650}
+.dopt dd{margin:0;color:var(--ink-2)}
+.dopt .cost{font-weight:750;color:var(--ink)}
+.dnote{font-size:12px;color:var(--ink-2);margin-top:10px}
+
+/* engine logic */
+.eng{margin-top:18px;display:grid;gap:26px}
+.settings{display:flex;flex-wrap:wrap;gap:6px}
+.set{font-size:12px;padding:4px 9px;border-radius:7px;background:var(--surface);border:1px solid var(--line);color:var(--ink-2)}
+.set b{color:var(--ink);font-weight:650}
+.esec{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 18px 20px;box-shadow:var(--shadow)}
+.esec h3{font-size:19px;margin:0;letter-spacing:-.01em}
+.esec .sub{color:var(--ink-2);margin:4px 0 0;max-width:90ch}
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:14px;counter-reset:st}
+@media (max-width:900px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.st{border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--surface-2);position:relative}
+.st .n{font-size:11px;font-weight:800;color:var(--fb-ink);letter-spacing:.04em}
+.st b{display:block;font-size:13.5px;margin:2px 0 3px}
+.st p{margin:0;font-size:12px;color:var(--ink-2)}
+.tbl-wrap{overflow-x:auto;margin-top:12px}
+table.t{border-collapse:collapse;width:100%;font-size:12.5px}
+.t th,.t td{padding:6px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.t th{font-size:11.5px;color:var(--muted);font-weight:650}
+.t td.r,.t th.r{text-align:right;font-variant-numeric:tabular-nums}
+.t .shown{font-weight:750;color:var(--ink);font-size:13.5px}
+.t .x1{color:var(--muted);font-size:11px;margin-left:5px}
+.t tr.sep td{border-top:2px solid var(--line-2)}
+.t td.inv{background:var(--gap-soft)}
+.t .role{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:1px 5px;border-radius:3px;margin-left:6px;background:var(--fb-soft);color:var(--fb-ink)}
+.t .role.no{background:var(--sunk);color:var(--muted)}
+.rec{margin-top:12px;border-left:3px solid var(--fb);padding:6px 0 6px 12px;display:grid;gap:4px;max-width:96ch}
+.rec b{color:var(--fb-ink)}
+.flag{margin-top:12px;border-radius:10px;background:var(--gap-soft);color:var(--ink);padding:12px 14px;display:grid;gap:6px;max-width:100ch}
+.flag .ft{font-weight:750;color:var(--gap-ink)}
+.twocol{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;margin-top:14px}
+@media (max-width:900px){.twocol{grid-template-columns:1fr}}
+.ladder{display:grid;gap:8px}
+.rung{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:start}
+.rung .pc{font-size:20px;font-weight:800;color:var(--ink);text-align:right;line-height:1.1}
+.rung .cats{display:flex;flex-wrap:wrap;gap:4px}
+.rung .cats span{font-size:11.5px;padding:2px 7px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line)}
+.rung .why2{grid-column:2;font-size:11.5px;color:var(--muted)}
+.rules{margin:0;padding-left:18px;display:grid;gap:6px;font-size:13px;color:var(--ink-2)}
+.rules b{color:var(--ink)}
+.opt{display:grid;grid-template-columns:minmax(0,1.5fr) 44px minmax(0,1.2fr) 70px;gap:8px;align-items:center;font-size:12.5px;padding:5px 8px;border-radius:7px}
+.opt.pk{background:var(--fb-soft)}
+.opt .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.opt .rt{font-weight:750;text-align:right}
+.opt .bar{height:8px;border-radius:4px;background:var(--sunk);overflow:hidden}
+.opt .bar i{display:block;height:100%;background:var(--fb)}
+.opt.ptn .bar i{background:var(--gap-ink)}
+.opt .amd{text-align:right;font-variant-numeric:tabular-nums;font-weight:650}
+.opthead{font-size:11px;color:var(--muted);font-weight:650}
+.tot{display:flex;justify-content:space-between;font-size:13px;margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
+
+/* comparison */
+.cmpwrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface);box-shadow:var(--shadow);margin-top:18px}
+table.cmp{border-collapse:collapse;min-width:1100px;width:100%}
+.cmp th,.cmp td{border-bottom:1px solid var(--line);border-left:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;font-size:12.5px}
+.cmp th:first-child,.cmp td:first-child{border-left:0;position:sticky;left:0;background:var(--surface-2);z-index:1;min-width:170px}
+.cmp thead th{background:var(--surface);font-size:12px}
+.cmp thead th .mono{margin-right:6px;vertical-align:middle}
+.cmp td.fbcol{background:var(--fb-soft)}
+.cell{display:flex;gap:6px;align-items:flex-start;width:100%;text-align:left;border:0;background:none;padding:0;cursor:pointer}
+.cell:hover .clab{text-decoration:underline}
+.cell .plet{width:18px;height:18px;font-size:10.5px;border-radius:5px}
+.cell.prop .plet{background:var(--fb);color:#fff}
+.clab{color:var(--ink-2)}
+.rowt{font-weight:700}
+.rows{font-size:11.5px;color:var(--muted)}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(10,12,14,.35);z-index:40}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--surface);z-index:41;box-shadow:-10px 0 40px rgba(0,0,0,.2);overflow-y:auto;padding:calc(20px + env(safe-area-inset-top,0px)) 22px calc(40px + env(safe-area-inset-bottom,0px))}
+.drawer .x{position:sticky;top:0;float:right;border:1px solid var(--line-2);background:var(--surface-2);border-radius:8px;padding:5px 10px;cursor:pointer}
+.drawer h3{font-size:20px;margin:6px 0 2px;letter-spacing:-.01em;display:flex;gap:10px;align-items:center}
+.drawer h4{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:20px 0 6px}
+.drawer .head{font-size:15px;font-weight:650;margin:12px 0 4px;text-wrap:pretty}
+.drawer ul{padding-left:18px;margin:0;display:grid;gap:5px;font-size:13px;color:var(--ink-2)}
+.drawer .kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13px;margin:0}
+.drawer .kv dt{color:var(--muted)}
+.drawer .kv dd{margin:0;color:var(--ink);font-variant-numeric:tabular-nums}
+.shot{border:1.5px dashed var(--line-2);border-radius:12px;background:var(--surface-2);padding:18px 14px;text-align:center;color:var(--muted);font-size:12.5px}
+.shot b{display:block;color:var(--ink-2);font-size:13px;margin-bottom:3px}
+.src{font-size:12.5px;display:grid;gap:4px;padding-left:18px;margin:0}
+.src a{word-break:break-word}
+.src .dt{color:var(--muted)}
+.tagp{display:inline-block;font-size:10.5px;font-weight:650;letter-spacing:.03em;text-transform:uppercase;padding:2px 7px;border-radius:4px;background:var(--neutral-soft);color:var(--neutral-ink)}
+.tagp.prop{background:var(--fb-soft);color:var(--fb-ink)}
+.verify{display:inline-block;margin-left:6px;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:1px 6px;border-radius:4px;background:var(--gap-soft);color:var(--gap-ink);vertical-align:1px}
+.ov{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.ov li{display:grid;grid-template-columns:24px 1fr;gap:8px;align-items:start;padding:7px 0;border-top:1px solid var(--line);font-size:12.8px}
+.ov li button{all:unset;cursor:pointer;color:var(--ink-2)}
+.ov li button:hover{color:var(--ink);text-decoration:underline}
+.ov .bt{font-weight:650;color:var(--ink);display:block}
+
+footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-2);display:grid;gap:10px}
+footer ol{margin:0;padding-left:18px;display:grid;gap:3px}
+@media (max-width:640px){.bhead{grid-template-columns:1fr}.q,.why{grid-column:1}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow">Fast Bank · cashback debit card</div>
+      <h1>Cashback engine playbook</h1>
+      <p class="lede">Ten open decisions on the way to launching choose-your-cashback on Fast Bank's paid debit cards, the pathways the market uses, and the recommended option in blue. One decision is still open for Fast Bank; it is at the end of Design decisions. The Engine logic tab shows how our engine builds each client's menu and rates. Click a bank to see how it does it, with app screenshots.</p>
+    </div>
+    <div class="meta">
+      <span><b>7</b> benchmark banks</span>
+      <span>Terms as of <b>September 2026</b></span>
+      <span>Version 4 · 28 Sep 2026</span>
+    </div>
+  </header>
+
+  <div class="legendwrap"><div class="legend" id="legend" aria-label="Benchmark banks"></div></div>
+
+  <details class="decided">
+    <summary>Already decided <span class="hint">· 8 settled choices, shown for context</span></summary>
+    <ul class="dec" id="declist"></ul>
+  </details>
+
+  <nav class="tabs" role="tablist" aria-label="Views">
+    <button class="tab" role="tab" id="tab-dec" aria-selected="true" aria-controls="view-dec">Design decisions</button>
+    <button class="tab" role="tab" id="tab-eng" aria-selected="false" aria-controls="view-eng">Engine logic</button>
+    <button class="tab" role="tab" id="tab-cmp" aria-selected="false" aria-controls="view-cmp">Bank comparison</button>
+    <span class="tabsep" aria-hidden="true"></span>
+    <span class="jumps" id="jumps"></span>
+  </nav>
+
+  <main>
+    <section id="view-dec" role="tabpanel" aria-labelledby="tab-dec"></section>
+    <section id="view-eng" role="tabpanel" aria-labelledby="tab-eng" hidden></section>
+    <section id="view-cmp" role="tabpanel" aria-labelledby="tab-cmp" hidden>
+      <p class="lede" style="margin-top:18px">Which pathway each bank takes in each decision. The last column is the recommended option for Fast Bank. Click any cell for the details.</p>
+      <div class="cmpwrap"><table class="cmp" id="cmp"></table></div>
+    </section>
+  </main>
+
+  <footer>
+    <div><b>How to read this draft.</b> Figures are monthly unless stated. RUB = Russian rouble, MXN = Mexican peso. Pictures on the options are either app screenshots (labelled “App · bank”: taken in the banks’ apps in late September 2026, or from their public store listings) or schematic illustrations of the mechanic (labelled “Schematic”) where no bank screen shows it. Hover over a screenshot for an English translation. Sber appears once, for reference; it is not one of the seven benchmark banks. The bank sidebars carry more screenshots. Items marked <span class="verify" style="margin:0">to verify</span> come from one secondary source or conflict between sources. Engine numbers: Python twin of the model's engine (matches the Excel engine), August 2026 client sample, targets and caps from the model's Control panel (v14).</div>
+    <div><b>Sources</b><ol id="srclist"></ol></div>
+  </footer>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dtitle" hidden></aside>
+
+<script>
+/*DATA*/
+const ENG = /*ENGINE*/;
+const ASSETS = /*ASSETS*/;
+
+/* ---------- schematic visuals, one per option ---------- */
+const row = (l, p, o = {}) => `<div class="vr${o.on ? " on" : ""}"><span class="ck">${o.on ? "✓" : ""}</span><span class="l">${l}${o.pt ? ` <span class="pt">partner</span>` : ""}</span><span class="p">${p}</span></div>`;
+const tiles = (arr, cols, on = [], mer = []) => `<div class="vgrid" style="grid-template-columns:repeat(${cols},minmax(0,1fr))">${arr.map(t => `<span class="vt${on.includes(t) ? " on" : ""}${mer.includes(t) ? " mer" : ""}">${t}</span>`).join("")}</div>`;
+const bar = (l, v, max, cls = "", txt) => `<div class="vbl"><span>${l}</span><b>${txt || v.toLocaleString("en-US") + " / " + max.toLocaleString("en-US")}</b></div><div class="vbar ${cls}"><i style="width:${Math.min(100, v / max * 100)}%"></i></div>`;
+const col = (who, inner) => `<div class="vcol"><span class="who">${who}</span>${inner}</div>`;
+const VIS = {
+  b1A: () => `<div class="vh">~35 categories · each client sees a few</div>` + tiles(["Groceries","Taxi","Pharmacy","Fuel","Cafés","Beauty","Kids","Travel","Online","Sport","Home","Clothes","Auto","Medical","Cinema","Merchant X"], 4, ["Groceries","Fuel","Cafés","Online"], ["Merchant X"]),
+  b1B: () => `<div class="vh">8 categories · same for everyone</div>` + tiles(["Groceries","Fuel","Cafés","Pharmacy","Transport","Beauty","Fun","Flowers"], 4),
+  b1C: () => `<div class="vh">No category list</div>` + row("Promotion at a partner", "+15%") + row("Seller bonus on the marketplace", "+60%") + row("Paying outside a promotion", "0%"),
+  b2A: () => `<div class="vh">Pick 4 of 7 · 4/4 chosen</div>` + row("Groceries", "2%", {on:1}) + row("Fuel", "3%", {on:1}) + row("Taxi", "10%", {on:1, pt:1}) + row("Fast food", "4%", {on:1}) + row("All purchases", "0.5%") + row("Transport", "7%"),
+  b2B: () => `<div class="vh">Pick 3</div>` + row("Cafés", "5%", {on:1}) + row("Taxi", "7%", {on:1}) + row("Pharmacy", "5%", {on:1}) + `<div class="vban">1% on everything else · automatic</div>`,
+  b2C: () => `<div class="vh">Earn rate set by plan</div>` + bar("Standard", 1, 10, "", "×1") + bar("Premium", 2.5, 10, "", "×2.5") + bar("Metal", 5, 10, "", "×5") + bar("Ultra", 10, 10, "", "×10"),
+  b3A: () => `<div class="vcols">` + col("Client A", row("Taxi", "7%") + row("Groceries", "2%") + row("Cinema", "5%")) + col("Client B", row("Pharmacy", "7%") + row("Fuel", "3%") + row("Kids", "5%")) + `</div>`,
+  b3B: () => `<div class="vcols">` + col("Client A", row("Flowers", "25%") + row("Cafés", "10%") + row("Fuel", "5%")) + col("Client B", row("Flowers", "25%") + row("Cafés", "10%") + row("Fuel", "5%")) + `</div>`,
+  b3C: () => `<div class="vh">One rate or a promotion</div>` + row("Any purchase", "0.1–1%") + row("Promotion: marketplace", "15%") + row("Seller bonus", "60%"),
+  b4A: () => `<div class="vh">This month</div>` + bar("Bank cashback", 3200, 5000) + bar("Partner offers", 800, 5000, "am"),
+  b4B: () => `<div class="vh">Total and per category</div>` + bar("Total", 2100, 3000) + bar("Cafés", 1500, 1500, "am") + bar("Fuel", 400, 1500) + bar("Pharmacy", 200, 1500),
+  b4C: () => `<div class="vh">A ceiling per channel</div>` + bar("QR payments", 12000, 30000) + bar("Marketplace", 90000, 500000) + bar("Travel", 5000, 30000),
+  b4D: () => `<div class="vh">No ceiling</div>` + bar("Points this month", 1240, 2000, "open", "1,240 · no limit") + `<div class="vban grey">Earn rate 0.1–1% keeps cost low</div>`,
+  b5A: () => `<div class="vh">Monthly menu</div>` + row("Groceries", "2%") + row("Taxi", "10%", {on:1, pt:1}) + row("Restaurants", "10%", {pt:1}) + row("Fuel", "3%"),
+  b5B: () => `<div class="vh">Offers · activate before paying</div>` + tiles(["Brand A −10%","Brand B 5×","Brand C −15%","Brand D 20×"], 2, ["Brand A −10%"]) + `<div class="vban grey">Activate</div>`,
+  b5C: () => `<div class="vh">On the group's own marketplace</div><div class="vrow"><div class="vprice"><s>12,990</s><b>11,690</b></div><span class="pt">with card</span></div>` + row("Seller bonus", "+60%"),
+  b6A: () => `<div class="vcols">` + col("Client A", row("Taxi", "7%") + row("Cafés", "4%") + row("Online", "3%")) + col("Client B", row("Fuel", "3%") + row("Kids", "4%") + row("Home", "3%")) + `</div>`,
+  b6B: () => `<div class="vcols">` + col("Client A", row("Groceries", "5%") + row("Fuel", "5%") + row("Cafés", "5%")) + col("Client B", row("Groceries", "5%") + row("Fuel", "5%") + row("Cafés", "5%")) + `</div>`,
+  b6C: () => `<div class="vcols">` + col("Client A", row("Any purchase", "1 pt/£10")) + col("Client B", row("Any purchase", "1 pt/£10")) + `</div>`,
+  b7A: () => `<div class="vh">Did not choose for October</div><div class="vtl"><span class="seg" style="background:var(--fb-soft)">25 Sep · window</span><span class="seg" style="background:var(--sunk);flex:2">October</span></div><div class="vban grey">No extra cashback in October</div>`,
+  b7B: () => `<div class="vh">Did not choose for October</div><div class="vtl"><span class="seg" style="background:var(--fb-soft)">25 Sep · window</span><span class="seg" style="background:var(--good-soft);flex:2">October</span></div><div class="vban">Base rate on all purchases still paid</div>`,
+  b7C: () => `<div class="vh">Earning every day</div><div class="dots">${Array.from({length:18}, (_, i) => `<i style="height:${30 + (i * 37) % 70}%"></i>`).join("")}</div><div class="vban grey">Nothing to choose</div>`,
+  b8A: () => `<div class="vh">Statement</div>` + row("1 Nov · Cashback for October", "+2,330") + row("Pending this month", "1,120") + `<div class="vban">Cash to the card account, AMD</div>`,
+  b8B: () => `<div class="vh">Points wallet</div><div class="vbig">12,400 pts</div>` + tiles(["Travel","Taxi","Store"], 3) + `<div class="vban grey">1 point = 1 unit off</div>`,
+  b8C: () => `<div class="vh">Checkout</div><div class="vprice"><s>12,990</s><b>11,690</b></div><div class="vban">Saving applied now, not paid back later</div>`,
+  b9A: () => `<div class="vh">Choose for October</div>` + row("Groceries · ≈1,200 AMD", "2%", {on:1}) + row("Fuel · ≈450 AMD", "3%", {on:1}) + row("Taxi · ≈360 AMD", "10%", {pt:1}) + bar("Cap", 3200, 5000),
+  b9B: () => `<div class="vrow"><span class="wheel" aria-hidden="true"></span><div style="display:grid;gap:4px;flex:1;min-width:0">` + row("Spin the wheel", "1 left", {on:1}) + row("Task: pay by QR", "✓") + row("Task: 5 purchases", "3/5") + `</div></div>`,
+  b9C: () => `<div class="vh">RevPoints · 4,380</div>` + tiles(["Shop 10×","Hotel −20%","Miles","Gift card"], 2, ["Shop 10×"]),
+  b10A: () => `<div class="vrow" style="flex:1;align-items:stretch"><div class="doc"><i></i><i style="width:80%"></i><span class="hl">Abuse: the bank may exclude the client and withhold cashback</span><i></i><i style="width:60%"></i></div></div>`,
+  b10B: () => `<div class="vh">Rules that remove the incentive</div>` + row("Max per category", "1,500") + row("Several offers apply", "highest only") + row("Counting unit", "per full 100") + row("Wheel spins", "cost points"),
+  b10C: () => `<div class="vh">Points wallet</div><div class="vbig">12,400 pts</div><span class="vbtn">Withdraw as cash</span><div class="vban grey">Spend in the app only</div>`
+};
+const CROPBANK = {b2A:"Yandex Pay", b3B:"Ozon Bank", b5A:"Ozon Bank", b5B:"T-Bank", b5C:"Ozon Bank", b7A:"Sber, for reference", b8A:"Plata", b8B:"Yandex Pay", b9A:"T-Bank", b9B:"Alfa-Bank", b9C:"Kaspi"};
+const CROPTXT = {
+  b2A:"Yandex Pay: “Select 5 out of 10 categories for October”; “1% All purchases” is one of the options.",
+  b5A:"Ozon Bank: “Categories in September”, with brand partners among the 4 picks: 10% Globus, 50% Tasty Coffee.",
+  b7A:"Sber (not one of the seven benchmark banks): “Your 5 categories in September. Can be changed from 1 October. Valid with SberPremier. 1% on all purchases, when paying by debit card.”",
+  b9A:"T-Bank, Premium client: “Select 4 categories for October. More categories for you.” First option: 1% on all purchases."
+};
+const vis = key => ASSETS.crop[key] ? `<figure class="vis real" style="margin:0"${CROPTXT[key] ? ` title="${esc(CROPTXT[key])}"` : ""}><img src="${ASSETS.crop[key]}" alt="${esc(CROPTXT[key] || CROPBANK[key] + " app screenshot")}" loading="lazy"><span class="sch">App · ${esc(CROPBANK[key])}</span></figure>`
+  : VIS[key] ? `<div class="vis"><span class="sch">Schematic</span>${VIS[key]()}</div>` : "";
+
+/* ---------- rendering ---------- */
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const mono = (b, cls = "") => ASSETS.logo[b] ? `<img class="logo ${cls}" src="${ASSETS.logo[b]}" alt="" aria-hidden="true">` : `<span class="mono ${cls}" aria-hidden="true">${esc(BANKS[b].mono)}</span>`;
+const pct = (x, d = 0) => (x * 100).toFixed(d).replace(/\.0+$/, "") + "%";
+const pct1 = x => { const v = x * 100; return (Math.abs(v - Math.round(v)) < 1e-9 ? v.toFixed(0) : v.toFixed(v * 10 % 1 === 0 ? 1 : 2)) + "%"; };
+
+$("#legend").innerHTML = ORDER.map(b => `
+  <button class="lg" data-bank="${b}" aria-label="${esc(BANKS[b].full)}: programme overview">
+    ${mono(b)}<span><span class="nm">${esc(BANKS[b].name)}</span><span class="ct">${esc(BANKS[b].country)}</span></span>
+  </button>`).join("");
+$("#declist").innerHTML = DECIDED.map(([k, v]) => `<li><span class="k">${esc(k)}</span><span class="v">${v}</span></li>`).join("");
+$("#jumps").innerHTML = BLOCKS.map((b, i) => `<button class="jump" data-jump="${b.id}" title="${esc(b.title)}">${i + 1}</button>`).join("") + `<button class="jump" data-jump="decision" title="Decision needed" style="background:var(--gap-soft);border-color:var(--gap-ink);color:var(--gap-ink);font-weight:700">Decision</button>`;
+
+$("#view-dec").innerHTML = BLOCKS.map((b, i) => `
+  <section class="block" id="${b.id}" aria-labelledby="${b.id}-t">
+    <div class="bhead">
+      <span class="bnum">${String(i + 1).padStart(2, "0")}</span>
+      <h2 id="${b.id}-t">${esc(b.title)}</h2>
+      <p class="q">${esc(b.q)}</p>
+      <p class="why">${esc(b.why)}</p>
+    </div>
+    <div class="paths">
+      ${b.paths.map(p => `
+        <article class="path${p.prop ? " prop" : ""}">
+          ${p.prop ? `<span class="ptag">Recommended</span>` : ""}
+          <div class="ptop"><span class="plet">${p.k}</span><span class="pname">${esc(p.name)}</span></div>
+          ${vis(b.id + p.k)}
+          <p class="pcap">${esc(p.desc)}</p>
+          <dl class="pm"><dt>Helps</dt><dd>${esc(p.plus)}</dd><dt>Watch</dt><dd>${esc(p.minus)}</dd></dl>
+          <div class="chips">${p.banks.map(bk => `
+            <button class="bchip" data-bank="${bk}" data-block="${b.id}" aria-label="${esc(BANKS[bk].name)}: how it handles ${esc(b.title.toLowerCase())}">${mono(bk, "sm")}${esc(BANKS[bk].name)}</button>`).join("")}
+          </div>
+        </article>`).join("")}
+    </div>
+  </section>`).join("");
+
+/* ---------- the open decision ---------- */
+(function () {
+  const taxB = ENG.rows.find(r => r.code === "TAX").show.Black, taxP = ENG.rows.find(r => r.code === "TAX").show.Premium;
+  const inv = ENG.rows.filter(r => r.role.Black !== "No" && r.show.Premium < r.show.Black).length;
+  const opts = [
+    ["A", "Raise Premium's target", "About 1.2% of non-cash spend (≈2.4% of eligible), so Premium rates are at least Black's.", "+≈1.4bn AMD (Premium 2.5 → 3.9bn)", "Premium's portfolio profit turns slightly negative (1.3bn → −0.1bn AMD)."],
+    ["B", "Lower Black's target", "About 0.4% of non-cash, so Black rates are no higher than Premium's (taxi " + pct(taxB) + " → " + pct(taxP) + ").", "−≈0.4bn AMD", "A weaker headline for the mass tier that drives new-to-bank acquisition."],
+    ["C", "Keep both targets", "Accept lower Premium rates; Premium's edge is the cap (20,000 vs 5,000 AMD), one extra menu slot and the travel partner offer.", "none", "Premium looks worse than Black on the menu itself."],
+    ["D", "Set targets on eligible spend", "One basis for all tiers, so gambling-heavy non-cash stops inflating Black's budget. Levels are then chosen per tier.", "depends on the levels", "The model's cashback line has to be reworked to use eligible spend."]
+  ];
+  $("#view-dec").insertAdjacentHTML("beforeend", `
+  <section class="decision" id="decision" aria-labelledby="decision-t">
+    <span class="dtag">Decision needed</span>
+    <h2 id="decision-t">Should Premium show higher rates than Black?</h2>
+    <p>With today's targets, Premium clients would see lower rates than Black in ${inv} of 18 categories: taxi is ${pct(taxP)} on Premium against ${pct(taxB)} on Black. Black's 0.5% target is measured on non-cash spend of which only 33% is eligible for cashback (most of the rest is gambling), against 48% for Premium, so it buys much richer menus. Details in the Engine logic tab.</p>
+    <div class="dopts">${opts.map(([k, n, what, cost, watch]) => `
+      <div class="dopt"><div class="dk"><span>${k}</span>${esc(n)}</div>
+        <dl><dt>What</dt><dd>${esc(what)}</dd><dt>3Y cost</dt><dd class="cost">${esc(cost)}</dd><dt>Watch</dt><dd>${esc(watch)}</dd></dl></div>`).join("")}
+    </div>
+    <p class="dnote">Cost is bank cashback over 2027–2029 from the v14 P&amp;L (mode 1), approximate. Options can be combined, for example B now and D when the model is next rebuilt.</p>
+  </section>`);
+})();
+
+/* ---------- engine logic ---------- */
+(function () {
+  const T = ["Black", "Premium", "Elite"];
+  const M = ENG.menu, meta = ENG.meta;
+  const inv = ENG.rows.filter(r => r.role.Black !== "No" && r.show.Premium < r.show.Black);
+  const partners = {Black: "Taxi 10% · Restaurants 10%", Premium: "Taxi 10% · Travel 10%", Elite: "Restaurants 15% · Travel 10%"};
+  const maxAmd = Math.max(...ENG.anna.map(o => o[3]));
+  const picks = ENG.anna.slice(0, 4), tot = picks.reduce((s, o) => s + o[3], 0), ptn = picks.filter(o => /Partner/.test(o[0])).reduce((s, o) => s + o[3], 0);
+  const groups = [
+    [1, "Supermarkets, Electronics, Jewellery", "Big, habitual spend and capped interchange: rewarding it is mostly deadweight."],
+    [2, "Fuel, Home & DIY, Travel, Marketplaces", "Routine or large-ticket spend; some room to move it."],
+    [3, "Restaurants, Fast food, Delivery, Auto, Medical, Clothing, Kids", "Discretionary spend clients often put on another card."],
+    [5, "Taxi, Transport, Pharmacies, Beauty, Entertainment, Sport", "Small, frequent spend that moves easily: cheap headlines."]
+  ];
+  $("#view-eng").innerHTML = `
+  <div class="eng">
+    <div>
+      <p class="lede" style="margin-top:0">How engine v1 (the Excel engine inside the model) decides what each client sees and at what rates, and what to change before IT builds it.</p>
+      <div class="settings" style="margin-top:10px">
+        <span class="set"><b>Menu</b> 7 bank categories + 2 partner offers + “All purchases”</span>
+        <span class="set"><b>Picks</b> 4 a month</span>
+        <span class="set"><b>Targets</b> Black 0.5% · Premium 0.75% · Elite 1.0% of non-cash</span>
+        <span class="set"><b>Caps</b> 5,000 · 20,000 · 30,000 AMD</span>
+        <span class="set"><b>Partner caps</b> 5,000 · 10,000 · 20,000 AMD</span>
+        <span class="set"><b>Non-choosers</b> flat 1%</span>
+      </div>
+    </div>
+
+    <section class="esec" id="eng-a">
+      <div class="eyebrow">a · Which categories a client sees</div>
+      <h3>Menu = the categories the client already spends in</h3>
+      <p class="sub">The menu is rebuilt every month from the client's own card spend, in five steps.</p>
+      <div class="flow">
+        <div class="st"><span class="n">1</span><b>Exclude</b><p>Gambling, cash and quasi-cash, transfers and e-wallets, government, utilities, telecom, insurance and charity never appear.</p></div>
+        <div class="st"><span class="n">2</span><b>Tier roles</b><p>“Always”: Entertainment, shown to everyone as discovery. “Never” on Black: Electronics and Jewellery. The rest are shown if spent.</p></div>
+        <div class="st"><span class="n">3</span><b>Client's spend</b><p>Last month's spend by category (August 2026 in the model).</p></div>
+        <div class="st"><span class="n">4</span><b>Fill 7 slots</b><p>The “Always” category plus the client's top 6 categories by spend.</p></div>
+        <div class="st"><span class="n">5</span><b>Add offers and base</b><p>2 partner offers (each replaces the same bank category) and “All purchases”.</p></div>
+      </div>
+      <div class="tbl-wrap"><table class="t" style="max-width:720px">
+        <thead><tr><th>Tier</th><th class="r">Bank categories shown, average of 7</th><th class="r">Clients with a full menu</th><th class="r">Clients who see only “Always”</th></tr></thead>
+        <tbody>${T.map(t => `<tr><td>${t}</td><td class="r shown">${M[t].avg.toFixed(1)}</td><td class="r">${pct(M[t].full)}</td><td class="r">${pct(M[t].only)}</td></tr>`).join("")}</tbody>
+      </table></div>
+      <div class="rec"><b>Recommended change</b>
+        <span>Fill empty slots with <b>discovery categories</b>: the tier's most popular categories that this client hasn't used, ranked by how often similar clients pick them. Cashback there is incremental by construction, and every client gets a full menu of 7.</span>
+        <span>Build the menu from <b>3 months</b> of spend, not one, so a single big purchase doesn't reshape it.</span>
+      </div>
+    </section>
+
+    <section class="esec" id="eng-b">
+      <div class="eyebrow">b · What rates the client sees</div>
+      <h3>Rate card × tier multiplier, rounded to whole percents</h3>
+      <p class="sub">Each tier has a relative rate card. One multiplier per tier scales the whole card until bank cost equals the target share of non-cash spend, with the monthly cap applied client by client. The shown rates are then rounded to whole percents with a 2% floor, and the multiplier is solved again so the rounding doesn't break the budget. Big numbers are what clients see; the small ones are the card before scaling.</p>
+      <div class="tbl-wrap"><table class="t" style="min-width:560px;max-width:860px">
+        <thead>
+          <tr><th>Category</th>${T.map(t => `<th class="r">${t}</th>`).join("")}</tr>
+          <tr><th style="font-weight:500">Multiplier after rounding · effective rate reached</th>${T.map(t => `<th class="r" style="font-weight:500">×${meta[t].m.toFixed(2)} · ${pct1(meta[t].eff)}</th>`).join("")}</tr>
+        </thead>
+        <tbody>
+          ${ENG.rows.map(r => `<tr><td>${esc(r.name)}${r.role.Black === "Always" ? `<span class="role">always shown</span>` : ""}${r.role.Black === "No" ? `<span class="role no">not shown on Black</span>` : ""}</td>${T.map(t => {
+              const hidden = r.role[t] === "No";
+              const invc = t === "Premium" && r.role.Black !== "No" && r.show.Premium < r.show.Black;
+              return `<td class="r${invc ? " inv" : ""}">${hidden ? `<span class="x1">not shown</span>` : `<span class="shown">${pct(r.show[t])}</span><span class="x1">${pct1(r.x1[t])}</span>`}</td>`;
+            }).join("")}</tr>`).join("")}
+          <tr class="sep"><td><b>All purchases</b> (base, 0.5% steps)</td>${T.map(t => `<td class="r"><span class="shown">${pct1(meta[t].base)}</span></td>`).join("")}</tr>
+          <tr><td><b>Partner offers</b> (merchant-funded)</td>${T.map(t => `<td class="r">${partners[t]}</td>`).join("")}</tr>
+        </tbody>
+      </table></div>
+      <div class="flag"><span class="ft">Decision needed: Premium clients would see lower rates than Black in ${inv.length} of 18 categories</span>
+        <span>For example, taxi is ${pct(ENG.rows.find(r => r.code === "TAX").show.Premium)} on Premium against ${pct(ENG.rows.find(r => r.code === "TAX").show.Black)} on Black. The targets are set on non-cash spend, and only 33% of Black's non-cash is eligible for cashback (the rest is mostly gambling), against 48% for Premium. So Black's 0.5% buys much higher category rates than Premium's 0.75%.</span>
+        <span>Keeping Premium at or above Black needs a Premium multiplier of about ×${ENG.prem_fix.m.toFixed(1)}, which costs about ${pct1(ENG.prem_fix.eff)} of non-cash instead of 0.75%. The options: raise the Premium target, set targets on eligible spend instead of non-cash, or keep Premium's edge in caps, one extra menu slot and partner offers.</span>
+      </div>
+      <p class="sub" style="margin-top:10px">Engine v1 today shows unrounded rates (e.g. 1.56%, 7.78%). Whole-percent rounding, the 2% floor and the second solve are the recommended additions.</p>
+    </section>
+
+    <section class="esec" id="eng-c">
+      <div class="eyebrow">c · How rates are balanced between categories</div>
+      <h3>Low where spend is habitual, high where it can move</h3>
+      <div class="twocol">
+        <div>
+          <div class="opthead" style="margin-bottom:8px">Relative card (Black, before scaling)</div>
+          <div class="ladder">${groups.map(([p, cats, w]) => `<div class="rung"><span class="pc">${p}%</span><span class="cats">${cats.split(", ").map(c => `<span>${esc(c)}</span>`).join("")}</span><span class="why2">${esc(w)}</span></div>`).join("")}</div>
+          <ol class="rules" style="margin-top:14px">
+            <li><b>Clients compare AMD, not %.</b> Each option is ranked by rate × the client's own spend, so 2% on groceries can beat 7% on transport.</li>
+            <li><b>One multiplier per tier</b> moves the whole card to the budget; the relative steps stay.</li>
+            <li><b>Guardrails:</b> at least 2% on any category other than the base, at most 10% bank-funded, whole percents only. Partner offers sit on top and are paid by the merchant.</li>
+            <li><b>Tiers must not invert:</b> a higher tier should never show a lower rate for the same category (see the flag above).</li>
+          </ol>
+        </div>
+        <div>
+          <div class="opthead" style="margin-bottom:6px">Worked example: Anna, Black card, the Client view persona. Her card spend: groceries 60,000, fuel 15,000, fast food 8,000, taxi 6,000, transport 1,500 AMD a month (plus cash and phone bills, which are excluded)</div>
+          <div class="opt opthead"><span>Option on her menu</span><span style="text-align:right">Rate</span><span>Expected cashback</span><span style="text-align:right">AMD</span></div>
+          ${ENG.anna.map((o, i) => `<div class="opt${i < 4 ? " pk" : ""}${/Partner/.test(o[0]) ? " ptn" : ""}"><span class="nm">${i < 4 ? "✓ " : ""}${esc(o[0].replace("Fuel, gas stations & EV charging", "Fuel & EV charging").replace("Supermarkets & groceries", "Groceries"))}</span><span class="rt">${pct1(o[1])}</span><span class="bar"><i style="width:${maxAmd ? o[3] / maxAmd * 100 : 0}%"></i></span><span class="amd">${Math.round(o[3]).toLocaleString("en-US")}</span></div>`).join("")}
+          <div class="tot"><span>She picks the top 4 by expected AMD</span><b class="num">${Math.round(tot).toLocaleString("en-US")} AMD a month</b></div>
+          <p class="sub" style="font-size:12.5px">Of that, ${Math.round(ptn).toLocaleString("en-US")} AMD is paid by the partner. Her headlines are 7% and 10%, but most of the bank's cost is 2% on groceries, her biggest category. The partner taxi offer shows 10% on the 60% of her taxi spend made at the partner.</p>
+        </div>
+      </div>
+    </section>
+  </div>`;
+})();
+
+/* ---------- comparison ---------- */
+(function () {
+  const head = `<thead><tr><th>Decision</th>${ORDER.map(b => `<th>${mono(b, "sm")}${esc(BANKS[b].name)}</th>`).join("")}<th>Fast Bank (recommended)</th></tr></thead>`;
+  const rows = BLOCKS.map((b, i) => {
+    const pp = b.paths.find(p => p.prop);
+    const cells = ORDER.map(bk => {
+      const d = b.det[bk]; if (!d) return `<td></td>`;
+      const p = b.paths.find(x => x.k === d.p);
+      return `<td><button class="cell${p.prop ? " prop" : ""}" data-bank="${bk}" data-block="${b.id}"><span class="plet">${p.k}</span><span class="clab">${esc(p.short)}</span></button></td>`;
+    }).join("");
+    return `<tr><td><div class="rowt">${i + 1}. ${esc(b.short)}</div><div class="rows">${esc(b.paths.map(p => p.k + " " + p.short).join(" · "))}</div></td>${cells}
+      <td class="fbcol"><button class="cell prop" data-jump="${b.id}"><span class="plet">${pp.k}</span><span class="clab">${esc(pp.short)}</span></button></td></tr>`;
+  }).join("");
+  $("#cmp").innerHTML = head + `<tbody>${rows}</tbody>`;
+})();
+
+const srcLink = s => s.u ? `<a href="${s.u}" target="_blank" rel="noopener">${esc(s.t)}</a>` : esc(s.t);
+$("#srclist").innerHTML = Object.values(SRC).map(s => `<li>${srcLink(s)}${s.d ? ` <span style="color:var(--muted)">· ${esc(s.d)}</span>` : ""}</li>`).join("");
+
+/* ---------- drawer ---------- */
+const drawer = $("#drawer"), scrim = $("#scrim");
+let lastFocus = null;
+const srcList = keys => `<h4>Sources</h4><ol class="src">${keys.map(k => SRC[k]).map(s => `<li>${srcLink(s)}${s.d ? ` <span class="dt">· ${esc(s.d)}</span>` : ""}</li>`).join("")}</ol>`;
+function openDrawer(html) {
+  lastFocus = document.activeElement;
+  drawer.innerHTML = `<button class="x" id="dclose">Close</button>` + html;
+  drawer.hidden = false; scrim.hidden = false; drawer.scrollTop = 0;
+  $("#dclose").focus();
+}
+function closeDrawer() { drawer.hidden = true; scrim.hidden = true; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
+const STORE = {tbank:"st_tb", alfa:"st_alfa", ozon:"st_ozon", yandex:"st_ya", kaspi:"st_kaspi", plata:"st_plata"};
+const SHOTDEF = {tbank:"tb_prem", alfa:"alfa_wheel", ozon:"ozon_hub", yandex:"ya_pick5", kaspi:"kaspi_promo", plata:"plata_cats"};
+const SHOTBLOCK = {ozon:{b3:"ozon_pick"}, yandex:{b4:"yandex_qr", b5:"yandex_shops", b7:"ya_home", b8:"yandex_qr", b9:"ya_home", b10:"yandex_qr"}, kaspi:{b5:"kaspi_store"}, plata:{b8:"plata_home"}};
+const APPSHOT = new Set(["tb_prem", "ozon_hub", "ya_pick5", "ya_home"]);
+const SHOTCAP = {
+  tb_prem:"T-Bank, Premium client: “Select 4 categories for October”, “More categories for you”. Options: 1% on all purchases, 15% fuel and up to 25% shopping in T-Bank's City service, 5% on pharmacies, beauty, entertainment and sports goods.",
+  ozon_hub:"Ozon Bank cashback screen: 0 ₽ “accumulating until 17 October” and a Limits button; September's 4 categories (1% on all purchases, 5% cosmetics, 10% Globus, 50% Tasty Coffee) with “You can choose again”; partner offers from more than 60 merchants.",
+  ya_pick5:"Yandex Pay: “Select 5 out of 10 categories for October”. With the Pay card: 1% on all purchases and 3–10% categories and Yandex services. With any bank card: 100% in S7 and on car insurance.",
+  ya_home:"Yandex Pay home screen: a card prompts “Select categories for October”, next to a banner to open a Super Split card.",
+  alfa_wheel:"Alfa-Bank: “Up to 100% cashback in the Supercashback wheel”.",
+  ozon_pick:"Ozon Bank: “Cashback up to 25% in rubles, new categories every month”, with the pick-4 list.",
+  yandex_qr:"Yandex Pay: “Pay by QR with cashback”, up to 50% in Plus points.",
+  yandex_shops:"Yandex Pay: discounts and cashback in 3,500 shops.",
+  kaspi_promo:"Kaspi: Promotions, with bonus and discount offers (Kazakh-language listing).",
+  kaspi_store:"Kaspi: the Kaspi Store marketplace.",
+  plata_cats:"Plata: “Up to 15% cashback”, April categories and cashback earned.",
+  plata_home:"Plata: home screen with cashback earned this month."
+};
+const shotKey = (bk, blockId) => (SHOTBLOCK[bk] && blockId && SHOTBLOCK[bk][blockId]) || SHOTDEF[bk];
+const storeSrc = (bk, blockId) => STORE[bk] && !APPSHOT.has(shotKey(bk, blockId)) ? [STORE[bk]] : [];
+function appShot(bk, blockId) {
+  const key = shotKey(bk, blockId);
+  if (!key) return `<div class="shot"><b>No public screenshot</b>Revolut's store listings don't show a RevPoints screen, and revolut.com blocks automated access.</div>`;
+  return `<figure class="appshot"><img src="${ASSETS.shot[key]}" alt="${esc(SHOTCAP[key])}"><figcaption>${esc(SHOTCAP[key])} ${APPSHOT.has(key) ? "App screenshot, late September 2026." : "Store listing screenshot."}</figcaption></figure>`;
+}
+function showDetail(bk, blockId) {
+  const b = BLOCKS.find(x => x.id === blockId), d = b.det[bk], bank = BANKS[bk];
+  const p = b.paths.find(x => x.k === d.p);
+  openDrawer(`
+    <div class="eyebrow">Block ${BLOCKS.indexOf(b) + 1} · ${esc(b.title)}</div>
+    <h3 id="dtitle">${mono(bk)}${esc(bank.full)}</h3>
+    <div style="color:var(--muted);font-size:12.5px">${esc(bank.country)} · ${esc(bank.product)}</div>
+    <div style="margin-top:10px"><span class="tagp${p.prop ? " prop" : ""}">Pathway ${p.k} · ${esc(p.name)}</span>${d.verify ? `<span class="verify">to verify</span>` : ""}</div>
+    <p class="head">${esc(d.head)}</p>
+    ${d.pts && d.pts.length ? `<ul>${d.pts.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+    ${d.kv ? `<h4>Key numbers</h4><dl class="kv">${d.kv.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : ""}
+    <h4>In the app</h4>
+    ${appShot(bk, blockId)}
+    ${srcList([...new Set(d.src.concat(storeSrc(bk, blockId)))])}`);
+}
+function showBank(bk) {
+  const bank = BANKS[bk];
+  const items = BLOCKS.map((b, i) => {
+    const d = b.det[bk]; if (!d) return "";
+    const p = b.paths.find(x => x.k === d.p);
+    return `<li><span class="plet" style="width:20px;height:20px;font-size:10.5px${p.prop ? ";background:var(--fb);color:#fff" : ""}">${p.k}</span>
+      <button data-bank="${bk}" data-block="${b.id}"><span class="bt">${i + 1}. ${esc(b.title)}</span>${esc(d.head)}</button></li>`;
+  }).join("");
+  const keys = [...new Set(BLOCKS.flatMap(b => b.det[bk] ? b.det[bk].src : []))];
+  openDrawer(`
+    <div class="eyebrow">Bank overview</div>
+    <h3 id="dtitle">${mono(bk)}${esc(bank.full)}</h3>
+    <div style="color:var(--muted);font-size:12.5px">${esc(bank.country)} · ${esc(bank.product)}</div>
+    <p class="head">${esc(bank.line)}</p>
+    <h4>Across the ten decisions</h4>
+    <ul class="ov">${items}</ul>
+    <h4>In the app</h4>
+    ${appShot(bk, null)}
+    ${srcList(keys.concat(storeSrc(bk, null)))}`);
+}
+document.addEventListener("click", e => {
+  if (e.target.closest("#dclose")) { closeDrawer(); return; }
+  const j = e.target.closest("[data-jump]");
+  if (j) { selectTab("dec"); const el = document.getElementById(j.dataset.jump); if (el) el.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}); if (!drawer.hidden) closeDrawer(); return; }
+  const t = e.target.closest("[data-bank]");
+  if (t) { t.dataset.block ? showDetail(t.dataset.bank, t.dataset.block) : showBank(t.dataset.bank); }
+});
+scrim.addEventListener("click", closeDrawer);
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !drawer.hidden) closeDrawer(); });
+
+/* ---------- tabs ---------- */
+function selectTab(which) {
+  ["dec", "eng", "cmp"].forEach(v => { $("#tab-" + v).setAttribute("aria-selected", v === which); $("#view-" + v).hidden = v !== which; });
+  $("#jumps").style.visibility = which === "dec" ? "visible" : "hidden";
+}
+["dec", "eng", "cmp"].forEach(v => $("#tab-" + v).addEventListener("click", () => selectTab(v)));
+if (location.hash === "#compare") selectTab("cmp");
+else if (location.hash === "#engine") selectTab("eng");
+else if (/^#b\d+$/.test(location.hash)) { const el = document.getElementById(location.hash.slice(1)); if (el) setTimeout(() => el.scrollIntoView(), 50); }
+</script>

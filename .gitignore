@@ -1,0 +1,9 @@
+.DS_Store
+.claude/
+__pycache__/
+market_dr_card_scan/downloaded manually/
+02_cvm_crm/reference_slides/
+01_debit_cards_model_and_benchmark/reference_images/cashback_app_screenshot_*
+*.xlsx
+~$*
+market_dr_card_scan/cashback_design/cashback-playbook*.html

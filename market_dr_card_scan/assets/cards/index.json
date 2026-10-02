@@ -1,0 +1,702 @@
+{
+ "Ameriabank|ArCa Pension": {
+  "file": "assets/cards/ameriabank-arca-pension.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/arca_pension.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|ArCa Classic": {
+  "file": "assets/cards/ameriabank-arca-classic.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/arca_classic.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|VISA Classic": {
+  "file": "assets/cards/ameriabank-visa-classic.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/visa_classic.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|Mastercard Standard": {
+  "file": "assets/cards/ameriabank-mastercard-standard.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/mastercard_standard.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|VISA Classic Digital": {
+  "file": "assets/cards/ameriabank-visa-classic-digital.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/visa_classic_digital.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|Mastercard Standard Digital": {
+  "file": "assets/cards/ameriabank-mastercard-standard-digital.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/mastercard_standard_digital.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|VISA Classic Student": {
+  "file": "assets/cards/ameriabank-visa-classic-student.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/visa_student.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|VISA Classic Student Digital": {
+  "file": "assets/cards/ameriabank-visa-classic-student-digital.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/visa_student_digital.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|VISA Classic Moons": {
+  "file": "assets/cards/ameriabank-visa-classic-moons.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/visa-moons.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|VISA Gold": {
+  "file": "assets/cards/ameriabank-visa-gold.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/visa_gold.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|Mastercard Gold": {
+  "file": "assets/cards/ameriabank-mastercard-gold.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/mastercard_gold.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|VISA Gold Digital": {
+  "file": "assets/cards/ameriabank-visa-gold-digital.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/visa_gold_digital.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|Mastercard Gold Digital": {
+  "file": "assets/cards/ameriabank-mastercard-gold-digital.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/mastercard_gold_digital.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|VISA Platinum": {
+  "file": "assets/cards/ameriabank-visa-platinum.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/visa_platinum.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|Mastercard World": {
+  "file": "assets/cards/ameriabank-mastercard-world.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/mastercard_world.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|VISA Platinum Digital": {
+  "file": "assets/cards/ameriabank-visa-platinum-digital.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/visa_platinum_digital.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|Mastercard World Digital": {
+  "file": "assets/cards/ameriabank-mastercard-world-digital.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/mastercard_world_digital.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ameriabank|VISA Signature": {
+  "file": "assets/cards/ameriabank-visa-signature.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/visa_signature.png",
+  "w": 320,
+  "h": 201,
+  "rotated": false
+ },
+ "Ameriabank|VISA Signature Digital": {
+  "file": "assets/cards/ameriabank-visa-signature-digital.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/visa_signature_digital.png",
+  "w": 320,
+  "h": 201,
+  "rotated": false
+ },
+ "Ameriabank|Visa Star": {
+  "file": "assets/cards/ameriabank-visa-star.webp",
+  "source": "https://ameriabank.am/Portals/0/Images/Cards/new/visa_star.png",
+  "w": 320,
+  "h": 200,
+  "rotated": false
+ },
+ "Ardshinbank|Mastercard Debit": {
+  "file": "assets/cards/ardshinbank-mastercard-debit.webp",
+  "source": "https://ardshinbank.am/api/files/images/Mastercard-Standart-e642d63f-d097-4cd0-99a1-6c51dea7eaec.png",
+  "w": 320,
+  "h": 214,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Classic": {
+  "file": "assets/cards/ardshinbank-visa-classic.webp",
+  "source": "https://ardshinbank.am/api/files/images/Visa Classic-752bb020-f1cf-49a8-85c0-7f81118cb992.png",
+  "w": 320,
+  "h": 214,
+  "rotated": false
+ },
+ "Ardshinbank|Arca": {
+  "file": "assets/cards/ardshinbank-arca.webp",
+  "source": "https://ardshinbank.am/api/files/images/Arca-card-17bd71ee-8172-49d3-ab3c-48545d075031.png",
+  "w": 320,
+  "h": 214,
+  "rotated": false
+ },
+ "Ardshinbank|Mastercard Debit (non-personalised / instant)": {
+  "file": "assets/cards/ardshinbank-mastercard-debit-non-personalised-instant.webp",
+  "source": "https://ardshinbank.am/api/files/images/Mastercard-Standart-434a98a3-520f-442b-a040-862a2689ea0b.png",
+  "w": 320,
+  "h": 214,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Classic (non-personalised / instant)": {
+  "file": "assets/cards/ardshinbank-visa-classic-non-personalised-instant.webp",
+  "source": "https://ardshinbank.am/api/files/images/Visa Classic-11b5a944-818b-4e1a-bf22-3f09a82113ab.png",
+  "w": 320,
+  "h": 214,
+  "rotated": false
+ },
+ "Ardshinbank|Arca (non-personalised / instant)": {
+  "file": "assets/cards/ardshinbank-arca-non-personalised-instant.webp",
+  "source": "https://ardshinbank.am/api/files/images/Arca-card-9e7ee55a-dda6-4731-a77e-2beea3c027c7.png",
+  "w": 320,
+  "h": 214,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Individual": {
+  "file": "assets/cards/ardshinbank-visa-individual.webp",
+  "source": "https://ardshinbank.am/api/files/images/Card-2.webp",
+  "w": 320,
+  "h": 174,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Gold Debit": {
+  "file": "assets/cards/ardshinbank-visa-gold-debit.webp",
+  "source": "https://ardshinbank.am/api/files/images/Visa Gold Debit-f46f8809-adb1-4141-9423-01c4e2ef5d34.png",
+  "w": 320,
+  "h": 199,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Platinum Debit": {
+  "file": "assets/cards/ardshinbank-visa-platinum-debit.webp",
+  "source": "https://ardshinbank.am/api/files/images/Visa-Platinum-debit-mcp 1.webp",
+  "w": 320,
+  "h": 231,
+  "rotated": false
+ },
+ "Ardshinbank|Mastercard World": {
+  "file": "assets/cards/ardshinbank-mastercard-world.webp",
+  "source": "https://ardshinbank.am/api/files/images/card-world.webp",
+  "w": 320,
+  "h": 369,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Signature Debit": {
+  "file": "assets/cards/ardshinbank-visa-signature-debit.webp",
+  "source": "https://ardshinbank.am/api/files/images/Visa Signature copy-79dc7dba-2b93-427e-988a-36d5b16f6afe.png",
+  "w": 320,
+  "h": 213,
+  "rotated": false
+ },
+ "Ardshinbank|Mastercard World Black Edition": {
+  "file": "assets/cards/ardshinbank-mastercard-world-black-edition.webp",
+  "source": "https://ardshinbank.am/api/files/images/Mastercard World Black Ed-c26090a6-9268-49f7-8493-cae017fdc8e2.png",
+  "w": 320,
+  "h": 214,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Infinite Debit": {
+  "file": "assets/cards/ardshinbank-visa-infinite-debit.webp",
+  "source": "https://ardshinbank.am/api/files/images/Visa Infinite1.png",
+  "w": 320,
+  "h": 214,
+  "rotated": false
+ },
+ "Ardshinbank|Mastercard World Elite": {
+  "file": "assets/cards/ardshinbank-mastercard-world-elite.webp",
+  "source": "https://ardshinbank.am/api/files/images/Mastercard World Elite co-439b7aef-e5db-4039-89ab-bcc259276c81.png",
+  "w": 320,
+  "h": 214,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Gold Debit Digital Card": {
+  "file": "assets/cards/ardshinbank-visa-gold-debit-digital-card.webp",
+  "source": "https://ardshinbank.am/api/files/images/Digital Cards copy (002).webp",
+  "w": 320,
+  "h": 207,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Classic for RA non-residents": {
+  "file": "assets/cards/ardshinbank-visa-classic-for-ra-non-residents.webp",
+  "source": "https://ardshinbank.am/api/files/images/Visa Classic-95ec95cd-4129-42ca-ad60-a7decaed3433.png",
+  "w": 320,
+  "h": 214,
+  "rotated": false
+ },
+ "Ardshinbank|Mastercard Debit for RA non-residents": {
+  "file": "assets/cards/ardshinbank-mastercard-debit-for-ra-non-residents.webp",
+  "source": "https://ardshinbank.am/api/files/images/Mastercard-Standart-76d9a79d-1ca0-48fd-a028-e401f64c0ec5.png",
+  "w": 320,
+  "h": 214,
+  "rotated": false
+ },
+ "Ardshinbank|ArCa card for RA non-residents": {
+  "file": "assets/cards/ardshinbank-arca-card-for-ra-non-residents.webp",
+  "source": "https://ardshinbank.am/api/files/images/Arca-card-07c0b1a0-bb0e-4a4a-b1c2-a2b840c54e4b.png",
+  "w": 320,
+  "h": 214,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Gold Debit for RA non-residents": {
+  "file": "assets/cards/ardshinbank-visa-gold-debit-for-ra-non-residents.webp",
+  "source": "https://ardshinbank.am/api/files/images/Visa Gold Debit-f46f8809-adb1-4141-9423-01c4e2ef5d34.png",
+  "w": 320,
+  "h": 199,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Gold Debit Digital Card for RA non-residents": {
+  "file": "assets/cards/ardshinbank-visa-gold-debit-digital-card-for-ra-non-residents.webp",
+  "source": "https://ardshinbank.am/api/files/images/Digital Cards copy (002)-1.webp",
+  "w": 320,
+  "h": 207,
+  "rotated": false
+ },
+ "Ardshinbank|Mastercard World Black Edition for RA non-residents": {
+  "file": "assets/cards/ardshinbank-mastercard-world-black-edition-for-ra-non-residents.webp",
+  "source": "https://ardshinbank.am/api/files/images/Mastercard World Black Ed-8f76524b-67b8-4a89-8bc1-fbac4f8c6f27.png",
+  "w": 320,
+  "h": 214,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Infinite Debit for RA non-residents": {
+  "file": "assets/cards/ardshinbank-visa-infinite-debit-for-ra-non-residents.webp",
+  "source": "https://ardshinbank.am/api/files/images/Visa Infinite -f8a7df0c-2745-4eb5-a967-88e1df6a9780.png",
+  "w": 320,
+  "h": 207,
+  "rotated": false
+ },
+ "Ardshinbank|Mastercard Standard (issued by the former Ardshininvestbank)": {
+  "file": "assets/cards/ardshinbank-mastercard-standard-issued-by-the-former-ardshininvestbank.webp",
+  "source": "https://ardshinbank.am/api/files/images/Mastercard-Standard.png",
+  "w": 320,
+  "h": 230,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Classic (issued by the former Ardshininvestbank)": {
+  "file": "assets/cards/ardshinbank-visa-classic-issued-by-the-former-ardshininvestbank.webp",
+  "source": "https://ardshinbank.am/api/files/images/Visa-Classic-6.png",
+  "w": 320,
+  "h": 230,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Gold Debit (issued by the former Ardshininvestbank)": {
+  "file": "assets/cards/ardshinbank-visa-gold-debit-issued-by-the-former-ardshininvestbank.webp",
+  "source": "https://ardshinbank.am/api/files/images/Visa-Gold-1.png",
+  "w": 320,
+  "h": 230,
+  "rotated": false
+ },
+ "Ardshinbank|Visa Platinum Debit (issued by the former Ardshininvestbank)": {
+  "file": "assets/cards/ardshinbank-visa-platinum-debit-issued-by-the-former-ardshininvestbank.webp",
+  "source": "https://ardshinbank.am/api/files/images/Visa-Platinum.png",
+  "w": 320,
+  "h": 230,
+  "rotated": false
+ },
+ "Evocabank|Visa Digital": {
+  "file": "assets/cards/evocabank-visa-digital.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/17485025148319/415x261.png",
+  "w": 320,
+  "h": 201,
+  "rotated": false
+ },
+ "Evocabank|Mastercard World Digital": {
+  "file": "assets/cards/evocabank-mastercard-world-digital.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/17639683196125/415x261.png",
+  "w": 320,
+  "h": 201,
+  "rotated": false
+ },
+ "Evocabank|Visa Vision": {
+  "file": "assets/cards/evocabank-visa-vision.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/1714986482757/415x261.png",
+  "w": 320,
+  "h": 190,
+  "rotated": false
+ },
+ "Evocabank|Visa Classic": {
+  "file": "assets/cards/evocabank-visa-classic.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/1714986642953/415x261.png",
+  "w": 320,
+  "h": 202,
+  "rotated": false
+ },
+ "Evocabank|Mastercard Standard": {
+  "file": "assets/cards/evocabank-mastercard-standard.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/17149866652788/415x261.png",
+  "w": 320,
+  "h": 201,
+  "rotated": false
+ },
+ "Evocabank|Mastercard Gold": {
+  "file": "assets/cards/evocabank-mastercard-gold.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/17149865321136/415x261.png",
+  "w": 320,
+  "h": 202,
+  "rotated": false
+ },
+ "Evocabank|Visa Gold": {
+  "file": "assets/cards/evocabank-visa-gold.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/17149865646885/415x261.png",
+  "w": 320,
+  "h": 203,
+  "rotated": false
+ },
+ "Evocabank|Evoca Visa Platinum": {
+  "file": "assets/cards/evocabank-evoca-visa-platinum.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/17798007931247/415x261.png",
+  "w": 320,
+  "h": 268,
+  "rotated": false
+ },
+ "Evocabank|Visa Infinite": {
+  "file": "assets/cards/evocabank-visa-infinite.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/1772717001933/415x261.png",
+  "w": 320,
+  "h": 270,
+  "rotated": false
+ },
+ "Evocabank|Wilco Visa Infinite": {
+  "file": "assets/cards/evocabank-wilco-visa-infinite.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/17815131185095/415x261.png",
+  "w": 320,
+  "h": 270,
+  "rotated": false
+ },
+ "Evocabank|UnionPay Gold": {
+  "file": "assets/cards/evocabank-unionpay-gold.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/17262129422977/415x261.png",
+  "w": 320,
+  "h": 201,
+  "rotated": false
+ },
+ "Evocabank|Arca Classic": {
+  "file": "assets/cards/evocabank-arca-classic.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/17404717644263/415x261.png",
+  "w": 320,
+  "h": 201,
+  "rotated": false
+ },
+ "Evocabank|Arca UnionPay Co-badge": {
+  "file": "assets/cards/evocabank-arca-unionpay-co-badge.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/17881574661708/415x261.png",
+  "w": 320,
+  "h": 201,
+  "rotated": false
+ },
+ "Evocabank|Evoca Travel Card": {
+  "file": "assets/cards/evocabank-evoca-travel-card.webp",
+  "source": "https://www.evoca.am/images-cache/cards/1/17479817930565/415x261.jpg",
+  "w": 320,
+  "h": 201,
+  "rotated": false
+ },
+ "FastBank|Arca Classic": {
+  "file": "assets/cards/fastbank-arca-classic.webp",
+  "source": "https://www.fastbank.am/api/assets/fastbank-website/e8882f0a-d012-428e-a52d-1c4ef489f0ad",
+  "w": 320,
+  "h": 207,
+  "rotated": false
+ },
+ "FastBank|VISA Classic": {
+  "file": "assets/cards/fastbank-visa-classic.webp",
+  "source": "https://www.fastbank.am/api/assets/fastbank-website/792b7279-ba95-4d2c-87b1-20d4ed5d62a8",
+  "w": 320,
+  "h": 207,
+  "rotated": false
+ },
+ "FastBank|Visa Digital": {
+  "file": "assets/cards/fastbank-visa-digital.webp",
+  "source": "https://www.fastbank.am/api/assets/fastbank-website/675c2e2b-e5e7-4d75-a7bf-f249a31d2ba7",
+  "w": 320,
+  "h": 207,
+  "rotated": false
+ },
+ "FastBank|VISA Gold": {
+  "file": "assets/cards/fastbank-visa-gold.webp",
+  "source": "https://www.fastbank.am/api/assets/fastbank-website/285fd263-dfa9-487d-bba2-7d0d02014d4b",
+  "w": 320,
+  "h": 207,
+  "rotated": false
+ },
+ "FastBank|Mastercard World": {
+  "file": "assets/cards/fastbank-mastercard-world.webp",
+  "source": "https://www.fastbank.am/api/assets/fastbank-website/24b87327-ee03-4a9f-84d5-4120cbe4f9fe",
+  "w": 320,
+  "h": 207,
+  "rotated": false
+ },
+ "FastBank|VISA INFINITE": {
+  "file": "assets/cards/fastbank-visa-infinite.webp",
+  "source": "https://www.fastbank.am/api/assets/fastbank-website/437801d0-4cf6-4c49-be05-b4573264ecc5",
+  "w": 320,
+  "h": 207,
+  "rotated": false
+ },
+ "FastBank|Mastercard World Elite": {
+  "file": "assets/cards/fastbank-mastercard-world-elite.webp",
+  "source": "https://www.fastbank.am/api/assets/fastbank-website/056532b0-9769-426f-8522-727d984833ba",
+  "w": 320,
+  "h": 207,
+  "rotated": false
+ },
+ "FastBank|Visa Infinite Metal": {
+  "file": "assets/cards/fastbank-visa-infinite-metal.webp",
+  "source": "https://www.fastbank.am/api/assets/fastbank-website/279d6769-6037-48c6-9c2e-3a4524692555",
+  "w": 320,
+  "h": 204,
+  "rotated": false
+ },
+ "IDBank|Arca Classic": {
+  "file": "assets/cards/idbank-arca-classic.webp",
+  "source": "https://idbank.am/upload/resize_cache/webp/iblock/2df/k0y50ebcfz1bbkg4hyggx0j6pyxoj2a2/arcacard.webp",
+  "w": 320,
+  "h": 201,
+  "rotated": false
+ },
+ "IDBank|Visa Gold debit": {
+  "file": "assets/cards/idbank-visa-gold-debit.webp",
+  "source": "https://idbank.am/upload/resize_cache/webp/iblock/58f/aicz8klwv9gxympers55gs2q95omir4x/visagold.webp",
+  "w": 320,
+  "h": 204,
+  "rotated": false
+ },
+ "IDBank|Visa Signature debit": {
+  "file": "assets/cards/idbank-visa-signature-debit.webp",
+  "source": "https://idbank.am/upload/resize_cache/webp/iblock/213/46yrvgg2ro7rek45xziirpyd5hq3318y/visasignature.webp",
+  "w": 320,
+  "h": 202,
+  "rotated": false
+ },
+ "IDBank|Visa Infinite debit": {
+  "file": "assets/cards/idbank-visa-infinite-debit.webp",
+  "source": "https://idbank.am/upload/resize_cache/webp/iblock/a95/q0u2ao3366kkm48vo5l2kmxq7s85ozmj/visainfinite.webp",
+  "w": 320,
+  "h": 202,
+  "rotated": false
+ },
+ "IDBank|Visa Infinite Special Edition": {
+  "file": "assets/cards/idbank-visa-infinite-special-edition.webp",
+  "source": "https://idbank.am/upload/resize_cache/webp/iblock/6c2/721nkc8fmpzudp606hob4bdri9mkzjhy/visainfinitespecial.webp",
+  "w": 320,
+  "h": 202,
+  "rotated": false
+ },
+ "IDBank|Mastercard World": {
+  "file": "assets/cards/idbank-mastercard-world.webp",
+  "source": "https://idbank.am/upload/resize_cache/webp/iblock/719/i1bl2dn4nkz3073jknivvjjruniibhy1/visaworld.webp",
+  "w": 320,
+  "h": 202,
+  "rotated": false
+ },
+ "IDBank|Travel Card (Visa Platinum)": {
+  "file": "assets/cards/idbank-travel-card-visa-platinum.webp",
+  "source": "https://idbank.am/upload/resize_cache/webp/iblock/751/n4xlbraeeyxfl9tvn91w4aftx3t4ds1q/visatravel.webp",
+  "w": 320,
+  "h": 202,
+  "rotated": false
+ },
+ "IDBank|Mastercard Gold": {
+  "file": "assets/cards/idbank-mastercard-gold.webp",
+  "source": "https://idbank.am/upload/resize_cache/webp/iblock/388/d13l1bltmxvgsjzpnl5ick29vcu40cqv/mastergold.webp",
+  "w": 320,
+  "h": 203,
+  "rotated": false
+ },
+ "IDBank|Mastercard Standard": {
+  "file": "assets/cards/idbank-mastercard-standard.webp",
+  "source": "https://idbank.am/upload/resize_cache/webp/iblock/686/nxrp1b30mdspivuz56u7861h3zsgy81z/masterstandart.webp",
+  "w": 320,
+  "h": 203,
+  "rotated": false
+ },
+ "IDBank|Mastercard Standard Instant": {
+  "file": "assets/cards/idbank-mastercard-standard-instant.webp",
+  "source": "https://idbank.am/upload/resize_cache/webp/iblock/686/nxrp1b30mdspivuz56u7861h3zsgy81z/masterstandart.webp",
+  "w": 320,
+  "h": 203,
+  "rotated": false
+ },
+ "IDBank|Visa Digital": {
+  "file": "assets/cards/idbank-visa-digital.webp",
+  "source": "https://idbank.am/upload/resize_cache/webp/iblock/a10/hv2kadj4ig6f3z9eoopjerduiwhppbn1/visadigital.webp",
+  "w": 320,
+  "h": 202,
+  "rotated": false
+ },
+ "IDBank|Idram Rocket Visa": {
+  "file": "assets/cards/idbank-idram-rocket-visa.webp",
+  "source": "https://idbank.am/upload/resize_cache/webp/iblock/aae/lg0yihqykhra01f8ubr02i0jyeo9cddu/visarocket.webp",
+  "w": 320,
+  "h": 203,
+  "rotated": false
+ },
+ "IDBank|Caring card": {
+  "file": "assets/cards/idbank-caring-card.webp",
+  "source": "https://idbank.am/upload/resize_cache/webp/iblock/c2e/0xotsy56b5gpu27xmwsaqblmeiv1von3/IDB_ARCA_IDS_WEB_BANNERS_468x292.webp",
+  "w": 320,
+  "h": 168,
+  "rotated": false
+ },
+ "Acba|ArCa Classic": {
+  "file": "assets/cards/acba-arca-classic.webp",
+  "source": "https://acba.am/media/uploaded/5354511234243800.webp",
+  "w": 320,
+  "h": 310,
+  "rotated": false
+ },
+ "Acba|ArCa Pension": {
+  "file": "assets/cards/acba-arca-pension.webp",
+  "source": "https://acba.am/media/uploaded/6934552519665408.webp",
+  "w": 320,
+  "h": 310,
+  "rotated": false
+ },
+ "Acba|ArCa Transfer": {
+  "file": "assets/cards/acba-arca-transfer.webp",
+  "source": "https://acba.am/media/uploaded/7765759494119994.webp",
+  "w": 320,
+  "h": 310,
+  "rotated": false
+ },
+ "Acba|Visa Benefactor": {
+  "file": "assets/cards/acba-visa-benefactor.webp",
+  "source": "https://acba.am/media/uploaded/8507405031630415.webp",
+  "w": 320,
+  "h": 310,
+  "rotated": false
+ },
+ "Acba|Visa Classic": {
+  "file": "assets/cards/acba-visa-classic.webp",
+  "source": "https://acba.am/media/uploaded/5430624161230436.webp",
+  "w": 320,
+  "h": 310,
+  "rotated": false
+ },
+ "Acba|Mastercard Standard": {
+  "file": "assets/cards/acba-mastercard-standard.webp",
+  "source": "https://acba.am/media/uploaded/5482585904405930.webp",
+  "w": 320,
+  "h": 310,
+  "rotated": false
+ },
+ "Acba|Visa Student": {
+  "file": "assets/cards/acba-visa-student.webp",
+  "source": "https://acba.am/media/uploaded/8922208427401385.webp",
+  "w": 320,
+  "h": 310,
+  "rotated": false
+ },
+ "Acba|Visa Gold": {
+  "file": "assets/cards/acba-visa-gold.webp",
+  "source": "https://acba.am/media/uploaded/3959978081123985.webp",
+  "w": 320,
+  "h": 310,
+  "rotated": false
+ },
+ "Acba|Mastercard Gold": {
+  "file": "assets/cards/acba-mastercard-gold.webp",
+  "source": "https://acba.am/media/uploaded/795443346927318.webp",
+  "w": 320,
+  "h": 202,
+  "rotated": true
+ },
+ "Acba|UnionPay Gold": {
+  "file": "assets/cards/acba-unionpay-gold.webp",
+  "source": "https://acba.am/media/uploaded/3231318950281833.webp",
+  "w": 320,
+  "h": 208,
+  "rotated": false
+ },
+ "Acba|Mastercard World": {
+  "file": "assets/cards/acba-mastercard-world.webp",
+  "source": "https://acba.am/media/uploaded/8077013940250508.webp",
+  "w": 320,
+  "h": 310,
+  "rotated": false
+ },
+ "Acba|Visa Signature": {
+  "file": "assets/cards/acba-visa-signature.webp",
+  "source": "https://acba.am/media/uploaded/2733971906782471.webp",
+  "w": 320,
+  "h": 310,
+  "rotated": false
+ },
+ "Acba|Visa Signature Limited Edition": {
+  "file": "assets/cards/acba-visa-signature-limited-edition.webp",
+  "source": "https://acba.am/media/uploaded/5947328982889264.webp",
+  "w": 320,
+  "h": 310,
+  "rotated": false
+ },
+ "Acba|Mastercard World Elite": {
+  "file": "assets/cards/acba-mastercard-world-elite.webp",
+  "source": "https://acba.am/media/uploaded/MastercardWorldelitvector-ezgifcom-png-to-webp-converter.webp",
+  "w": 320,
+  "h": 202,
+  "rotated": true
+ },
+ "Acba|American Express Cashback": {
+  "file": "assets/cards/acba-american-express-cashback.webp",
+  "source": "https://acba.am/media/uploaded/5016651847308955.webp",
+  "w": 320,
+  "h": 208,
+  "rotated": false
+ },
+ "Acba|American Express Gold Debit": {
+  "file": "assets/cards/acba-american-express-gold-debit.webp",
+  "source": "https://acba.am/media/uploaded/1062243665824642.webp",
+  "w": 320,
+  "h": 208,
+  "rotated": false
+ },
+ "Acba|Visa Digital": {
+  "file": "assets/cards/acba-visa-digital.webp",
+  "source": "https://acba.am/media/uploaded/3708957917541732.webp",
+  "w": 320,
+  "h": 191,
+  "rotated": false
+ },
+ "Acba|Mastercard Digital First": {
+  "file": "assets/cards/acba-mastercard-digital-first.webp",
+  "source": "https://acba.am/media/uploaded/8690853749324104.webp",
+  "w": 320,
+  "h": 191,
+  "rotated": false
+ },
+ "Acba|Arca Acba Federation payment card": {
+  "file": "assets/cards/acba-arca-acba-federation-payment-card.webp",
+  "source": "https://acba.am/media/uploaded/1839030351476621.webp",
+  "w": 320,
+  "h": 310,
+  "rotated": false
+ }
+}

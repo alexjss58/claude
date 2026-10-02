@@ -1,0 +1,184 @@
+{
+ "source": "https://rate.am/en/armenian-dram-exchange-rates/banks",
+ "fetched": "2026-09-21",
+ "note": "Per-bank USD/EUR buy & sell rates as published on rate.am. CLEARING = non-cash rate; CARD = separate card rate where the bank publishes one. Conversebank CARD rows on rate.am are malformed (USD 80.54/87) and are ignored.",
+ "banks": {
+  "FastBank": {
+   "updated": "2026-09-21T10:45:38.000Z",
+   "USD": {
+    "CLEARING": {
+     "buy": 362.5,
+     "sell": 365.5
+    },
+    "CASH": {
+     "buy": 362.5,
+     "sell": 364.5
+    }
+   },
+   "EUR": {
+    "CASH": {
+     "buy": 414.0,
+     "sell": 419.5
+    },
+    "CLEARING": {
+     "buy": 413.5,
+     "sell": 421.5
+    }
+   }
+  },
+  "IDBank": {
+   "updated": "2026-09-21T10:45:18.000Z",
+   "USD": {
+    "CLEARING": {
+     "buy": 361.5,
+     "sell": 365.5
+    },
+    "CARD": {
+     "buy": 359.5,
+     "sell": 367.5
+    },
+    "CASH": {
+     "buy": 361.5,
+     "sell": 365.5
+    }
+   },
+   "EUR": {
+    "CASH": {
+     "buy": 413.0,
+     "sell": 422.0
+    },
+    "CARD": {
+     "buy": 411.0,
+     "sell": 424.0
+    },
+    "CLEARING": {
+     "buy": 413.0,
+     "sell": 422.0
+    }
+   }
+  },
+  "Evocabank": {
+   "updated": "2026-09-21T10:45:35.000Z",
+   "USD": {
+    "CASH": {
+     "buy": 361.0,
+     "sell": 365.0
+    },
+    "CLEARING": {
+     "buy": 361.0,
+     "sell": 365.5
+    }
+   },
+   "EUR": {
+    "CASH": {
+     "buy": 412.0,
+     "sell": 423.0
+    },
+    "CLEARING": {
+     "buy": 412.0,
+     "sell": 423.0
+    }
+   }
+  },
+  "Ardshinbank": {
+   "updated": "2026-09-21T10:45:13.000Z",
+   "USD": {
+    "CASH": {
+     "buy": 361.0,
+     "sell": 365.5
+    },
+    "CLEARING": {
+     "buy": 361.0,
+     "sell": 366.0
+    }
+   },
+   "EUR": {
+    "CLEARING": {
+     "buy": 409.0,
+     "sell": 424.0
+    },
+    "CASH": {
+     "buy": 409.0,
+     "sell": 424.0
+    }
+   }
+  },
+  "Conversebank": {
+   "updated": "2026-09-21T10:45:06.000Z",
+   "USD": {
+    "CLEARING": {
+     "buy": 362.0,
+     "sell": 366.0
+    },
+    "CASH": {
+     "buy": 361.5,
+     "sell": 365.5
+    }
+   },
+   "EUR": {
+    "CASH": {
+     "buy": 412.0,
+     "sell": 423.0
+    },
+    "CLEARING": {
+     "buy": 412.0,
+     "sell": 423.0
+    }
+   }
+  },
+  "Ameriabank": {
+   "updated": "2026-09-21T10:45:13.000Z",
+   "USD": {
+    "CASH": {
+     "buy": 361.0,
+     "sell": 366.0
+    },
+    "CLEARING": {
+     "buy": 361.0,
+     "sell": 366.0
+    }
+   },
+   "EUR": {
+    "CASH": {
+     "buy": 410.0,
+     "sell": 424.0
+    },
+    "CLEARING": {
+     "buy": 410.0,
+     "sell": 424.0
+    }
+   }
+  },
+  "Acba": {
+   "updated": "2026-09-21T10:45:10.000Z",
+   "USD": {
+    "CASH": {
+     "buy": 361.0,
+     "sell": 365.0
+    },
+    "CLEARING": {
+     "buy": 361.0,
+     "sell": 366.0
+    },
+    "CARD": {
+     "buy": 361.0,
+     "sell": 366.0
+    }
+   },
+   "EUR": {
+    "CASH": {
+     "buy": 410.0,
+     "sell": 423.0
+    },
+    "CARD": {
+     "buy": 410.0,
+     "sell": 423.0
+    },
+    "CLEARING": {
+     "buy": 410.0,
+     "sell": 423.0
+    }
+   }
+  }
+ }
+}

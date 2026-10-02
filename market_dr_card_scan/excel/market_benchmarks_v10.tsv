@@ -1,0 +1,18 @@
+Metric	Unit	Free low	Free mid	Free high	Plus low	Plus mid	Plus high	Premium low	Premium mid	Premium high	Elite low	Elite mid	Elite high	Basis
+Annual service fee	AMD/yr	0	0	2000	1000	4500	8400	0	15000	36000	40000	96000	150000	Published fee; cards n = 13 / 30 / 29 / 16
+Own-bank ATM withdrawal (effective)	%	0.00%	0.30%	2.00%	0.00%	0.00%	1.00%	0.00%	0.25%	2.00%	0.00%	0.25%	4.00%	After free allowances; 100k / 200k / 400k / 800k AMD a month in 2 withdrawals
+Other-bank ATM withdrawal (effective)	%	1.00%	1.00%	3.00%	0.00%	1.00%	1.50%	0.00%	1.00%	2.50%	0.00%	1.00%	1.50%	Same volumes as above
+Card-to-card, same bank	%	0.00%	0.30%	1.50%	0.00%	0.30%	0.50%	0.00%	0.30%	0.50%	0.00%	0.00%	4.00%	Published tariff
+Card-to-card, other banks	%	0.50%	0.50%	1.50%	0.50%	0.50%	0.75%	0.50%	0.50%	0.75%	0.50%	0.75%	4.00%	Published tariff
+Interest on AMD card balance	%	0.00%	0.00%	4.00%	0.00%	0.00%	4.00%	0.00%	0.00%	4.00%	0.00%	0.00%	3.00%	Effective at 100k / 300k / 2m / 10m AMD balance (min-balance thresholds applied)
+Interest on non-AMD balance	%	n/p	n/p	n/p	n/p	n/p	n/p	n/p	n/p	n/p	n/p	n/p	n/p	Not collected in the market scan
+Card type (count of cards)	#	Virtual 7 · Plastic 6	—	—	Plastic 30	—	—	Plastic 22 · Virtual 7	—	—	Plastic 15 · Virtual 1	—	—	Market cards in tier
+FX one-way cost, USD	%	0.55%	0.69%	1.10%	0.55%	0.69%	1.10%	0.55%	0.69%	1.10%	0.55%	0.69%	1.10%	Bank-level, rate.am 21.09.2026, half buy/sell spread (6 banks); same for all tiers
+FX one-way cost, EUR	%	1.32%	1.56%	1.80%	1.32%	1.56%	1.80%	1.32%	1.56%	1.80%	1.32%	1.56%	1.80%	As above
+FX one-way cost, RUB	%	1.74%	2.62%	3.82%	1.74%	2.62%	3.82%	1.74%	2.62%	3.82%	1.74%	2.62%	3.82%	As above
+Bank-funded cashback, all cards (effective)	%	0.00%	0.00%	1.17%	0.00%	0.00%	0.27%	0.00%	0.00%	1.12%	0.00%	0.00%	1.00%	Cash + valued points on tier basket (80k / 150k / 300k / 650k AMD a month); excl. state ArCa 2% and promos
+Bank-funded cashback, cards that pay it (effective)	%	0.27%	0.72%	1.17%	0.27%	0.27%	0.27%	0.11%	0.62%	1.12%	0.08%	1.00%	1.00%	n = 2 / 1 / 2 / 4 cards
+Cashback earned on tier basket, paying cards	AMD/mo	212	574	936	401	401	401	330	1845	3360	488	6500	6500	Same cards as above
+Cashback cap per month (bank-funded)	AMD/mo	5000	—	No cap	5000	5000	5000	20000	—	No cap published	No cap published	No cap published	No cap published	Free: Evoca Visa Digital 5,000; Acba Amex no cap. Plus: Evoca Visa Vision 5,000. Premium: Evoca Travel 20,000; IDBank Travel no cash cap (idcoin 8,000). Elite: IDBank Signature / Infinite / Infinite SE, Evoca Infinite
+State ArCa 2% cap (ArCa cards only)	AMD/mo	60000	60000	60000	60000	60000	60000	—	—	—	—	—	—	State-funded; also 6,000 AMD per payment; 1 Free and 10 Plus cards
+Card lifts deposit rate (count)	#	0 of 13	—	—	0 of 30	—	—	5 of 29	—	—	1 of 16	—	—	Premium: Ameriabank Visa Gold, MC Gold, Visa Platinum, MC World; IDBank Visa Gold. Elite: Ameriabank Visa Signature

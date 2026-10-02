@@ -1,0 +1,769 @@
+<meta charset="utf-8">
+<title>Armenian Card Tier Benchmark</title>
+<meta name="description" content="Debit cards of seven Armenian banks sorted into four tiers, with Fast Bank compared to the market on fees, rates, FX, transfers, ATM costs, cashback and perks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f2f3ef; --surface:#fcfcfa; --surface-2:#f6f7f3; --sunk:#eceee8;
+  --ink:#14161a; --ink-2:#474b51; --muted:#7d8187; --line:#e0e2db; --line-2:#cdd0c8;
+  --fb:#1f4fd6; --fb-soft:#e4ebfd; --fb-ink:#1a43b8;
+  --t-free:#5f7388; --t-plus:#22252a; --t-premium:#9a6f14; --t-elite:#54467f;
+  --good:#0ca30c; --good-ink:#0b6b0b; --good-soft:#e2f3e0;
+  --mild:#0b6b0b; --mild-soft:#eef6ec;
+  --neutral-ink:#55595f; --neutral-soft:#ecede9;
+  --serious:#ec835a; --serious-ink:#9b3f16; --serious-soft:#fbe9e0;
+  --crit:#d03b3b; --crit-ink:#a42525; --crit-soft:#f9e1e0;
+  --gap-ink:#7a5a00; --gap-soft:#f7efd6;
+  --shadow: 0 1px 2px rgba(20,22,26,.06), 0 4px 18px rgba(20,22,26,.06);
+  --font: "Schibsted Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#101214; --surface:#17191c; --surface-2:#1c1f23; --sunk:#131517;
+    --ink:#eef0ec; --ink-2:#b8bcc1; --muted:#868b91; --line:#292c31; --line-2:#383c42;
+    --fb:#6e90f2; --fb-soft:#1c2748; --fb-ink:#9db3f7;
+    --t-free:#94a8bd; --t-plus:#d9dce0; --t-premium:#d6a94a; --t-elite:#a797d8;
+    --good-ink:#4bd24b; --good-soft:#15301a; --mild:#4bd24b; --mild-soft:#16241a;
+    --neutral-ink:#b3b7bc; --neutral-soft:#24272b;
+    --serious-ink:#f09a74; --serious-soft:#3a2219; --crit-ink:#ef7a7a; --crit-soft:#3a1c1c;
+    --gap-ink:#e2bf5a; --gap-soft:#33290f;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 22px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#101214; --surface:#17191c; --surface-2:#1c1f23; --sunk:#131517;
+  --ink:#eef0ec; --ink-2:#b8bcc1; --muted:#868b91; --line:#292c31; --line-2:#383c42;
+  --fb:#6e90f2; --fb-soft:#1c2748; --fb-ink:#9db3f7;
+  --t-free:#94a8bd; --t-plus:#d9dce0; --t-premium:#d6a94a; --t-elite:#a797d8;
+  --good-ink:#4bd24b; --good-soft:#15301a; --mild:#4bd24b; --mild-soft:#16241a;
+  --neutral-ink:#b3b7bc; --neutral-soft:#24272b;
+  --serious-ink:#f09a74; --serious-soft:#3a2219; --crit-ink:#ef7a7a; --crit-soft:#3a1c1c;
+  --gap-ink:#e2bf5a; --gap-soft:#33290f;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 22px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:14px;line-height:1.45;margin:0}
+.wrap{max-width:1560px;margin:0 auto;padding-inline:clamp(16px,3vw,36px);padding-block:22px 64px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--fb);outline-offset:2px;border-radius:4px}
+.num{font-variant-numeric:tabular-nums}
+
+/* header */
+.top{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:flex-end;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+h1{font-size:clamp(24px,3vw,34px);line-height:1.08;margin:.2em 0 0;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--ink-2);font-size:13px}
+.meta b{color:var(--ink);font-weight:600}
+.tierkey{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0 6px}
+.tk{border-left:3px solid var(--tc);padding:2px 0 2px 10px}
+.tk b{display:block;font-size:13px;color:var(--tc)}
+.tk span{font-size:12px;color:var(--ink-2)}
+@media (max-width:760px){.tierkey{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* tabs */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);display:flex;gap:4px;flex-wrap:wrap;padding:12px 0 10px;border-bottom:1px solid var(--line)}
+.tab{border:1px solid transparent;background:none;padding:7px 12px;border-radius:999px;cursor:pointer;font-weight:600;font-size:13.5px;color:var(--ink-2)}
+.tab:hover{background:var(--sunk);color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.tab.fbtab[aria-selected="true"]{background:var(--fb);color:#fff}
+.tab.pending{opacity:.55;cursor:not-allowed;font-weight:500}
+.tabsep{width:1px;background:var(--line-2);margin:4px 6px}
+
+/* assumptions */
+details.assump{margin:14px 0 4px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+details.assump>summary{cursor:pointer;padding:10px 14px;font-weight:600;font-size:13px;display:flex;gap:10px;align-items:center;list-style:none}
+details.assump>summary::-webkit-details-marker{display:none}
+details.assump>summary .hint{font-weight:400;color:var(--muted)}
+details.assump>summary::before{content:"";width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);transition:transform .15s}
+details.assump[open]>summary::before{transform:rotate(45deg)}
+.atable-wrap{overflow-x:auto;padding:0 14px 14px}
+.atable{border-collapse:collapse;min-width:720px;width:100%}
+.atable th,.atable td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;font-size:12.5px}
+.atable th{font-weight:600;color:var(--ink-2)}
+.atable td input{width:110px;padding:5px 7px;border:1px solid var(--line-2);border-radius:6px;background:var(--surface-2);color:var(--ink);font:inherit;font-variant-numeric:tabular-nums}
+.atable .src{color:var(--muted);font-size:11.5px}
+.abtn{margin:0 14px 14px;border:1px solid var(--line-2);background:var(--surface-2);padding:6px 12px;border-radius:7px;cursor:pointer;font-size:12.5px}
+
+/* sections */
+.section-head{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:flex-end;justify-content:space-between;margin:26px 0 12px}
+h2{font-size:22px;margin:0;font-weight:750;letter-spacing:-.01em;text-wrap:balance}
+.lede{color:var(--ink-2);max-width:78ch;margin:.35em 0 0}
+.seg{display:inline-flex;border:1px solid var(--line-2);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:none;padding:6px 11px;font-size:12.5px;cursor:pointer;color:var(--ink-2)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.seglabel{font-size:12px;color:var(--muted);margin-right:8px}
+
+/* the tier grid */
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface);box-shadow:var(--shadow)}
+.grid{display:grid;grid-template-columns:minmax(150px,176px) repeat(4,minmax(236px,1fr));min-width:1140px}
+.grid>div{padding:12px 14px;border-bottom:1px solid var(--line);border-left:1px solid var(--line);min-width:0}
+.grid>.rl{border-left:0;background:var(--surface-2);position:sticky;left:0;z-index:2}
+.grid>.hd{padding:12px 14px 10px;background:var(--surface);border-bottom:2px solid var(--tc)}
+.grid>.hd .tn{font-weight:800;font-size:15px;color:var(--tc);letter-spacing:.01em}
+.grid>.hd .ts{font-size:11.5px;color:var(--muted)}
+.grid>.corner{background:var(--surface-2);position:sticky;left:0;z-index:3;border-bottom:2px solid var(--line-2)}
+.rl .rt{font-weight:700;font-size:13px}
+.rl .rs{font-size:11.5px;color:var(--muted);margin-top:3px}
+.rl .rbank{margin-top:8px;font-size:12px;color:var(--ink-2)}
+.rl .rbank b{color:var(--ink)}
+.grid .last{border-bottom:0}
+.empty{color:var(--muted);font-size:12.5px}
+.big{font-size:19px;font-weight:750;letter-spacing:-.01em;line-height:1.15}
+.big small{font-size:12px;font-weight:500;color:var(--muted);letter-spacing:0}
+.lines{margin:7px 0 0;padding:0;list-style:none;display:grid;gap:5px}
+.lines li{font-size:12.5px;color:var(--ink-2);line-height:1.38}
+.lines li b{color:var(--ink);font-weight:600}
+.lines li .who{color:var(--muted)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;font-size:12.5px;margin-top:6px}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0;color:var(--ink)}
+.tag{display:inline-block;font-size:10.5px;font-weight:650;letter-spacing:.03em;text-transform:uppercase;padding:1px 6px;border-radius:4px;background:var(--neutral-soft);color:var(--neutral-ink);vertical-align:1px;white-space:nowrap}
+.tag.pkg{background:var(--fb-soft);color:var(--fb-ink)}
+.capl{display:inline-block;margin-top:2px;font-size:12px;color:var(--ink-2,inherit)}
+.tag.promo{background:var(--gap-soft);color:var(--gap-ink)}
+.tag.arca{background:var(--mild-soft);color:var(--good-ink)}
+.tag.warn{background:var(--serious-soft);color:var(--serious-ink)}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.chip{font-size:11.5px;padding:2px 8px;border-radius:999px;border:1px solid var(--line-2);color:var(--ink-2);background:var(--surface-2);white-space:nowrap}
+.chip b{color:var(--ink)}
+.gapnote{margin-top:8px;font-size:12px;color:var(--gap-ink);background:var(--gap-soft);padding:6px 8px;border-radius:6px}
+.sub{font-size:11.5px;color:var(--muted);margin-top:2px}
+hr.thin{border:0;border-top:1px dashed var(--line-2);margin:9px 0}
+
+/* mini cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:10px 8px;margin-top:8px}
+.ccw{display:flex;flex-direction:column;gap:4px;min-width:0}
+.cc{position:relative;aspect-ratio:1.586;width:100%;max-width:100%;border-radius:7px;border:1px solid rgba(0,0,0,.18);cursor:pointer;padding:0;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.18);transition:transform .12s}
+.cc:hover{transform:translateY(-2px)}
+.cc::before{content:"";position:absolute;left:10%;top:36%;width:15%;height:20%;border-radius:2px;background:linear-gradient(135deg,#f3dc92,#b58e38);opacity:.9}
+.cc .cb{position:absolute;left:8%;top:9%;font-size:8.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;opacity:.85}
+.cc .cs{position:absolute;right:7%;bottom:8%;font-size:10px;font-weight:800;font-style:italic;letter-spacing:.02em}
+.cc .cs.mc{width:24px;height:14px;font-size:0}
+.cc .cs.mc::before,.cc .cs.mc::after{content:"";position:absolute;top:0;width:14px;height:14px;border-radius:50%}
+.cc .cs.mc::before{left:0;background:#eb001b}
+.cc .cs.mc::after{left:9px;background:#f79e1b;mix-blend-mode:multiply;opacity:.95}
+.cc .dg{position:absolute;right:7%;top:9%;font-size:7.5px;font-weight:700;padding:1px 4px;border-radius:3px;background:rgba(255,255,255,.25);letter-spacing:.05em}
+.cc.t-free{background:linear-gradient(135deg,#e6edf3,#bfccd8 70%,#a9b8c6);color:#1f2d3a}
+.cc.t-plus{background:linear-gradient(135deg,#3a3f47,#1a1c20 55%,#0d0e10);color:#f2f2f2}
+.cc.t-premium{background:linear-gradient(135deg,#f1d88f,#c89b3c 55%,#8f6816);color:#2d2008}
+.cc.t-elite{background:radial-gradient(120% 90% at 85% 0%,#6b5aa8 0%,transparent 55%),linear-gradient(135deg,#2c2838,#141219 60%,#08070b);color:#e9e5f6}
+.cc.fbc{outline:2px solid var(--fb);outline-offset:2px}
+.cc.photo{background:none!important;border:0;box-shadow:none;overflow:visible;display:flex;align-items:center;justify-content:center}
+.cc.photo::before{display:none}
+.cc.photo img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
+.cc.photo.fbc{outline-offset:3px;border-radius:8px}
+.ccn{font-size:11.5px;line-height:1.25;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* strips */
+.strip{display:block;width:100%;max-width:260px;height:auto;margin-top:8px;overflow:hidden}
+.strip .cnt{font-size:9.5px;font-weight:650;fill:var(--ink-2)}
+.strip text{font-size:10px;fill:var(--muted);font-family:var(--font)}
+.strip .axis{stroke:var(--line-2);stroke-width:1}
+.strip .dot{fill:var(--muted);fill-opacity:.55;stroke:var(--surface);stroke-width:1.5}
+.strip .med{stroke:var(--ink-2);stroke-width:2}
+.strip .fbm{fill:var(--fb);stroke:var(--surface);stroke-width:2}
+.stats{font-size:11.5px;color:var(--muted);margin-top:2px}
+.stats b{color:var(--ink-2);font-weight:600}
+
+/* verdicts */
+.v{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:650;padding:2px 8px 2px 6px;border-radius:999px;white-space:nowrap}
+.v i{font-style:normal;font-size:10px}
+.v.best{background:var(--good-soft);color:var(--good-ink)}
+.v.better{background:var(--mild-soft);color:var(--mild)}
+.v.at{background:var(--neutral-soft);color:var(--neutral-ink)}
+.v.worse{background:var(--serious-soft);color:var(--serious-ink)}
+.v.worst{background:var(--crit-soft);color:var(--crit-ink)}
+.v.gap{background:var(--gap-soft);color:var(--gap-ink)}
+.v.na{background:transparent;color:var(--muted);padding-left:0}
+
+/* FB vs market */
+.fbgrid .rl .rt{font-size:12.5px}
+.fbv{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.fbv .big{color:var(--fb-ink)}
+.fbrange{font-size:11.5px;color:var(--muted)}
+.grouprow{grid-column:1/-1;background:var(--sunk)!important;padding:7px 14px!important;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);position:sticky;left:0;border-left:0!important}
+.reads{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:0 0 16px}
+.read{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.read h3{margin:0 0 6px;font-size:13px;display:flex;gap:8px;align-items:center}
+.read ul{margin:0;padding-left:16px;display:grid;gap:4px;font-size:12.5px;color:var(--ink-2)}
+.read ul b{color:var(--ink)}
+.score{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+
+/* niche strip */
+.niche{margin-top:18px}
+.niche h3{font-size:14px;margin:0 0 4px}
+.nlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px;margin-top:8px}
+.nitem{text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:9px 11px;cursor:pointer;display:grid;gap:3px}
+.nitem:hover{border-color:var(--line-2);background:var(--surface-2)}
+.nitem .nn{font-weight:650;font-size:13px}
+.nitem .nd{font-size:12px;color:var(--ink-2)}
+
+/* market bank table */
+.btab{width:100%;border-collapse:collapse;margin-top:6px}
+.btab td{font-size:12px;padding:2px 0;color:var(--ink-2);vertical-align:top}
+.btab td.n{text-align:right;font-weight:650;color:var(--ink);width:26px}
+.btab tr.fbrow td{color:var(--fb-ink)}
+.btab .bar{display:inline-block;height:6px;border-radius:3px;background:var(--line-2);vertical-align:1px;margin-right:6px}
+.btab tr.fbrow .bar{background:var(--fb)}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(10,12,14,.35);z-index:40}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--surface);z-index:41;box-shadow:-10px 0 40px rgba(0,0,0,.2);overflow-y:auto;padding:20px 22px calc(40px + env(safe-area-inset-bottom,0px))}
+.drawer .x{position:sticky;top:0;float:right;border:1px solid var(--line-2);background:var(--surface-2);border-radius:8px;padding:5px 10px;cursor:pointer}
+.drawer h3{font-size:20px;margin:6px 0 2px;letter-spacing:-.01em}
+.drawer h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:20px 0 6px}
+.drawer .dcard{width:150px;margin:6px 0 10px}
+.dl{display:grid;grid-template-columns:150px 1fr;gap:6px 14px;font-size:12.5px}
+.dl dt{color:var(--muted)}
+.dl dd{margin:0}
+.drawer a{color:var(--fb-ink);word-break:break-all}
+.drawer ul{padding-left:18px;margin:0;display:grid;gap:3px;font-size:12.5px}
+@media (max-width:520px){.dl{grid-template-columns:1fr}.dl dt{margin-top:6px}}
+
+.tip{position:fixed;z-index:60;pointer-events:none;background:var(--ink);color:var(--bg);font-size:12px;padding:6px 9px;border-radius:6px;max-width:280px;box-shadow:var(--shadow)}
+.foot{margin-top:28px;font-size:12px;color:var(--muted);max-width:100ch}
+.foot p{margin:.4em 0}
+/* deposits */
+.depk{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:0 0 14px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.kpi .kl{font-size:12px;color:var(--muted)}
+.kpi .kv2{font-size:24px;font-weight:750;letter-spacing:-.01em;margin-top:2px}
+.kpi.fbk .kv2{color:var(--fb-ink)}
+.kpi .ks{font-size:12px;color:var(--ink-2);margin-top:2px}
+.dbars{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px 10px;box-shadow:var(--shadow)}
+.dbar{display:grid;grid-template-columns:130px minmax(0,1fr) 190px;gap:12px;align-items:center;padding:4px 0}
+.dbar .bn{font-size:13px;font-weight:600}
+.dbar.fb .bn{color:var(--fb-ink)}
+.dtrack{position:relative;height:18px}
+.dseg{position:absolute;top:0;bottom:0;left:0;background:var(--line-2);border-radius:0 4px 4px 0}
+.dbar.fb .dseg{background:var(--fb)}
+.dseg.on{background:repeating-linear-gradient(135deg,var(--muted) 0 2px,transparent 2px 5px);opacity:.7}
+.dmed{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink-2)}
+.dval{font-size:12.5px;color:var(--ink-2)}
+.dval b{color:var(--ink);font-size:14px}
+.dbar.fb .dval b{color:var(--fb-ink)}
+.dleg{font-size:11.5px;color:var(--muted);margin-top:6px}
+.dtable{width:100%;border-collapse:collapse;min-width:1080px}
+.dtable th,.dtable td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;font-size:12.5px;vertical-align:top}
+.dtable th{font-weight:650;color:var(--ink-2);background:var(--surface-2)}
+.dtable td.n,.dtable th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.dtable tr.fb td{background:var(--fb-soft)}
+.dtable tr.fb td:first-child{color:var(--fb-ink);font-weight:700}
+.dtable a{color:var(--fb-ink)}
+.dtable .sub{margin-top:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow">Fast Bank · debit card value proposition</div>
+      <h1>Armenian card tier benchmark</h1>
+    </div>
+    <div class="meta" id="meta"></div>
+  </header>
+  <div class="tierkey" id="tierkey"></div>
+  <nav class="tabs" id="tabs" aria-label="Views"></nav>
+  <details class="assump" id="assump">
+    <summary>Comparison assumptions <span class="hint">— the typical customer per tier, used for every "effective" number. Edit to re-run.</span></summary>
+    <div class="atable-wrap"><table class="atable" id="atable"></table></div>
+    <button class="abtn" id="areset" type="button">Reset to defaults</button>
+  </details>
+  <main id="view"></main>
+  <footer class="foot" id="foot"></footer>
+</div>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+const TIERS = [
+  {id:'free', name:'Free', sub:'Digital, virtual, no-fee entry and ArCa cards', c:'var(--t-free)'},
+  {id:'plus', name:'Black', sub:'Classic / Standard / Gold', c:'var(--t-plus)'},
+  {id:'premium', name:'Premium', sub:'Platinum, World', c:'var(--t-premium)'},
+  {id:'elite', name:'Elite', sub:'Signature, Black Edition, Infinite, World Elite, Metal', c:'var(--t-elite)'},
+];
+const DEF_A = {
+  free:    {spend:80000,  trav:1, foth:5, groc:35, excl:12, bal:100000,   atm:100000, atmN:2, abr:50000},
+  plus:    {spend:150000, trav:2, foth:5, groc:30, excl:10, bal:300000,   atm:200000, atmN:2, abr:100000},
+  premium: {spend:300000, trav:5, foth:7, groc:25, excl:8,  bal:2000000,  atm:400000, atmN:2, abr:150000},
+  elite:   {spend:650000, trav:7, foth:8, groc:20, excl:6,  bal:10000000, atm:800000, atmN:2, abr:300000},
+};
+const A_FIELDS = [
+  ['spend','Card spend a month, AMD','Premium 2m / Elite 10m balances and the ~650k Elite spend follow Fast Bank\'s own card model (ARCA dashboard, Sep 2025); mass tiers are working assumptions.'],
+  ['trav','…of which travel abroad, %','Hotels, flights, car hire. Elite ≈ 7% per the ARCA dashboard.'],
+  ['foth','…of which other spend abroad / foreign online, %',''],
+  ['groc','…of which Armenian supermarkets, %','Needed for category cashback (e.g. Acba Amex 2% at supermarkets).'],
+  ['excl','…of which utilities, telecom, e-wallets, %','Commonly excluded from bank cashback programmes.'],
+  ['bal','Average AMD balance on the card','Drives the balance-interest comparison.'],
+  ['atm','Cash withdrawn in Armenia a month, AMD','Split into equal withdrawals on different days.'],
+  ['atmN','Number of withdrawals a month',''],
+  ['abr','One ATM withdrawal abroad, AMD','Minimum fees bite on small withdrawals.'],
+];
+const STORE='tierbench.v3';
+let A = JSON.parse(JSON.stringify(DEF_A));
+let S = {view:'fb', basis:'cards'};
+try{ const s=JSON.parse(localStorage.getItem(STORE)||'null'); if(s){ if(s.A) for(const t in DEF_A) A[t]=Object.assign({},DEF_A[t],s.A[t]||{}); if(s.S) S=Object.assign(S,s.S);} }catch(e){}
+function save(){ try{ localStorage.setItem(STORE, JSON.stringify({A,S})); }catch(e){} }
+
+const BANKS = DATA.banks.filter(b=>!b.pending);
+const BANK = Object.fromEntries(DATA.banks.map(b=>[b.id,b]));
+const CARD = Object.fromEntries(DATA.cards.map(c=>[c.id,c]));
+const COL = DATA.cards.filter(c=>c.place==='column' && !BANK[c.bank].pending);
+const inTier = (bank,t)=>COL.filter(c=>c.bank===bank && c.tier===t);
+const FB='FastBank';
+
+/* ---------- formatting ---------- */
+const esc = s => String(s??'').replace(/[&<>"]/g, ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+const pct = x => x==null? '—' : (Math.round(x*100)/100).toString()+'%';
+const amd = n => n==null? '—' : Math.round(n).toLocaleString('en-US');
+const kamd = n => n>=1e6 ? (Math.round(n/1e5)/10)+'m' : n>=1000 ? Math.round(n/1000)+'k' : String(n);
+const feeTxt = n => n==null? 'n/p' : n===0 ? 'Free' : amd(n);
+const median = arr => { const a=arr.filter(v=>v!=null&&!isNaN(v)).sort((x,y)=>x-y); if(!a.length) return null; const m=a.length>>1; return a.length%2? a[m] : (a[m-1]+a[m])/2; };
+const uniq = a => [...new Set(a)];
+
+/* ---------- economics ---------- */
+function effInt(c,t){ const i=c.int; if(!i) return null; const B=A[t].bal;
+  if(i.bands){ for(const [u,r] of i.bands){ if(u===null||B<=u) return r; } }
+  return B>=(i.thr||0)? i.rate : 0; }
+function atmEff(rule,M,n){ if(rule==null) return null; if(rule==='na') return 'na'; n=Math.max(1,Math.round(n)); const s=M/n; let fm=rule.fm||0, fee=0;
+  for(let k=0;k<n;k++){ let tax=s; if(rule.fd) tax=Math.max(0,s-rule.fd); if(rule.fm){ const fr=Math.min(fm,tax); tax-=fr; fm-=fr; }
+    let f=tax*rule.pct/100; if(tax>0 && rule.min) f=Math.max(f,rule.min); fee+=f; }
+  return fee/M*100; }
+function abrEff(rule,X){ if(rule==null) return null; if(rule==='na') return 'na'; let f=X*rule.pct/100; if(rule.min) f=Math.max(f,rule.min); return f/X*100; }
+function shares(t){ const a=A[t]; const trav=+a.trav||0, foth=+a.foth||0, groc=+a.groc||0, excl=+a.excl||0; const dom=Math.max(0,100-trav-foth);
+  return {dom, trav, foth, groc:Math.min(groc,dom), excl, domx:Math.max(0,dom-groc-excl)}; }
+function cbEff(c,t){ const a=A[t], Sp=+a.spend||1, sh=shares(t);
+  const base={all:Sp, dom:Sp*sh.dom/100, trav:Sp*sh.trav/100, foth:Sp*sh.foth/100, foreign:Sp*(sh.trav+sh.foth)/100, groc:Sp*sh.groc/100, domx:Sp*sh.domx/100};
+  const sums={bank:0,points:0,arca:0};
+  for(const r of (c.cb.rules||[])) sums[r.src]+=base[r.scope]*r.rate/100;
+  for(const k in sums){ const cap=(c.cb.cap||{})[k]; if(cap!=null) sums[k]=Math.min(sums[k],cap); }
+  return {bank:sums.bank/Sp*100, points:sums.points/Sp*100, arca:sums.arca/Sp*100, amdBank:sums.bank+sums.points, amdCash:sums.bank, amdPts:sums.points, amdArca:sums.arca}; }
+function paidTag(c){ if(c.cb.paid) return c.cb.paid; const src=(c.cb.rules||[]).map(r=>r.src);
+  if(src.includes('bank')&&src.includes('points')) return 'Cash + points'; if(src.includes('bank')) return 'Cash'; if(src.includes('points')) return 'Points'; if(src.includes('arca')) return 'Cash · state scheme'; return ''; }
+const splitTxt = e => e.bank+e.points<=0? '' : (e.points>0? `cash ${pct(e.bank)} + points ${pct(e.points)}` : `all cash`);
+/* monthly cashback cap: max AMD a card can earn in a month, per funding stream */
+const CAPSRC={bank:'cash',points:'points',arca:'state ArCa'};
+function capInfo(c){ const cap=c.cb.cap||{}, src=uniq((c.cb.rules||[]).map(r=>r.src)); if(!src.length) return null;
+  const bf=src.filter(s=>s!=='arca');
+  const max = !bf.length? null : bf.every(s=>cap[s]!=null)? bf.reduce((a,s)=>a+cap[s],0) : Infinity;
+  const parts = src.map(s=> cap[s]!=null? `${CAPSRC[s]} ${amd(cap[s])} AMD` : `${CAPSRC[s]} ${c.cb.cap_note||'no cap published'}`);
+  return {max, arca: src.includes('arca')? cap.arca : null, parts}; }
+function capTag(c){ const k=capInfo(c); if(!k) return '';
+  const bfTxt = k.max==null? '' : k.max===Infinity? (c.cb.cap_note||'no cap published') : `${amd(k.max)} AMD`;
+  const detail = k.parts.length>1 && Object.keys(c.cb.cap||{}).length? ` (${k.parts.join(' · ')})` : '';
+  const main = k.max==null? `${amd(k.arca)} AMD, state ArCa` : bfTxt;
+  return `<span class="capl">Max / month: <b>${esc(main)}</b>${esc(detail)}</span>`; }
+const capShort = c => { const k=capInfo(c); if(!k||k.max==null) return ''; return k.max===Infinity? (c.cb.cap_note||'no cap published') : `cap ${amd(k.max)}/mo`; };
+const numOrNull = x => (x==='na'||x==null)? null : x;
+/* 1-year AMD term deposit on the reference amount: bank rate at maturity + online bonus + card uplift (only where the reference depositor qualifies) */
+const DEP = DATA.deposits || null;
+const depBank = b => { const d=DEP&&DEP.banks[b]; return d? d.maturity+(d.online||0) : null; };
+const depUp = c => { const u=c.uplift; if(!u||!u.dep_pp||!DEP) return 0; return (u.min_bal||0)<=DEP.reference.amount? u.dep_pp : 0; };
+const depCard = c => { const b=depBank(c.bank); return b==null? null : b+depUp(c); };
+const DEPREF = () => DEP? `${kamd(DEP.reference.amount)} AMD · ${DEP.reference.term_months} months` : '';
+const hasPerk = (c,tag) => (c.perks||[]).some(p=>p[0]===tag);
+
+/* ---------- metrics used by the comparison views ---------- */
+const METRICS = [
+  {g:'Cards', id:'n', label:'Cards on offer', kind:'count'},
+  {g:'Service cost', id:'fee', label:'Annual service fee', unit:'AMD', dir:-1, fmt:feeTxt, val:c=>c.fee},
+  {g:'Service cost', id:'waiver', label:'Fee can be waived', kind:'bool', val:c=> c.fee===0? null : ['balance','spend','deposit','package','payroll','promo'].includes(c.waiver.type)},
+  {g:'Rates', id:'int', label:'Interest on the card balance', sub:t=>`on a ${kamd(A[t].bal)} AMD balance`, dir:1, fmt:pct, val:(c,t)=>effInt(c,t)},
+  {g:'Rates', id:'dep', label:'Term deposit, 1m AMD for 12 months', sub:()=>'at maturity, incl. online bonus and any card uplift', dir:1, fmt:pct, val:c=>depCard(c)},
+  {g:'Rates', id:'uplift', label:'Card lifts deposit / savings rate', kind:'bool', val:c=>!!c.uplift},
+  {g:'FX', id:'fx', label:'FX cost, USD one-way', sub:()=>'half the bank\'s buy/sell spread', dir:-1, fmt:pct, val:c=>{const f=BANK[c.bank].fx; return f? f.usd : null;}},
+  {g:'Transfers', id:'c2cin', label:'Card-to-card, same bank', dir:-1, fmt:pct, val:c=>c.c2c_in},
+  {g:'Transfers', id:'c2cout', label:'Card-to-card, other banks', dir:-1, fmt:pct, val:c=>c.c2c_out},
+  {g:'ATM withdrawals', id:'atmown', label:'Own-bank ATMs', sub:t=>`${kamd(A[t].atm)} AMD a month, effective`, dir:-1, fmt:pct, val:(c,t)=>numOrNull(atmEff(c.atm_own,A[t].atm,A[t].atmN))},
+  {g:'ATM withdrawals', id:'atmoth', label:'Other Armenian banks\' ATMs', sub:t=>`${kamd(A[t].atm)} AMD a month, effective`, dir:-1, fmt:pct, val:(c,t)=>numOrNull(atmEff(c.atm_other,A[t].atm,A[t].atmN))},
+  {g:'ATM withdrawals', id:'atmabr', label:'ATMs abroad', sub:t=>`one ${kamd(A[t].abr)} AMD withdrawal`, dir:-1, fmt:pct, val:(c,t)=>numOrNull(abrEff(c.atm_abroad,A[t].abr))},
+  {g:'Cashback', id:'cb', label:'Bank-funded cashback (cash + points), effective', sub:t=>`on ${kamd(A[t].spend)} AMD a month`, dir:1, fmt:pct, val:(c,t)=>{const e=cbEff(c,t); return e.bank+e.points;}},
+  {g:'Cashback', id:'arca', label:'National ArCa 2% card available', kind:'bool', val:c=>(c.cb.rules||[]).some(r=>r.src==='arca')},
+  {g:'Partnerships & perks', id:'lounge', label:'Lounge access', kind:'bool', perk:'Lounge'},
+  {g:'Partnerships & perks', id:'ins', label:'Travel insurance included', kind:'bool', perk:'Travel insurance'},
+  {g:'Partnerships & perks', id:'conc', label:'Concierge', kind:'bool', perk:'Concierge'},
+  {g:'Partnerships & perks', id:'partners', label:'Named partner offers', dir:1, fmt:n=>n==null?'—':String(n), val:c=>(c.partners||[]).length},
+];
+function mval(m,c,t){ if(m.perk){ if(c.gap) return 'gap'; return hasPerk(c,m.perk); } if(m.id==='partners' && c.gap) return 'gap'; return m.val(c,t); }
+
+/* values for one metric in one tier: per card or per bank (bank's best card) */
+function marketVals(m,t,basis,excludeFB=true){
+  const pool = COL.filter(c=>c.tier===t && (!excludeFB || c.bank!==FB));
+  if(basis==='cards') return pool.map(c=>({v:mval(m,c,t), who:`${BANK[c.bank].name} · ${c.short}`, bank:c.bank})).filter(x=>x.v!=null && x.v!=='gap');
+  const out=[];
+  for(const b of BANKS){ if(excludeFB && b.id===FB) continue; const cs=pool.filter(c=>c.bank===b.id); if(!cs.length) continue;
+    const vs=cs.map(c=>mval(m,c,t)).filter(v=>v!=null && v!=='gap'); if(!vs.length) continue;
+    let v; if(m.kind==='bool') v=vs.some(Boolean); else v = m.dir>0? Math.max(...vs) : Math.min(...vs);
+    out.push({v, who:b.name, bank:b.id}); }
+  return out;
+}
+function fbVal(m,t){ const cs=inTier(FB,t); if(!cs.length) return {none:true};
+  const vs=cs.map(c=>mval(m,c,t)); const real=vs.filter(v=>v!=null && v!=='gap');
+  if(m.kind==='bool'){ if(real.some(Boolean)) return {v:true}; if(vs.includes('gap')) return {gap:true}; if(!real.length) return {v:null}; return {v:false}; }
+  if(!real.length) return vs.includes('gap')? {gap:true} : {v:null};
+  const nums=real.map(Number); return {v:median(nums), lo:Math.min(...nums), hi:Math.max(...nums), n:nums.length}; }
+
+function verdict(m,fb,mk,t){
+  if(fb.none) return {cls:'na', txt:'No Fast Bank card'};
+  if(fb.gap) return {cls:'gap', i:'?', txt:'Data gap'};
+  if(fb.v==null) return (m.id==='waiver' && inTier(FB,t).every(c=>c.fee===0))? {cls:'na', txt:'Card is free'} : {cls:'na', txt:'Not published'};
+  if(!mk.length) return {cls:'na', txt:'No market data'};
+  if(m.kind==='bool'){
+    const share=mk.filter(x=>x.v).length/mk.length;
+    if(fb.v) return share<0.5? {cls:'better',i:'▲',txt:'Ahead of most'} : {cls:'at',i:'●',txt:'In line'};
+    return share>=0.5? {cls:'worse',i:'▼',txt:'Behind most'} : share>0? {cls:'at',i:'●',txt:'Minority offer it'} : {cls:'at',i:'●',txt:'In line'};
+  }
+  const vals=mk.map(x=>x.v), d=m.dir, v=fb.v, eps=1e-9;
+  const best=d>0?Math.max(...vals):Math.min(...vals), worst=d>0?Math.min(...vals):Math.max(...vals), med=median(vals);
+  const better=(x,y)=> d>0? x>y+eps : x<y-eps;
+  if(Math.abs(best-worst)<eps && Math.abs(v-best)<eps) return {cls:'at',i:'●',txt:'Same as market'};
+  if(Math.abs(v-med)<eps) return {cls:'at',i:'●',txt:'At median'};
+  if(!better(best,v)) return {cls:'best',i:'▲▲',txt:'Best in market'};
+  if(better(v,med)) return {cls:'better',i:'▲',txt:'Better than median'};
+  if(!better(v,worst)) return {cls:'worst',i:'▼▼',txt:'Worst in market'};
+  return {cls:'worse',i:'▼',txt:'Worse than median'};
+}
+const vchip = v => `<span class="v ${v.cls}">${v.i?`<i aria-hidden="true">${v.i}</i>`:''}${esc(v.txt)}</span>`;
+
+/* range strip: market points grouped by position (one dot, sized by count, count above), median tick, Fast Bank diamond */
+function strip(mk, fbv, fmt){
+  const vals=mk.map(x=>x.v); const all=vals.concat(fbv!=null?[fbv]:[]); if(!all.length) return '';
+  let lo=Math.min(...all), hi=Math.max(...all); const W=240, L=12, R=W-12, Y=24;
+  if(hi===lo){ const p=Math.max(1,Math.abs(hi)*0.1); lo-=p/2; hi+=p/2; }
+  const x=v=>L+(v-lo)/(hi-lo)*(R-L);
+  const groups=[];
+  for(const d of [...mk].sort((a,b)=>a.v-b.v)){ const px=x(d.v); const g=groups.find(g=>Math.abs(g.px-px)<=4); if(g) g.items.push(d); else groups.push({px, v:d.v, items:[d]}); }
+  const unit=S.basis==='cards'?'cards':'banks';
+  let dots='';
+  for(const g of groups){ const n=g.items.length, r=Math.min(4+Math.sqrt(n-1)*1.3, 8);
+    const tip = n>1? `${n} ${unit} at ${fmt(g.v)}: ${g.items.map(i=>i.who).join('; ')}` : `${g.items[0].who}: ${fmt(g.v)}`;
+    dots+=`<circle class="dot" cx="${g.px.toFixed(1)}" cy="${Y}" r="${r.toFixed(1)}" data-tip="${esc(tip)}"></circle>`;
+    if(n>1) dots+=`<text class="cnt" x="${g.px.toFixed(1)}" y="10" text-anchor="middle">×${n}</text>`; }
+  const med=median(vals);
+  const medl = med!=null? `<line class="med" x1="${x(med).toFixed(1)}" x2="${x(med).toFixed(1)}" y1="${Y-8}" y2="${Y+8}" data-tip="Market median: ${esc(fmt(med))}"></line>`:'';
+  const fbm = fbv!=null? `<path class="fbm" d="M${x(fbv).toFixed(1)} ${Y-9} l7 9 l-7 9 l-7 -9z" data-tip="Fast Bank: ${esc(fmt(fbv))}"></path>`:'';
+  return `<svg class="strip" viewBox="0 0 ${W} 48" role="img" aria-label="Market range from ${esc(fmt(Math.min(...all)))} to ${esc(fmt(Math.max(...all)))}">
+    <line class="axis" x1="${L}" x2="${R}" y1="${Y}" y2="${Y}"></line>${dots}${medl}${fbm}
+    <text x="${L-2}" y="45">${esc(fmt(Math.min(...all)))}</text><text x="${R+2}" y="45" text-anchor="end">${esc(fmt(Math.max(...all)))}</text></svg>`;
+}
+
+/* ---------- small renderers ---------- */
+const SCH = {Visa:'VISA', Mastercard:'', ArCa:'ArCa', UnionPay:'UnionPay', Mir:'МИР', Other:''};
+function mini(c,withName=true){
+  const dg=/digital|virtual|instant/i.test(c.name)? `<span class="dg">${/instant/i.test(c.name)?'INSTANT':'DIGITAL'}</span>`:'';
+  const sch = c.scheme==='Mastercard'? '<span class="cs mc"></span>' : `<span class="cs">${esc(SCH[c.scheme]||'')}</span>`;
+  const t = c.tier || 'plus';
+  const face = c.img? `<img src="${c.img}" alt="">` : `<span class="cb">${esc(BANK[c.bank].name)}</span>${dg}${sch}`;
+  return `<div class="ccw"><button type="button" class="cc t-${t} ${c.img?'photo':''} ${c.bank===FB?'fbc':''}" data-card="${c.id}" aria-label="${esc(BANK[c.bank].name+' '+c.name)} — details">${face}</button>${withName?`<span class="ccn">${esc(c.short)}</span>`:''}</div>`;
+}
+function grouped(cards, fn){ // [[text, [cards]]]
+  const m=new Map(); for(const c of cards){ const k=fn(c); if(k==null||k==='') continue; if(!m.has(k)) m.set(k,[]); m.get(k).push(c); } return [...m.entries()]; }
+const whoList = cs => cs.map(c=>esc(c.short)).join(', ');
+function atmRuleTxt(r){ if(r==null) return 'not published'; if(r==='na') return 'n/a — card works in Armenia only';
+  let s = r.fm? `free to ${kamd(r.fm)}/month, then ${pct(r.pct)}` : r.fd? `free to ${kamd(r.fd)}/day, then ${pct(r.pct)}` : pct(r.pct);
+  if(r.min) s+=` (min ${amd(r.min)} AMD)`; return s; }
+const WAIVER_LABEL = {balance:'Balance', spend:'Spend', deposit:'Deposit', package:'Package', payroll:'Payroll', promo:'Promo', app:'App discount', none:'None', free:'No fee'};
+
+/* ---------- bank view ---------- */
+const ROWS = [
+  {id:'cards', t:'Cards', s:'Click a card for its full tariff and sources'},
+  {id:'cost', t:'Service cost', s:'Annual fee and how to get it waived'},
+  {id:'rates', t:'Rates', s:'Interest on the card balance; 1-year term deposit on 1m AMD; deposit-rate boost'},
+  {id:'fx', t:'FX', s:'What a currency conversion costs'},
+  {id:'transfers', t:'Transfers', s:'Card-to-card fees'},
+  {id:'atm', t:'ATM withdrawals', s:'Own ATMs, other Armenian banks, abroad'},
+  {id:'cashback', t:'Cashback', s:'Structure, rates, monthly cap (max AMD a month); effective rate on the tier basket'},
+  {id:'perks', t:'Partnerships & perks', s:'Lounges, insurance, concierge, merchant and travel partners'},
+];
+function rowLabel(r, bankId){
+  let extra='';
+  if(r.id==='fx' && bankId){ const f=BANK[bankId].fx;
+    extra = f? `<div class="rbank">Bank rate: <b>USD ${pct(f.usd)}</b> · EUR ${pct(f.eur)} one-way<br><span class="sub" data-tip="USD buy ${f.usd_rate.buy} / sell ${f.usd_rate.sell}; EUR buy ${f.eur_rate.buy} / sell ${f.eur_rate.sell}. One-way cost = (sell − buy) / (sell + buy).">${esc(f.usd_kind)}, <a href="${esc(DATA.fx_source)}" target="_blank" rel="noopener" style="color:var(--fb-ink)">rate.am</a> ${esc(DATA.fx_as_of)} · buy ${f.usd_rate.buy} / sell ${f.usd_rate.sell}</span></div>` : `<div class="rbank">No rate on rate.am</div>`; }
+  if(r.id==='fx' && !bankId) extra = `<div class="rbank">${BANKS.map(b=>b.fx?{b,v:b.fx.usd}:null).filter(Boolean).sort((a,b)=>a.v-b.v).map(x=>`<div class="${x.b.id===FB?'fbtxt':''}">${x.b.id===FB?'<b style="color:var(--fb-ink)">':'<b>'}${esc(x.b.name)}</b> ${pct(x.v)}</div>`).join('')}<span class="sub">USD one-way, ${esc(DATA.fx_as_of)}</span></div>`;
+  if(r.id==='rates' && bankId && DEP){ const d=DEP.banks[bankId];
+    extra = d? `<div class="rbank">1-year deposit, 1m AMD: <b>${pct(depBank(bankId))}</b>${d.online?` <span class="sub" style="display:inline">(${pct(d.maturity)} + ${pct(d.online)} online)</span>`:''}<br><span class="sub">${esc(d.product)}, at maturity · ${pct(d.monthly)} if paid monthly · <a href="${esc(DEP.source.url)}" target="_blank" rel="noopener" style="color:var(--fb-ink)">fininfo.am</a> ${esc(DEP.as_of)}</span></div>` : ''; }
+  if(r.id==='rates' && !bankId && DEP) extra = `<div class="rbank">${BANKS.filter(b=>DEP.banks[b.id]).map(b=>({b,v:depBank(b.id)})).sort((a,b)=>b.v-a.v).map(x=>`<div>${x.b.id===FB?'<b style="color:var(--fb-ink)">':'<b>'}${esc(x.b.name)}</b> ${pct(x.v)}</div>`).join('')}<span class="sub">1-year deposit, 1m AMD, ${esc(DEP.as_of)}</span></div>`;
+  return `<div class="rl"><div class="rt">${esc(r.t)}</div><div class="rs">${esc(r.s)}</div>${extra}</div>`;
+}
+function bankCell(r, cs, t){
+  if(!cs.length) return `<div><span class="empty">—</span></div>`;
+  const L = (items)=> `<ul class="lines">${items.join('')}</ul>`;
+  switch(r.id){
+    case 'cards':
+      return `<div><div class="big num">${cs.length} <small>card${cs.length>1?'s':''}</small></div><div class="cards">${cs.map(c=>mini(c)).join('')}</div></div>`;
+    case 'cost': {
+      const fees=cs.map(c=>c.fee).filter(v=>v!=null); const lo=Math.min(...fees), hi=Math.max(...fees);
+      const head = !fees.length? 'n/p' : lo===hi? (lo===0?'Free':amd(lo)+' <small>AMD/yr</small>') : `${lo===0?'Free':amd(lo)}–${amd(hi)} <small>AMD/yr</small>`;
+      const fl = grouped(cs,c=>c.fee_display).map(([k,g])=>`<li><b>${esc(k)}</b> <span class="who">— ${whoList(g)}</span></li>`);
+      const wl = grouped(cs,c=>c.waiver.type==='free'?null:c.waiver.text).map(([k,g])=>`<li><span class="tag ${g[0].waiver.type==='package'?'pkg':g[0].waiver.type==='promo'?'promo':''}">${esc(WAIVER_LABEL[g[0].waiver.type])}</span> ${esc(k)} <span class="who">— ${whoList(g)}</span></li>`);
+      const dis = cs.filter(c=>c.fee_note).map(c=>`<li><span class="tag warn">Check</span> ${esc(c.short)}: ${esc(c.fee_note)}</li>`);
+      return `<div><div class="big num">${head}</div>${L(fl)}${wl.length?'<hr class="thin">'+L(wl):''}${dis.length?L(dis):''}</div>`; }
+    case 'rates': {
+      const best=Math.max(...cs.map(c=>effInt(c,t)??-1));
+      const il = grouped(cs,c=>c.int? c.int.text : 'Not published').map(([k,g])=>`<li>${g[0].int&&g[0].int.via==='package'?'<span class="tag pkg">Package</span> ':''}${esc(k)} <span class="who">— ${whoList(g)}</span></li>`);
+      const ul = grouped(cs,c=>c.uplift? c.uplift.text : null).map(([k,g])=>`<li><span class="tag ${g[0].uplift.via==='package'?'pkg':''}">${g[0].uplift.via==='package'?'Package':'Card'}</span> ${esc(k)} <span class="who">— ${whoList(g)}</span></li>`);
+      const dv=Math.max(...cs.map(c=>depCard(c)??-1)), upc=cs.filter(c=>depUp(c)>0);
+      const dh = dv<0? '' : `<hr class="thin"><div class="sub" style="margin:0 0 3px">Term deposit, ${DEPREF()}</div><div class="big num" style="font-size:16px">${pct(dv)} <small>at maturity</small></div><div class="sub">${upc.length? 'incl. card uplift: '+whoList(upc) : 'bank rate; no card uplift for a 1m depositor'}</div>`;
+      return `<div><div class="big num">${best<0?'n/p':pct(best)} <small>on ${kamd(A[t].bal)} AMD</small></div>${L(il)}${dh}<hr class="thin"><div class="sub" style="margin:0 0 3px">Deposit-rate boost</div>${ul.length?L(ul):'<span class="empty">None published</span>'}</div>`; }
+    case 'fx': {
+      const fl = grouped(cs,c=>c.fx? c.fx.text : null).map(([k,g])=>`<li>${g[0].fx.pref?'<span class="tag arca">Preferential</span> ':''}${esc(k)} <span class="who">— ${whoList(g)}</span></li>`);
+      return `<div>${fl.length? L(fl) : '<span class="empty">No card-level FX terms; the bank rate applies.</span>'}</div>`; }
+    case 'transfers': {
+      const ins=cs.map(c=>c.c2c_in).filter(v=>v!=null), outs=cs.map(c=>c.c2c_out).filter(v=>v!=null);
+      const rng=a=>!a.length?'n/p': Math.min(...a)===Math.max(...a)? pct(a[0]) : `${pct(Math.min(...a))}–${pct(Math.max(...a))}`;
+      const nl = grouped(cs,c=>c.c2c_note).map(([k,g])=>`<li>${esc(k)} <span class="who">— ${whoList(g)}</span></li>`);
+      return `<div><dl class="kv"><dt>Same bank</dt><dd class="big num" style="font-size:16px">${rng(ins)}</dd><dt>Other banks</dt><dd class="big num" style="font-size:16px">${rng(outs)}</dd></dl>${L(nl)}</div>`; }
+    case 'atm': {
+      const a=A[t];
+      const gl = grouped(cs,c=>JSON.stringify([c.atm_own,c.atm_other,c.atm_abroad])).map(([k,g])=>{ const c=g[0];
+        const eo=atmEff(c.atm_own,a.atm,a.atmN), et=atmEff(c.atm_other,a.atm,a.atmN), ea=abrEff(c.atm_abroad,a.abr);
+        const e=v=> v==null? '' : v==='na'? '' : ` <b class="num">→ ${pct(v)}</b>`;
+        return `<li><span class="who">${whoList(g)}</span><dl class="kv" style="margin-top:2px"><dt>Own</dt><dd>${esc(atmRuleTxt(c.atm_own))}${e(eo)}</dd><dt>Other RA</dt><dd>${esc(atmRuleTxt(c.atm_other))}${e(et)}</dd><dt>Abroad</dt><dd>${esc(atmRuleTxt(c.atm_abroad))}${e(ea)}</dd></dl></li>`; });
+      return `<div><div class="sub">→ effective on ${kamd(a.atm)} AMD a month in ${a.atmN} withdrawals; abroad on one ${kamd(a.abr)} AMD withdrawal</div>${L(gl)}</div>`; }
+    case 'cashback': {
+      const effs=cs.map(c=>({c,e:cbEff(c,t)}));
+      const best=Math.max(...effs.map(x=>x.e.bank+x.e.points));
+      const bestC=effs.find(x=>Math.abs(x.e.bank+x.e.points-best)<1e-9);
+      const arca=effs.filter(x=>x.e.arca>0);
+      const tl = grouped(cs,c=>c.cb.text).map(([k,g])=>{ const pt=paidTag(g[0]); const src=(g[0].cb.rules||[]).map(r=>r.src);
+        const cls = src.includes('bank')||src.includes('points')? 'arca' : src.includes('arca')? '' : pt? 'warn' : '';
+        return `<li>${pt?`<span class="tag ${cls}">${esc(pt)}</span> `:''}${esc(k)} <span class="who">— ${whoList(g)}</span>${capTag(g[0])?`<br>${capTag(g[0])}`:''}</li>`; });
+      const pl = grouped(cs,c=>c.cb.promo).map(([k,g])=>`<li><span class="tag promo">Promo</span> ${esc(k)} <span class="who">— ${whoList(g)}</span></li>`);
+      return `<div><div class="big num">${pct(best)} <small>bank-funded${best>0?` · ${amd(bestC.e.amdBank)} AMD/mo`:''}</small></div>
+        ${best>0?`<div class="sub">${esc(bestC.c.short)}: ${esc(splitTxt(bestC.e))}${capShort(bestC.c)?` · ${esc(capShort(bestC.c))}`:''}</div>`:''}
+        ${arca.length?`<div class="sub">+ state ArCa 2% on ${whoList(arca.map(x=>x.c))}: ${pct(arca[0].e.arca)} (${amd(arca[0].e.amdArca)} AMD/mo, paid by ArCa and the state)</div>`:''}${L(tl)}${pl.length?L(pl):''}</div>`; }
+    case 'perks': {
+      const tags={}; cs.forEach(c=>(c.perks||[]).forEach(p=>{ (tags[p[0]]=tags[p[0]]||new Set()).add(c.id); }));
+      const chips=Object.entries(tags).sort((a,b)=>b[1].size-a[1].size).map(([k,s])=>`<span class="chip">${esc(k)}${cs.length>1?` <b>${s.size}/${cs.length}</b>`:''}</span>`).join('');
+      const pm=new Map(); cs.forEach(c=>(c.partners||[]).forEach(p=>{ if(!pm.has(p[0])) pm.set(p[0],p[1]); }));
+      const pl=[...pm.entries()].map(([n,b])=>`<li><b>${esc(n)}</b> — ${esc(b)}</li>`);
+      const detail = grouped(cs.flatMap(c=>(c.perks||[]).filter(p=>!['Loyalty points','Card insurance','Merchant discounts'].includes(p[0])).map(p=>({...c, _p:p}))), x=>x._p[0]+': '+x._p[1])
+        .slice(0,8).map(([k,g])=>`<li>${esc(k)} <span class="who">— ${uniq(g.map(x=>x.short)).map(esc).join(', ')}</span></li>`);
+      const gap = cs.some(c=>c.gap)? `<div class="gapnote">${esc(cs.find(c=>c.gap).gap)}</div>` : '';
+      return `<div>${chips?`<div class="chips">${chips}</div>`:'<span class="empty">No perks or partners published.</span>'}${pl.length?L(pl):''}${detail.length?'<hr class="thin">'+L(detail):''}${gap}</div>`; }
+  }
+}
+function renderBank(id){
+  const b=BANK[id];
+  const niche=DATA.cards.filter(c=>c.bank===id && c.place==='strip');
+  let g=`<div class="corner"></div>`+TIERS.map(t=>`<div class="hd" style="--tc:${t.c}"><div class="tn">${t.name}</div><div class="ts">${esc(t.sub)}</div></div>`).join('');
+  ROWS.forEach((r,ri)=>{ g+=rowLabel(r,id); for(const t of TIERS) g+=bankCell(r,inTier(id,t.id),t.id); });
+  const nicheHtml = niche.length? `<section class="niche"><h3>Also issued — outside the tier columns (${niche.length})</h3><div class="sub">Pension, student, payroll, co-brand, non-resident and legacy cards. Listed so nothing is lost; excluded from the tier statistics.</div>
+    <div class="nlist">${niche.map(c=>`<button type="button" class="nitem" data-card="${c.id}"><span class="nn">${esc(c.short)} <span class="tag">${esc(c.strip_reason)}</span></span><span class="nd">${esc(c.fee_display)}${c.interest_pct?` · ${pct(c.interest_pct)} on balance`:''}${c.cb_kind&&c.cb_kind!=='None'?` · cashback: ${esc(c.cb_kind)}${c.cb_headline?' '+pct(c.cb_headline):''}`:''}</span></button>`).join('')}</div></section>` : '';
+  return `<div class="section-head"><div><h2>${esc(b.name)}</h2><p class="lede">${inTier(id,'free').length+inTier(id,'plus').length+inTier(id,'premium').length+inTier(id,'elite').length} cards in the four tiers${niche.length?`, ${niche.length} more in the niche list below`:''}. "Effective" figures use the tier assumptions above.</p></div></div>
+    <div class="scroll"><div class="grid">${g}</div></div>${nicheHtml}`;
+}
+
+/* ---------- market view ---------- */
+function mCell(r,t){
+  const cs=COL.filter(c=>c.tier===t);
+  const mk=(m)=>marketVals(m,t,S.basis,false);
+  const fbv=(m)=>{ const f=fbVal(m,t); return f.v!=null&&typeof f.v==='number'? f.v : null; };
+  const stat=(m)=>{ const v=mk(m).map(x=>x.v); if(!v.length) return '<span class="empty">No data</span>';
+    return `${strip(mk(m),fbv(m),m.fmt)}<div class="stats num">min <b>${esc(m.fmt(Math.min(...v)))}</b> · median <b>${esc(m.fmt(median(v)))}</b> · max <b>${esc(m.fmt(Math.max(...v)))}</b> <span>(${v.length} ${S.basis==='cards'?'cards':'banks'})</span></div>`; };
+  const M=id=>METRICS.find(m=>m.id===id);
+  switch(r.id){
+    case 'cards': {
+      const max=Math.max(1,...BANKS.map(b=>inTier(b.id,t).length));
+      return `<div><div class="big num">${cs.length} <small>cards · ${uniq(cs.map(c=>c.bank)).length} banks</small></div><table class="btab">${BANKS.map(b=>{const n=inTier(b.id,t).length; return `<tr class="${b.id===FB?'fbrow':''}"><td><span class="bar" style="width:${Math.round(n/max*46)}px"></span>${esc(b.name)}</td><td class="n num">${n||'—'}</td></tr>`;}).join('')}</table></div>`; }
+    case 'cost': {
+      const w=cs.filter(c=>c.fee!==0); const wt={}; w.forEach(c=>{ wt[c.waiver.type]=(wt[c.waiver.type]||0)+1; });
+      return `<div><div class="sub">Annual fee, AMD</div>${stat(M('fee'))}<hr class="thin"><div class="sub">Waiver route (${w.length} paid cards)</div><div class="chips">${Object.entries(wt).sort((a,b)=>b[1]-a[1]).map(([k,n])=>`<span class="chip">${esc(WAIVER_LABEL[k])} <b>${n}</b></span>`).join('')}</div></div>`; }
+    case 'rates': {
+      const up=cs.filter(c=>c.uplift);
+      return `<div><div class="sub">Interest on a ${kamd(A[t].bal)} AMD balance</div>${stat(M('int'))}<hr class="thin"><div class="sub">Term deposit, ${DEPREF()}, at maturity</div>${stat(M('dep'))}<hr class="thin"><div class="sub">Deposit-rate boost: ${up.length? whoList(up)+' ('+uniq(up.map(c=>BANK[c.bank].name)).join(', ')+')' : 'none'}</div></div>`; }
+    case 'fx': {
+      const f=cs.filter(c=>c.fx); return `<div>${f.length? `<ul class="lines">${f.map(c=>`<li><b>${esc(BANK[c.bank].name)} ${esc(c.short)}</b> — ${esc(c.fx.text)}</li>`).join('')}</ul>` : '<span class="empty">No card-level FX terms.</span>'}</div>`; }
+    case 'transfers':
+      return `<div><div class="sub">Same bank</div>${stat(M('c2cin'))}<hr class="thin"><div class="sub">Other banks</div>${stat(M('c2cout'))}</div>`;
+    case 'atm':
+      return `<div><div class="sub">Own ATMs · ${kamd(A[t].atm)}/month</div>${stat(M('atmown'))}<hr class="thin"><div class="sub">Other Armenian banks</div>${stat(M('atmoth'))}<hr class="thin"><div class="sub">Abroad · one ${kamd(A[t].abr)}</div>${stat(M('atmabr'))}</div>`;
+    case 'cashback': {
+      const bf=cs.map(c=>({c,e:cbEff(c,t)})).filter(x=>x.e.bank+x.e.points>0).sort((a,b)=>(b.e.bank+b.e.points)-(a.e.bank+a.e.points));
+      const ar=cs.filter(c=>(c.cb.rules||[]).some(r=>r.src==='arca')); const pr=cs.filter(c=>c.cb.promo);
+      return `<div><div class="sub">Bank-funded (cash + points), effective on ${kamd(A[t].spend)}/month</div>${stat(M('cb'))}<ul class="lines">${bf.map(x=>`<li><b>${pct(x.e.bank+x.e.points)}</b> ${esc(BANK[x.c.bank].name)} ${esc(x.c.short)} <span class="who">— ${esc(splitTxt(x.e))}${capShort(x.c)?` · ${esc(capShort(x.c))}`:''}</span></li>`).join('')||'<li class="empty">No bank-funded cashback in this tier.</li>'}</ul><hr class="thin"><div class="sub">ArCa 2% cards: ${ar.length} · promo-only: ${pr.length}</div></div>`; }
+    case 'perks': {
+      const tags={}; cs.forEach(c=>(c.perks||[]).forEach(p=>{ (tags[p[0]]=tags[p[0]]||{c:new Set(),b:new Set()}); tags[p[0]].c.add(c.id); tags[p[0]].b.add(c.bank); }));
+      const pm={}; cs.forEach(c=>(c.partners||[]).forEach(p=>{ (pm[p[0]]=pm[p[0]]||new Set()).add(c.bank); }));
+      const tl=Object.entries(tags).sort((a,b)=>b[1].c.size-a[1].c.size).map(([k,v])=>`<li><b>${esc(k)}</b> — ${v.c.size} card${v.c.size>1?'s':''} · ${[...v.b].map(x=>BANK[x].name).join(', ')}</li>`);
+      const top=Object.entries(pm).sort((a,b)=>b[1].size-a[1].size).slice(0,10).map(([k])=>`<span class="chip">${esc(k)}</span>`).join('');
+      const gap = inTier(FB,t).some(c=>c.gap)? `<div class="gapnote">Fast Bank's perks in this tier are unread (benefit PDFs blocked).</div>`:'';
+      return `<div><ul class="lines">${tl.join('')||'<li class="empty">None</li>'}</ul>${top?`<hr class="thin"><div class="sub">Named partners</div><div class="chips">${top}</div>`:''}${gap}</div>`; }
+  }
+}
+function basisToggle(){ return `<div><span class="seglabel">Market statistics over</span><span class="seg" role="group" aria-label="Statistics basis"><button type="button" data-basis="cards" aria-pressed="${S.basis==='cards'}">every card</button><button type="button" data-basis="banks" aria-pressed="${S.basis==='banks'}">each bank's best card</button></span></div>`; }
+function renderMarket(){
+  let g=`<div class="corner"></div>`+TIERS.map(t=>`<div class="hd" style="--tc:${t.c}"><div class="tn">${t.name}</div><div class="ts">${esc(t.sub)}</div></div>`).join('');
+  ROWS.forEach(r=>{ g+=rowLabel(r,null); for(const t of TIERS) g+=`<div>${mCell(r,t.id)}</div>`; });
+  return `<div class="section-head"><div><h2>Market overview</h2><p class="lede">All ${COL.length} tier cards from ${BANKS.length} banks. Grey dots are cards (or banks), the dark tick is the median, <span style="color:var(--fb-ink);font-weight:650">◆ Fast Bank</span>. Hover a dot for the bank and card.</p></div>${basisToggle()}</div>
+    <div class="scroll"><div class="grid">${g}</div></div>`;
+}
+
+/* ---------- Fast Bank vs market ---------- */
+function renderFB(){
+  const res={}; // id -> tier -> {fb, mk, v}
+  for(const m of METRICS){ res[m.id]={}; for(const t of TIERS){ const mk=m.kind==='count'?[]:marketVals(m,t.id,S.basis,true); const fb=m.kind==='count'?null:fbVal(m,t.id); res[m.id][t.id]={mk,fb,v:m.kind==='count'?null:verdict(m,fb,mk,t.id)}; } }
+  // key reads
+  const bucket={best:[],better:[],behind:[],worst:[],gap:[]};
+  for(const m of METRICS){ if(m.kind==='count') continue; const ts={best:[],better:[],behind:[],worst:[],gap:[]};
+    for(const t of TIERS){ const v=res[m.id][t.id].v; if(!v) continue;
+      if(v.cls==='best') ts.best.push(t.name); if(v.cls==='better') ts.better.push(t.name); if(v.cls==='worst') ts.worst.push(t.name); if(v.cls==='worse') ts.behind.push(t.name); if(v.cls==='gap') ts.gap.push(t.name); }
+    for(const k in ts) if(ts[k].length) bucket[k].push(`<li><b>${esc(m.label)}</b> — ${ts[k].length===4?'all tiers':ts[k].join(', ')}</li>`); }
+  const score=TIERS.map(t=>{ const c={best:0,better:0,at:0,worse:0,worst:0,gap:0}; METRICS.forEach(m=>{ const v=res[m.id][t.id].v; if(v&&c[v.cls]!=null) c[v.cls]++; });
+    return `<div class="read"><h3 style="color:${t.c}">${t.name}</h3><div class="score">${c.best?vchip({cls:'best',i:'▲▲',txt:c.best+' best'}):''}${c.better?vchip({cls:'better',i:'▲',txt:c.better+' above median'}):''}${c.at?vchip({cls:'at',i:'●',txt:c.at+' at market'}):''}${c.worse?vchip({cls:'worse',i:'▼',txt:c.worse+' below median'}):''}${c.worst?vchip({cls:'worst',i:'▼▼',txt:c.worst+' worst'}):''}${c.gap?vchip({cls:'gap',i:'?',txt:c.gap+' data gap'}):''}</div></div>`; }).join('');
+  let g=`<div class="corner"></div>`+TIERS.map(t=>`<div class="hd" style="--tc:${t.c}"><div class="tn">${t.name}</div><div class="ts">Fast Bank: ${inTier(FB,t.id).map(c=>esc(c.short)).join(', ')||'—'}</div></div>`).join('');
+  let lastG='';
+  for(const m of METRICS){
+    if(m.g!==lastG){ g+=`<div class="grouprow">${esc(m.g)}</div>`; lastG=m.g; }
+    g+=`<div class="rl"><div class="rt">${esc(m.label)}</div>${m.sub?`<div class="rs">${esc(m.sub('premium').replace(/^on a [^ ]+ AMD balance$/,'at the tier\'s typical balance').replace(/^[0-9.km]+ AMD a month, effective$/,'effective, on the tier\'s monthly cash').replace(/^one [0-9.km]+ AMD withdrawal$/,'one withdrawal, tier size').replace(/^on [0-9.km]+ AMD a month$/,'on the tier\'s monthly spend'))}</div>`:''}</div>`;
+    for(const t of TIERS){
+      if(m.kind==='count'){ const n=inTier(FB,t.id).length; const per=BANKS.filter(b=>b.id!==FB).map(b=>inTier(b.id,t.id).length); const med=median(per);
+        g+=`<div><div class="fbv"><span class="big num">${n}</span><span class="fbrange">market median ${med} per bank (range ${Math.min(...per)}–${Math.max(...per)})</span></div><div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(64px,1fr))">${inTier(FB,t.id).map(c=>mini(c,false)).join('')}</div></div>`; continue; }
+      const {mk,fb,v}=res[m.id][t.id];
+      let fbTxt;
+      if(fb.none) fbTxt='<span class="empty">No card</span>';
+      else if(fb.gap) fbTxt='<span class="big" style="font-size:15px">Unknown</span>';
+      else if(m.kind==='bool') fbTxt=`<span class="big" style="font-size:16px">${fb.v==null?'n/a':fb.v?'Yes':'No'}</span>`;
+      else fbTxt=`<span class="big num">${fb.v==null?'n/p':esc(m.fmt(fb.v))}</span>${fb.n>1&&fb.lo!==fb.hi?`<span class="fbrange">range ${esc(m.fmt(fb.lo))}–${esc(m.fmt(fb.hi))}</span>`:''}`;
+      let mkTxt='';
+      if(m.kind==='bool'){ const yes=mk.filter(x=>x.v); mkTxt = mk.length? `<div class="stats">${yes.length} of ${mk.length} ${S.basis==='cards'?'cards':'banks'} · <span data-tip="${esc(yes.map(x=>x.who).join('; ')||'none')}" style="text-decoration:underline dotted">${Math.round(yes.length/mk.length*100)}%</span></div>` : '<div class="stats">no market data</div>'; }
+      else if(mk.length){ const vs=mk.map(x=>x.v); mkTxt=`${strip(mk, typeof fb.v==='number'?fb.v:null, m.fmt)}<div class="stats num">min <b>${esc(m.fmt(Math.min(...vs)))}</b> · median <b>${esc(m.fmt(median(vs)))}</b> · max <b>${esc(m.fmt(Math.max(...vs)))}</b></div>`; }
+      else mkTxt='<div class="stats">no market data</div>';
+      g+=`<div><div class="fbv">${fbTxt}</div><div style="margin:5px 0 2px">${vchip(v)}</div>${mkTxt}</div>`;
+    }
+  }
+  const tierSubs = TIERS.map(t=>`<b>${t.name}</b> ${kamd(A[t.id].spend)} spend · ${kamd(A[t.id].bal)} balance`).join(' &nbsp;·&nbsp; ');
+  return `<div class="section-head"><div><h2>Fast Bank vs market — current offer</h2><p class="lede">Fast Bank's live cards in each tier against the same tier at the ${BANKS.length-1} other banks (${S.basis==='cards'?'every card counted':'each bank represented by its best card for the customer'}). Where Fast Bank has several cards in a tier, its median is shown. Typical customer: ${tierSubs}.</p></div>${basisToggle()}</div>
+    <div class="reads">${[
+      ['best', {cls:'best',i:'▲▲',txt:'Best in market'}],
+      ['better', {cls:'better',i:'▲',txt:'Better than median / ahead of most'}],
+      ['behind', {cls:'worse',i:'▼',txt:'Below median / behind most'}],
+      ['worst', {cls:'worst',i:'▼▼',txt:'Worst in market'}],
+      ['gap', {cls:'gap',i:'?',txt:'Data gap'}],
+    ].filter(([k])=>bucket[k].length).map(([k,chip])=>`<div class="read"><h3>${vchip(chip)}</h3><ul>${bucket[k].join('')}</ul></div>`).join('')}</div>
+    ${(!bucket.worst.length||!bucket.gap.length)?`<p class="sub" style="margin:-6px 0 14px">${[!bucket.worst.length?'No metric where Fast Bank is worst in market.':'', !bucket.gap.length?'Every Fast Bank cell is sourced.':''].filter(Boolean).join(' ')}</p>`:''}
+    <div class="reads">${score}</div>
+    <div class="scroll"><div class="grid fbgrid">${g}</div></div>`;
+}
+
+/* ---------- deposits ---------- */
+function renderDeposits(){
+  if(!DEP) return '<p class="empty">No deposit data.</p>';
+  const ref=DEP.reference;
+  const rows=BANKS.filter(b=>DEP.banks[b.id]).map(b=>({b, d:DEP.banks[b.id], v:depBank(b.id)})).sort((x,y)=>y.v-x.v);
+  const comp=rows.filter(r=>r.b.id!==FB), fb=rows.find(r=>r.b.id===FB);
+  const med=median(comp.map(r=>r.v)), best=Math.max(...comp.map(r=>r.v)), bestW=comp.filter(r=>Math.abs(r.v-best)<1e-9).map(r=>r.b.name).join(', ');
+  const inc=v=>ref.amount*v/100*0.9;
+  const pp=x=>(x>=0?'+':'−')+(Math.round(Math.abs(x)*100)/100).toFixed(2)+' pp';
+  const kpis = fb? `<div class="depk">
+    <div class="kpi fbk"><div class="kl">Fast Bank</div><div class="kv2 num">${pct(fb.v)}</div><div class="ks">${amd(inc(fb.v))} AMD a year on 1m, after 10% tax</div></div>
+    <div class="kpi"><div class="kl">Market median (${comp.length} banks)</div><div class="kv2 num">${pct(med)}</div><div class="ks">${amd(inc(med))} AMD a year after tax</div></div>
+    <div class="kpi"><div class="kl">Best competitor</div><div class="kv2 num">${pct(best)}</div><div class="ks">${esc(bestW)}</div></div>
+    <div class="kpi fbk"><div class="kl">Fast Bank's lead</div><div class="kv2 num">${pp(fb.v-best)}</div><div class="ks">${pp(fb.v-med)} over the median: ${amd(inc(fb.v)-inc(med))} AMD a year more on 1m</div></div></div>` : '';
+  const X=Math.max(...rows.map(r=>r.v))*1.06, xp=v=>(v/X*100).toFixed(2)+'%';
+  const bars=rows.map(r=>{ const d=r.d; return `<div class="dbar ${r.b.id===FB?'fb':''}"><span class="bn">${esc(r.b.name)}</span>
+    <div class="dtrack"><span class="dseg" style="width:${xp(d.maturity)}" data-tip="${esc(r.b.name)}: ${pct(d.maturity)} at maturity (${esc(d.product)}, ${esc(d.bucket)})"></span>${d.online?`<span class="dseg on" style="left:${xp(d.maturity)};width:${xp(d.online)}" data-tip="${esc(d.online_note)}"></span>`:''}<span class="dmed" style="left:${xp(med)}" data-tip="Market median ${pct(med)}"></span></div>
+    <span class="dval"><b class="num">${pct(r.v)}</b>${d.online?` <span class="sub" style="display:inline">(${pct(d.maturity)} + ${pct(d.online)} online)</span>`:''}</span></div>`; }).join('');
+  const upTxt = b => { const ups=uniq(COL.filter(c=>c.bank===b && c.uplift).map(c=>c.uplift)); if(!ups.length) return '<span class="empty">None published</span>';
+    return uniq(ups.map(u=>u.text)).map(t=>esc(t)).join('<br>')+(COL.some(c=>c.bank===b && depUp(c)>0)? '' : '<div class="sub">No term-deposit uplift for a 1m depositor.</div>'); };
+  const tbl = rows.map(r=>{ const d=r.d; return `<tr class="${r.b.id===FB?'fb':''}"><td>${esc(r.b.name)}</td><td>${esc(d.product)}<div class="sub">${esc(d.bucket)}${d.topup?' · top-ups allowed':''}</div></td>
+    <td class="n">${pct(d.maturity)}</td><td class="n">${d.online?'+'+pct(d.online):'—'}</td><td class="n"><b>${pct(r.v)}</b></td><td class="n">${pct(d.monthly)}<div class="sub">yield ${pct(d.monthly_apy)}</div></td>
+    <td class="n">${amd(inc(r.v))}</td><td>${upTxt(r.b.id)}</td>
+    <td>${[d.online_note,...(d.notes||[])].map(esc).join('<br>')}</td><td>${(d.src||[]).map(([t,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`).join('<br>')}</td></tr>`; }).join('');
+  return `<div class="section-head"><div><h2>Deposit rates: ${amd(ref.amount)} AMD for ${ref.term_months} months</h2><p class="lede">What a customer actually earns on a one-year AMD term deposit at each bank, interest paid at maturity. Online-opening bonuses are included; card or package uplifts count only where a 1m AMD depositor qualifies, and none do today. Rates from the Central Bank's <a href="${esc(DEP.source.url)}" target="_blank" rel="noopener" style="color:var(--fb-ink)">fininfo.am</a> comparison (${esc(DEP.as_of)}), checked against the banks' own pages.</p></div></div>
+    ${kpis}
+    <div class="dbars" role="img" aria-label="One-year AMD deposit rate on 1m AMD by bank">${bars}<div class="dleg">Bar: rate at maturity, branch · hatched: online-opening bonus · dark tick: market median without Fast Bank (${pct(med)}).</div></div>
+    <div class="scroll" style="margin-top:14px"><table class="dtable"><thead><tr><th>Bank</th><th>Product · term bucket</th><th class="n">At maturity</th><th class="n">Online bonus</th><th class="n">Headline</th><th class="n">Paid monthly</th><th class="n">Income after tax, AMD</th><th>Card / package uplift</th><th>Notes</th><th>Source</th></tr></thead><tbody>${tbl}</tbody></table></div>
+    <div class="reads" style="margin-top:14px">
+      <div class="read"><h3>Whole market on fininfo.am</h3><ul>${(DEP.market_top||[]).map(([n,v,k])=>`<li><b>${esc(n)}</b> ${pct(v)} <span class="who">— ${esc(k)}</span></li>`).join('')}</ul><div class="sub" style="margin-top:6px">Best 12-month AMD offer per bank on 1m; ${DEP.market_n_banks} banks listed, ${esc(DEP.as_of)}.</div></div>
+      <div class="read"><h3>Card-linked deposit uplifts</h3><ul>${(DEP.uplift_notes||[]).map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div>
+      <div class="read"><h3>How to read this</h3><ul><li>${esc(ref.basis)}</li><li>${esc(DEP.tax)}</li><li>${esc(DEP.guarantee)}</li></ul></div>
+    </div>`;
+}
+
+/* ---------- drawer ---------- */
+function openCard(id){
+  const c=CARD[id]; if(!c) return; const t=c.tier;
+  const rows=[];
+  const add=(k,v)=>{ if(v!=null && v!=='') rows.push(`<dt>${esc(k)}</dt><dd>${v}</dd>`); };
+  add('Bank', esc(BANK[c.bank].name)); add('Tier', t? esc(TIERS.find(x=>x.id===t).name) : esc(c.strip_reason||'Niche'));
+  add('Card level', esc((c.level||'')+(c.scheme?' · '+c.scheme:''))); if(c.local) add('Local name', esc(c.local));
+  add('Annual fee', esc(c.fee_display)+(c.fee_note?` <span class="tag warn">Check</span> ${esc(c.fee_note)}`:''));
+  if(c.place==='column'){
+    add('Fee waiver', `<span class="tag">${esc(WAIVER_LABEL[c.waiver.type])}</span> ${esc(c.waiver.text)}`);
+    add('Balance interest', c.int? esc(c.int.text)+` → <b>${pct(effInt(c,t))}</b> on ${kamd(A[t].bal)} AMD` : 'Not published');
+    add('Deposit boost', c.uplift? esc(c.uplift.text) : 'None published');
+    if(DEP && DEP.banks[c.bank]){ const d=DEP.banks[c.bank]; add('Term deposit, '+DEPREF(), `<b>${pct(depCard(c))}</b> at maturity${depUp(c)?` incl. +${pct(depUp(c))} card uplift`:''} — ${esc(d.product)}, ${esc(d.bucket)}${d.online?` (${pct(d.maturity)} + ${pct(d.online)} online)`:''}; ${pct(d.monthly)} if paid monthly`); }
+    add('FX', (c.fx? esc(c.fx.text)+'<br>' : '')+(BANK[c.bank].fx? `Bank rate USD ${pct(BANK[c.bank].fx.usd)} / EUR ${pct(BANK[c.bank].fx.eur)} one-way (${esc(BANK[c.bank].fx.usd_kind)})`:''));
+    add('Card-to-card', `same bank ${pct(c.c2c_in)} · other banks ${pct(c.c2c_out)}<br><span class="sub">${esc(c.c2c_note||'')}</span>`);
+    add('ATM', `own: ${esc(atmRuleTxt(c.atm_own))}<br>other RA: ${esc(atmRuleTxt(c.atm_other))}<br>abroad: ${esc(atmRuleTxt(c.atm_abroad))}`);
+    const e=cbEff(c,t); add('Cashback', (paidTag(c)?`<span class="tag">${esc(paidTag(c))}</span> `:'')+esc(c.cb.text)+`<br><b>${pct(e.bank+e.points)}</b> bank-funded${e.points>0?` (${esc(splitTxt(e))})`:''}${e.arca?` + ${pct(e.arca)} state ArCa`:''} on the ${TIERS.find(x=>x.id===t).name} basket`+(capTag(c)?`<br>${capTag(c)}`:'')+(c.cb.promo?`<br><span class="tag promo">Promo</span> ${esc(c.cb.promo)}`:''));
+    add('Perks', (c.perks||[]).map(p=>`<b>${esc(p[0])}</b>: ${esc(p[1])}`).join('<br>')||'None published');
+    add('Partners', (c.partners||[]).map(p=>`<b>${esc(p[0])}</b> — ${esc(p[1])}`).join('<br>'));
+    if(c.placement) add('Placement', esc(c.placement)); if(c.note) add('Normalisation note', esc(c.note)); if(c.gap) add('Data gap', esc(c.gap));
+  }
+  const raw=Object.entries(c.raw||{}).map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(typeof v==='string'?v:JSON.stringify(v))}</dd>`).join('');
+  const html=`<button class="x" type="button" data-close>Close</button>
+    <div class="eyebrow">${esc(BANK[c.bank].name)} · confidence ${esc(c.confidence||'n/a')}</div><h3>${esc(c.name)}</h3>
+    <div class="dcard">${mini(c,false)}</div>
+    <h4>Normalised</h4><dl class="dl">${rows.join('')}</dl>
+    ${c.notable?`<h4>Scan note</h4><p style="font-size:12.5px;margin:0">${esc(c.notable)}</p>`:''}
+    <h4>Tariff as published</h4><dl class="dl">${raw}</dl>
+    ${(c.gaps||[]).length?`<h4>Gaps in the source</h4><ul>${c.gaps.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
+    ${c.img_src?`<h4>Card image</h4><p style="font-size:12.5px;margin:0">From the bank's website: <a href="${esc(c.img_src)}" target="_blank" rel="noopener">${esc(c.img_src)}</a></p>`:''}
+    <h4>Sources</h4><ul>${[c.url,...(c.sources||[])].filter(Boolean).filter((v,i,a)=>a.indexOf(v)===i).map(u=>`<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}</a></li>`).join('')}</ul>`;
+  closeCard();
+  const scrim=document.createElement('div'); scrim.className='scrim'; scrim.dataset.close='1';
+  const d=document.createElement('aside'); d.className='drawer'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-label',c.name); d.innerHTML=html;
+  document.body.append(scrim,d); d.querySelector('.x').focus();
+}
+function closeCard(){ document.querySelectorAll('.scrim,.drawer').forEach(n=>n.remove()); }
+
+/* ---------- chrome ---------- */
+function renderChrome(){
+  const nCol=COL.length, nStrip=DATA.cards.filter(c=>c.place==='strip'&&!BANK[c.bank].pending).length;
+  document.getElementById('meta').innerHTML=`<span><b>${BANKS.length}</b> banks</span><span><b>${nCol}</b> cards in tiers · ${nStrip} niche</span><span>Tariffs read <b>${esc(DATA.as_of)}</b></span><span>FX <b>${esc(DATA.fx_as_of)}</b></span>${DATA.version?`<span>Version <b>${esc(DATA.version)}</b></span>`:''}`;
+  document.getElementById('tierkey').innerHTML=TIERS.map(t=>`<div class="tk" style="--tc:${t.c}"><b>${t.name}</b><span>${esc(t.sub)}</span></div>`).join('');
+  const tabs=[['fb','Fast Bank vs market','fbtab'],['market','Market overview',''],['deposits','Deposit rates','']];
+  let h=tabs.map(([id,l,cl])=>`<button type="button" class="tab ${cl}" role="tab" data-view="${id}" aria-selected="${S.view===id}">${l}</button>`).join('')+'<span class="tabsep" aria-hidden="true"></span>';
+  h+=DATA.banks.map(b=>b.pending? `<button type="button" class="tab pending" disabled title="Data pending">${esc(b.name)} · pending</button>` : `<button type="button" class="tab ${b.id===FB?'fbtab':''}" role="tab" data-view="${b.id}" aria-selected="${S.view===b.id}">${esc(b.name)}</button>`).join('');
+  document.getElementById('tabs').innerHTML=h;
+  // assumptions
+  let at=`<tr><th></th>${TIERS.map(t=>`<th style="color:${t.c}">${t.name}</th>`).join('')}<th>Basis</th></tr>`;
+  for(const [k,l,src] of A_FIELDS) at+=`<tr><td>${esc(l)}</td>${TIERS.map(t=>`<td><input id="a-${t.id}-${k}" data-t="${t.id}" data-k="${k}" type="number" inputmode="numeric" min="0" step="${k==='trav'||k==='foth'||k==='atmN'?1:1000}" value="${A[t.id][k]}" aria-label="${esc(t.name+' — '+l)}"></td>`).join('')}<td class="src">${esc(src)}</td></tr>`;
+  at+=`<tr><td>Domestic spend / other domestic, % (derived)</td>${TIERS.map(t=>`<td class="num" id="dom-${t.id}">${shares(t.id).dom}% / ${shares(t.id).domx}%</td>`).join('')}<td class="src">Domestic = 100 − travel − other abroad; other domestic = domestic − supermarkets − excluded.</td></tr>`;
+  document.getElementById('atable').innerHTML=at;
+  document.getElementById('foot').innerHTML=`<p><b>How the tiers were drawn.</b> Every current card sits in a tier, non-resident variants included, except demographic cards (pension, student / youth, women), genuine co-brands with an outside partner and payroll packages. Cards no longer issued are left out entirely. Tiers follow card level, following Fast Bank's own segment plan (Digital → Core → Mid-premium → Premium): Free = digital, virtual and no-fee instant cards plus ArCa (domestic, AMD-only) cards; Black = Classic / Standard / Gold; Premium = Platinum, World (digital variants included by level); Elite = Signature, World Black Edition, Infinite, World Elite, Metal. Evoca's Travel Card has no published level and sits in Premium on price and benefits; Acba's free Amex Cashback sits in Free and its Amex Gold Debit (70,000 AMD, Priority Pass) in Elite, following Amex's own ladder.</p>
+    <p><b>What counts.</b> Current retail cards only. Pension, student, payroll, co-brand, non-resident and legacy cards are listed per bank but kept out of the statistics. "Not published" is never read as zero. The national ArCa 2% cashback is funded by ArCa and the state, so it is shown separately from bank-funded cashback. Every cashback line says how it is paid: cash, points, or the state scheme. Points count only where the bank publishes a cash value (IDBank idcoin = 1 AMD); Acba's Amex Membership Rewards and Converse Points have no published value and are not counted. Promotional cashback is listed but not counted.</p>
+    <p><b>Card images</b> are taken from each bank's website (21 Sep 2026); cards without a published image (all of Converse Bank's, and a few co-brands) are shown as a styled render in the tier colour.</p>
+    <p><b>Sources.</b> Card tariffs: live product pages and tariff PDFs of each bank (competitor scan, 18 Sep 2026; Acba added ${esc(DATA.as_of)}). Documents supplied manually on 21 Sep 2026 close most gaps: Fast Bank's card tariff (TC 04 01#12, effective 26.06.2026) and premium benefit brochures, Ameriabank's card tariff (edition 46, effective 7 Jul 2026) and LoungeKey sheet, and Acba's standalone tariff sheets (decoded from the legacy ArmSCII font). Still unpublished: Ardshinbank's fee for card-to-card transfers to other banks and the fees of Acba's Visa Signature Limited Edition. FX: per-bank USD/EUR rates from <a href="${esc(DATA.fx_source)}" style="color:var(--fb-ink)">rate.am</a>, ${esc(DATA.fx_as_of)}; the separate card rate is used where a bank publishes one (IDBank), otherwise the non-cash rate. ${DEP?`Deposits: 1-year AMD term deposit on ${amd(DEP.reference.amount)} AMD from the Central Bank's <a href="${esc(DEP.source.url)}" style="color:var(--fb-ink)">fininfo.am</a> comparison, ${esc(DEP.as_of)}, checked against each bank's deposit page (links in the Deposit rates tab).`:''}</p>`;
+}
+function render(){
+  document.querySelectorAll('.tab[data-view]').forEach(b=>b.setAttribute('aria-selected', String(b.dataset.view===S.view)));
+  const v=document.getElementById('view');
+  v.innerHTML = S.view==='fb'? renderFB() : S.view==='market'? renderMarket() : S.view==='deposits'? renderDeposits() : BANK[S.view]? renderBank(S.view) : renderFB();
+  save();
+}
+
+/* ---------- events ---------- */
+document.addEventListener('click',e=>{
+  const tab=e.target.closest('.tab[data-view]'); if(tab){ S.view=tab.dataset.view; render(); return; }
+  const bs=e.target.closest('[data-basis]'); if(bs){ S.basis=bs.dataset.basis; render(); return; }
+  const cd=e.target.closest('[data-card]'); if(cd){ openCard(cd.dataset.card); return; }
+  if(e.target.closest('[data-close]')){ closeCard(); return; }
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeCard(); });
+document.getElementById('atable').addEventListener('input',e=>{ const i=e.target; if(!i.dataset.k) return; const v=parseFloat(i.value); if(isNaN(v)) return; A[i.dataset.t][i.dataset.k]=v; document.getElementById('dom-'+i.dataset.t).textContent=shares(i.dataset.t).dom+'% / '+shares(i.dataset.t).domx+'%'; render(); });
+document.getElementById('areset').addEventListener('click',()=>{ A=JSON.parse(JSON.stringify(DEF_A)); renderChrome(); render(); });
+const tip=document.getElementById('tip');
+document.addEventListener('mouseover',e=>{ const el=e.target.closest('[data-tip]'); if(!el){ tip.hidden=true; return; } tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; });
+document.addEventListener('mousemove',e=>{ if(tip.hidden) return; const w=tip.offsetWidth, h=tip.offsetHeight; let x=e.clientX+12, y=e.clientY+14; if(x+w>innerWidth-8) x=e.clientX-w-12; if(y+h>innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; });
+
+renderChrome(); render();
+</script>
