@@ -17,7 +17,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from . import units
-from .conditions import detect_equiv
+from .conditions import detect_equiv, parse_value
 from .models import Position, Purchase, Requirement, fmt
 
 try:
@@ -192,10 +192,16 @@ def char_to_requirement(c: dict) -> Requirement:
         for t in texts:
             tl = t.lower().strip()
             norm.append("да" if tl in ("да", "наличие", "есть") else "нет" if tl in ("нет", "отсутствует") else t)
+        if len(texts) == 1 and re.search(r"\d", texts[0]) and re.search(r"≥|≤|>|<|не менее|не более|от\s*\d|до\s*\d|более|менее|[xх×]\s*\d", texts[0].lower()):
+            pr = parse_value(texts[0], name, unit)
+            if pr.op in (">=", "<=", "диапазон") or pr.vmin is not None or (pr.values and pr.unit == "пиксель"):
+                pr.instruction = instr
+                return pr
         r.values = norm
         if len(norm) == 1:
             r.op = "="
-        elif icode == "5" or "все значения" in instr.lower():
+        elif icode in ("5", "6") or "все значения" in instr.lower() or "не может изменяться" in instr.lower():
+            # «не может изменяться» + несколько значений = товар должен иметь все перечисленные
             r.op, r.all_values = "=", True
         else:
             r.op = "из_списка"

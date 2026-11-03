@@ -5,7 +5,7 @@
 import { createRequire } from 'node:module';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { statSync } from 'node:fs';
+import { readFileSync, statSync } from 'node:fs';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require('playwright');
@@ -22,7 +22,12 @@ page.on('pageerror', (e) => errors.push(e.message));
 
 // 1. Ассортимент: XLSX с пометкой в первой строке, шапка в третьей
 await page.goto(base + '#/demo/assortiment');
-await page.setInputFiles('input[type=file]', join(root, 'public', 'пример_прайса_оргтехники.xlsx'));
+// Файл передаём буфером: Playwright молча не передаёт файл, если в пути есть кириллица.
+await page.setInputFiles('input[type=file]', {
+  name: 'пример_прайса_оргтехники.xlsx',
+  mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  buffer: readFileSync(join(root, 'public', 'пример_прайса_оргтехники.xlsx')),
+});
 await page.waitForSelector('.parse-result', { timeout: 10000 });
 const notes = await page.locator('.parse-result .notes').innerText();
 ok('XLSX: шапка найдена в строке 3', notes.includes('строке 3'), notes.split('\n').join(' | '));

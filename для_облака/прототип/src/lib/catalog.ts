@@ -4,6 +4,7 @@
 import Papa from 'papaparse';
 import type { CatalogItem } from '../types';
 import { parseNumber } from './format';
+import { readXlsx } from './xlsx';
 
 export type FieldKey =
   | 'артикул' | 'наименование' | 'категория' | 'производитель' | 'модель'
@@ -76,12 +77,9 @@ export async function readFileRows(file: File): Promise<{ rows: string[][]; note
   const name = file.name.toLowerCase();
   const notes: string[] = [];
   if (name.endsWith('.xlsx')) {
-    // Версия «universal» — без Web Worker: из file:// воркеры не запускаются, а сайт должен работать без сервера.
-    const { default: readXlsxFile } = await import('read-excel-file/universal');
-    const sheets = await readXlsxFile(await file.arrayBuffer());
-    const first = sheets[0];
-    if (sheets.length > 1) notes.push(`В файле ${sheets.length} листа(ов), взят первый: «${first.sheet}».`);
-    return { rows: first.data.map((r) => r.map(cellToString)), notes };
+    const { rows, sheetName, sheetCount } = readXlsx(await file.arrayBuffer());
+    if (sheetCount > 1) notes.push(`В файле ${sheetCount} листа(ов), взят первый: «${sheetName}».`);
+    return { rows, notes };
   }
   if (name.endsWith('.xls')) {
     throw new Error('Старый формат .xls не поддерживается в прототипе. Сохраните файл как .xlsx или .csv.');
