@@ -18,6 +18,15 @@ SHEETS = ['Связь и аудио-видео 26.3-26.4', 'Приборы 26.51
 FIELDS = ["ИНН", "ОГРН", "регион", "сайт", "почта", "телефон", "руководитель", "профиль"]
 
 
+def txt(v):
+    """ИНН/ОГРН — всегда текстом (ведущие нули, без экспоненты)."""
+    if v is None or (isinstance(v, float) and pd.isna(v)):
+        return None
+    if isinstance(v, float):
+        v = int(v)
+    return str(v).strip() or None
+
+
 def filled(c):
     return sum(1 for f in FIELDS if c.get(f))
 
@@ -81,6 +90,8 @@ def build():
     head_fill = PatternFill("solid", fgColor="2F4F4F")
     best_rows = []
     stats = {}
+    build.all_rows = {}
+    picked_mail = [0]
     for sh in SHEETS:
         df = pd.read_excel(SRC, sheet_name=sh)
         ws = wb.create_sheet(sh[:31])
@@ -94,7 +105,8 @@ def build():
         n_inn = n_mail = n_tel = 0
         for _, r in df.iterrows():
             k = (sh, int(r["№"]))
-            c = res.get(k, {})
+            c = dict(res.get(k, {}))
+            c["ИНН"], c["ОГРН"] = txt(c.get("ИНН")), txt(c.get("ОГРН"))
             src, rel = main_source(c)
             drop = None if pd.isna(r["Среднее снижение, %"]) else round(float(r["Среднее снижение, %"]), 1)
             row = [int(r["№"]), str(r["Поставщик"]).strip(), int(r["Участий за квартал"]), int(r["Побед"]),
@@ -108,6 +120,7 @@ def build():
                    src, rel, all_sources(c), c.get("примечание"), letter_type(drop), None]
             ws.append(row)
             n_inn += bool(c.get("ИНН")); n_mail += is_email(c.get("почта")); n_tel += bool(c.get("телефон"))
+            build.all_rows.setdefault(sh, []).append((row, c))
             if is_email(c.get("почта")):
                 best_rows.append((sh, row, c))
         stats[sh] = (len(df), n_inn, n_mail, n_tel)
@@ -124,33 +137,41 @@ def build():
     ws.append(cols)
     order = {"да": 0, "неясно": 1, "нет": 2}
     picked_total = 0
+    all_rows = getattr(build, "all_rows", {})
     for sh in SHEETS:
         cand = [(row, c) for s, row, c in best_rows if s == sh and c.get("профиль")]
         cand.sort(key=lambda rc: (order.get(rc[1].get("малый_без_тендерного_отдела") or "неясно", 1), -rc[0][3]))
-        for row, c in cand[:10]:
+        chosen = cand[:10]
+        # Добор до 10: лидеры ниши без найденной почты — почту взять из карточки Тендерплана / ЕИС (из России).
+        taken = {row[0] for row, _ in chosen}
+        rest = [(row, c) for row, c in all_rows.get(sh, []) if row[0] not in taken]
+        rest.sort(key=lambda rc: -rc[0][3])
+        chosen += rest[:10 - len(chosen)]
+        for row, c in chosen:
+            has_mail = is_email(c.get("почта"))
             why = (f"{row[3]} побед из {row[2]} участий за квартал; "
-                   f"есть деловая почта; малый без тендерного отдела: {c.get('малый_без_тендерного_отдела') or 'неясно'}")
+                   + ("есть деловая почта" if has_mail else "ПОЧТЫ НЕТ — взять в карточке Тендерплана (ссылка справа) или в реестре контрактов ЕИС")
+                   + f"; малый без тендерного отдела: {c.get('малый_без_тендерного_отдела') or 'неясно'}")
             ws.append([sh, row[0], row[1], c.get("руководитель"), c.get("почта"), c.get("телефон"), c.get("сайт"),
                        c.get("ИНН"), c.get("регион"), c.get("профиль"), row[2], row[3], row[5], row[6],
                        row[23], c.get("малый_без_тендерного_отдела") or "неясно", why,
-                       (c.get("надёжность") or {}).get("почта"), (c.get("источники") or {}).get("почта"), None])
+                       (c.get("надёжность") or {}).get("почта"), (c.get("источники") or {}).get("почта") or row[8], None])
             picked_total += 1
-        if len(cand) < 10:
-            ws.append([sh, None, f"⚠ Нашлось только {len(cand)} компаний с почтой и профилем — добрать вручную"])
+            picked_mail[0] += has_mail
     fmt(ws, head_font, head_fill)
 
     # Лист-инструкция
     wi = wb.create_sheet("Как пользоваться", 1)
     lines = [
         "Поставщики_75: контакты 75 лидеров трёх ниш (блок A). Собрано 3–4 ноября 2026 по открытым источникам.",
-        "Лист «Лучшие 30» — с кого начать: у всех есть деловая почта и понятный профиль. Тексты писем — в письма_30.xlsx (блок B).",
+        "Лист «Лучшие 30» — с кого начать: по 10 на нишу. Сначала компании с найденной деловой почтой, остальные — лидеры ниши, почту которых нужно взять в карточке Тендерплана (ссылка в столбце «Источник почты»). Тексты писем — в письма_30.xlsx (блок B).",
         "Надёжность: «подтверждено на сайте компании» — видели на сайте; «из справочника» — rusprofile/checko/list-org и т. п.; «предположение» — проверить перед письмом.",
         "Пустая ячейка = не нашли. Ничего не додумывали. Для ИП — только деловые контакты бизнеса.",
         "Тип письма: «а» — среднее снижение ≤7% (свои закупки, важны скорость и надёжность), «б» — снижение >25% (ценовые бойцы, важен расчёт цены).",
         "Перед отправкой: проверить почту на сайте компании (2 минуты), если надёжность не «подтверждено на сайте компании».",
         "",
         "Итог по нишам (компаний / с ИНН / с почтой / с телефоном):",
-    ] + [f"  {sh}: {a} / {b} / {c} / {d}" for sh, (a, b, c, d) in stats.items()] + [f"  В «Лучших 30» отобрано: {picked_total}"]
+    ] + [f"  {sh}: {a} / {b} / {c} / {d}" for sh, (a, b, c, d) in stats.items()] + [f"  В «Лучших 30»: {picked_total} компаний, из них с найденной почтой: {picked_mail[0]}"]
     for l in lines:
         wi.append([l])
     wi.column_dimensions["A"].width = 140
