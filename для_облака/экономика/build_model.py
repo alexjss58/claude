@@ -391,3 +391,7 @@ wb.move_sheet("Сводка", offset=-(wb.sheetnames.index("Сводка") - 0))
 wb.move_sheet("Допущения", offset=-(wb.sheetnames.index("Допущения") - 1))
 wb.save(OUT)
 print("saved", OUT, wb.sheetnames)
+
+# Лист «Себестоимость по этапам» (добавлен 4 ноября): раскладка «Юнит-экономика»!G13 по этапам тендера.
+import add_stage_sheet  # noqa: E402
+add_stage_sheet.main()
