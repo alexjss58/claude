@@ -1,0 +1,768 @@
+{
+ "_meta": {
+  "purchase_number": "0340100010926000063",
+  "source": "структурированное извещение ЕИС (через открытое API ГосПлан, v2test.gosplan.info)",
+  "retrieved": "2026-11-03",
+  "api_url": "https://v2test.gosplan.info/fz44/purchases/0340100010926000063",
+  "customer_inn": "4346010151",
+  "region_code": 43,
+  "stage": 1,
+  "purchase_type": "epNotificationEF2020"
+ },
+ "doc_type": "epNotificationEF2020",
+ "source": {
+  "id": "44334773",
+  "versionNumber": "1",
+  "commonInfo": {
+   "purchaseNumber": "0340100010926000063",
+   "docNumber": "№0340100010926000063",
+   "directDT": "2026-10-21T15:39:57.478+03:00",
+   "plannedPublishDate": "2026-10-21+03:00",
+   "publishDTInEIS": "2026-10-21T16:53:50.358+03:00",
+   "href": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0340100010926000063",
+   "placingWay": {
+    "code": "EAP20",
+    "name": "Электронный аукцион"
+   },
+   "ETP": {
+    "code": "ETP_RTS",
+    "name": "РТС-тендер",
+    "url": "http://www.rts-tender.ru"
+   },
+   "contractConclusionOnSt83Ch2": "true",
+   "purchaseObjectInfo": "Поставка проекторов и экранов для проектора"
+  },
+  "purchaseResponsibleInfo": {
+   "responsibleOrgInfo": {
+    "regNum": "03401000109",
+    "consRegistryNum": "001X0645",
+    "fullName": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \"КИРОВСКИЙ ГОСУДАРСТВЕННЫЙ МЕДИЦИНСКИЙ УНИВЕРСИТЕТ\" МИНИСТЕРСТВА ЗДРАВООХРАНЕНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ",
+    "shortName": "ФГБОУ ВО КИРОВСКИЙ ГМУ МИНЗДРАВА РОССИИ",
+    "postAddress": "610027, г. Киров, ул. Владимирская, 112",
+    "factAddress": "610027, г. Киров, ул. Владимирская, 112",
+    "INN": "4346010151",
+    "KPP": "434501001"
+   },
+   "responsibleRole": "CU",
+   "responsibleInfo": {
+    "orgPostAddress": "610027, г. Киров, ул. Владимирская, 112",
+    "orgFactAddress": "610027, г. Киров, ул. Владимирская, 112"
+   }
+  },
+  "printFormInfo": {
+   "url": "https://zakupki.gov.ru/epz/order/notice/printForm/view.html?regNumber=0340100010926000063"
+  },
+  "attachmentsInfo": {
+   "attachmentInfo": [
+    {
+     "publishedContentId": "01A15E3EEC3D7729A2358E09C64C8088",
+     "fileName": "Приложение 3. Обоснование НМЦК.xlsx",
+     "fileSize": "13162",
+     "docDescription": "Приложение 3. Обоснование НМЦК.xlsx",
+     "docDate": "2026-10-21T14:35:52+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15E3EEC3D7729A2358E09C64C8088",
+     "docKindInfo": {
+      "code": "MRJ",
+      "name": "Обоснование начальной (максимальной) цены контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A15E3EEC76717FA50300D8670291C5",
+     "fileName": "Приложение 4. Проект контракта. Проекторы и экраны зз-0567.doc",
+     "fileSize": "60215",
+     "docDescription": "Приложение 4. Проект контракта. Проекторы и экраны зз-0567.doc",
+     "docDate": "2026-10-21T14:35:52+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15E3EEC76717FA50300D8670291C5",
+     "docKindInfo": {
+      "code": "CP",
+      "name": "Проект контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A15E3EED1B76C988A392BC0F1F86C1",
+     "fileName": "Декларация.doc",
+     "fileSize": "27648",
+     "docDescription": "Декларация.doc",
+     "docDate": "2026-10-21T14:35:52+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15E3EED1B76C988A392BC0F1F86C1",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A15E3EEC127F1FBF73313FD9A50153",
+     "fileName": "Приложение 2.ПРОЕКТОР_Экран.docx",
+     "fileSize": "58685",
+     "docDescription": "Приложение 2.ПРОЕКТОР_Экран.docx",
+     "docDate": "2026-10-21T14:35:52+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15E3EEC127F1FBF73313FD9A50153",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A15E3EED507829AFE39493541BF7FB",
+     "fileName": "Уведомление 1875 проектор.pdf",
+     "fileSize": "85550",
+     "docDescription": "Уведомление 1875 проектор.pdf",
+     "docDate": "2026-10-21T14:35:52+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15E3EED507829AFE39493541BF7FB",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A15E3EED81784A9BB8513E5D63C55E",
+     "fileName": "Уведомление 1875 экран.pdf",
+     "fileSize": "80415",
+     "docDescription": "Уведомление 1875 экран.pdf",
+     "docDate": "2026-10-21T14:35:52+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15E3EED81784A9BB8513E5D63C55E",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A15E3EECDD719EA377DB0DD7B30EEE",
+     "fileName": "Приложение 6. Дополнительная информация к извещению об осуществлении закупки (43).docx",
+     "fileSize": "37192",
+     "docDescription": "Приложение 6. Дополнительная информация к извещению об осуществлении закупки (43).docx",
+     "docDate": "2026-10-21T14:35:52+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15E3EECDD719EA377DB0DD7B30EEE",
+     "docKindInfo": {
+      "code": "CAR",
+      "name": "Требование к содержанию, составу заявки на участие в закупке"
+     }
+    },
+    {
+     "publishedContentId": "01A15E3EEBDE730BA29F359CCC6D4BF6",
+     "fileName": "Приложение 1. Инструкция по заполнению заявки на участие в аукционе в электронной форме.doc",
+     "fileSize": "137216",
+     "docDescription": "Приложение 1. Инструкция по заполнению заявки на участие в аукционе в электронной форме.doc",
+     "docDate": "2026-10-21T14:35:52+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15E3EEBDE730BA29F359CCC6D4BF6",
+     "docKindInfo": {
+      "code": "CAR",
+      "name": "Требование к содержанию, составу заявки на участие в закупке"
+     }
+    },
+    {
+     "publishedContentId": "01A15E3EECA47610BD24319339C77270",
+     "fileName": "Приложение 5. Реквизиты для перечисления обеспечения.doc",
+     "fileSize": "132608",
+     "docDescription": "Приложение 5. Реквизиты для перечисления обеспечения.doc",
+     "docDate": "2026-10-21T14:35:52+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15E3EECA47610BD24319339C77270",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    }
+   ]
+  },
+  "serviceSigns": {
+   "isIncludeKOKS": "false",
+   "isControlP1Ch5St99": "true"
+  },
+  "notificationInfo": {
+   "procedureInfo": {
+    "collectingInfo": {
+     "startDT": "2026-10-21T16:53:50+03:00",
+     "endDT": "2026-11-06T09:00:00+03:00"
+    },
+    "biddingDate": "2026-11-06+03:00",
+    "summarizingDate": "2026-11-10+03:00"
+   },
+   "contractConditionsInfo": {
+    "maxPriceInfo": {
+     "maxPrice": "190498.68",
+     "currency": {
+      "code": "RUB",
+      "name": "РОССИЙСКИЙ РУБЛЬ"
+     }
+    },
+    "standardContractNumber": "1400700000520009"
+   },
+   "customerRequirementsInfo": {
+    "customerRequirementInfo": {
+     "customer": {
+      "regNum": "03401000109",
+      "consRegistryNum": "001X0645",
+      "fullName": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \"КИРОВСКИЙ ГОСУДАРСТВЕННЫЙ МЕДИЦИНСКИЙ УНИВЕРСИТЕТ\" МИНИСТЕРСТВА ЗДРАВООХРАНЕНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ"
+     },
+     "contractGuarantee": {
+      "account": {
+       "bik": "000000000",
+       "settlementAccount": "00000000000000000000",
+       "personalAccount": "См. прилагаемые документы"
+      },
+      "procedureInfo": "В соответствии с п.7 Инструкции по заполнению заявки на участие в закупке",
+      "part": "10.0"
+     },
+     "contractConditionsInfo": {
+      "maxPriceInfo": {
+       "maxPrice": "190498.68"
+      },
+      "mustPublicDiscussion": "false",
+      "IKZInfo": {
+       "purchaseCode": "261434601015143450100100300480000244",
+       "publishYear": "2026",
+       "OKPD2Info": {
+        "undefined": "0000"
+       },
+       "KVRInfo": {
+        "KVR": {
+         "code": "244",
+         "name": "Прочая закупка товаров, работ и услуг"
+        }
+       },
+       "customerCode": "14346010151434501001",
+       "purchaseNumber": "0030",
+       "purchaseOrderNumber": "048"
+      },
+      "tenderPlan2020Info": {
+       "plan2020Number": "202603401000109001",
+       "position2020Number": "202603401000109001000080"
+      },
+      "contractExecutionPaymentPlan": {
+       "contractExecutionTermsInfo": {
+        "notRelativeTermsInfo": {
+         "isFromConclusionDate": "true",
+         "endDate": "2027-03-31+03:00"
+        }
+       },
+       "financingSourcesInfo": {
+        "nonbudgetFinancingsInfo": {
+         "selfFunds": "true"
+        },
+        "currentYear": "2026",
+        "financeInfo": {
+         "total": "190498.68",
+         "currentYear": "0.00",
+         "firstYear": "190498.68",
+         "secondYear": "0.00",
+         "subsecYears": "0.00"
+        }
+       },
+       "stagesInfo": {
+        "stageInfo": {
+         "sid": "22364664",
+         "termsInfo": {
+          "notRelativeTermsInfo": {
+           "isFromConclusionDate": "true",
+           "endDate": "2027-03-31+03:00"
+          }
+         },
+         "nonbudgetFinancingInfo": {
+          "paymentYearInfo": {
+           "total": "190498.68",
+           "currentYear": "0.00",
+           "firstYear": "190498.68",
+           "secondYear": "0.00",
+           "subsecYears": "0.00"
+          },
+          "KVRsInfo": {
+           "currentYear": "2026",
+           "KVRInfo": {
+            "KVR": {
+             "code": "244",
+             "name": "Прочая закупка товаров, работ и услуг"
+            },
+            "KVRYearsInfo": {
+             "total": "190498.68",
+             "currentYear": "0.00",
+             "firstYear": "190498.68",
+             "secondYear": "0.00",
+             "subsecYears": "0.00"
+            }
+           },
+           "totalSum": "190498.68"
+          }
+         }
+        }
+       }
+      },
+      "deliveryPlacesInfo": {
+       "byGARInfo": {
+        "sid": "62273049",
+        "countryInfo": {
+         "countryCode": "643",
+         "countryFullName": "Российская Федерация"
+        },
+        "GARInfo": {
+         "GARGuid": "621fa135-6936-4234-b038-19f39b5b422b",
+         "GARAddress": "обл. Кировская, г.о. город Киров, г. Киров, ул. Владимирская, д. 112"
+        }
+       }
+      },
+      "isOneSideRejectionSt95": "true",
+      "isExecutionStagesTerms": "false"
+     }
+    }
+   },
+   "purchaseObjectsInfo": {
+    "notDrugPurchaseObjectsInfo": {
+     "purchaseObject": [
+      {
+       "sid": "225402750",
+       "externalSid": "p-5duu-zz4g-q0aq",
+       "KTRU": {
+        "code": "26.20.17.120-00000001",
+        "name": "Проектор",
+        "versionId": "376281",
+        "versionNumber": "18",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "335618983",
+           "code": "ddc02c75-e",
+           "name": "Контрастность",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "433474680",
+             "qualityDescription": "≥ 20 000:1"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "335618984",
+           "code": "6bb90862-d",
+           "name": "Максимальное проекционное расстояние",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "433474681",
+             "OKEI": {
+              "code": "006",
+              "nationalCode": "м",
+              "name": "Метр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "10"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "335618985",
+           "code": "51d20c9b-0",
+           "name": "Наличие возможности коррекции трапецеидальных искажений по вертикальной оси",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "433474682",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335618986",
+           "code": "6718caa0-4",
+           "name": "Наличие встроенных динамиков",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "433474683",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335618987",
+           "code": "98ee5474-0",
+           "name": "Поддерживаемое разрешение",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "433474684",
+             "qualityDescription": "Full HD (1920х1080)"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335618988",
+           "code": "34f17fe2-4",
+           "name": "Разъемы подключения",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": [
+             {
+              "sid": "433474687",
+              "qualityDescription": "HDMI"
+             },
+             {
+              "sid": "433474685",
+              "qualityDescription": "Выход 3.5 (mini-Jack)"
+             },
+             {
+              "sid": "433474686",
+              "qualityDescription": "Вход 3.5 (mini-Jack)"
+             }
+            ]
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335618989",
+           "code": "b518ab39-3",
+           "name": "Технология проецирования",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "433474688",
+             "qualityDescription": "DLP"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335618990",
+           "code": "2fc9937a-c",
+           "name": "Тип монтажа",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": [
+             {
+              "sid": "433474689",
+              "qualityDescription": "Настольный"
+             },
+             {
+              "sid": "433474690",
+              "qualityDescription": "Потолочный"
+             }
+            ]
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335618991",
+           "code": "3dba1ef4-f",
+           "name": "Тип проектора",
+           "type": "1",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "433474691",
+             "qualityDescription": "Стационарный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335618992",
+           "code": "ef65d0e6-1",
+           "name": "Яркость",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "433474692",
+             "OKEI": {
+              "code": "284",
+              "nationalCode": "лм",
+              "name": "Люмен"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "3000"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.70.16.190",
+         "OKPDName": "Проекторы изображений прочие, не включенные в другие группировки"
+        }
+       },
+       "name": "Проектор",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "42999.67",
+       "volumeSpecifyingMethod": "QF",
+       "quantity": {
+        "value": "4.00000000000"
+       },
+       "sum": "171998.68",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isRestrictForeignPurchaseObjects": "true"
+       }
+      },
+      {
+       "sid": "225402751",
+       "externalSid": "p-ozws-uqad-tck2",
+       "KTRU": {
+        "code": "26.70.17.150-00000002",
+        "name": "Экран для проектора",
+        "versionId": "186013",
+        "versionNumber": "7",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "335618993",
+           "code": "e932737c-9",
+           "name": "Высота",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "433474693",
+             "OKEI": {
+              "code": "004",
+              "nationalCode": "см",
+              "name": "Сантиметр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "180",
+               "maxMathNotation": "less",
+               "max": "210"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "335618994",
+           "code": "ac55dbf4-f",
+           "name": "Длина",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "433474694",
+             "OKEI": {
+              "code": "004",
+              "nationalCode": "см",
+              "name": "Сантиметр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "180",
+               "maxMathNotation": "less",
+               "max": "210"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "335618995",
+           "code": "5d1b5d5c-d",
+           "name": "Тип конструкции",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "433474695",
+             "qualityDescription": "Подпружиненный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335618996",
+           "code": "63101b65-9",
+           "name": "Тип покрытия полотна",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "433474696",
+             "qualityDescription": "Матовое"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335618997",
+           "code": "4ffa1e2d-3",
+           "name": "Тип проекции",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "433474697",
+             "qualityDescription": "Фронтальная"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335618998",
+           "code": "7a5a20c9-5",
+           "name": "Тип размещения",
+           "type": "1",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "433474698",
+             "qualityDescription": "Настенно-потолочный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335618999",
+           "code": "787cc4ce-a",
+           "name": "Тип установки",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "433474699",
+             "qualityDescription": "Стационарный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.70.17.150",
+         "OKPDName": "Экраны проекционные"
+        }
+       },
+       "name": "Экран для проектора",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "4625.00",
+       "volumeSpecifyingMethod": "QF",
+       "quantity": {
+        "value": "4.00000000000"
+       },
+       "sum": "18500.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isRestrictForeignPurchaseObjects": "true"
+       }
+      }
+     ],
+     "totalSum": "190498.68",
+     "quantityUndefined": "false"
+    }
+   },
+   "preferensesInfo": {
+    "preferenseInfo": {
+     "preferenseRequirementInfo": {
+      "shortName": "PVS33044",
+      "name": "Преимущество в соответствии с ч. 3 ст. 30 Закона № 44-ФЗ"
+     }
+    }
+   },
+   "requirementsInfo": {
+    "requirementInfo": [
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "ET44",
+       "name": "Единые требования к участникам закупок в соответствии с ч. 1 ст. 31 Закона № 44-ФЗ"
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TR442",
+       "name": "Требования к участникам закупок в соответствии с ч. 1.1 ст. 31 Закона № 44-ФЗ"
+      }
+     }
+    ]
+   },
+   "flags": {
+    "purchaseObjectsCh9St37": "false"
+   }
+  },
+  "@schemeVersion": "16.3"
+ }
+}

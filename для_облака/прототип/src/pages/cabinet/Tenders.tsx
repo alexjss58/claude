@@ -111,9 +111,9 @@ export default function Tenders() {
         </fieldset>
         <label>Порядок
           <select value={sort} onChange={(e) => setSort(e.target.value as typeof sort)}>
-            <option value="match">сначала с вашим товаром</option>
-            <option value="date">сначала новые</option>
-            <option value="nmc">сначала дорогие</option>
+            <option value="match">с вашим товаром</option>
+            <option value="date">новые</option>
+            <option value="nmc">дорогие</option>
           </select>
         </label>
       </form>
@@ -178,7 +178,7 @@ function TenderRow({ t, hintCount, hintCats }: { t: TenderView; hintCount: numbe
         <div><dt>НМЦ</dt><dd>{rubShort(t.нмц)}</dd></div>
         <div><dt>{t.закон}</dt><dd>{t.способ}</dd></div>
         <div><dt>Окончание</dt><dd>{t.дата_окончания}</dd></div>
-        <div><dt>Итог</dt><dd>{t.участников ? `${num(t.участников)} уч.` : '—'}{t['снижение_%'] !== null ? `, −${pct(t['снижение_%'], 0)}` : ''}</dd></div>
+        <div><dt>Итог</dt><dd>{t.участников ? `${num(t.участников)} уч.` : '—'}{t['снижение_%'] !== null ? (t['снижение_%'] < 0.5 ? ', без снижения' : `, −${pct(t['снижение_%'], t['снижение_%'] < 10 ? 1 : 0)}`) : ''}</dd></div>
       </dl>
     </li>
   );

@@ -8,12 +8,12 @@ import { useApp } from '../../state';
 
 export type Section = 'assortiment' | 'tendery' | 'tender' | 'zayavka' | 'sroki';
 
-const NAV: { key: Section; title: string; to: (id?: string) => string }[] = [
-  { key: 'assortiment', title: 'Ваш ассортимент', to: () => '/demo/assortiment' },
-  { key: 'tendery', title: 'Подходящие тендеры', to: () => '/demo/tendery' },
-  { key: 'tender', title: 'Карточка тендера', to: (id) => `/demo/tender/${id || firstSverkaKey}` },
-  { key: 'zayavka', title: 'Черновик заявки', to: (id) => `/demo/zayavka/${id || firstSverkaKey}` },
-  { key: 'sroki', title: 'Сроки и деньги', to: (id) => `/demo/sroki/${id || firstSverkaKey}` },
+const NAV: { key: Section; title: string; short: string; to: (id?: string) => string }[] = [
+  { key: 'assortiment', title: 'Ваш ассортимент', short: 'Ассортимент', to: () => '/demo/assortiment' },
+  { key: 'tendery', title: 'Подходящие тендеры', short: 'Тендеры', to: () => '/demo/tendery' },
+  { key: 'tender', title: 'Карточка тендера', short: 'Карточка', to: (id) => `/demo/tender/${id || firstSverkaKey}` },
+  { key: 'zayavka', title: 'Черновик заявки', short: 'Заявка', to: (id) => `/demo/zayavka/${id || firstSverkaKey}` },
+  { key: 'sroki', title: 'Сроки и деньги', short: 'Сроки', to: (id) => `/demo/sroki/${id || firstSverkaKey}` },
 ];
 
 export function AiModeSwitch() {
@@ -62,7 +62,7 @@ export default function CabinetLayout({ section, tenderId, children }: { section
             {NAV.map((n, i) => (
               <li key={n.key}>
                 <a href={href(n.to(tenderId))} aria-current={section === n.key ? 'page' : undefined} className={section === n.key ? 'on' : ''}>
-                  <span className="roman-sm">{roman(i + 1)}.</span> {n.title}
+                  <span className="roman-sm">{roman(i + 1)}.</span> <span className="nav-long">{n.title}</span><span className="nav-short">{n.short}</span>
                 </a>
               </li>
             ))}

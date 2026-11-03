@@ -1,0 +1,4797 @@
+{
+ "_meta": {
+  "purchase_number": "0342100011826000841",
+  "source": "структурированное извещение ЕИС (через открытое API ГосПлан, v2test.gosplan.info)",
+  "retrieved": "2026-11-03",
+  "api_url": "https://v2test.gosplan.info/fz44/purchases/0342100011826000841",
+  "customer_inn": "6317002858",
+  "region_code": 63,
+  "stage": 1,
+  "purchase_type": "epNotificationEF2020"
+ },
+ "doc_type": "epNotificationEF2020",
+ "source": {
+  "id": "44431671",
+  "versionNumber": "1",
+  "commonInfo": {
+   "purchaseNumber": "0342100011826000841",
+   "docNumber": "№0342100011826000841",
+   "directDT": "2026-10-30T15:33:01.654+04:00",
+   "plannedPublishDate": "2026-11-02+04:00",
+   "publishDTInEIS": "2026-11-02T09:14:41.742+04:00",
+   "href": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0342100011826000841",
+   "placingWay": {
+    "code": "EAP20",
+    "name": "Электронный аукцион"
+   },
+   "ETP": {
+    "code": "ETP_EETP",
+    "name": "РОСЭЛТОРГ (АО«ЕЭТП»)",
+    "url": "http://roseltorg.ru"
+   },
+   "contractConclusionOnSt83Ch2": "true",
+   "purchaseObjectInfo": "Поставка ноутбуков, системных блоков, мониторов, клавиатур, манипуляторов мышь, интерактивных панелей и планшетных компьютеров для нужд ФГБОУ ВО СамГМУ Минздрава России"
+  },
+  "purchaseResponsibleInfo": {
+   "responsibleOrgInfo": {
+    "regNum": "03421000118",
+    "consRegistryNum": "001X8738",
+    "fullName": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \"САМАРСКИЙ ГОСУДАРСТВЕННЫЙ МЕДИЦИНСКИЙ УНИВЕРСИТЕТ\" МИНИСТЕРСТВА ЗДРАВООХРАНЕНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ",
+    "shortName": "ФГБОУ ВО САМГМУ МИНЗДРАВА РОССИИ",
+    "postAddress": "443099, Самарская обл, г Самара, ул Чапаевская, дом 89",
+    "factAddress": "Российская Федерация, 443099, Самарская обл, Самара г, Чапаевская ул, Д. 89",
+    "INN": "6317002858",
+    "KPP": "631701001"
+   },
+   "responsibleRole": "CU",
+   "responsibleInfo": {
+    "orgPostAddress": "443099, Самарская обл, г Самара, ул Чапаевская, дом 89",
+    "orgFactAddress": "Российская Федерация, 443099, Самарская обл, Самара г, Чапаевская ул, Д. 89"
+   }
+  },
+  "printFormInfo": {
+   "url": "https://zakupki.gov.ru/epz/order/notice/printForm/view.html?regNumber=0342100011826000841"
+  },
+  "attachmentsInfo": {
+   "attachmentInfo": [
+    {
+     "publishedContentId": "01A18C932DCE7F4B900A624206C61F6F",
+     "fileName": "Расчет НМЦК.xlsx",
+     "fileSize": "24516",
+     "docDescription": "Расчет НМЦК",
+     "docDate": "2026-10-30T14:30:18+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18C932DCE7F4B900A624206C61F6F",
+     "docKindInfo": {
+      "code": "MRJ",
+      "name": "Обоснование начальной (максимальной) цены контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A18C933E9978C3A929329D110C14FA",
+     "fileName": "Проект контракта.docx",
+     "fileSize": "63270",
+     "docDescription": "Проект контракта",
+     "docDate": "2026-10-30T14:30:22+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18C933E9978C3A929329D110C14FA",
+     "docKindInfo": {
+      "code": "CP",
+      "name": "Проект контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A18C9354D479A8BD7AA0717A46DD27",
+     "fileName": "Приложение 2_Техническое задание.docx",
+     "fileSize": "55568",
+     "docDescription": "Приложение 2_Техническое задание",
+     "docDate": "2026-10-30T14:30:28+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18C9354D479A8BD7AA0717A46DD27",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A18C9364AF76EEA8ADBEAE79BD0074",
+     "fileName": "Приложение 1_Описание объекта закупки.xlsx",
+     "fileSize": "27477",
+     "docDescription": "Приложение 1_Описание объекта закупки",
+     "docDate": "2026-10-30T14:30:32+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18C9364AF76EEA8ADBEAE79BD0074",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A18C937CDC7439B0164904E87827A0",
+     "fileName": "ТРЕБОВАНИЯ К ЗАЯВКЕ.docx",
+     "fileSize": "32773",
+     "docDescription": "ТРЕБОВАНИЯ К ЗАЯВКЕ",
+     "docDate": "2026-10-30T14:30:38+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18C937CDC7439B0164904E87827A0",
+     "docKindInfo": {
+      "code": "CAR",
+      "name": "Требование к содержанию, составу заявки на участие в закупке"
+     }
+    }
+   ]
+  },
+  "serviceSigns": {
+   "isControlP1Ch5St99": "true"
+  },
+  "notificationInfo": {
+   "procedureInfo": {
+    "collectingInfo": {
+     "startDT": "2026-11-02T09:14:41+04:00",
+     "endDT": "2026-11-10T09:00:00+04:00"
+    },
+    "biddingDate": "2026-11-10+04:00",
+    "summarizingDate": "2026-11-12+04:00"
+   },
+   "contractConditionsInfo": {
+    "maxPriceInfo": {
+     "maxPrice": "12525600.00",
+     "currency": {
+      "code": "RUB",
+      "name": "РОССИЙСКИЙ РУБЛЬ"
+     }
+    }
+   },
+   "customerRequirementsInfo": {
+    "customerRequirementInfo": {
+     "customer": {
+      "regNum": "03421000118",
+      "consRegistryNum": "001X8738",
+      "fullName": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \"САМАРСКИЙ ГОСУДАРСТВЕННЫЙ МЕДИЦИНСКИЙ УНИВЕРСИТЕТ\" МИНИСТЕРСТВА ЗДРАВООХРАНЕНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ"
+     },
+     "applicationGuarantee": {
+      "amount": "125256.00",
+      "account": {
+       "bik": "000000000",
+       "settlementAccount": "00000000000000000000",
+       "personalAccount": "См. прилагаемые документы"
+      },
+      "accountBudget": {
+       "accountBudgetAdmin": {
+        "anotherAdmin": "true",
+        "INN": "6317002858",
+        "KPP": "631701001",
+        "OKTMOInfo": {
+         "code": "36701000",
+         "name": "Муниципальные образования Самарской области / Городские округа Самарской области/ / Самара"
+        },
+        "bankAccount": "40102810545370000036",
+        "ksNumber": "03100643000000014200",
+        "bik": "013601205",
+        "counterpartyName": "УПРАВЛЕНИЕ ФЕДЕРАЛЬНОГО КАЗНАЧЕЙСТВА ПО САМАРСКОЙ ОБЛАСТИ (ФГБОУ ВО САМГМУ МИНЗДРАВА РОССИИ)"
+       }
+      },
+      "procedureInfo": "Обеспечение заявки предоставляется в виде денежных средств или независимой гарантии. Выбор способа обеспечения заявки осуществляется участником закупки",
+      "part": "1.0"
+     },
+     "contractGuarantee": {
+      "account": {
+       "bik": "000000000",
+       "settlementAccount": "00000000000000000000",
+       "personalAccount": "См. прилагаемые документы"
+      },
+      "procedureInfo": "Исполнение контракта может обеспечиваться предоставлением независимой гарантией, выданной банком и соответствующей требованиям статьи 45 Федерального Закона 44-ФЗ, или внесением денежных средств на указанный заказчиком счет, на котором в соответствии с законодательствомРоссийскойФедерацииучитываютсяоперациисосредствами, поступающими заказчику. Наименование получателя: УФК по Нижегородской области (ФГБОУ ВО СамГМУ Минздрава России, лс 20426X87380) Банк получателя: ОКЦ № 1 ВВГУ Банка России//УФК по Нижегородской области, г. Нижний Новгород БИК 012202102 р/с 03214643000000013249 к/с 40102810745370000024 ОГРН 1026301426348 ОКАТО 36401388 ОКТМО 36701000 ОКОПФ 75103 ОКОГУ 1320700 ОКФС 12 ОКПО 01963143 Дата постановки на учет в налоговом органе: 27.07.1994г.!!!! В номере лицевого счета 20426X87380,X – заглавная латинская буква В поле «Назначение платежа» перед текстовым указанием назначения платежа указывать: 00000000000000000510.(образец: 00000000000000000510 обеспечение исполнения контракта на (указать название контракта) НДС не облагается»)",
+      "part": "10.0"
+     },
+     "contractConditionsInfo": {
+      "maxPriceInfo": {
+       "maxPrice": "12525600.00"
+      },
+      "mustPublicDiscussion": "false",
+      "IKZInfo": {
+       "purchaseCode": "261631700285863170100100070070000244",
+       "publishYear": "2026",
+       "OKPD2Info": {
+        "undefined": "0000"
+       },
+       "KVRInfo": {
+        "KVR": {
+         "code": "244",
+         "name": "Прочая закупка товаров, работ и услуг"
+        }
+       },
+       "customerCode": "16317002858631701001",
+       "purchaseNumber": "0007",
+       "purchaseOrderNumber": "007"
+      },
+      "tenderPlan2020Info": {
+       "plan2020Number": "202603421000118001",
+       "position2020Number": "202603421000118001000028"
+      },
+      "contractExecutionPaymentPlan": {
+       "contractExecutionTermsInfo": {
+        "notRelativeTermsInfo": {
+         "isFromConclusionDate": "true",
+         "endDate": "2026-12-30+03:00"
+        }
+       },
+       "financingSourcesInfo": {
+        "nonbudgetFinancingsInfo": {
+         "selfFunds": "true"
+        },
+        "currentYear": "2026",
+        "financeInfo": {
+         "total": "12525600.00",
+         "currentYear": "12525600.00",
+         "firstYear": "0.00",
+         "secondYear": "0.00",
+         "subsecYears": "0.00"
+        }
+       },
+       "stagesInfo": {
+        "stageInfo": {
+         "sid": "22523150",
+         "termsInfo": {
+          "notRelativeTermsInfo": {
+           "isFromConclusionDate": "true",
+           "endDate": "2026-12-30+03:00"
+          }
+         },
+         "nonbudgetFinancingInfo": {
+          "paymentYearInfo": {
+           "total": "12525600.00",
+           "currentYear": "12525600.00",
+           "firstYear": "0.00",
+           "secondYear": "0.00",
+           "subsecYears": "0.00"
+          },
+          "KVRsInfo": {
+           "currentYear": "2026",
+           "KVRInfo": {
+            "KVR": {
+             "code": "244",
+             "name": "Прочая закупка товаров, работ и услуг"
+            },
+            "KVRYearsInfo": {
+             "total": "12525600.00",
+             "currentYear": "12525600.00",
+             "firstYear": "0.00",
+             "secondYear": "0.00",
+             "subsecYears": "0.00"
+            }
+           },
+           "totalSum": "12525600.00"
+          }
+         }
+        }
+       }
+      },
+      "deliveryPlacesInfo": {
+       "byGARInfo": {
+        "sid": "62457375",
+        "countryInfo": {
+         "countryCode": "643",
+         "countryFullName": "Российская Федерация"
+        },
+        "GARInfo": {
+         "GARGuid": "50e8e6c8-ea39-40f7-9fcd-d0f9396961be",
+         "GARAddress": "обл. Самарская, г.о. Самара, г. Самара, ул. Чапаевская, д. 89"
+        },
+        "deliveryPlace": "443079 г. Самара, ул. Чапаевская, 89"
+       }
+      },
+      "isOneSideRejectionSt95": "true",
+      "isExecutionStagesTerms": "false"
+     },
+     "warrantyInfo": {
+      "warrantyTerm": "не менее 2 (двух) лет"
+     }
+    }
+   },
+   "purchaseObjectsInfo": {
+    "notDrugPurchaseObjectsInfo": {
+     "purchaseObject": [
+      {
+       "sid": "226220558",
+       "OKPD2": {
+        "OKPDCode": "26.20.11.120",
+        "OKPDName": "Портативные персональные компьютеры (совмещающие функции смартфона или планшета, или ноутбука)",
+        "characteristics": {
+         "characteristicsUsingTextForm": [
+          {
+           "sid": "337941259",
+           "name": "Количество производительных ядер процессора",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603006",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "6"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941260",
+           "name": "Количество энергоэффективных ядер процессора",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603007",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "8"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941261",
+           "name": "Количество потоков процессора",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603008",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "20"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941262",
+           "name": "Частота процессора базовая",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603009",
+             "OKEI": {
+              "code": "293",
+              "nationalCode": "ГГц",
+              "name": "Гигагерц"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2.6"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941263",
+           "name": "Частота процессора максимальная",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603010",
+             "OKEI": {
+              "code": "293",
+              "nationalCode": "ГГц",
+              "name": "Гигагерц"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "4.9"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941264",
+           "name": "Объем кэш памяти третьего уровня процессора (L3)",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603011",
+             "OKEI": {
+              "code": "257",
+              "nationalCode": "Мбайт",
+              "name": "Мегабайт"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "24"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941265",
+           "name": "Оперативная память",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436603012",
+             "qualityDescription": "DDR5 SO-DIMM"
+            }
+           }
+          },
+          {
+           "sid": "337941266",
+           "name": "Количество слотов памяти",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603013",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941267",
+           "name": "Количество установленых модулей памяти",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603014",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941268",
+           "name": "Общий объем памяти",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603015",
+             "OKEI": {
+              "code": "2553",
+              "nationalCode": "Гбайт",
+              "name": "Гигабайт"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "32"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941269",
+           "name": "Тактовая частота",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603016",
+             "OKEI": {
+              "code": "292",
+              "nationalCode": "МГц",
+              "name": "Мегагерц"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "4800"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941270",
+           "name": "Количество ядер CUDA",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603017",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "3328"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941271",
+           "name": "Пропускная способность памяти",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603018",
+             "OKEI": {
+              "code": "2547",
+              "nationalCode": "Гбит/с",
+              "name": "Гигабит в секунду"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "384"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941272",
+           "name": "Тип видеопамяти",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436603019",
+             "qualityDescription": "GDDR7"
+            }
+           }
+          },
+          {
+           "sid": "337941273",
+           "name": "Поддержка DLSS 4",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436603020",
+             "qualityDescription": "Да"
+            }
+           }
+          },
+          {
+           "sid": "337941274",
+           "name": "Аппаратное ускорение трассировки лучей",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436603021",
+             "qualityDescription": "Да"
+            }
+           }
+          },
+          {
+           "sid": "337941275",
+           "name": "Объем видеопамяти",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603022",
+             "OKEI": {
+              "code": "2553",
+              "nationalCode": "Гбайт",
+              "name": "Гигабайт"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "8"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941276",
+           "name": "Тип накопителя",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436603023",
+             "qualityDescription": "SSD NVMe M.2 PCIe Gen4x4"
+            }
+           }
+          },
+          {
+           "sid": "337941277",
+           "name": "Объем накопителя",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603024",
+             "OKEI": {
+              "code": "2554",
+              "nationalCode": "Тбайт",
+              "name": "Терабайт"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941278",
+           "name": "Диагональ экрана",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603025",
+             "OKEI": {
+              "code": "039",
+              "nationalCode": "дюйм",
+              "name": "Дюйм (25,4 мм)"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "17"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941279",
+           "name": "Разрешение экрана, Пиксель",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436603026",
+             "qualityDescription": "2560x1440"
+            }
+           }
+          },
+          {
+           "sid": "337941280",
+           "name": "Тип матрицы",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436603027",
+             "qualityDescription": "IPS"
+            }
+           }
+          },
+          {
+           "sid": "337941281",
+           "name": "Порт ввода-вывода USB 3.2 Type-A",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603028",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941282",
+           "name": "Порт ввода-вывода USB 3.2 Type-C",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436603029",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941283",
+           "name": "Порт ввода-вывода RJ-45",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436603030",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueSet": {
+              "concreteValue": "1"
+             }
+            }
+           }
+          },
+          {
+           "sid": "337941284",
+           "name": "Беспроводная связь Wi-Fi 6 (802.11ax)",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436603031",
+             "qualityDescription": "да"
+            }
+           }
+          },
+          {
+           "sid": "337941285",
+           "name": "Беспроводная связь Bluetooth 5",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436603032",
+             "qualityDescription": "да"
+            }
+           }
+          }
+         ]
+        }
+       },
+       "name": "Ноутбук тип 1",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "330000.00",
+       "quantity": {
+        "value": "2.00000000000"
+       },
+       "sum": "660000.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       },
+       "isSoftware": "false"
+      },
+      {
+       "sid": "226227573",
+       "OKPD2": {
+        "OKPDCode": "26.20.11.120",
+        "OKPDName": "Портативные персональные компьютеры (совмещающие функции смартфона или планшета, или ноутбука)",
+        "characteristics": {
+         "characteristicsUsingTextForm": [
+          {
+           "sid": "337970779",
+           "name": "Количество ядер процессора",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436641804",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "6"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337970780",
+           "name": "Количество потоков процессора",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436641805",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "12"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337970781",
+           "name": "Частота процессора базовая",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436641806",
+             "OKEI": {
+              "code": "293",
+              "nationalCode": "ГГц",
+              "name": "Гигагерц"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2.3"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337970782",
+           "name": "Частота процессора максимальная",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436641807",
+             "OKEI": {
+              "code": "293",
+              "nationalCode": "ГГц",
+              "name": "Гигагерц"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "4.3"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337970783",
+           "name": "Объем кэш памяти третьего уровня процессора (L3)",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436641808",
+             "OKEI": {
+              "code": "257",
+              "nationalCode": "Мбайт",
+              "name": "Мегабайт"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "16"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337970784",
+           "name": "Оперативная память",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436641809",
+             "qualityDescription": "DDR4 SO-DIMM"
+            }
+           }
+          },
+          {
+           "sid": "337970785",
+           "name": "Общий объем памяти",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436641810",
+             "OKEI": {
+              "code": "2553",
+              "nationalCode": "Гбайт",
+              "name": "Гигабайт"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "16"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337970786",
+           "name": "Тактовая частота",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436641811",
+             "OKEI": {
+              "code": "292",
+              "nationalCode": "МГц",
+              "name": "Мегагерц"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "3200"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337970787",
+           "name": "Видеоконтроллер",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436641812",
+             "qualityDescription": "Встроенная графика"
+            }
+           }
+          },
+          {
+           "sid": "337970788",
+           "name": "Количество шейдерных ядер",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436641813",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "448"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337970789",
+           "name": "Поддерживаемые API",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436641814",
+             "qualityDescription": "DirectX 12.1, OpenGL 4.6, OpenCL 2.2, Vulkan"
+            }
+           }
+          },
+          {
+           "sid": "337970790",
+           "name": "Тип накопителя",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436641815",
+             "qualityDescription": "SSD NVMe M.2 PCIe Gen4x4"
+            }
+           }
+          },
+          {
+           "sid": "337970791",
+           "name": "Объем накопителя",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436641816",
+             "OKEI": {
+              "code": "2553",
+              "nationalCode": "Гбайт",
+              "name": "Гигабайт"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "512"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337970792",
+           "name": "Диагональ экрана",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436641817",
+             "OKEI": {
+              "code": "039",
+              "nationalCode": "дюйм",
+              "name": "Дюйм (25,4 мм)"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "15.6"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337970793",
+           "name": "Разрешение экрана",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436641818",
+             "qualityDescription": "1920x1080"
+            }
+           }
+          },
+          {
+           "sid": "337970794",
+           "name": "Порт ввода-вывода USB 3.2 Type-A",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436641819",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "4"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337970795",
+           "name": "Порт ввода-вывода USB 3.2 Type-C",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "436641820",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "337970796",
+           "name": "Порт ввода-вывода RJ-45",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436641821",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueSet": {
+              "concreteValue": "1"
+             }
+            }
+           }
+          },
+          {
+           "sid": "337970797",
+           "name": "Беспроводная связь",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "436641822",
+             "qualityDescription": "Wi-Fi 5 (802.11ac)"
+            }
+           }
+          }
+         ]
+        }
+       },
+       "name": "Ноутбук тип 2",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "99300.00",
+       "quantity": {
+        "value": "12.00000000000"
+       },
+       "sum": "1191600.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       },
+       "isSoftware": "false"
+      },
+      {
+       "sid": "226238222",
+       "KTRU": {
+        "code": "26.20.15.000-00000028",
+        "name": "Системный блок",
+        "versionId": "393721",
+        "versionNumber": "32",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "338002953",
+           "code": "183b49d1-b",
+           "name": "Базовая частота графического контроллера интегрированного в процессор",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682626",
+             "OKEI": {
+              "code": "292",
+              "nationalCode": "МГц",
+              "name": "Мегагерц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "less",
+               "max": "333"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002954",
+           "code": "65bb2997-1",
+           "name": "Высота корпуса",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682627",
+             "OKEI": {
+              "code": "003",
+              "nationalCode": "мм",
+              "name": "Миллиметр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "less",
+               "max": "400"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002955",
+           "code": "5d3cf27c-d",
+           "name": "Длина корпуса",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682628",
+             "OKEI": {
+              "code": "003",
+              "nationalCode": "мм",
+              "name": "Миллиметр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "less",
+               "max": "300"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002956",
+           "code": "52a9574a-4",
+           "name": "Интерфейс накопителя SSD",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682629",
+             "qualityDescription": "PCIe"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338002957",
+           "code": "a562ecbf-4",
+           "name": "Количество накопителей типа SSD форм-фактора M.2",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682630",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002958",
+           "code": "b41f067d-0",
+           "name": "Количество портов HDMI",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682631",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002959",
+           "code": "ae0762e4-0",
+           "name": "Количество потоков процессора",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682632",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "12"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002960",
+           "code": "a1cdd523-8",
+           "name": "Количество слотов оперативной памяти",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682633",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002961",
+           "code": "25d731d7-7",
+           "name": "Количество ядер процессора",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682634",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "6"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002962",
+           "code": "504d329d-2",
+           "name": "Мощность блока питания",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682635",
+             "OKEI": {
+              "code": "212",
+              "nationalCode": "Вт",
+              "name": "Ватт"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "300"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002963",
+           "code": "bb69afac-2",
+           "name": "Наличие графического контроллера интегрированного в процессор",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682636",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338002964",
+           "code": "c4b784a1-a",
+           "name": "Общее количество установленных портов DisplayPort",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682637",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002965",
+           "code": "18695da2-2",
+           "name": "Общий объем накопителей SSD форм-фактора M.2",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682638",
+             "OKEI": {
+              "code": "2553",
+              "nationalCode": "Гбайт",
+              "name": "Гигабайт"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "240"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002966",
+           "code": "85e831f4-9",
+           "name": "Объем каждого установленного модуля оперативной памяти",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682639",
+             "OKEI": {
+              "code": "2553",
+              "nationalCode": "Гбайт",
+              "name": "Гигабайт"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "8"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002967",
+           "code": "c69f824d-3",
+           "name": "Объем кэш памяти третьего уровня процессора (L3)",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682640",
+             "OKEI": {
+              "code": "257",
+              "nationalCode": "Мбайт",
+              "name": "Мегабайт"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "15"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002968",
+           "code": "cab07f74-9",
+           "name": "Объем установленной оперативной памяти",
+           "type": "2",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "436682641",
+             "OKEI": {
+              "code": "2553",
+              "nationalCode": "Гбайт",
+              "name": "Гигабайт"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "16"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002969",
+           "code": "38625fe4-6",
+           "name": "Сетевой интерфейс 8P8C (RJ-45)",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682642",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002970",
+           "code": "61099e51-9",
+           "name": "Скорость передачи данных проводного сетевого контроллера",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682643",
+             "OKEI": {
+              "code": "2545",
+              "nationalCode": "Мбит/с",
+              "name": "Мегабит в секунду"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1000"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002971",
+           "code": "767d4945-9",
+           "name": "Суммарное количество встроенных в корпус портов USB 2.0",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682644",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002972",
+           "code": "3134a602-f",
+           "name": "Суммарное количество встроенных в корпус портов USB 3.2 Gen 2 (USB 3.1 Gen 2, USB 3.1)",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682645",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002973",
+           "code": "25d67248-f",
+           "name": "Суммарное количество встроенных в корпус портов USB Type-C",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682646",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002974",
+           "code": "684e9502-a",
+           "name": "Тактовая частота оперативной памяти",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682647",
+             "OKEI": {
+              "code": "292",
+              "nationalCode": "МГц",
+              "name": "Мегагерц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "4800"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002975",
+           "code": "3ecc8aa1-f",
+           "name": "Тип интерфейса проводного сетевого контроллера",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682648",
+             "qualityDescription": "RJ-45"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338002976",
+           "code": "5af31c5f-3",
+           "name": "Тип накопителя",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682649",
+             "qualityDescription": "SSD"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338002977",
+           "code": "0285dbe2-e",
+           "name": "Тип оперативной памяти",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682650",
+             "qualityDescription": "DDR5"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338002978",
+           "code": "79097625-9",
+           "name": "Частота процессора базовая",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682651",
+             "OKEI": {
+              "code": "293",
+              "nationalCode": "ГГц",
+              "name": "Гигагерц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2.5"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002979",
+           "code": "690f6851-8",
+           "name": "Частота процессора максимальная",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682652",
+             "OKEI": {
+              "code": "293",
+              "nationalCode": "ГГц",
+              "name": "Гигагерц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "4.2"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338002980",
+           "code": "de6e0a02-7",
+           "name": "Ширина корпуса",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436682653",
+             "OKEI": {
+              "code": "003",
+              "nationalCode": "мм",
+              "name": "Миллиметр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "less",
+               "max": "150"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.20.15.000",
+         "OKPDName": "Машины вычислительные электронные цифровые прочие, содержащие или не содержащие в одном корпусе одно или два из следующих устройств для автоматической обработки данных: запоминающие устройства, устройства ввода, устройства вывода"
+        }
+       },
+       "name": "Системный блок",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "108800.00",
+       "quantity": {
+        "value": "20.00000000000"
+       },
+       "sum": "2176000.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       },
+       "isSoftware": "false"
+      },
+      {
+       "sid": "226244461",
+       "KTRU": {
+        "code": "26.20.17.110-00000007",
+        "name": "Монитор, подключаемый к компьютеру",
+        "versionId": "356261",
+        "versionNumber": "17",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "338032742",
+           "code": "4d32caf9-6",
+           "name": "Блок питания",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725091",
+             "qualityDescription": "Встроенный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338032743",
+           "code": "6ef8f746-9",
+           "name": "Время отклика, мс",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725092",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "less",
+               "max": "6"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338032744",
+           "code": "e7db0797-e",
+           "name": "Изогнутый экран",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725093",
+             "qualityDescription": "Нет"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338032745",
+           "code": "83867a5a-d",
+           "name": "Интерфейс подключения",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": [
+             {
+              "sid": "436725095",
+              "qualityDescription": "Display Port"
+             },
+             {
+              "sid": "436725094",
+              "qualityDescription": "HDMI"
+             }
+            ]
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338032746",
+           "code": "99117d56-e",
+           "name": "Кабель для подключения к источнику изображения в комплекте",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725096",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338032747",
+           "code": "bbf9fcd6-f",
+           "name": "Количество встроенных в корпус портов DisplayPort",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725097",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338032748",
+           "code": "29c0bb44-b",
+           "name": "Количество встроенных в корпус портов HDMI",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725098",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338032749",
+           "code": "0a224ad7-3",
+           "name": "Контрастность",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725099",
+             "qualityDescription": "≥1000:1"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338032750",
+           "code": "c7d8cb52-5",
+           "name": "Наличие встроенных динамиков",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725100",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338032751",
+           "code": "5676d1b4-d",
+           "name": "Наличие USB-концентратора",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725101",
+             "qualityDescription": "Нет"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338032752",
+           "code": "20d87efd-4",
+           "name": "Размер диагонали",
+           "type": "2",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "436725102",
+             "OKEI": {
+              "code": "039",
+              "nationalCode": "дюйм",
+              "name": "Дюйм (25,4 мм)"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "27"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338032753",
+           "code": "3b3a4392-d",
+           "name": "Разрешение экрана, Пиксель",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725103",
+             "qualityDescription": "1920 x 1080"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338032754",
+           "code": "3652d6a3-a",
+           "name": "Разъем",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": [
+             {
+              "sid": "436725104",
+              "qualityDescription": "Mini-Jack (3,5 мм) вход"
+             },
+             {
+              "sid": "436725105",
+              "qualityDescription": "Mini-Jack (3,5 мм) выход"
+             }
+            ]
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338032755",
+           "code": "6869632b-6",
+           "name": "Стандарт крепления",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725106",
+             "qualityDescription": "VESA 100 x 100"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338032756",
+           "code": "2fa21306-2",
+           "name": "Технология изготовления матрицы дисплея",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725107",
+             "qualityDescription": "IPS (PLS, ADS, AAS, FFS, SFT, New Mode2, Vistarich)"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338032757",
+           "code": "0717e845-5",
+           "name": "Тип кабеля для подключения к источнику изображения в комплекте",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725108",
+             "qualityDescription": "HDMI-HDMI"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338032758",
+           "code": "8486bc83-8",
+           "name": "Угол обзора по вертикали, градус",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725109",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "178"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338032759",
+           "code": "73e1008d-7",
+           "name": "Угол обзора по горизонтали, градус",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725110",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "178"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338032760",
+           "code": "1623785d-f",
+           "name": "Частота обновления экрана",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725111",
+             "OKEI": {
+              "code": "290",
+              "nationalCode": "Гц",
+              "name": "Герц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "100"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338032761",
+           "code": "5dba0cf0-b",
+           "name": "Яркость, кд/м2",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436725112",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "300",
+               "maxMathNotation": "less",
+               "max": "350"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.20.17.110",
+         "OKPDName": "Мониторы, подключаемые к компьютеру"
+        }
+       },
+       "name": "Монитор, подключаемый к компьютеру",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "20400.00",
+       "quantity": {
+        "value": "45.00000000000"
+       },
+       "sum": "918000.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       },
+       "isSoftware": "false"
+      },
+      {
+       "sid": "226244810",
+       "KTRU": {
+        "code": "26.20.16.110-00000002",
+        "name": "Клавиатура",
+        "versionId": "377362",
+        "versionNumber": "6",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "338034904",
+           "code": "1881892a-f",
+           "name": "Длина кабеля",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436727886",
+             "OKEI": {
+              "code": "006",
+              "nationalCode": "м",
+              "name": "Метр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1.6",
+               "maxMathNotation": "less",
+               "max": "2"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338034905",
+           "code": "dbfe3ec0-c",
+           "name": "Интерфейс подключения",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436727887",
+             "qualityDescription": "USB"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338034906",
+           "code": "92b65506-5",
+           "name": "Отличие цвета русских букв на клавишах от латинских",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436727888",
+             "qualityDescription": "Нет"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338034907",
+           "code": "0f8fce6a-1",
+           "name": "Способ нанесения русификации клавиатуры",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436727889",
+             "qualityDescription": "Промышленный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338034908",
+           "code": "bd5c74e7-f",
+           "name": "Тип",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436727890",
+             "qualityDescription": "Полноразмерная"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338034909",
+           "code": "4da020c2-0",
+           "name": "Тип подключения",
+           "type": "1",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "436727891",
+             "qualityDescription": "Проводная"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.20.16.110",
+         "OKPDName": "Клавиатуры"
+        }
+       },
+       "name": "Клавиатура",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "2000.00",
+       "quantity": {
+        "value": "20.00000000000"
+       },
+       "sum": "40000.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       },
+       "isSoftware": "false"
+      },
+      {
+       "sid": "226244955",
+       "KTRU": {
+        "code": "26.20.16.170-00000002",
+        "name": "Мышь компьютерная",
+        "versionId": "111114",
+        "versionNumber": "3",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "338035513",
+           "code": "e4356b06-a",
+           "name": "Длина кабеля",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436728758",
+             "OKEI": {
+              "code": "006",
+              "nationalCode": "м",
+              "name": "Метр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1.5",
+               "maxMathNotation": "less",
+               "max": "2"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338035514",
+           "code": "a928a97b-c",
+           "name": "Интерфейс подключения",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436728759",
+             "qualityDescription": "USB"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338035515",
+           "code": "3bbaafed-7",
+           "name": "Разрешение сенсора, точек/дюйм",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436728760",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1000"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338035516",
+           "code": "4da020c2-0",
+           "name": "Тип подключения",
+           "type": "1",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "436728761",
+             "qualityDescription": "Проводной"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338035517",
+           "code": "c6e2ae51-6",
+           "name": "Тип сенсора",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436728762",
+             "qualityDescription": "Оптический"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.20.16.170",
+         "OKPDName": "Манипуляторы"
+        }
+       },
+       "name": "Мышь компьютерная",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "1000.00",
+       "quantity": {
+        "value": "20.00000000000"
+       },
+       "sum": "20000.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       },
+       "isSoftware": "false"
+      },
+      {
+       "sid": "226246375",
+       "KTRU": {
+        "code": "26.20.13.000-00000002",
+        "name": "Интерактивная панель",
+        "versionId": "418381",
+        "versionNumber": "17",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "338042899",
+           "code": "002fa2a5-7",
+           "name": "Вес панели",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758114",
+             "OKEI": {
+              "code": "166",
+              "nationalCode": "кг",
+              "name": "Килограмм"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "30",
+               "maxMathNotation": "less",
+               "max": "40"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042904",
+           "code": "bda42b48-3",
+           "name": "Время отклика матрицы дисплея (от серого к серому), мс",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758115",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "8"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042905",
+           "code": "41771bae-6",
+           "name": "Время отклика сенсора касания, мс",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758116",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "5"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042907",
+           "code": "323cd950-5",
+           "name": "Высота панели",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758117",
+             "OKEI": {
+              "code": "003",
+              "nationalCode": "мм",
+              "name": "Миллиметр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "800",
+               "maxMathNotation": "less",
+               "max": "1000"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042908",
+           "code": "aa093e6e-4",
+           "name": "Высота срабатывания сенсора от поверхности экрана",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758118",
+             "OKEI": {
+              "code": "003",
+              "nationalCode": "мм",
+              "name": "Миллиметр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "2"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042909",
+           "code": "56c89d80-0",
+           "name": "Диагональ матрицы дисплея",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758119",
+             "OKEI": {
+              "code": "039",
+              "nationalCode": "дюйм",
+              "name": "Дюйм (25,4 мм)"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "65",
+               "maxMathNotation": "less",
+               "max": "70"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042910",
+           "code": "236a2c94-8",
+           "name": "Количество встроенных портов Ethernet для подключения дополнительных устройств",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758120",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042911",
+           "code": "5576b5e3-e",
+           "name": "Количество входов аудиосигнала линейного уровня",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758121",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042913",
+           "code": "1e8474bb-0",
+           "name": "Количество входов аудиосигнала микрофонного уровня",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758122",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042915",
+           "code": "162f8194-9",
+           "name": "Количество выходов аудиосигнала",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758123",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "3"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042917",
+           "code": "6ec6ddaf-f",
+           "name": "Количество поддерживаемых стилусов одновременно",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758124",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "20"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042920",
+           "code": "4e64be27-d",
+           "name": "Количество портов USB 3.0 Type-A",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758125",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "4"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042922",
+           "code": "cb0c229d-2",
+           "name": "Количество портов USB 3.0 Type-C",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758126",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042925",
+           "code": "f9fdad36-1",
+           "name": "Количество свободных портов USB 2.0 Type-A",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758127",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042926",
+           "code": "a363daf2-3",
+           "name": "Количество свободных портов USB Type-A на лицевой панели",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758128",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "3"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042927",
+           "code": "76c10004-b",
+           "name": "Количество стилусов в комплекте поставки",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758129",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042928",
+           "code": "4196523d-4",
+           "name": "Количество точек касания",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758130",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "20"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042929",
+           "code": "bb151c67-9",
+           "name": "Количество HDMI входов на лицевой панели",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758131",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "3"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042935",
+           "code": "d75c644c-c",
+           "name": "Наличие встроенного вычислительного блока",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758132",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042936",
+           "code": "09e9e861-f",
+           "name": "Наличие встроенного микрофона",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758133",
+             "qualityDescription": "Нет"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042937",
+           "code": "318b5857-d",
+           "name": "Наличие встроенной акустической системы",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758134",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042938",
+           "code": "098d57bd-5",
+           "name": "Наличие встроенной камеры",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758135",
+             "qualityDescription": "Нет"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042939",
+           "code": "ee14db92-0",
+           "name": "Наличие дополнительного вычислительного блока",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758136",
+             "qualityDescription": "Нет"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042940",
+           "code": "f04fbd1f-e",
+           "name": "Наличие закаленного защитного стекла",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758137",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042941",
+           "code": "ea8d2b63-6",
+           "name": "Наличие интегрированного датчика освещенности для автоматической коррекции яркости подсветки",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758138",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042942",
+           "code": "94784910-6",
+           "name": "Наличие крепления в комплекте",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758139",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042943",
+           "code": "d545a424-1",
+           "name": "Наличие лотков для хранения стилусов",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758140",
+             "qualityDescription": "Нет"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042945",
+           "code": "000f5f01-b",
+           "name": "Наличие пульта дистанционного управления в комплекте",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758141",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042946",
+           "code": "dd9bcac2-6",
+           "name": "Наличие твердотельного накопителя",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758142",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042953",
+           "code": "e1370e11-2",
+           "name": "Наличие функции двойного написания",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758143",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042955",
+           "code": "e24868dd-9",
+           "name": "Объем накопителя встроенного вычислительного блока",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758144",
+             "OKEI": {
+              "code": "2553",
+              "nationalCode": "Гбайт",
+              "name": "Гигабайт"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "128"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042956",
+           "code": "b5bb66b3-d",
+           "name": "Объем оперативной памяти встроенного вычислительного блока",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758145",
+             "OKEI": {
+              "code": "2553",
+              "nationalCode": "Гбайт",
+              "name": "Гигабайт"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "8"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042957",
+           "code": "5c89059f-8",
+           "name": "Поддерживаемая операционная система",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "436758146",
+             "qualityDescription": "Android"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042958",
+           "code": "63b16b5d-b",
+           "name": "Поддержка разрешения 3840х2160 пикселей (при 60 Гц)",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758147",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042960",
+           "code": "90e6b058-8",
+           "name": "Разрешение матрицы дисплея по вертикали, пиксель",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758148",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2100"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042961",
+           "code": "ab37925a-f",
+           "name": "Разрешение матрицы дисплея по горизонтали, пиксель",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758149",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "3000"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042962",
+           "code": "987f716a-5",
+           "name": "Разрешение сенсора касания",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758150",
+             "OKEI": {
+              "code": "003",
+              "nationalCode": "мм",
+              "name": "Миллиметр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042963",
+           "code": "4ea5f5a1-6",
+           "name": "Способ крепления стилуса",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758151",
+             "qualityDescription": "Магнитный (на панели)"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042964",
+           "code": "402af74c-5",
+           "name": "Статическая контрастность дисплея",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758152",
+             "qualityDescription": "≥5000:1"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042965",
+           "code": "3091513f-e",
+           "name": "Технология изготовления матрицы дисплея",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758153",
+             "qualityDescription": "VA (AHVA, MVA, PVA)"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042966",
+           "code": "07d2351e-5",
+           "name": "Тип конструкции",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "436758154",
+             "qualityDescription": "Настенный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042967",
+           "code": "4fa2bab0-9",
+           "name": "Тип подсветки",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758155",
+             "qualityDescription": "Прямая светодиодная"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042968",
+           "code": "51b41b97-5",
+           "name": "Тип сенсорной технологии",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "436758156",
+             "qualityDescription": "Инфракрасная"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042970",
+           "code": "2b0e4d60-0",
+           "name": "Тип системы охлаждения корпуса интерактивной панели",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758157",
+             "qualityDescription": "Пассивное"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042971",
+           "code": "3ca3e14b-0",
+           "name": "Тип слота на корпусе для установки дополнительного вычислительного блока",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758158",
+             "qualityDescription": "OPS"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042972",
+           "code": "51939235-f",
+           "name": "Тип стилусов для работы с панелью",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758159",
+             "qualityDescription": "Безбатарейный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042973",
+           "code": "72d8e51d-0",
+           "name": "Толщина панели",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758160",
+             "OKEI": {
+              "code": "003",
+              "nationalCode": "мм",
+              "name": "Миллиметр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "80",
+               "maxMathNotation": "less",
+               "max": "100"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042974",
+           "code": "d82d240a-8",
+           "name": "Условия эксплуатации",
+           "type": "1",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "436758161",
+             "qualityDescription": "В помещении"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338042977",
+           "code": "93447522-9",
+           "name": "Ширина панели",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758162",
+             "OKEI": {
+              "code": "003",
+              "nationalCode": "мм",
+              "name": "Миллиметр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1400",
+               "maxMathNotation": "less",
+               "max": "1500"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338042978",
+           "code": "fc4786b0-f",
+           "name": "Яркость дисплея, кд/м2",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758163",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "450"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.20.13.000",
+         "OKPDName": "Машины вычислительные электронные цифровые, содержащие в одном корпусе центральный процессор и устройство ввода и вывода, объединенные или нет для автоматической обработки данных"
+        }
+       },
+       "name": "Интерактивная панель",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "200000.00",
+       "quantity": {
+        "value": "16.00000000000"
+       },
+       "sum": "3200000.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      },
+      {
+       "sid": "226250175",
+       "KTRU": {
+        "code": "26.20.11.110-00000152",
+        "name": "Планшетный компьютер",
+        "versionId": "376181",
+        "versionNumber": "17",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "338056149",
+           "code": "2ab62c0e-3",
+           "name": "Архитектура процессора",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758164",
+             "qualityDescription": "ARM"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056150",
+           "code": "92e8c97d-1",
+           "name": "Беспроводная связь",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": [
+             {
+              "sid": "436758165",
+              "qualityDescription": "Bluetooth"
+             },
+             {
+              "sid": "436758166",
+              "qualityDescription": "Wi-Fi"
+             }
+            ]
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056151",
+           "code": "42563fae-d",
+           "name": "Версия Bluetooth",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758167",
+             "qualityDescription": "≥ 5,0"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338056152",
+           "code": "fd55080e-2",
+           "name": "Вес",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758168",
+             "OKEI": {
+              "code": "166",
+              "nationalCode": "кг",
+              "name": "Килограмм"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "0.6"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338056153",
+           "code": "60da2a7c-e",
+           "name": "Время автономной работы от батареи",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758169",
+             "OKEI": {
+              "code": "356",
+              "nationalCode": "ч",
+              "name": "Час"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "8"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338056154",
+           "code": "ff299185-5",
+           "name": "Диагональ экрана",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758170",
+             "OKEI": {
+              "code": "039",
+              "nationalCode": "дюйм",
+              "name": "Дюйм (25,4 мм)"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "11",
+               "maxMathNotation": "less",
+               "max": "12"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338056155",
+           "code": "e549e346-b",
+           "name": "Емкость аккумуляторной батареи",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758171",
+             "OKEI": {
+              "code": "243",
+              "nationalCode": "Вт.ч",
+              "name": "Ватт-час"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "33"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338056156",
+           "code": "bf3c647e-4",
+           "name": "Количество встроенных в корпус портов USB Type-C",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758172",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338056157",
+           "code": "044d1f97-1",
+           "name": "Количество ядер процессора",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758173",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "8"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338056158",
+           "code": "05576ada-a",
+           "name": "Наличие автофокуса для тыльной камеры",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758174",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056159",
+           "code": "6dca587f-f",
+           "name": "Наличие аудиоразъема 3,5 мм",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758175",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056160",
+           "code": "423af284-1",
+           "name": "Наличие встроенного микрофона",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758176",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056161",
+           "code": "de1fce7d-d",
+           "name": "Наличие встроенного(ых) динамика(ов)",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758177",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056162",
+           "code": "4bb0e2e1-c",
+           "name": "Наличие ГЛОНАСС",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758178",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056163",
+           "code": "1707c469-0",
+           "name": "Наличие датчика акселерометра",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758179",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056164",
+           "code": "10bb6a2b-2",
+           "name": "Наличие датчика освещенности",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758180",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056165",
+           "code": "276c6fdd-6",
+           "name": "Наличие разъема для сим-карт",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758181",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056166",
+           "code": "c8eb06ca-6",
+           "name": "Наличие слота для карты памяти",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758182",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056167",
+           "code": "2c3402ce-c",
+           "name": "Наличие тыльной камеры",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758183",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056168",
+           "code": "e096b908-8",
+           "name": "Наличие фронтальной камеры",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758184",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056169",
+           "code": "d007dd59-f",
+           "name": "Наличие A-GPS",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758185",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056170",
+           "code": "555ce4f5-f",
+           "name": "Наличие Beidou",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758186",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056171",
+           "code": "57aa5fb3-3",
+           "name": "Наличие GPS",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758187",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056172",
+           "code": "395dc569-e",
+           "name": "Объем встроенной памяти",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758188",
+             "OKEI": {
+              "code": "2553",
+              "nationalCode": "Гбайт",
+              "name": "Гигабайт"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "120"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338056173",
+           "code": "06afd267-5",
+           "name": "Объем оперативной памяти",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758189",
+             "OKEI": {
+              "code": "2553",
+              "nationalCode": "Гбайт",
+              "name": "Гигабайт"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "8"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338056174",
+           "code": "8c74190f-6",
+           "name": "Рабочая частота WiFi",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758190",
+             "OKEI": {
+              "code": "293",
+              "nationalCode": "ГГц",
+              "name": "Гигагерц"
+             },
+             "valueFormat": "N",
+             "valueSet": {
+              "concreteValue": "5"
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056175",
+           "code": "8cb29408-0",
+           "name": "Разрешение тыльной камеры, Мпиксель",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758191",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "13"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338056176",
+           "code": "0180451b-d",
+           "name": "Разрешение фронтальной камеры, Мпиксель",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758192",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "5"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338056177",
+           "code": "a0f4d571-1",
+           "name": "Разрешение экрана, Пиксель",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758193",
+             "qualityDescription": "≥ 2000 х 1200"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "338056178",
+           "code": "8764e600-a",
+           "name": "Сенсорный экран, мультитач",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758194",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056179",
+           "code": "3408c2e3-f",
+           "name": "Технология изготовления матрицы дисплея",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758195",
+             "qualityDescription": "IPS (PLS, ADS, AAS, FFS, SFT, New Mode2, Vistarich)"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056180",
+           "code": "90a76352-c",
+           "name": "Тип матрицы",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758196",
+             "qualityDescription": "Жидкокристаллическая"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056181",
+           "code": "c7fbe7aa-e",
+           "name": "Цветность экрана",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758197",
+             "qualityDescription": "Цветной"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338056182",
+           "code": "ffe8eee1-b",
+           "name": "Частота процессора",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "436758198",
+             "OKEI": {
+              "code": "293",
+              "nationalCode": "ГГц",
+              "name": "Гигагерц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2.2"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.20.11.110",
+         "OKPDName": "Ноутбуки, в том числе портативные в защищенном исполнении, предназначенные для работы в сложной среде эксплуатации"
+        }
+       },
+       "name": "Планшетный компьютер",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "96000.00",
+       "quantity": {
+        "value": "45.00000000000"
+       },
+       "sum": "4320000.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       },
+       "isSoftware": "false"
+      }
+     ],
+     "totalSum": "12525600.00",
+     "quantityUndefined": "false"
+    }
+   },
+   "preferensesInfo": {
+    "preferenseInfo": {
+     "preferenseRequirementInfo": {
+      "shortName": "PVS33044",
+      "name": "Преимущество в соответствии с ч. 3 ст. 30 Закона № 44-ФЗ"
+     }
+    }
+   },
+   "requirementsInfo": {
+    "requirementInfo": [
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "ET44",
+       "name": "Единые требования к участникам закупок в соответствии с ч. 1 ст. 31 Закона № 44-ФЗ"
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TR442",
+       "name": "Требования к участникам закупок в соответствии с ч. 1.1 ст. 31 Закона № 44-ФЗ"
+      }
+     }
+    ]
+   },
+   "flags": {
+    "purchaseObjectsCh9St37": "false"
+   }
+  },
+  "@schemeVersion": "16.3"
+ }
+}

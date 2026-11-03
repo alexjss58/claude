@@ -1,0 +1,615 @@
+{
+ "_meta": {
+  "purchase_number": "0373200589126000121",
+  "source": "структурированное извещение ЕИС (через открытое API ГосПлан, v2test.gosplan.info)",
+  "retrieved": "2026-11-03",
+  "api_url": "https://v2test.gosplan.info/fz44/purchases/0373200589126000121",
+  "customer_inn": "7724245600",
+  "region_code": 77,
+  "stage": 1,
+  "purchase_type": "epNotificationEZK2020"
+ },
+ "doc_type": "epNotificationEZK2020",
+ "source": {
+  "id": "44440970",
+  "externalId": "14988878",
+  "versionNumber": "1",
+  "commonInfo": {
+   "purchaseNumber": "0373200589126000121",
+   "docNumber": "№0373200589126000121",
+   "plannedPublishDate": "2026-10-30+03:00",
+   "publishDTInEIS": "2026-10-30T17:24:24.324+03:00",
+   "href": "https://zakupki.gov.ru/epz/order/notice/zk20/view/common-info.html?regNumber=0373200589126000121",
+   "placingWay": {
+    "code": "ZKP20",
+    "name": "Запрос котировок в электронной форме"
+   },
+   "ETP": {
+    "code": "ETP_EETP",
+    "name": "РОСЭЛТОРГ (АО«ЕЭТП»)",
+    "url": "http://roseltorg.ru"
+   },
+   "contractConclusionOnSt83Ch2": "true",
+   "purchaseObjectInfo": "Поставка гарнитуры для нужд ГБУЗ \"ГП №214 ДЗМ\""
+  },
+  "purchaseResponsibleInfo": {
+   "responsibleOrgInfo": {
+    "regNum": "03732005891",
+    "consRegistryNum": "452Р9314",
+    "fullName": "ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ ГОРОДА МОСКВЫ \"ГОРОДСКАЯ ПОЛИКЛИНИКА № 214 ДЕПАРТАМЕНТА ЗДРАВООХРАНЕНИЯ ГОРОДА МОСКВЫ\"",
+    "shortName": "ГБУЗ \"ГП № 214 ДЗМ\"",
+    "postAddress": "115583, г. Москва, улица Елецкая дом 14",
+    "factAddress": "115583, МОСКВА, УЛ. ЕЛЕЦКАЯ, Дом (Корпус/строение) Д.14",
+    "INN": "7724245600",
+    "KPP": "772401001"
+   },
+   "responsibleRole": "CU",
+   "responsibleInfo": {
+    "orgPostAddress": "115583, г. Москва, улица Елецкая дом 14",
+    "orgFactAddress": "115583, МОСКВА, УЛ. ЕЛЕЦКАЯ, Дом (Корпус/строение) Д.14"
+   }
+  },
+  "printFormInfo": {
+   "url": "https://zakupki.gov.ru/epz/order/notice/printForm/view.html?regNumber=0373200589126000121"
+  },
+  "attachmentsInfo": {
+   "attachmentInfo": [
+    {
+     "publishedContentId": "01A18D30696D71C5B0FEC0B441607C11",
+     "fileName": "расчет НМЦК,.xls",
+     "fileSize": "28672",
+     "docDescription": "Расчет НМЦК(Д)",
+     "docDate": "2026-10-30T17:22:06+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18D30696D71C5B0FEC0B441607C11",
+     "docKindInfo": {
+      "code": "MRJ",
+      "name": "Обоснование начальной (максимальной) цены контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A18D306AB27ADBB7CF6B794CAE5F71",
+     "fileName": "Протокол.pdf",
+     "fileSize": "1059024",
+     "docDescription": "Протокол НМЦК(Д)",
+     "docDate": "2026-10-30T17:22:06+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18D306AB27ADBB7CF6B794CAE5F71",
+     "docKindInfo": {
+      "code": "MRJ",
+      "name": "Обоснование начальной (максимальной) цены контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A18D306B6E7FC8B07BCB3388AA881F",
+     "fileName": "Проект_контракта_17292302-1.pdf",
+     "fileSize": "122057",
+     "docDescription": "Проект контракта (договора)",
+     "docDate": "2026-10-30T17:22:06+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18D306B6E7FC8B07BCB3388AA881F",
+     "docKindInfo": {
+      "code": "CP",
+      "name": "Проект контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A18D306BF67F1B9EE1DA4B019F96B2",
+     "fileName": "Техническое_задание_17292302-1.pdf",
+     "fileSize": "69457",
+     "docDescription": "Техническое задание",
+     "docDate": "2026-10-30T17:22:06+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18D306BF67F1B9EE1DA4B019F96B2",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A18D3068E4778C8289EC30B504FD22",
+     "fileName": "Требования к содержанию, составу заявки на участие.pdf",
+     "fileSize": "60200",
+     "docDescription": "Требования к содержанию, составу заявки на участие в закупке",
+     "docDate": "2026-10-30T17:22:06+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18D3068E4778C8289EC30B504FD22",
+     "docKindInfo": {
+      "code": "CAR",
+      "name": "Требование к содержанию, составу заявки на участие в закупке"
+     }
+    },
+    {
+     "publishedContentId": "01A18D3066FF74C79BD6CF098ABFC41B",
+     "fileName": "Приказ.pdf",
+     "fileSize": "4872743",
+     "docDescription": "Приказ.pdf",
+     "docDate": "2026-10-30T17:22:06+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18D3066FF74C79BD6CF098ABFC41B",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    },
+    {
+     "publishedContentId": "01A18D306C7973188AC4AA54C025C06A",
+     "fileName": "!! В_помощь_участникам_закупок.pdf",
+     "fileSize": "151808",
+     "docDescription": "!! В помощь участникам закупок",
+     "docDate": "2026-10-30T17:22:06+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18D306C7973188AC4AA54C025C06A",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    }
+   ]
+  },
+  "serviceSigns": {
+   "isIncludeKOKS": "false",
+   "isControlP1Ch5St99": "false"
+  },
+  "notificationInfo": {
+   "procedureInfo": {
+    "collectingInfo": {
+     "startDT": "2026-10-30T17:24:24+03:00",
+     "endDT": "2026-11-10T10:00:00+03:00"
+    },
+    "summarizingDate": "2026-11-12+03:00"
+   },
+   "contractConditionsInfo": {
+    "maxPriceInfo": {
+     "maxPrice": "133982.00",
+     "currency": {
+      "code": "RUB",
+      "name": "РОССИЙСКИЙ РУБЛЬ"
+     }
+    }
+   },
+   "customerRequirementsInfo": {
+    "customerRequirementInfo": {
+     "customer": {
+      "regNum": "03732005891",
+      "consRegistryNum": "452Р9314",
+      "fullName": "ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ ГОРОДА МОСКВЫ \"ГОРОДСКАЯ ПОЛИКЛИНИКА № 214 ДЕПАРТАМЕНТА ЗДРАВООХРАНЕНИЯ ГОРОДА МОСКВЫ\""
+     },
+     "contractGuarantee": {
+      "account": {
+       "bik": "004525988",
+       "settlementAccount": "03224643450000007300",
+       "personalAccount": "2105442000960979",
+       "creditOrgName": "ОКЦ № 1 ГУ Банка России по ЦФО//УФК ПО Г. МОСКВЕ, г Москва",
+       "corrAccountNumber": "40102810545370000003"
+      },
+      "procedureInfo": "Контракт заключается после предоставления заказчику обеспечения исполнения контракта. Обеспечение исполнения контракта может быть представлено в виде безотзывной независимой гарантии или внесением денежных средств на указанный заказчиком счет, на котором в соответствии с законодательством Российской Федерации учитываются операции со средствами, поступающими заказчику, в размере обеспечения исполнения контракта, указанном в документации о закупках. Безотзывная независимая гарантия должна соответствовать требованиям, установленным Гражданским кодексом Российской Федерации, а также иным законодательством Российской Федерации.\nСпособ обеспечения исполнения контракта определяется участником закупки, с которым заключается контракт, самостоятельно.\nСрок внесения обеспечения - до момента заключения контракта».",
+      "part": "5.0"
+     },
+     "contractConditionsInfo": {
+      "maxPriceInfo": {
+       "maxPrice": "133982.00"
+      },
+      "IKZInfo": {
+       "purchaseCode": "262772424560077240100101350010000244",
+       "publishYear": "2026",
+       "OKPD2Info": {
+        "undefined": "0000"
+       },
+       "KVRInfo": {
+        "KVR": {
+         "code": "244",
+         "name": "Прочая закупка товаров, работ и услуг"
+        }
+       },
+       "customerCode": "27724245600772401001",
+       "purchaseNumber": "0135",
+       "purchaseOrderNumber": "001"
+      },
+      "tenderPlan2020Info": {
+       "plan2020Number": "202603732005891001",
+       "position2020Number": "202603732005891001000135"
+      },
+      "contractExecutionPaymentPlan": {
+       "contractExecutionTermsInfo": {
+        "relativeTermsInfo": {
+         "start": "1",
+         "startDayType": "working",
+         "term": "26",
+         "termDayType": "working"
+        }
+       },
+       "financingSourcesInfo": {
+        "nonbudgetFinancingsInfo": {
+         "selfFunds": "true"
+        },
+        "currentYear": "2026",
+        "financeInfo": {
+         "total": "133982.00",
+         "currentYear": "133982.00",
+         "firstYear": "0.00",
+         "secondYear": "0.00",
+         "subsecYears": "0.00"
+        }
+       },
+       "stagesInfo": {
+        "stageInfo": {
+         "sid": "22539442",
+         "externalSid": "35004405",
+         "termsInfo": {
+          "relativeTermsInfo": {
+           "start": "0",
+           "startDayType": "working",
+           "term": "26",
+           "termDayType": "working"
+          }
+         },
+         "nonbudgetFinancingInfo": {
+          "paymentYearInfo": {
+           "total": "133982.00",
+           "currentYear": "133982.00",
+           "firstYear": "0.00",
+           "secondYear": "0.00",
+           "subsecYears": "0.00"
+          },
+          "KVRsInfo": {
+           "currentYear": "2026",
+           "KVRInfo": {
+            "KVR": {
+             "code": "244",
+             "name": "Прочая закупка товаров, работ и услуг"
+            },
+            "KVRYearsInfo": {
+             "total": "133982.00",
+             "currentYear": "133982.00",
+             "firstYear": "0.00",
+             "secondYear": "0.00",
+             "subsecYears": "0.00"
+            }
+           },
+           "totalSum": "133982.00"
+          }
+         }
+        }
+       }
+      },
+      "deliveryPlacesInfo": {
+       "byGARInfo": {
+        "sid": "62477323",
+        "externalSid": "331793575",
+        "countryInfo": {
+         "countryCode": "643",
+         "countryFullName": "Российская Федерация"
+        },
+        "GARInfo": {
+         "GARGuid": "cc47d283-6c94-4f46-a51c-6457c959bb1c",
+         "GARAddress": "г. Москва, вн.тер.г. муниципальный округ Зябликово, б-р Ореховый, д. 35 к. 2"
+        }
+       }
+      },
+      "isOneSideRejectionSt95": "true",
+      "isExecutionStagesTerms": "false"
+     }
+    }
+   },
+   "purchaseObjectsInfo": {
+    "notDrugPurchaseObjectsInfo": {
+     "purchaseObject": {
+      "sid": "226285069",
+      "externalSid": "251869320-1622437261",
+      "KTRU": {
+       "code": "26.40.42.120-00000005",
+       "name": "Гарнитура",
+       "versionId": "204697",
+       "versionNumber": "6",
+       "characteristics": {
+        "characteristicsUsingReferenceInfo": [
+         {
+          "sid": "338183462",
+          "externalSid": "2019311393-1322830969",
+          "code": "4451cc02-4",
+          "name": "Максимальная воспроизводимая частота",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436927127",
+            "externalSid": "enum-2270905285",
+            "OKEI": {
+             "code": "290",
+             "nationalCode": "Гц",
+             "name": "Герц"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "10000"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338183463",
+          "externalSid": "2019311521-1322830686",
+          "code": "671cbddd-8",
+          "name": "Шумоподавление",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436927128",
+            "externalSid": "enum-2270905293",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338183464",
+          "externalSid": "2019311390-1322830967",
+          "code": "06384422-8",
+          "name": "Длина провода при проводном подключении",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436927129",
+            "externalSid": "enum-2270905282",
+            "OKEI": {
+             "code": "006",
+             "nationalCode": "м",
+             "name": "Метр"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "2.2"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "338183465",
+          "externalSid": "2019311518-1322830970",
+          "code": "b02f2141-f",
+          "name": "Тип конструкции наушников",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436927130",
+            "externalSid": "enum-2270905290",
+            "qualityDescription": "Накладные"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338183466",
+          "externalSid": "2019311519-1322830971",
+          "code": "1e93d324-a",
+          "name": "Чувствительность микрофона",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436927131",
+            "externalSid": "enum-2270905291",
+            "OKEI": {
+             "code": "3135",
+             "nationalCode": "дБ",
+             "name": "Децибел"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "-50"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "338183467",
+          "externalSid": "2019311522-1302173621",
+          "code": "6304b6ca-c",
+          "name": "Дополнительные функции",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": {
+            "sid": "436927132",
+            "externalSid": "enum-2270905294",
+            "qualityDescription": "Отключение микрофона"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338183468",
+          "externalSid": "2019311388-1316264579",
+          "code": "86725b8b-c",
+          "name": "Вид",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436927133",
+            "externalSid": "enum-2270905280",
+            "qualityDescription": "Однопроводная"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338183469",
+          "externalSid": "2019311389-1323220616",
+          "code": "b704b4be-5",
+          "name": "Вес",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436927134",
+            "externalSid": "enum-2270905281",
+            "OKEI": {
+             "code": "163",
+             "nationalCode": "г",
+             "name": "Грамм"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "150",
+              "maxMathNotation": "less",
+              "max": "200"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "338183470",
+          "externalSid": "2019311391-1353551518",
+          "code": "02e076ef-7",
+          "name": "Конструкция",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436927135",
+            "externalSid": "enum-2270905283",
+            "qualityDescription": "С двумя наушниками"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338183471",
+          "externalSid": "2019311392-1322830685",
+          "code": "d6d90f10-c",
+          "name": "Крепление микрофона",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436927136",
+            "externalSid": "enum-2270905284",
+            "qualityDescription": "Подвижное"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338183472",
+          "externalSid": "2019311517-1321680781",
+          "code": "34119ec9-7",
+          "name": "Разъем",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436927137",
+            "externalSid": "enum-2270905289",
+            "qualityDescription": "USB Type-A"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         }
+        ]
+       },
+       "OKPD2": {
+        "OKPDCode": "26.40.42.120",
+        "OKPDName": "Телефоны головные, наушники и комбинированные устройства, состоящие из микрофона и громкоговорителя"
+       }
+      },
+      "name": "Гарнитура",
+      "OKEI": {
+       "code": "796",
+       "nationalCode": "шт",
+       "name": "Штука"
+      },
+      "price": "4322.00",
+      "volumeSpecifyingMethod": "QF",
+      "quantity": {
+       "value": "31.00000000000"
+      },
+      "sum": "133982.00",
+      "type": "PRODUCT",
+      "hierarchyType": "ND",
+      "restrictionsInfo": {
+       "isRestrictForeignPurchaseObjects": "true"
+      }
+     },
+     "totalSum": "133982.00",
+     "quantityUndefined": "false"
+    }
+   },
+   "preferensesInfo": {
+    "preferenseInfo": {
+     "preferenseRequirementInfo": {
+      "shortName": "PVS33044",
+      "name": "Преимущество в соответствии с ч. 3 ст. 30 Закона № 44-ФЗ"
+     },
+     "prefValue": "100.0"
+    }
+   },
+   "requirementsInfo": {
+    "requirementInfo": [
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "ET44",
+       "name": "Единые требования к участникам закупок в соответствии с ч. 1 ст. 31 Закона № 44-ФЗ"
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TR442",
+       "name": "Требования к участникам закупок в соответствии с ч. 1.1 ст. 31 Закона № 44-ФЗ"
+      }
+     }
+    ]
+   }
+  },
+  "printFormFieldsInfo": {
+   "is449Features": "false"
+  },
+  "@schemeVersion": "16.3"
+ }
+}

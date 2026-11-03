@@ -90,7 +90,7 @@ function TimelineInner({ id }: { id?: string }) {
               <p>{s.note}</p>
               {s.money && s.money.amount > 0 && (
                 <p className={`money money-${s.money.dir}`}>
-                  <span className="money-sign" aria-hidden="true">{s.money.dir === 'in' ? '+' : s.money.dir === 'out' ? '−' : s.money.dir === 'hold' ? '⏸' : '↺'}</span>
+                  <span className="money-sign" aria-hidden="true">{s.money.dir === 'in' ? '+' : s.money.dir === 'out' ? '−' : s.money.dir === 'hold' ? '‖' : '↺'}</span>
                   <b>{rub(s.money.amount)}</b> — {s.money.label}
                 </p>
               )}

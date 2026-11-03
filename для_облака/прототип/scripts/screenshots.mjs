@@ -60,8 +60,17 @@ for (const d of devices) {
     const file = join(out, `${s.name}__${d.tag}.png`);
     await page.screenshot({ path: file, fullPage: !s.viewportOnly });
     // Проверка на горизонтальную прокрутку страницы (на телефоне её быть не должно)
-    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
-    if (overflow > 1) errors.push(`${d.tag} ${s.name}: горизонтальная прокрутка ${overflow}px`);
+    const overflow = await page.evaluate(() => {
+      const w = window.innerWidth;
+      const bad = [...document.querySelectorAll('body *')].filter((e) => {
+        if (e.closest('.table-scroll')) return false; // таблицы листаются внутри своей рамки — это нормально
+        const r = e.getBoundingClientRect();
+        return r.width > 0 && r.right > w + 1;
+      }).slice(0, 5).map((e) => `${e.tagName.toLowerCase()}.${String(e.className).split(' ')[0]} (${Math.round(e.getBoundingClientRect().right)}px)`);
+      return { page: document.documentElement.scrollWidth - w, bad };
+    });
+    if (overflow.page > 1) errors.push(`${d.tag} ${s.name}: горизонтальная прокрутка ${overflow.page}px`);
+    if (overflow.bad.length) errors.push(`${d.tag} ${s.name}: за правый край вылезают ${overflow.bad.join(', ')}`);
     console.log('✓', file.replace(root + '/', ''));
     await page.close();
   }

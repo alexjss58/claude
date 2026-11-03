@@ -1,0 +1,339 @@
+{
+ "_meta": {
+  "purchase_number": "0176100004326000053",
+  "source": "структурированное извещение ЕИС (через открытое API ГосПлан, v2test.gosplan.info)",
+  "retrieved": "2026-11-03",
+  "api_url": "https://v2test.gosplan.info/fz44/purchases/0176100004326000053",
+  "customer_inn": "0105028229",
+  "region_code": 1,
+  "stage": 3,
+  "purchase_type": "epNotificationEF2020"
+ },
+ "doc_type": "epNotificationEF2020",
+ "source": {
+  "id": "44337196",
+  "versionNumber": "1",
+  "commonInfo": {
+   "purchaseNumber": "0176100004326000053",
+   "docNumber": "№0176100004326000053",
+   "directDT": "2026-10-21T16:35:45.250+03:00",
+   "plannedPublishDate": "2026-10-22+03:00",
+   "publishDTInEIS": "2026-10-22T16:40:08.353+03:00",
+   "href": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0176100004326000053",
+   "placingWay": {
+    "code": "EAP20",
+    "name": "Электронный аукцион"
+   },
+   "ETP": {
+    "code": "ETP_SBAST",
+    "name": "АО «Сбербанк-АСТ»",
+    "url": "http://www.sberbank-ast.ru"
+   },
+   "contractConclusionOnSt83Ch2": "true",
+   "purchaseObjectInfo": "Поставка и установка систем видеонаблюдения  в Красногвардейском районном суде"
+  },
+  "purchaseResponsibleInfo": {
+   "responsibleOrgInfo": {
+    "regNum": "01761000043",
+    "consRegistryNum": "00148822",
+    "fullName": "УПРАВЛЕНИЕ СУДЕБНОГО ДЕПАРТАМЕНТА В РЕСПУБЛИКЕ АДЫГЕЯ",
+    "shortName": "УСД В РЕСПУБЛИКЕ АДЫГЕЯ",
+    "postAddress": "Российская Федерация, 385000, Адыгея Респ, Майкоп г, Димитрова, 2 б.",
+    "factAddress": "Российская Федерация, 385011, Адыгея Респ, Майкоп г, Димитрова ул, Д. 2",
+    "INN": "0105028229",
+    "KPP": "010501001"
+   },
+   "responsibleRole": "CU",
+   "responsibleInfo": {
+    "orgPostAddress": "Российская Федерация, 385000, Адыгея Респ, Майкоп г, Димитрова, 2 б.",
+    "orgFactAddress": "Российская Федерация, 385011, Адыгея Респ, Майкоп г, Димитрова ул, Д. 2"
+   }
+  },
+  "printFormInfo": {
+   "url": "https://zakupki.gov.ru/epz/order/notice/printForm/view.html?regNumber=0176100004326000053"
+  },
+  "attachmentsInfo": {
+   "attachmentInfo": [
+    {
+     "publishedContentId": "01A15EA8F1AE74CABB44C849D33E8B77",
+     "fileName": "Обоснование НМЦК (1) (1).docx",
+     "fileSize": "18370",
+     "docDescription": "Обоснование НМЦК (1) (1)",
+     "docDate": "2026-10-21T16:31:32+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15EA8F1AE74CABB44C849D33E8B77",
+     "docKindInfo": {
+      "code": "MRJ",
+      "name": "Обоснование начальной (максимальной) цены контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A15EA90AAA705DB45CAF2985D35D2C",
+     "fileName": "Приложение №4._Проект Контракта.docx",
+     "fileSize": "100530",
+     "docDescription": "Приложение №4._Проект Контракта",
+     "docDate": "2026-10-21T16:31:39+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15EA90AAA705DB45CAF2985D35D2C",
+     "docKindInfo": {
+      "code": "CP",
+      "name": "Проект контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A15EA920C077AFB82396E8B6595588",
+     "fileName": "Приложение №1 к извещению (Описание объекта закупки).docx",
+     "fileSize": "29148",
+     "docDescription": "Приложение №1 к извещению (Описание объекта закупки)",
+     "docDate": "2026-10-21T16:31:44+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15EA920C077AFB82396E8B6595588",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A15EA934987385AA70FABF68F5C22D",
+     "fileName": "Требование к содержанию, составу заявки.docx",
+     "fileSize": "18902",
+     "docDescription": "Требование к содержанию, составу заявки",
+     "docDate": "2026-10-21T16:31:49+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15EA934987385AA70FABF68F5C22D",
+     "docKindInfo": {
+      "code": "CAR",
+      "name": "Требование к содержанию, составу заявки на участие в закупке"
+     }
+    },
+    {
+     "publishedContentId": "01A15EA96C9A7350B268170C1AD4FAFC",
+     "fileName": "Реквизиты обесп НОВОЕ!!!.docx",
+     "fileSize": "16806",
+     "docDescription": "Реквизиты обесп НОВОЕ!!!",
+     "docDate": "2026-10-21T16:32:04+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15EA96C9A7350B268170C1AD4FAFC",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    },
+    {
+     "publishedContentId": "01A15EA9539D7AEEB7A8194BB5A2061D",
+     "fileName": "Смета.xlsx",
+     "fileSize": "90014",
+     "docDescription": "Смета",
+     "docDate": "2026-10-21T16:31:57+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15EA9539D7AEEB7A8194BB5A2061D",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    }
+   ]
+  },
+  "serviceSigns": {
+   "isControlP1Ch5St99": "true"
+  },
+  "notificationInfo": {
+   "procedureInfo": {
+    "collectingInfo": {
+     "startDT": "2026-10-22T16:40:08+03:00",
+     "endDT": "2026-10-30T10:00:00+03:00"
+    },
+    "biddingDate": "2026-10-30+03:00",
+    "summarizingDate": "2026-11-02+03:00"
+   },
+   "contractConditionsInfo": {
+    "maxPriceInfo": {
+     "maxPrice": "997460.00",
+     "currency": {
+      "code": "RUB",
+      "name": "РОССИЙСКИЙ РУБЛЬ"
+     }
+    }
+   },
+   "customerRequirementsInfo": {
+    "customerRequirementInfo": {
+     "customer": {
+      "regNum": "01761000043",
+      "consRegistryNum": "00148822",
+      "fullName": "УПРАВЛЕНИЕ СУДЕБНОГО ДЕПАРТАМЕНТА В РЕСПУБЛИКЕ АДЫГЕЯ"
+     },
+     "contractGuarantee": {
+      "account": {
+       "bik": "000000000",
+       "settlementAccount": "00000000000000000000",
+       "personalAccount": "См. прилагаемые документы"
+      },
+      "procedureInfo": "-",
+      "part": "10.0"
+     },
+     "contractConditionsInfo": {
+      "maxPriceInfo": {
+       "maxPrice": "997460.00"
+      },
+      "mustPublicDiscussion": "false",
+      "IKZInfo": {
+       "purchaseCode": "261010502822901050100101230012630244",
+       "publishYear": "2026",
+       "OKPD2Info": {
+        "OKPD2": {
+         "OKPDCode": "26.30",
+         "OKPDName": "Оборудование коммуникационное"
+        }
+       },
+       "KVRInfo": {
+        "KVR": {
+         "code": "244",
+         "name": "Прочая закупка товаров, работ и услуг"
+        }
+       },
+       "customerCode": "10105028229010501001",
+       "purchaseNumber": "0123",
+       "purchaseOrderNumber": "001"
+      },
+      "tenderPlan2020Info": {
+       "plan2020Number": "202601761000043001",
+       "position2020Number": "202601761000043001000235"
+      },
+      "contractExecutionPaymentPlan": {
+       "contractExecutionTermsInfo": {
+        "notRelativeTermsInfo": {
+         "startDate": "2026-11-16+03:00",
+         "endDate": "2026-12-15+03:00"
+        }
+       },
+       "financingSourcesInfo": {
+        "budgetFinancingsInfo": {
+         "budgetInfo": {
+          "code": "99010001",
+          "name": "Федеральный бюджет"
+         },
+         "budgetLevelInfo": {
+          "code": "10",
+          "name": "федеральный бюджет"
+         },
+         "OKTMOInfo": {
+          "code": "00000001",
+          "name": "Раздел 1. Муниципальные образования субъектов Российской Федерации / Федеральный бюджет"
+         }
+        },
+        "currentYear": "2026",
+        "financeInfo": {
+         "total": "997460.00",
+         "currentYear": "997460.00",
+         "firstYear": "0.00",
+         "secondYear": "0.00",
+         "subsecYears": "0.00"
+        }
+       },
+       "stagesInfo": {
+        "stageInfo": {
+         "sid": "22368246",
+         "termsInfo": {
+          "notRelativeTermsInfo": {
+           "startDate": "2026-11-16+03:00",
+           "endDate": "2026-12-15+03:00"
+          }
+         },
+         "budgetFinancingsInfo": {
+          "budgetFinancingInfo": {
+           "KBK": "43801059090090020244",
+           "paymentYearInfo": {
+            "total": "997460.00",
+            "currentYear": "997460.00",
+            "firstYear": "0.00",
+            "secondYear": "0.00",
+            "subsecYears": "0.00"
+           }
+          }
+         }
+        }
+       }
+      },
+      "BOInfo": {
+       "BONumber": "0014882226000001444",
+       "BODate": "2026-10-22T00:00:00+03:00",
+       "inputBOFlag": "auto"
+      },
+      "deliveryPlacesInfo": {
+       "byGARInfo": {
+        "sid": "62277008",
+        "countryInfo": {
+         "countryCode": "643",
+         "countryFullName": "Российская Федерация"
+        },
+        "GARInfo": {
+         "GARGuid": "d8327a56-80de-4df2-815c-4f6ab1224c50",
+         "GARAddress": "респ. Адыгея"
+        }
+       }
+      },
+      "isOneSideRejectionSt95": "true",
+      "isExecutionStagesTerms": "false"
+     },
+     "warrantyInfo": {
+      "warrantyTerm": "На оборудования устанавливается не менее 12 месяцев. На работы по монтажу  5 лет"
+     }
+    }
+   },
+   "purchaseObjectsInfo": {
+    "notDrugPurchaseObjectsInfo": {
+     "purchaseObject": {
+      "sid": "225423577",
+      "OKPD2": {
+       "OKPDCode": "26.30.50.120",
+       "OKPDName": "Приборы и аппаратура для систем автоматического пожаротушения и пожарной сигнализации"
+      },
+      "name": "Поставка и установка систем видеонаблюдения  в Красногвардейском районном суде",
+      "OKEI": {
+       "code": "876",
+       "nationalCode": "УСЛ ЕД",
+       "name": "Условная единица"
+      },
+      "price": "997460.00",
+      "quantity": {
+       "value": "1.00000000000"
+      },
+      "sum": "997460.00",
+      "type": "PRODUCT",
+      "hierarchyType": "ND",
+      "restrictionsInfo": {
+       "isProhibitionForeignPurchaseObjects": "false",
+       "isRestrictForeignPurchaseObjects": "true",
+       "isPreferenseRFPurchaseObjects": "false",
+       "isImposibilityProhibition": "false"
+      }
+     },
+     "totalSum": "997460.00",
+     "quantityUndefined": "false"
+    }
+   },
+   "preferensesInfo": {
+    "preferenseInfo": {
+     "preferenseRequirementInfo": {
+      "shortName": "PVS33044",
+      "name": "Преимущество в соответствии с ч. 3 ст. 30 Закона № 44-ФЗ"
+     }
+    }
+   },
+   "requirementsInfo": {
+    "requirementInfo": [
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "ET44",
+       "name": "Единые требования к участникам закупок в соответствии с ч. 1 ст. 31 Закона № 44-ФЗ"
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TR442",
+       "name": "Требования к участникам закупок в соответствии с ч. 1.1 ст. 31 Закона № 44-ФЗ"
+      }
+     }
+    ]
+   },
+   "flags": {
+    "purchaseObjectsCh9St37": "false"
+   }
+  },
+  "@schemeVersion": "16.3"
+ }
+}

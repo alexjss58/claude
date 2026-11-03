@@ -76,8 +76,9 @@ export async function readFileRows(file: File): Promise<{ rows: string[][]; note
   const name = file.name.toLowerCase();
   const notes: string[] = [];
   if (name.endsWith('.xlsx')) {
-    const { default: readXlsxFile } = await import('read-excel-file/browser');
-    const sheets = await readXlsxFile(file);
+    // Версия «universal» — без Web Worker: из file:// воркеры не запускаются, а сайт должен работать без сервера.
+    const { default: readXlsxFile } = await import('read-excel-file/universal');
+    const sheets = await readXlsxFile(await file.arrayBuffer());
     const first = sheets[0];
     if (sheets.length > 1) notes.push(`В файле ${sheets.length} листа(ов), взят первый: «${first.sheet}».`);
     return { rows: first.data.map((r) => r.map(cellToString)), notes };

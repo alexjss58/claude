@@ -218,7 +218,7 @@ function NatReg({ t, s, catalog }: { t: TenderView; s?: Sverka | null; catalog: 
       </ol>
       {s && (
         <div className="table-scroll" tabIndex={0} role="region" aria-label="Происхождение товаров">
-          <table className="data-table">
+          <table className="data-table stack-sm">
             <thead><tr><th scope="col">Позиция</th><th scope="col">Товар</th><th scope="col">Страна (из прайса)</th><th scope="col">Что сделать</th></tr></thead>
             <tbody>
               {s.позиции.filter((p) => p.сверка.статус !== 'нет').map((p) => {
@@ -226,10 +226,10 @@ function NatReg({ t, s, catalog }: { t: TenderView; s?: Sverka | null; catalog: 
                 const ru = item && /росси/i.test(item.страна);
                 return (
                   <tr key={p['№']}>
-                    <td>{p.наименование}</td>
-                    <td>{p.сверка.товар_из_каталога}</td>
-                    <td>{item?.страна || 'нет в прайсе'}</td>
-                    <td>{ru ? 'Найти номер реестровой записи в ГИСП и срок действия' : 'Иностранный товар: при запрете не подходит — подобрать российский аналог'}</td>
+                    <td data-label="Позиция"><b>{p.наименование}</b></td>
+                    <td data-label="Товар">{p.сверка.товар_из_каталога}</td>
+                    <td data-label="Страна (из прайса)">{item?.страна || 'нет в прайсе'}</td>
+                    <td data-label="Что сделать">{ru ? 'Найти номер реестровой записи в ГИСП и срок действия' : 'Иностранный товар: при запрете не подходит — подобрать российский аналог'}</td>
                   </tr>
                 );
               })}

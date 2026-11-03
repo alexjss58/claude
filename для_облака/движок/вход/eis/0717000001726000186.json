@@ -1,0 +1,631 @@
+{
+ "_meta": {
+  "purchase_number": "0717000001726000186",
+  "source": "структурированное извещение ЕИС (через открытое API ГосПлан, v2test.gosplan.info)",
+  "retrieved": "2026-11-03",
+  "api_url": "https://v2test.gosplan.info/fz44/purchases/0717000001726000186",
+  "customer_inn": "",
+  "region_code": 22,
+  "stage": 1,
+  "purchase_type": "epNotificationEF2020"
+ },
+ "doc_type": "epNotificationEF2020",
+ "source": {
+  "id": "44389308",
+  "versionNumber": "1",
+  "commonInfo": {
+   "purchaseNumber": "0717000001726000186",
+   "docNumber": "№0717000001726000186",
+   "plannedPublishDate": "2026-11-03+07:00",
+   "publishDTInEIS": "2026-11-03T12:37:42.675+07:00",
+   "href": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0717000001726000186",
+   "placingWay": {
+    "code": "EAP20",
+    "name": "Электронный аукцион"
+   },
+   "ETP": {
+    "code": "ETP_RTS",
+    "name": "РТС-тендер",
+    "url": "http://www.rts-tender.ru"
+   },
+   "contractConclusionOnSt83Ch2": "true",
+   "purchaseObjectInfo": "Мониторы, подключаемые к компьютеру; Системные блоки; Источники бесперебойного питания; Клавиатура; Мышь компьютерная"
+  },
+  "purchaseResponsibleInfo": {
+   "responsibleOrgInfo": {
+    "regNum": "07170000017",
+    "fullName": "НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ \"РЕГИОНАЛЬНЫЙ ОПЕРАТОР АЛТАЙСКОГО КРАЯ \"ФОНД КАПИТАЛЬНОГО РЕМОНТА МНОГОКВАРТИРНЫХ ДОМОВ\"",
+    "shortName": "НО \"РО АЛТАЙСКОГО КРАЯ \"ФОНД КАПИТАЛЬНОГО РЕМОНТА МКД\"",
+    "postAddress": "656031, Алтайский край, г Барнаул, Алтайский край, г Барнаул, р-н Железнодорожный, пр-кт Строителей, дом 34",
+    "factAddress": "Российская Федерация, 656031, Алтайский край, Барнаул г, Строителей пр-кт, Д. 34",
+    "INN": "2225996465",
+    "KPP": "222501001"
+   },
+   "responsibleRole": "CS",
+   "responsibleInfo": {
+    "orgPostAddress": "656031, Алтайский край, г Барнаул, Алтайский край, г Барнаул, р-н Железнодорожный, пр-кт Строителей, дом 34",
+    "orgFactAddress": "Российская Федерация, 656031, Алтайский край, Барнаул г, Строителей пр-кт, Д. 34"
+   }
+  },
+  "printFormInfo": {
+   "url": "https://zakupki.gov.ru/epz/order/notice/printForm/view.html?regNumber=0717000001726000186"
+  },
+  "attachmentsInfo": {
+   "attachmentInfo": [
+    {
+     "publishedContentId": "01A19FE59C6D7FDD804ED477CB09347A",
+     "fileName": "Извещение.docx",
+     "fileSize": "22520",
+     "docDescription": "Извещение",
+     "docDate": "2026-11-03T08:33:07+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A19FE59C6D7FDD804ED477CB09347A",
+     "docKindInfo": {
+      "code": "MRJ",
+      "name": "Обоснование начальной (максимальной) цены контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A19FE5EF3F77618EEF723640A58CBE",
+     "fileName": "Приложение №3 Проект контракта.docx",
+     "fileSize": "50589",
+     "docDescription": "Приложение №3 Проект контракта",
+     "docDate": "2026-11-03T08:33:28+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A19FE5EF3F77618EEF723640A58CBE",
+     "docKindInfo": {
+      "code": "CP",
+      "name": "Проект контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A19FE622D97719BF364858B04BD8EA",
+     "fileName": "Приложение №1 техническое задание пк.docx",
+     "fileSize": "35809",
+     "docDescription": "Приложение №1 техническое задание пк",
+     "docDate": "2026-11-03T08:33:41+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A19FE622D97719BF364858B04BD8EA",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A19FE651967FE2838F262F31576F2F",
+     "fileName": "Документация.doc",
+     "fileSize": "144896",
+     "docDescription": "Документация",
+     "docDate": "2026-11-03T08:33:53+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A19FE651967FE2838F262F31576F2F",
+     "docKindInfo": {
+      "code": "CAR",
+      "name": "Требование к содержанию, составу заявки на участие в закупке"
+     }
+    },
+    {
+     "publishedContentId": "01A19FE66CE97597922F6D7128C57666",
+     "fileName": "Приложение №2 Обоснование НМЦ.xls",
+     "fileSize": "47104",
+     "docDescription": "Приложение №2 Обоснование НМЦ",
+     "docDate": "2026-11-03T08:34:00+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A19FE66CE97597922F6D7128C57666",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    }
+   ]
+  },
+  "serviceSigns": {
+   "isControlP1Ch5St99": "false"
+  },
+  "notificationInfo": {
+   "procedureInfo": {
+    "collectingInfo": {
+     "startDT": "2026-11-03T12:37:42+07:00",
+     "endDT": "2026-11-12T10:00:00+07:00"
+    },
+    "biddingDate": "2026-11-12+07:00",
+    "summarizingDate": "2026-11-16+07:00"
+   },
+   "contractConditionsInfo": {
+    "maxPriceInfo": {
+     "maxPrice": "383520.00",
+     "currency": {
+      "code": "RUB",
+      "name": "РОССИЙСКИЙ РУБЛЬ"
+     }
+    }
+   },
+   "customerRequirementsInfo": {
+    "customerRequirementInfo": {
+     "customer": {
+      "regNum": "07170000017",
+      "fullName": "НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ \"РЕГИОНАЛЬНЫЙ ОПЕРАТОР АЛТАЙСКОГО КРАЯ \"ФОНД КАПИТАЛЬНОГО РЕМОНТА МНОГОКВАРТИРНЫХ ДОМОВ\""
+     },
+     "applicationGuarantee": {
+      "amount": "3835.20",
+      "account": {
+       "bik": "044525823",
+       "settlementAccount": "40603810600000000018",
+       "creditOrgName": "Банк ГПБ (АО) г. Москва",
+       "corrAccountNumber": "30101810200000000823"
+      },
+      "accountBudget": {
+       "accountBudgetAdmin": {
+        "anotherAdmin": "true",
+        "INN": "2225996465",
+        "KPP": "222501001",
+        "OKTMOInfo": {
+         "code": "01701000001",
+         "name": "Муниципальные образования Алтайского края / Городские округа Алтайского края/ / город Барнаул / г Барнаул"
+        },
+        "bankAccount": "40102810045370000009",
+        "ksNumber": "03100643000000011700",
+        "bik": "010173001",
+        "counterpartyName": "УПРАВЛЕНИЕ ФЕДЕРАЛЬНОГО КАЗНАЧЕЙСТВА ПО АЛТАЙСКОМУ КРАЮ (НО \"РО АЛТАЙСКОГО КРАЯ \"ФОНД КАПИТАЛЬНОГО РЕМОНТА МКД\")"
+       }
+      },
+      "procedureInfo": "Обеспечение заявки на участие в аукционе осуществляется путем перечисления денежных средств на счет оператора электронной площадки",
+      "part": "1.0"
+     },
+     "contractGuarantee": {
+      "amount": "19176.00",
+      "account": {
+       "bik": "044525823",
+       "settlementAccount": "40603810600000000018",
+       "creditOrgName": "Банк ГПБ (АО) г. Москва",
+       "corrAccountNumber": "30101810200000000823"
+      },
+      "procedureInfo": "Обеспечение исполнения контракта может предоставляться участником закупки в виде денежных средств или банковской гарантии. Выбор способа обеспечения заявки на участие в конкурсе или аукционе осуществляется участником закупки самостоятельно",
+      "part": "5.0"
+     },
+     "contractConditionsInfo": {
+      "maxPriceInfo": {
+       "maxPrice": "383520.00"
+      },
+      "mustPublicDiscussion": "false",
+      "IKZInfo": {
+       "purchaseCode": "264222599646522250100101161160000240",
+       "publishYear": "2026",
+       "OKPD2Info": {
+        "undefined": "0000"
+       },
+       "KVRInfo": {
+        "KVR": {
+         "code": "240",
+         "name": "Иные закупки товаров, работ и услуг для обеспечения государственных (муниципальных) нужд"
+        }
+       },
+       "customerCode": "42225996465222501001",
+       "purchaseNumber": "0116",
+       "purchaseOrderNumber": "116"
+      },
+      "contractExecutionPaymentPlan": {
+       "contractExecutionTermsInfo": {
+        "notRelativeTermsInfo": {
+         "isFromConclusionDate": "true",
+         "endDate": "2026-12-31+03:00"
+        }
+       },
+       "financingSourcesInfo": {
+        "nonbudgetFinancingsInfo": {
+         "selfFunds": "true"
+        },
+        "currentYear": "2026",
+        "financeInfo": {
+         "total": "383520.00",
+         "currentYear": "383520.00",
+         "firstYear": "0.00",
+         "secondYear": "0.00",
+         "subsecYears": "0.00"
+        }
+       },
+       "stagesInfo": {
+        "stageInfo": {
+         "sid": "22452803",
+         "termsInfo": {
+          "notRelativeTermsInfo": {
+           "isFromConclusionDate": "true",
+           "endDate": "2026-12-31+03:00"
+          }
+         },
+         "nonbudgetFinancingInfo": {
+          "paymentYearInfo": {
+           "total": "383520.00",
+           "currentYear": "383520.00",
+           "firstYear": "0.00",
+           "secondYear": "0.00",
+           "subsecYears": "0.00"
+          }
+         }
+        }
+       }
+      },
+      "deliveryPlacesInfo": {
+       "byGARInfo": {
+        "sid": "62377123",
+        "countryInfo": {
+         "countryCode": "643",
+         "countryFullName": "Российская Федерация"
+        },
+        "GARInfo": {
+         "GARGuid": "2f7fbc27-7a21-4e63-8410-5213ecbc6fc6",
+         "GARAddress": "край Алтайский, г.о. город Барнаул, г. Барнаул, пр-кт Строителей, д. 34"
+        }
+       }
+      },
+      "isOneSideRejectionSt95": "true",
+      "isExecutionStagesTerms": "false"
+     }
+    }
+   },
+   "purchaseObjectsInfo": {
+    "notDrugPurchaseObjectsInfo": {
+     "purchaseObject": [
+      {
+       "sid": "225874960",
+       "OKPD2": {
+        "OKPDCode": "26.20.15.120",
+        "OKPDName": "Системные блоки"
+       },
+       "name": "Системные блоки",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "93540.00",
+       "quantity": {
+        "value": "3.00000000000"
+       },
+       "sum": "280620.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      },
+      {
+       "sid": "225874961",
+       "OKPD2": {
+        "OKPDCode": "26.20.17.110",
+        "OKPDName": "Мониторы, подключаемые к компьютеру"
+       },
+       "name": "Мониторы, подключаемые к компьютеру",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "16800.00",
+       "quantity": {
+        "value": "3.00000000000"
+       },
+       "sum": "50400.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      },
+      {
+       "sid": "225874962",
+       "KTRU": {
+        "code": "26.20.16.170-00000002",
+        "name": "Мышь компьютерная",
+        "versionId": "111114",
+        "versionNumber": "3",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "338613663",
+           "code": "e4356b06-a",
+           "name": "Длина кабеля",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437498207",
+             "OKEI": {
+              "code": "006",
+              "nationalCode": "м",
+              "name": "Метр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338613664",
+           "code": "a928a97b-c",
+           "name": "Интерфейс подключения",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437498211",
+             "qualityDescription": "USB"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338613671",
+           "code": "3bbaafed-7",
+           "name": "Разрешение сенсора, точек/дюйм",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437498215",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1000"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338613673",
+           "code": "4da020c2-0",
+           "name": "Тип подключения",
+           "type": "1",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "437498218",
+             "qualityDescription": "Проводной"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.20.16.170",
+         "OKPDName": "Манипуляторы"
+        }
+       },
+       "name": "Мышь компьютерная",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "2100.00",
+       "quantity": {
+        "value": "3.00000000000"
+       },
+       "sum": "6300.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      },
+      {
+       "sid": "225874963",
+       "KTRU": {
+        "code": "26.20.16.110-00000002",
+        "name": "Клавиатура",
+        "versionId": "377362",
+        "versionNumber": "6",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "338615526",
+           "code": "1881892a-f",
+           "name": "Длина кабеля",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437501607",
+             "OKEI": {
+              "code": "006",
+              "nationalCode": "м",
+              "name": "Метр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338615527",
+           "code": "dbfe3ec0-c",
+           "name": "Интерфейс подключения",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437501608",
+             "qualityDescription": "USB"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338615528",
+           "code": "8140b3c5-f",
+           "name": "Наличие колеса прокрутки",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437501609",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338615529",
+           "code": "de1970c9-b",
+           "name": "Раскладка клавиатуры",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "437501610",
+             "qualityDescription": "QWERTY"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338615530",
+           "code": "0f8fce6a-1",
+           "name": "Способ нанесения русификации клавиатуры",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437501611",
+             "qualityDescription": "Промышленный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338615531",
+           "code": "4da020c2-0",
+           "name": "Тип подключения",
+           "type": "1",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "437501612",
+             "qualityDescription": "Проводная"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.20.16.110",
+         "OKPDName": "Клавиатуры"
+        }
+       },
+       "name": "Клавиатура",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "2900.00",
+       "quantity": {
+        "value": "3.00000000000"
+       },
+       "sum": "8700.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      },
+      {
+       "sid": "225874964",
+       "OKPD2": {
+        "OKPDCode": "26.20.40.111",
+        "OKPDName": "Источники бесперебойного питания"
+       },
+       "name": "Источники бесперебойного питания",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "12500.00",
+       "quantity": {
+        "value": "3.00000000000"
+       },
+       "sum": "37500.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      }
+     ],
+     "totalSum": "383520.00",
+     "quantityUndefined": "false"
+    }
+   },
+   "requirementsInfo": {
+    "requirementInfo": {
+     "preferenseRequirementInfo": {
+      "shortName": "ET44",
+      "name": "Единые требования к участникам закупок в соответствии с ч. 1 ст. 31 Закона № 44-ФЗ"
+     }
+    }
+   },
+   "flags": {
+    "purchaseObjectsCh9St37": "false"
+   }
+  },
+  "@schemeVersion": "16.3"
+ }
+}

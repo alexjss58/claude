@@ -69,6 +69,13 @@ export default function Landing() {
                 <a className="btn btn-solid" href={href('/demo/assortiment')}>Открыть демо-кабинет</a>
                 <button type="button" className="btn" onClick={() => scrollTo('pilot')}>Хочу пилот</button>
               </div>
+              <div className="plate" role="note">
+                <div className="plate-inner">
+                  <span className="plate-kicker">Цель пилота</span>
+                  <strong>+10 заявок в месяц</strong>
+                  <span>без найма нового сотрудника</span>
+                </div>
+              </div>
             </div>
             <aside className="hero-aside">
               <Frame ornate className="contents">
@@ -84,13 +91,6 @@ export default function Landing() {
                   ))}
                 </ol>
               </Frame>
-              <div className="plate" role="note">
-                <div className="plate-inner">
-                  <span className="plate-kicker">Цель пилота</span>
-                  <strong>+10 заявок в месяц</strong>
-                  <span>без найма нового сотрудника</span>
-                </div>
-              </div>
             </aside>
           </div>
         </section>
@@ -155,16 +155,16 @@ export default function Landing() {
             <div><div className="big-word">Ваш каталог</div><p>Сверяем техзадание с вашим прайсом позиция за позицией, а не просто ищем по словам.</p></div>
             <div><div className="big-word">Больше заявок</div><p>без найма тендерного специалиста. Платите за поданные заявки и за победы.</p></div>
           </div>
-          <div className="table-scroll" tabIndex={0} role="region" aria-label="Сравнение подходов">
+          <div className="table-scroll compare-wrap" tabIndex={0} role="region" aria-label="Сравнение подходов">
             <table className="compare">
               <thead>
                 <tr><th scope="col"></th><th scope="col">Сервис поиска закупок</th><th scope="col">Сопровождение тендеров</th><th scope="col" className="ours">Тендер под ключ</th></tr>
               </thead>
               <tbody>
-                <tr><th scope="row">Что получаете</th><td>Список закупок по фильтрам</td><td>Специалист готовит заявку</td><td className="ours">Готовый пакет: от поиска до гарантии</td></tr>
-                <tr><th scope="row">Подходит ли ваш товар</th><td>Решаете сами, читая техзадание</td><td>Специалист проверяет вручную</td><td className="ours">Сверка с вашим прайсом по каждой позиции</td></tr>
-                <tr><th scope="row">Цена</th><td>Аналитика по рынку</td><td>По опыту специалиста</td><td className="ours">Диапазон по истории ниши и заказчика + ваша маржа</td></tr>
-                <tr><th scope="row">Чтобы подавать больше</th><td>Нужно больше людей</td><td>Больше платежей за заявки</td><td className="ours">Те же люди, больше заявок</td></tr>
+                <tr><th scope="row">Что получаете</th><td data-label="Сервис поиска закупок">Список закупок по фильтрам</td><td data-label="Сопровождение тендеров">Специалист готовит заявку</td><td data-label="Тендер под ключ" className="ours">Готовый пакет: от поиска до гарантии</td></tr>
+                <tr><th scope="row">Подходит ли ваш товар</th><td data-label="Сервис поиска закупок">Решаете сами, читая техзадание</td><td data-label="Сопровождение тендеров">Специалист проверяет вручную</td><td data-label="Тендер под ключ" className="ours">Сверка с вашим прайсом по каждой позиции</td></tr>
+                <tr><th scope="row">Цена</th><td data-label="Сервис поиска закупок">Аналитика по рынку</td><td data-label="Сопровождение тендеров">По опыту специалиста</td><td data-label="Тендер под ключ" className="ours">Диапазон по истории ниши и заказчика + ваша маржа</td></tr>
+                <tr><th scope="row">Чтобы подавать больше</th><td data-label="Сервис поиска закупок">Нужно больше людей</td><td data-label="Сопровождение тендеров">Больше платежей за заявки</td><td data-label="Тендер под ключ" className="ours">Те же люди, больше заявок</td></tr>
               </tbody>
             </table>
           </div>
@@ -193,7 +193,7 @@ export default function Landing() {
           <SourceNote>
             {SOURCE_NOTE}. Первые четыре строки — сводка Тендерплана по выборке (лист «Анализ»).
             * — наш расчёт по строкам выгрузки ({num(Number(tendersMeta.всего_строк))} закупок после удаления дублей):
-            доля закупок с одним участником и доля «чистой поставки» без монтажа, ремонта и услуг (правила по названию закупки).
+            доля закупок с одним участником (среди тех, где известно число участников) и доля «чистой поставки» без монтажа, ремонта и услуг (правила по названию закупки).
           </SourceNote>
         </section>
 

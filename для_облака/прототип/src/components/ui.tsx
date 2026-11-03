@@ -85,7 +85,6 @@ export function Badge({ b }: { b: BadgeT }) {
     <span className={`badge badge-${b.код}`} title={b.почему}>
       {b.код === 'svoy' && <span aria-hidden="true">?</span>}
       {b.код === 'natreg' && <span aria-hidden="true">РФ</span>}
-      {b.код === 'few' && <span aria-hidden="true">1–2</span>}
       {b.код === 'match' && <span aria-hidden="true">✓</span>}
       {b.текст}
     </span>

@@ -102,20 +102,20 @@ export default function Assortment() {
           <h4>Столбцы: что мы поняли</h4>
           <p className="hint">Если мы ошиблись — выберите правильное значение в списке.</p>
           <div className="table-scroll" tabIndex={0} role="region" aria-label="Сопоставление столбцов">
-            <table className="data-table cols-table">
+            <table className="data-table cols-table stack-sm">
               <thead><tr><th scope="col">Столбец в файле</th><th scope="col">Что это</th><th scope="col">Уверенность</th><th scope="col">Пример значения</th></tr></thead>
               <tbody>
                 {parsed.columns.map((c) => (
                   <tr key={c.index}>
                     <td><strong>{c.header}</strong></td>
-                    <td>
+                    <td data-label="Что это">
                       <label className="sr-only" htmlFor={`col-${c.index}`}>Назначение столбца «{c.header}»</label>
                       <select id={`col-${c.index}`} value={c.field} onChange={(e) => setField(c.index, e.target.value as FieldKey)}>
                         {FIELDS.map((f) => <option key={f} value={f}>{FIELD_LABELS[f]}</option>)}
                       </select>
                     </td>
-                    <td><span className={`conf conf-${c.confidence === 'точно' ? 'ok' : c.confidence === 'вероятно' ? 'mid' : 'no'}`}>{c.confidence}</span></td>
-                    <td className="sample-cell">{c.sample.slice(0, 90)}{c.sample.length > 90 ? '…' : ''}</td>
+                    <td data-label="Уверенность"><span className={`conf conf-${c.confidence === 'точно' ? 'ok' : c.confidence === 'вероятно' ? 'mid' : 'no'}`}>{c.confidence}</span></td>
+                    <td className="sample-cell" data-label="Пример значения">{c.sample.slice(0, 90)}{c.sample.length > 90 ? '…' : ''}</td>
                   </tr>
                 ))}
               </tbody>
@@ -131,16 +131,16 @@ export default function Assortment() {
           </div>
 
           <div className="table-scroll" tabIndex={0} role="region" aria-label="Первые позиции">
-            <table className="data-table">
+            <table className="data-table stack-sm">
               <thead><tr><th scope="col">Артикул</th><th scope="col">Наименование</th><th scope="col">Категория</th><th scope="col">Характеристики (разобрано)</th><th scope="col" className="num">Цена</th></tr></thead>
               <tbody>
                 {preview.slice(0, 8).map((p) => (
                   <tr key={p.артикул + p.наименование}>
-                    <td className="mono">{p.артикул}</td>
-                    <td>{p.наименование}</td>
-                    <td>{p.категория}</td>
-                    <td className="specs-cell">{Object.entries(p.характеристики).slice(0, 4).map(([k, v]) => <span key={k} className="spec-chip">{k}: <b>{v}</b></span>)}{Object.keys(p.характеристики).length > 4 && <span className="more">ещё {Object.keys(p.характеристики).length - 4}</span>}</td>
-                    <td className="num">{rub(p.цена)}</td>
+                    <td className="mono" data-label="Артикул">{p.артикул}</td>
+                    <td data-label="Наименование"><b>{p.наименование}</b></td>
+                    <td data-label="Категория">{p.категория}</td>
+                    <td className="specs-cell" data-label="Характеристики">{Object.entries(p.характеристики).slice(0, 4).map(([k, v]) => <span key={k} className="spec-chip">{k}: <b>{v}</b></span>)}{Object.keys(p.характеристики).length > 4 && <span className="more">ещё {Object.keys(p.характеристики).length - 4}</span>}</td>
+                    <td className="num" data-label="Цена">{rub(p.цена)}</td>
                   </tr>
                 ))}
               </tbody>

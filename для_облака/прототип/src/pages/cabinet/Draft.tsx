@@ -77,20 +77,20 @@ export default function Draft({ id }: { id?: string }) {
           <h3>Предложение участника в отношении объекта закупки</h3>
           {m.rows.length ? (
             <div className="table-scroll" tabIndex={0} role="region" aria-label="Таблица характеристик">
-              <table className="data-table doc-table">
+              <table className="data-table doc-table stack-sm">
                 <thead><tr><th scope="col">№</th><th scope="col">Позиция / товар</th><th scope="col">Характеристика</th><th scope="col">Требование</th><th scope="col">Значение у товара</th></tr></thead>
                 <tbody>
                   {m.rows.map((r) => r.характеристики.map((c, i) => (
                     <tr key={`${r.n}-${i}`} className={i === 0 ? 'first' : ''}>
-                      {i === 0 && <td rowSpan={r.характеристики.length}>{r.n}</td>}
+                      {i === 0 && <td rowSpan={r.характеристики.length} className="hide-stack">{r.n}</td>}
                       {i === 0 && (
-                        <td rowSpan={r.характеристики.length}>
+                        <td rowSpan={r.характеристики.length} data-label={`Позиция ${r.n}`}>
                           <b>{r.позиция}</b> ({r.количество})<br />{r.товар}<br /><span className="muted">Страна: {r.страна}</span><br /><Status s={r.статус as 'подходит'} />
                         </td>
                       )}
-                      <td>{c.имя}</td>
-                      <td>{c.требование}</td>
-                      <td className={c.значение.includes('⚠') ? 'warn' : ''}>{c.значение}</td>
+                      <td data-label="Характеристика"><b>{c.имя}</b></td>
+                      <td data-label="Требование">{c.требование}</td>
+                      <td data-label="Значение у товара" className={c.значение.includes('⚠') ? 'warn' : ''}>{c.значение}</td>
                     </tr>
                   )))}
                 </tbody>

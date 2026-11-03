@@ -24,7 +24,10 @@ class Requirement:
     key: str | None = None       # канонический ключ (заполняет сопоставитель)
 
     def describe(self) -> str:
-        u = f" {self.unit}" if self.unit else ""
+        from .units import pretty_unit
+        u = f" {pretty_unit(self.unit)}" if self.unit and self.unit != "пиксель" else ""
+        if self.values and self.op in (">=", "<=") and self.vmin is None and self.vmax is None:
+            return f"{'≥' if self.op == '>=' else '≤'} {self.values[0]}"
         if self.op == ">=":
             return f"{'>' if self.min_strict else '≥'} {fmt(self.vmin)}{u}"
         if self.op == "<=":

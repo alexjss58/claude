@@ -27,15 +27,15 @@ export const market = marketRaw as unknown as { подпись: string; ниши
 const hPrice = Object.values(hPriceMod)[0];
 export const priceTable: PriceRow[] = hPrice && hPrice.length ? hPrice : (ownPrice as PriceRow[]);
 export const priceSource = hPrice && hPrice.length
-  ? 'модуль цены (блок H): медианы по выгрузкам Тендерплана'
-  : 'наша оценка по выгрузкам Тендерплана (scripts/prepare_data.py)';
+  ? 'модуль цены: медианы снижения по выгрузкам Тендерплана'
+  : 'оценка по выгрузкам Тендерплана';
 
 const engine = Object.values(engineMods).filter((s) => s && s.закупка && Array.isArray(s.позиции));
 export const sverkaFromEngine = engine.length > 0;
 export const sverkaList: Sverka[] = sverkaFromEngine ? engine : Object.values(demoMods);
 export const sverkaSource = sverkaFromEngine
-  ? 'движок сверки (блок G), файлы из движок/демо_выход/'
-  : 'демо, пример: сверка подготовлена вручную в формате движка (блок G)';
+  ? 'движок сверки техзадания, демо-режим'
+  : 'демо, пример: сверка подготовлена вручную в формате движка сверки';
 
 export const samplePriceCsv: string = sampleCsv;
 
@@ -118,7 +118,7 @@ function viewFromSverka(s: Sverka): TenderView {
     ],
     риски: risks,
     sverka: s,
-    источник: sverkaFromEngine ? 'движок сверки (блок G)' : 'демо, пример (позиции составлены для показа)',
+    источник: sverkaFromEngine ? 'движок сверки, демо-режим' : 'демо, пример (позиции составлены для показа)',
   };
 }
 

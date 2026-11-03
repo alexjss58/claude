@@ -1,0 +1,663 @@
+{
+ "_meta": {
+  "purchase_number": "0252100003826000222",
+  "source": "структурированное извещение ЕИС (через открытое API ГосПлан, v2test.gosplan.info)",
+  "retrieved": "2026-11-03",
+  "api_url": "https://v2test.gosplan.info/fz44/purchases/0252100003826000222",
+  "customer_inn": "5502044963",
+  "region_code": 55,
+  "stage": 3,
+  "purchase_type": "epNotificationEZK2020"
+ },
+ "doc_type": "epNotificationEZK2020",
+ "source": {
+  "id": "44318692",
+  "externalId": "df75bd77-c33b-4630-8cff-4dd00321f3d7",
+  "versionNumber": "1",
+  "commonInfo": {
+   "purchaseNumber": "0252100003826000222",
+   "docNumber": "№0252100003826000222",
+   "directDT": "2026-10-20T15:58:00.383+06:00",
+   "plannedPublishDate": "2026-10-21+06:00",
+   "publishDTInEIS": "2026-10-21T08:23:36.357+06:00",
+   "href": "https://zakupki.gov.ru/epz/order/notice/zk20/view/common-info.html?regNumber=0252100003826000222",
+   "placingWay": {
+    "code": "ZKP20",
+    "name": "Запрос котировок в электронной форме"
+   },
+   "ETP": {
+    "code": "ETP_RTS",
+    "name": "РТС-тендер",
+    "url": "http://www.rts-tender.ru"
+   },
+   "contractConclusionOnSt83Ch2": "true",
+   "purchaseObjectInfo": "Поставка и ввод в эксплуатацию телефонных аппаратов для мини-АТС Panasonic KX-TDE600RU эксплуатируемой в ФБУ Центре реабилитации СФР \"Омский\""
+  },
+  "purchaseResponsibleInfo": {
+   "responsibleOrgInfo": {
+    "regNum": "02521000038",
+    "consRegistryNum": "004Ф5258",
+    "fullName": "ФЕДЕРАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЦЕНТР РЕАБИЛИТАЦИИ ФОНДА ПЕНСИОННОГО И СОЦИАЛЬНОГО СТРАХОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ \"ОМСКИЙ\"",
+    "shortName": "ФБУ ЦЕНТР РЕАБИЛИТАЦИИ СФР \"ОМСКИЙ\"",
+    "postAddress": "644012, Омская обл, г Омск, ул Березовая, д. 1",
+    "factAddress": "644012, Омская обл, г Омск, ул Березовая, д. 1",
+    "INN": "5502044963",
+    "KPP": "550301001"
+   },
+   "responsibleRole": "CU",
+   "responsibleInfo": {
+    "orgPostAddress": "644012, Омская обл, г Омск, ул Березовая, д. 1",
+    "orgFactAddress": "644012, Омская обл, г Омск, ул Березовая, д. 1"
+   }
+  },
+  "printFormInfo": {
+   "url": "https://zakupki.gov.ru/epz/order/notice/printForm/view.html?regNumber=0252100003826000222"
+  },
+  "attachmentsInfo": {
+   "attachmentInfo": [
+    {
+     "publishedContentId": "01A158BA950F7AFAB24CE257C5935F8C",
+     "fileName": "Обоснование начальной (максимальной) цены контракта.xls",
+     "fileSize": "177152",
+     "docDescription": "Обоснование начальной (максимальной) цены контракта.xls",
+     "docDate": "2026-10-20T12:53:11+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A158BA950F7AFAB24CE257C5935F8C",
+     "docKindInfo": {
+      "code": "MRJ",
+      "name": "Обоснование начальной (максимальной) цены контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A158BA959F7FB9AA6D2B4FBD37483B",
+     "fileName": "Проект контракта.doc",
+     "fileSize": "112640",
+     "docDescription": "Проект контракта.doc",
+     "docDate": "2026-10-20T12:53:11+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A158BA959F7FB9AA6D2B4FBD37483B",
+     "docKindInfo": {
+      "code": "CP",
+      "name": "Проект контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A158BA953A7A329233278A628E7EC5",
+     "fileName": "Описание объекта закупки.xls",
+     "fileSize": "49664",
+     "docDescription": "Описание объекта закупки.xls",
+     "docDate": "2026-10-20T12:53:11+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A158BA953A7A329233278A628E7EC5",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A158BA95C973A48919CD1CEFE2F8C3",
+     "fileName": "Требования к содержанию и составу заявки.doc",
+     "fileSize": "157184",
+     "docDescription": "Требования к содержанию и составу заявки.doc",
+     "docDate": "2026-10-20T12:53:11+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A158BA95C973A48919CD1CEFE2F8C3",
+     "docKindInfo": {
+      "code": "CAR",
+      "name": "Требование к содержанию, составу заявки на участие в закупке"
+     }
+    },
+    {
+     "publishedContentId": "01A158BA95F37B64AC880184E37827DE",
+     "fileName": "Уведомление об отсутствии в РРПП (Проводной телефон).pdf",
+     "fileSize": "81576",
+     "docDescription": "Уведомление об отсутствии в РРПП (Проводной телефон).pdf",
+     "docDate": "2026-10-20T12:53:11+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A158BA95F37B64AC880184E37827DE",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    },
+    {
+     "publishedContentId": "01A158BA96287D3AAD1303D05A3E4A49",
+     "fileName": "Уведомление об отсутствии в РРПП (Беспроводной телефон).pdf",
+     "fileSize": "82286",
+     "docDescription": "Уведомление об отсутствии в РРПП (Беспроводной телефон).pdf",
+     "docDate": "2026-10-20T12:53:11+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A158BA96287D3AAD1303D05A3E4A49",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    },
+    {
+     "publishedContentId": "01A158BA956D7F1090E0FF0A64E8A1D1",
+     "fileName": "Декларация.docx",
+     "fileSize": "18609",
+     "docDescription": "Декларация.docx",
+     "docDate": "2026-10-20T12:53:11+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A158BA956D7F1090E0FF0A64E8A1D1",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    }
+   ]
+  },
+  "serviceSigns": {
+   "isIncludeKOKS": "false",
+   "isControlP1Ch5St99": "true"
+  },
+  "notificationInfo": {
+   "procedureInfo": {
+    "collectingInfo": {
+     "startDT": "2026-10-21T08:23:36+06:00",
+     "endDT": "2026-10-28T08:00:00+06:00"
+    },
+    "summarizingDate": "2026-10-29+06:00"
+   },
+   "contractConditionsInfo": {
+    "maxPriceInfo": {
+     "maxPrice": "347666.70",
+     "currency": {
+      "code": "RUB",
+      "name": "РОССИЙСКИЙ РУБЛЬ"
+     }
+    }
+   },
+   "customerRequirementsInfo": {
+    "customerRequirementInfo": {
+     "customer": {
+      "regNum": "02521000038",
+      "consRegistryNum": "004Ф5258",
+      "fullName": "ФЕДЕРАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЦЕНТР РЕАБИЛИТАЦИИ ФОНДА ПЕНСИОННОГО И СОЦИАЛЬНОГО СТРАХОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ \"ОМСКИЙ\""
+     },
+     "contractConditionsInfo": {
+      "maxPriceInfo": {
+       "maxPrice": "347666.70"
+      },
+      "IKZInfo": {
+       "purchaseCode": "261550204496355030100102200012630244",
+       "publishYear": "2026",
+       "OKPD2Info": {
+        "OKPD2": {
+         "OKPDCode": "26.30",
+         "OKPDName": "Оборудование коммуникационное"
+        }
+       },
+       "KVRInfo": {
+        "KVR": {
+         "code": "244",
+         "name": "Прочая закупка товаров, работ и услуг"
+        }
+       },
+       "customerCode": "15502044963550301001",
+       "purchaseNumber": "0220",
+       "purchaseOrderNumber": "001"
+      },
+      "tenderPlan2020Info": {
+       "plan2020Number": "202602521000038003",
+       "position2020Number": "202602521000038003000265"
+      },
+      "contractExecutionPaymentPlan": {
+       "contractExecutionTermsInfo": {
+        "relativeTermsInfo": {
+         "start": "0",
+         "startDayType": "calendar",
+         "term": "57",
+         "termDayType": "working"
+        }
+       },
+       "financingSourcesInfo": {
+        "nonbudgetFinancingsInfo": {
+         "selfFunds": "true"
+        },
+        "currentYear": "2026",
+        "financeInfo": {
+         "total": "347666.70",
+         "currentYear": "347666.70",
+         "firstYear": "0.00",
+         "secondYear": "0.00",
+         "subsecYears": "0.00"
+        }
+       },
+       "stagesInfo": {
+        "stageInfo": {
+         "sid": "22339912",
+         "externalSid": "5b67b24c-93c0-4f35-9f07-f46a6331b05c",
+         "termsInfo": {
+          "relativeTermsInfo": {
+           "start": "0",
+           "startDayType": "calendar",
+           "term": "57",
+           "termDayType": "working"
+          }
+         },
+         "nonbudgetFinancingInfo": {
+          "paymentYearInfo": {
+           "total": "347666.70",
+           "currentYear": "347666.70",
+           "firstYear": "0.00",
+           "secondYear": "0.00",
+           "subsecYears": "0.00"
+          },
+          "KVRsInfo": {
+           "currentYear": "2026",
+           "KVRInfo": {
+            "KVR": {
+             "code": "244",
+             "name": "Прочая закупка товаров, работ и услуг"
+            },
+            "KVRYearsInfo": {
+             "total": "347666.70",
+             "currentYear": "347666.70",
+             "firstYear": "0.00",
+             "secondYear": "0.00",
+             "subsecYears": "0.00"
+            }
+           },
+           "totalSum": "347666.70"
+          }
+         }
+        }
+       }
+      },
+      "deliveryPlacesInfo": {
+       "byGARInfo": {
+        "sid": "62241382",
+        "externalSid": "6884a307-5173-4fc0-b462-c8818ce4212b",
+        "countryInfo": {
+         "countryCode": "643",
+         "countryFullName": "Российская Федерация"
+        },
+        "GARInfo": {
+         "GARGuid": "0aaaaa7e-c467-4189-875f-6855ed4ad663",
+         "GARAddress": "обл. Омская, г.о. город Омск, г. Омск, ул. Березовая, д. 1"
+        }
+       }
+      },
+      "isOneSideRejectionSt95": "true",
+      "isExecutionStagesTerms": "false"
+     },
+     "warrantyInfo": {
+      "warrantyTerm": "На поставляемый товар/услуги должна предоставляться гарантия  не менее 12 месяцев."
+     }
+    }
+   },
+   "purchaseObjectsInfo": {
+    "notDrugPurchaseObjectsInfo": {
+     "purchaseObject": [
+      {
+       "sid": "225217784",
+       "externalSid": "1c694afe-29f6-4549-b12c-c89cb35d918b",
+       "KTRU": {
+        "code": "26.30.23.000-00000002",
+        "name": "Телефонный аппарат",
+        "versionId": "173686",
+        "versionNumber": "3",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "335196705",
+           "code": "613913f6-9",
+           "name": "Возможность подключения гарнитуры",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432902150",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335196706",
+           "code": "4de1b4ea-5",
+           "name": "Количество номеров в телефонной книге",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432902151",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greater",
+               "min": "100",
+               "maxMathNotation": "lessOrEqual",
+               "max": "250"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "335196707",
+           "code": "7a4a29ec-4",
+           "name": "Наличие дисплея",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432902152",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335196708",
+           "code": "eb193989-d",
+           "name": "Наличие определителя номера",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432902153",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335196709",
+           "code": "bd477390-e",
+           "name": "Наличие спикерфона",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432902154",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335196710",
+           "code": "d8e0df73-0",
+           "name": "Память исходящих вызовов",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432902155",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greater",
+               "min": "10",
+               "maxMathNotation": "lessOrEqual",
+               "max": "20"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "335196711",
+           "code": "01e2029a-c",
+           "name": "Тип устройства",
+           "type": "1",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "432902156",
+             "qualityDescription": "Беспроводной телефон"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.30.23.170",
+         "OKPDName": "Аппараты телефонные прочие, устройства и аппаратура для передачи и приема речи, изображений или других данных, включая оборудование коммуникационное для работы в проводных или беспроводных сетях связи с функциями безопасности информации, обеспеченными встроенными, в том числе криптографическими, средствами защиты"
+        }
+       },
+       "name": "Телефонный аппарат",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "7966.67",
+       "volumeSpecifyingMethod": "QF",
+       "quantity": {
+        "value": "30.00000000000"
+       },
+       "sum": "239000.10",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      },
+      {
+       "sid": "225217785",
+       "externalSid": "bf219a3a-70a5-45e1-b2e3-edb822054a13",
+       "KTRU": {
+        "code": "26.30.23.000-00000003",
+        "name": "Телефонный аппарат",
+        "versionId": "173687",
+        "versionNumber": "3",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "335196712",
+           "code": "4de1b4ea-5",
+           "name": "Количество номеров в телефонной книге",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432902157",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greater",
+               "min": "20",
+               "maxMathNotation": "lessOrEqual",
+               "max": "50"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "335196713",
+           "code": "7a4a29ec-4",
+           "name": "Наличие дисплея",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432902158",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335196714",
+           "code": "eb193989-d",
+           "name": "Наличие определителя номера",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432902159",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335196715",
+           "code": "bd477390-e",
+           "name": "Наличие спикерфона",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432902160",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "335196716",
+           "code": "d8e0df73-0",
+           "name": "Память исходящих вызовов",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432902161",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greater",
+               "min": "20",
+               "maxMathNotation": "lessOrEqual",
+               "max": "50"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "335196717",
+           "code": "01e2029a-c",
+           "name": "Тип устройства",
+           "type": "1",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "432902162",
+             "qualityDescription": "Проводной телефон"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.30.23.170",
+         "OKPDName": "Аппараты телефонные прочие, устройства и аппаратура для передачи и приема речи, изображений или других данных, включая оборудование коммуникационное для работы в проводных или беспроводных сетях связи с функциями безопасности информации, обеспеченными встроенными, в том числе криптографическими, средствами защиты"
+        }
+       },
+       "name": "Телефонный аппарат",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "5433.33",
+       "volumeSpecifyingMethod": "QF",
+       "quantity": {
+        "value": "20.00000000000"
+       },
+       "sum": "108666.60",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      }
+     ],
+     "totalSum": "347666.70",
+     "quantityUndefined": "false"
+    }
+   },
+   "requirementsInfo": {
+    "requirementInfo": [
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "ET44",
+       "name": "Единые требования к участникам закупок в соответствии с ч. 1 ст. 31 Закона № 44-ФЗ"
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TR442",
+       "name": "Требования к участникам закупок в соответствии с ч. 1.1 ст. 31 Закона № 44-ФЗ"
+      }
+     }
+    ]
+   }
+  },
+  "printFormFieldsInfo": {
+   "is449Features": "false"
+  },
+  "@schemeVersion": "16.3"
+ }
+}

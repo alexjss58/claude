@@ -1,0 +1,2913 @@
+{
+ "_meta": {
+  "purchase_number": "0843500000226006292",
+  "source": "структурированное извещение ЕИС (через открытое API ГосПлан, v2test.gosplan.info)",
+  "retrieved": "2026-11-03",
+  "api_url": "https://v2test.gosplan.info/fz44/purchases/0843500000226006292",
+  "customer_inn": "4500013358",
+  "region_code": 45,
+  "stage": 1,
+  "purchase_type": "epNotificationEZK2020"
+ },
+ "doc_type": "epNotificationEZK2020",
+ "source": {
+  "id": "44420938",
+  "externalId": "deece208-4a77-4bf6-b773-5064b2ffd53945",
+  "versionNumber": "1",
+  "commonInfo": {
+   "purchaseNumber": "0843500000226006292",
+   "docNumber": "№0843500000226006292",
+   "plannedPublishDate": "2026-10-29+05:00",
+   "publishDTInEIS": "2026-10-29T15:13:31.458+05:00",
+   "href": "https://zakupki.gov.ru/epz/order/notice/zk20/view/common-info.html?regNumber=0843500000226006292",
+   "placingWay": {
+    "code": "ZKP20",
+    "name": "Запрос котировок в электронной форме"
+   },
+   "ETP": {
+    "code": "ETP_SBAST",
+    "name": "АО «Сбербанк-АСТ»",
+    "url": "http://www.sberbank-ast.ru"
+   },
+   "contractConclusionOnSt83Ch2": "true",
+   "purchaseObjectInfo": "Поставка Ethernet-коммутаторов"
+  },
+  "purchaseResponsibleInfo": {
+   "responsibleOrgInfo": {
+    "regNum": "08435000002",
+    "consRegistryNum": "372D0084",
+    "fullName": "ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ \"ЦЕНТР ЗАКУПОК И БУХГАЛТЕРСКОГО УЧЕТА КУРГАНСКОЙ ОБЛАСТИ\"",
+    "shortName": "ГКУ \"ЦЗБУ КО\"",
+    "postAddress": "Российская Федерация, 640003, Курганская обл, Курган г, УЛ Р. ЗОРГЕ, ДОМ 20, ОФ.1",
+    "factAddress": "Российская Федерация, 640003, Курганская обл, Курган г, УЛ РИХАРДА ЗОРГЕ, ОФИС 1, ДОМ 20",
+    "INN": "4501214152",
+    "KPP": "450101001"
+   },
+   "responsibleRole": "AI",
+   "responsibleInfo": {
+    "orgPostAddress": "Российская Федерация, 640003, Курганская обл, Курган г, УЛ Р. ЗОРГЕ, ДОМ 20, ОФ.1",
+    "orgFactAddress": "Российская Федерация, 640003, Курганская обл, Курган г, УЛ РИХАРДА ЗОРГЕ, ОФИС 1, ДОМ 20"
+   }
+  },
+  "printFormInfo": {
+   "url": "https://zakupki.gov.ru/epz/order/notice/printForm/view.html?regNumber=0843500000226006292"
+  },
+  "attachmentsInfo": {
+   "attachmentInfo": [
+    {
+     "publishedContentId": "01A1871D408C7497848403C5D8981C2A",
+     "fileName": "Обоснование НМЦК.xlsx",
+     "fileSize": "11529",
+     "docDescription": "Обоснование начальной (максимальной) цены контракта",
+     "docDate": "2026-10-29T13:03:43+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A1871D408C7497848403C5D8981C2A",
+     "docKindInfo": {
+      "code": "MRJ",
+      "name": "Обоснование начальной (максимальной) цены контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A1871D3F4A737D87B92BE24C22FC88",
+     "fileName": "Проект контракта.docx",
+     "fileSize": "50289",
+     "docDescription": "Проект контракта",
+     "docDate": "2026-10-29T13:03:43+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A1871D3F4A737D87B92BE24C22FC88",
+     "docKindInfo": {
+      "code": "CP",
+      "name": "Проект контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A1871D3FE1771CA482929C41585F32",
+     "fileName": "Описание объекта закупки.docx",
+     "fileSize": "31286",
+     "docDescription": "Описание объекта закупки (Техническое задание)",
+     "docDate": "2026-10-29T13:03:43+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A1871D3FE1771CA482929C41585F32",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A1871D4163718E896DC3F35C685F52",
+     "fileName": "Требования к содержанию, составу заявки на участие в ЗК и инструкция по ее заполнению.docx",
+     "fileSize": "44832",
+     "docDescription": "Требования к содержанию_ составу заявки на участие в ЗК и инструкция по ее заполнению",
+     "docDate": "2026-10-29T13:03:43+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A1871D4163718E896DC3F35C685F52",
+     "docKindInfo": {
+      "code": "CAR",
+      "name": "Требование к содержанию, составу заявки на участие в закупке"
+     }
+    }
+   ]
+  },
+  "serviceSigns": {
+   "isIncludeKOKS": "false",
+   "isControlP1Ch5St99": "true"
+  },
+  "notificationInfo": {
+   "procedureInfo": {
+    "collectingInfo": {
+     "startDT": "2026-10-29T15:13:31+05:00",
+     "endDT": "2026-11-06T07:00:00+05:00"
+    },
+    "summarizingDate": "2026-11-10+05:00"
+   },
+   "contractConditionsInfo": {
+    "maxPriceInfo": {
+     "maxPrice": "1801296.00",
+     "currency": {
+      "code": "RUB",
+      "name": "РОССИЙСКИЙ РУБЛЬ"
+     }
+    }
+   },
+   "customerRequirementsInfo": {
+    "customerRequirementInfo": {
+     "customer": {
+      "regNum": "98005000010",
+      "consRegistryNum": "372D1865",
+      "fullName": "ДЕПАРТАМЕНТ СОЦИАЛЬНОЙ ПОЛИТИКИ КУРГАНСКОЙ ОБЛАСТИ"
+     },
+     "applicationGuarantee": {
+      "amount": "18012.96",
+      "account": {
+       "bik": "045004108",
+       "settlementAccount": "03222643370000004300",
+       "personalAccount": "05025D18650",
+       "creditOrgName": "ОКЦ № 1 СибГУ Банка России//УФК по Курганской области, г Курган",
+       "corrAccountNumber": "40102810445370000108"
+      },
+      "accountBudget": {
+       "accountBudgetAdmin": {
+        "anotherAdmin": "true",
+        "INN": "4500013358",
+        "KPP": "450001001",
+        "KBK": "02511610056020000140",
+        "OKTMOInfo": {
+         "code": "37701000001",
+         "name": "Муниципальные образования Курганской области / Городские округа Курганской области/ / город Курган / г Курган"
+        },
+        "bankAccount": "40102810445370000108",
+        "ksNumber": "03100643000000014300",
+        "bik": "045004108",
+        "counterpartyName": "УПРАВЛЕНИЕ ФЕДЕРАЛЬНОГО КАЗНАЧЕЙСТВА ПО КУРГАНСКОЙ ОБЛАСТИ (ДСП КУРГАНСКОЙ ОБЛАСТИ)"
+       }
+      },
+      "procedureInfo": "Порядок предоставления обеспечения заявки определен статьей 44 Федерального закона № 44-ФЗ. \nОбеспечение заявки на участие в закупке может предоставляться участником закупки в виде денежных средств (путем блокирования денежных средств, внесенных участником закупки на банковский счет, открытый таким участником в банке, включенном в перечень, утвержденный распоряжением Правительства РФ от 13 июля 2018 года № 1451-р) или независимой гарантии, соответствующей требованиям статьи 45 Федерального закона № 44-ФЗ. \nУчастник закупки для подачи заявки на участие в закупке выбирает с использованием электронной площадки способ обеспечения такой заявки путем указания реквизитов специального счета или указания номера реестровой записи из реестра независимых гарантий, размещенного в единой информационной системе.\nСрок действия независимой гарантии должен составлять не менее месяца с даты окончания срока подачи заявок.\nГосударственные, муниципальные учреждения не предоставляют обеспечение подаваемых ими заявок на участие в закупках.\nПредприятия уголовно-исполнительной системы, организации инвалидов, предусмотренные частью 2 статьи 29 Федерального закона № 44-ФЗ, предоставляют обеспечение заявки на участие в закупке в размере 0,5% НМЦК. Постановлением Правительства Российской Федерации от 10 апреля 2023 года N 579 для участников закупки (за исключением закупок, участниками которых в соответствии с частью 3 статьи 30 Федерального закона № 44-ФЗ, могут быть только СМП, СОНКО), являющихся юридическими лицами, зарегистрированными на территории государства - члена Евразийского экономического союза, за исключением Российской Федерации, или физическими лицами, являющимися гражданами государства - члена Евразийского экономического союза, за исключением Российской Федерации, предусмотрены особенности предоставления обеспечения заявок в виде денежных средств (см. Раздел III приложения «Требования к содержанию, составу заявки на участие в ЗК, инструкция по ее заполнению»).",
+      "part": "1.0"
+     },
+     "contractGuarantee": {
+      "account": {
+       "bik": "045004108",
+       "settlementAccount": "03222643370000004300",
+       "personalAccount": "05025D18650",
+       "creditOrgName": "ОКЦ № 1 СибГУ Банка России//УФК по Курганской области, г Курган",
+       "corrAccountNumber": "40102810445370000108"
+      },
+      "procedureInfo": "Порядок предоставления обеспечения исполнения контракта, требования к такому обеспечению определены статьей 96 Федерального закона № 44-ФЗ.\nИсполнение контракта может обеспечиваться предоставлением независимой гарантии, соответствующей требованиям статьи 45 Федерального закона № 44-ФЗ, или внесением денежных средств на указанный заказчиком счет, на котором в соответствии с законодательством Российской Федерации учитываются операции со средствами, поступающими заказчику. \nСпособ обеспечения исполнения контракта, срок действия независимой гарантии определяются в соответствии с требованиями Федерального закона № 44-ФЗ участником закупки, с которым заключается контракт, самостоятельно. При этом срок действия независимой гарантии должен превышать предусмотренный контрактом срок исполнения обязательств, которые должны быть обеспечены такой независимой гарантией, не менее чем на 1 месяц, в том числе в случае его изменения в соответствии со статьей 95 Федерального закона № 44-ФЗ.\nОсобенности предоставления обеспечения исполнения контракта, заключаемого по результатам определения поставщика (подрядчика, исполнителя) в соответствии с пунктом 1 части 1 статьи 30 Федерального закона № 44-ФЗ, определены частями 6.2, 8.1 статьи 96 Федерального закона № 44-ФЗ.\nОбеспечение исполнения контракта не требуется в случаях, предусмотренных частью 8 статьи 96 Федерального закона № 44-ФЗ.",
+      "part": "5.0"
+     },
+     "contractConditionsInfo": {
+      "maxPriceInfo": {
+       "maxPrice": "1801296.00"
+      },
+      "IKZInfo": {
+       "purchaseCode": "262450001335845000100100160012630242",
+       "publishYear": "2026",
+       "OKPD2Info": {
+        "OKPD2": {
+         "OKPDCode": "26.30",
+         "OKPDName": "Оборудование коммуникационное"
+        }
+       },
+       "KVRInfo": {
+        "KVR": {
+         "code": "242",
+         "name": "Закупка товаров, работ и услуг в сфере информационно-коммуникационных технологий"
+        }
+       },
+       "customerCode": "24500013358450001001",
+       "purchaseNumber": "0016",
+       "purchaseOrderNumber": "001"
+      },
+      "tenderPlan2020Info": {
+       "plan2020Number": "202698005000010001",
+       "position2020Number": "202698005000010001000020"
+      },
+      "contractExecutionPaymentPlan": {
+       "contractExecutionTermsInfo": {
+        "notRelativeTermsInfo": {
+         "isFromConclusionDate": "true",
+         "endDate": "2026-12-31+03:00"
+        }
+       },
+       "financingSourcesInfo": {
+        "budgetFinancingsInfo": {
+         "budgetInfo": {
+          "code": "43020004",
+          "name": "Бюджет Курганской области"
+         },
+         "budgetLevelInfo": {
+          "code": "20",
+          "name": "бюджет субъекта Российской Федерации"
+         },
+         "OKTMOInfo": {
+          "code": "37000000",
+          "name": "Муниципальные образования Курганской области"
+         }
+        },
+        "currentYear": "2026",
+        "financeInfo": {
+         "total": "1801296.00",
+         "currentYear": "1801296.00",
+         "firstYear": "0.00",
+         "secondYear": "0.00",
+         "subsecYears": "0.00"
+        }
+       },
+       "stagesInfo": {
+        "stageInfo": {
+         "sid": "22504070",
+         "externalSid": "560b4288-cb21-43d7-9993-079a541ca341",
+         "termsInfo": {
+          "notRelativeTermsInfo": {
+           "isFromConclusionDate": "true",
+           "endDate": "2026-12-31+03:00"
+          }
+         },
+         "budgetFinancingsInfo": {
+          "budgetFinancingInfo": {
+           "KBK": "02510062830219180242",
+           "paymentYearInfo": {
+            "total": "1801296.00",
+            "currentYear": "1801296.00",
+            "firstYear": "0.00",
+            "secondYear": "0.00",
+            "subsecYears": "0.00"
+           }
+          }
+         }
+        }
+       }
+      },
+      "deliveryPlacesInfo": {
+       "byGARInfo": {
+        "sid": "62435699",
+        "externalSid": "3ec11df4-3829-4971-8a5e-e2c53be24c27",
+        "countryInfo": {
+         "countryCode": "643",
+         "countryFullName": "Российская Федерация"
+        },
+        "GARInfo": {
+         "GARGuid": "3bbda77d-ba3f-4457-9d44-c440815cda89",
+         "GARAddress": "обл. Курганская, г.о. город Курган, г. Курган"
+        },
+        "deliveryPlace": "г.Курган, ул.Р.Зорге, 39, каб. 35"
+       }
+      },
+      "isOneSideRejectionSt95": "true",
+      "isExecutionStagesTerms": "false"
+     },
+     "warrantyInfo": {
+      "warrantyTerm": "Гарантийный срок эксплуатации составляет 12 месяцев с даты размещения в единой информационной системе «ЗАКАЗЧИКОМ» документа о приемке, но не менее срока, установленного производителем"
+     },
+     "provisionWarranty": {
+      "amount": "18012.96",
+      "part": "1.0",
+      "procedureInfo": "Порядок и срок предоставления поставщиком (подрядчиком, исполнителем) обеспечения гарантийных обязательств определены приложением к извещению «Проект контракта». \nГарантийные обязательства могут обеспечиваться предоставлением независимой гарантии, соответствующей требованиям статьи 45 Федерального закона № 44-ФЗ, или внесением денежных средств на указанный заказчиком счет, на котором в соответствии с законодательством Российской Федерации учитываются операции со средствами, поступающими заказчику. \nСпособ обеспечения гарантийных обязательств, срок действия независимой гарантии определяются в соответствии с требованиями Федерального закона № 44-ФЗ участником закупки, с которым заключается контракт, самостоятельно. При этом срок действия независимой гарантии должен превышать предусмотренный контрактом срок исполнения обязательств, которые должны быть обеспечены такой независимой гарантией, не менее чем на 1 месяц, в том числе в случае его изменения в соответствии со статьей 95 Федерального закона № 44-ФЗ.\nУчастник закупки, с которым заключается контракт по результатам определения поставщика (подрядчика, исполнителя) в соответствии с пунктом 1 части 1 статьи 30 Федерального закона № 44-ФЗ, освобождается от предоставления обеспечения гарантийных обязательств в случае, предусмотренном частью 8.1 статьи 96 Федерального закона № 44-ФЗ.",
+      "account": {
+       "bik": "045004108",
+       "settlementAccount": "03222643370000004300",
+       "personalAccount": "05025D18650",
+       "creditOrgName": "ОКЦ № 1 СибГУ Банка России//УФК по Курганской области, г Курган",
+       "corrAccountNumber": "40102810445370000108"
+      }
+     }
+    }
+   },
+   "purchaseObjectsInfo": {
+    "notDrugPurchaseObjectsInfo": {
+     "purchaseObject": {
+      "sid": "226119685",
+      "externalSid": "c5fb84b7-763d-4ff8-b664-a6099deec65e",
+      "KTRU": {
+       "code": "26.30.11.110-00000041",
+       "name": "Коммутатор",
+       "versionId": "403161",
+       "versionNumber": "30",
+       "characteristics": {
+        "characteristicsUsingReferenceInfo": [
+         {
+          "sid": "337668433",
+          "externalSid": "4652ab11-49e6-4d13-8366-1d2bcfc249e5",
+          "code": "76379562-8",
+          "name": "Блок питания",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231603",
+            "externalSid": "e034465f-fa71-4a7a-ab3f-30f7757d2255",
+            "qualityDescription": "Встроенный"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668434",
+          "externalSid": "73bfdac9-a818-4abf-a934-e60f49c4151b",
+          "code": "4f298e63-1",
+          "name": "Виртуальное тестирование кабеля",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231604",
+            "externalSid": "838c1737-7eee-493c-b79e-616202a192da",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668435",
+          "externalSid": "44fe6396-b274-48ce-b0e7-67f0d21f47c0",
+          "code": "d9b1e1ae-f",
+          "name": "Внешний интерфейс управления",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": {
+            "sid": "436231605",
+            "externalSid": "0cbf2bb2-31d5-4eef-a8ab-2a421a204f32",
+            "qualityDescription": "RJ-45"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668436",
+          "externalSid": "a4f69f4e-10a7-4ce4-855a-1fad40fd8218",
+          "code": "f0a58ace-e",
+          "name": "Внутренняя пропускная способность",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231606",
+            "externalSid": "24b14abd-7945-4879-a780-2ef5b9787f55",
+            "OKEI": {
+             "code": "2547",
+             "nationalCode": "Гбит/с",
+             "name": "Гигабит в секунду"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "100"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668437",
+          "externalSid": "dc2893d7-98df-4971-873b-ce213301ef30",
+          "code": "959bd473-7",
+          "name": "Возможность загрузки и выгрузки конфигурации и программного обеспечения",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231609",
+             "externalSid": "7121e308-874e-4234-b952-c39a7a9a1c06",
+             "qualityDescription": "SFTP"
+            },
+            {
+             "sid": "436231610",
+             "externalSid": "229a44ab-1f46-4498-9ca6-07d4aaeef4c0",
+             "qualityDescription": "SSH"
+            },
+            {
+             "sid": "436231607",
+             "externalSid": "93dddb03-aeaa-4824-bcea-d9ee4fa25b54",
+             "qualityDescription": "SCP"
+            },
+            {
+             "sid": "436231608",
+             "externalSid": "67dd0faa-5998-4b89-a473-c0357814024d",
+             "qualityDescription": "TFTP"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "337668438",
+          "externalSid": "9209f772-2600-4866-9861-4e8c134eb193",
+          "code": "956a4354-6",
+          "name": "Возможность загрузки файлов на устройство по нешифрованному протоколу передачи файлов",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231611",
+            "externalSid": "e272d5c5-dae2-4223-a479-66ac83f28550",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668439",
+          "externalSid": "f28ec01c-584f-421c-8ec0-78463c0ab698",
+          "code": "b3c11d49-d",
+          "name": "Возможность загрузки файлов на устройство по шифрованному протоколу передачи файлов",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231612",
+            "externalSid": "c1039cf3-0684-4efb-970a-29e33e95d981",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668440",
+          "externalSid": "5b52b17a-c2cd-4461-9430-91f5f5bcc718",
+          "code": "52c7faf6-4",
+          "name": "Возможность работы в качестве DHCP relay агента",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231613",
+            "externalSid": "582f8af1-e10b-4309-a67c-ba110b650239",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668441",
+          "externalSid": "ae995e8e-b789-40d0-bc54-f79847aa5f6e",
+          "code": "01940339-2",
+          "name": "Возможность работы в качестве DHCP-клиента",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231614",
+            "externalSid": "d3244879-c930-4719-93d1-6b4576b61cc3",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668442",
+          "externalSid": "08c99bcf-02d5-41aa-8cc4-113125e14e91",
+          "code": "d4937b7b-5",
+          "name": "Возможность работы в качестве DHCP-сервера",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231615",
+            "externalSid": "068b78a3-a52f-4c7c-a21e-44d418e07434",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668443",
+          "externalSid": "7fed74dd-05cb-48cd-99fa-b872ad24373e",
+          "code": "aac5b17c-7",
+          "name": "Возможность управления доступом при подключении к консольному (последовательному/серийному) порту",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231616",
+            "externalSid": "94d4cf72-f409-4f9f-8c11-12eb083f5ab3",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668444",
+          "externalSid": "968e3c0d-976a-47a1-9ba4-6005dbe8d1c0",
+          "code": "cdc7da1d-d",
+          "name": "Высота коммутатора для размещения в шкаф телекоммуникационный, Юнит",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231617",
+            "externalSid": "bcb23ab2-d90d-42a1-902a-7e2cd468d315",
+            "valueFormat": "N",
+            "valueSet": {
+             "concreteValue": "1"
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668445",
+          "externalSid": "4de76a9b-3912-4a1a-a5b7-8fc910f1a7cd",
+          "code": "c88ea254-e",
+          "name": "Диагностика оптического трансивера",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231618",
+            "externalSid": "a9f30513-ce9f-4ce8-b87f-4e44da234238",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668446",
+          "externalSid": "64875cfa-8b78-4664-9bf2-4be7d86b5129",
+          "code": "8b4c326e-9",
+          "name": "Интерфейс LAN-порта",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231619",
+             "externalSid": "384ddb6a-70a4-445e-8729-a33bd8732e51",
+             "qualityDescription": "SFP+"
+            },
+            {
+             "sid": "436231620",
+             "externalSid": "a61053d5-a2c2-412b-81b3-f73b8191bd4e",
+             "qualityDescription": "SFP"
+            },
+            {
+             "sid": "436231621",
+             "externalSid": "5bded7ca-a49a-4479-8c6b-6b0748a00873",
+             "qualityDescription": "RJ45"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "337668447",
+          "externalSid": "b398f737-07b3-4705-b7ae-887ff63d67bd",
+          "code": "c78903e5-5",
+          "name": "Интерфейс сетевых модулей",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231622",
+             "externalSid": "b04389f4-ef9c-4351-a3d1-3f64f41d6316",
+             "qualityDescription": "SFP+"
+            },
+            {
+             "sid": "436231623",
+             "externalSid": "a57ec35b-cd50-42cc-976f-0f2860e320de",
+             "qualityDescription": "SFP"
+            },
+            {
+             "sid": "436231624",
+             "externalSid": "054137e5-93d6-4bec-88b9-07ff3ea0b041",
+             "qualityDescription": "RJ45"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "337668448",
+          "externalSid": "17071ca4-88f6-439d-a11e-2e068c855e0a",
+          "code": "252f53cc-8",
+          "name": "Количество 802.1ad правил",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231625",
+            "externalSid": "2f684ea5-86bd-45d2-8bf0-1243cfb0bce1",
+            "OKEI": {
+             "code": "798",
+             "nationalCode": "тыс. шт; 1000 шт",
+             "name": "Тысяча штук"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greater",
+              "min": "1.2",
+              "maxMathNotation": "lessOrEqual",
+              "max": "2"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668449",
+          "externalSid": "9416bb1a-fdad-4462-8826-a5ec0f946335",
+          "code": "d9ee1ebb-8",
+          "name": "Количество ACL (списков/записей)",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231626",
+            "externalSid": "47327756-b83b-4eb4-835c-8997f2c87903",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "1000"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668450",
+          "externalSid": "708673ed-be2d-4782-aca3-533a95d27beb",
+          "code": "e92ebe16-f",
+          "name": "Количество ARP записей",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231627",
+            "externalSid": "ee386439-1125-4ea7-ab4a-b70e764e82b9",
+            "OKEI": {
+             "code": "798",
+             "nationalCode": "тыс. шт; 1000 шт",
+             "name": "Тысяча штук"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "1"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668451",
+          "externalSid": "60cdade4-bc4a-4c50-bba7-01c8b5d6bef5",
+          "code": "da5924c8-1",
+          "name": "Количество L2 Multicast-групп",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231628",
+            "externalSid": "a9f08429-a4e1-41ef-9482-8ca1570c3b06",
+            "OKEI": {
+             "code": "798",
+             "nationalCode": "тыс. шт; 1000 шт",
+             "name": "Тысяча штук"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greater",
+              "min": "1.8",
+              "maxMathNotation": "lessOrEqual",
+              "max": "2.2"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668452",
+          "externalSid": "45493852-c2eb-471c-a233-f8b49c3eebec",
+          "code": "520967bd-a",
+          "name": "Количество L3 интерфейсов",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231629",
+            "externalSid": "4f106830-35d5-41f4-9064-c6def770dd8e",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greater",
+              "min": "1024",
+              "maxMathNotation": "lessOrEqual",
+              "max": "2048"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668453",
+          "externalSid": "68bfec20-0be8-41d1-ac75-39b0368ac6a3",
+          "code": "40bf3a16-5",
+          "name": "Количество LAG групп",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231630",
+            "externalSid": "875eb9b9-a666-4ed6-85ec-0d3298ad55c2",
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greater",
+              "min": "64",
+              "maxMathNotation": "lessOrEqual",
+              "max": "128"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668454",
+          "externalSid": "54e62720-349c-4915-a370-fa7fa8e700f5",
+          "code": "c09daac6-c",
+          "name": "Количество LAN портов",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231631",
+            "externalSid": "94087293-5c87-4905-942c-2720240d3650",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "24"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668455",
+          "externalSid": "f6c02fbb-2849-41c6-ac4d-527d41147c52",
+          "code": "ddb5816f-4",
+          "name": "Количество Loopback-интерфейсов",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231632",
+            "externalSid": "edca4fcd-3219-480b-947b-03b218785448",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greater",
+              "min": "32",
+              "maxMathNotation": "lessOrEqual",
+              "max": "64"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668456",
+          "externalSid": "df771725-8837-493c-8548-b7074ca2368e",
+          "code": "1607e1b5-7",
+          "name": "Количество блоков питания",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231633",
+            "externalSid": "352aa210-39d2-4057-a16f-a7733e2ae82a",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "valueSet": {
+             "concreteValue": "1"
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668457",
+          "externalSid": "2926e897-e0fc-4544-872e-ca0b740ee5aa",
+          "code": "c1d47e8f-8",
+          "name": "Количество записей MAC",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231634",
+            "externalSid": "6a08a24e-2ada-47e2-9075-4bbc79bd73a6",
+            "OKEI": {
+             "code": "798",
+             "nationalCode": "тыс. шт; 1000 шт",
+             "name": "Тысяча штук"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "16"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668458",
+          "externalSid": "7fd56f04-edd4-4de4-ac89-567772e415d4",
+          "code": "a4922276-1",
+          "name": "Количество записей таблицы Vlan",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231635",
+            "externalSid": "0552d890-b0ce-4c4e-b9e1-b2650246ffd0",
+            "OKEI": {
+             "code": "798",
+             "nationalCode": "тыс. шт; 1000 шт",
+             "name": "Тысяча штук"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greater",
+              "min": "4",
+              "maxMathNotation": "lessOrEqual",
+              "max": "8"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668459",
+          "externalSid": "67acd4a1-abfb-464d-b0dd-74b7468270ec",
+          "code": "47c17243-a",
+          "name": "Количество очередей (выходных на порт)",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231636",
+            "externalSid": "04c0f6bb-f739-4b2e-aa9c-e8dd2e6c4d43",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greater",
+              "min": "4",
+              "maxMathNotation": "lessOrEqual",
+              "max": "8"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668460",
+          "externalSid": "fd31ae91-6cea-4710-9bb5-15803334f6db",
+          "code": "81f87d30-5",
+          "name": "Количество поддерживаемых устройств для объединения в стэк",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231637",
+            "externalSid": "cb01a19e-abe9-4842-9576-2fa74fab462c",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "8"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668461",
+          "externalSid": "868bddb2-171e-4c07-92f5-bea75a25b46a",
+          "code": "0d5cdb26-b",
+          "name": "Количество портов 10G SFP+",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231638",
+            "externalSid": "2136a623-a422-47d2-a98d-fafb82e65c3b",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "4"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668462",
+          "externalSid": "45ec69fa-2124-4392-8896-9711a758ad08",
+          "code": "6ddaa113-3",
+          "name": "Количество портов 1G 8P8C",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231639",
+            "externalSid": "969bc467-1eb0-4ad7-906c-2209645ae5eb",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "24"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668463",
+          "externalSid": "039f1035-9517-420c-888e-41652a256ed9",
+          "code": "d0443f59-b",
+          "name": "Количество портов PoE",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231640",
+            "externalSid": "ed5f2ec4-ce5f-4d81-94bc-3a6051de6d34",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "24"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668464",
+          "externalSid": "e0adaaa6-d1cf-4baf-8f4c-cdd96104ca05",
+          "code": "b80f6525-b",
+          "name": "Количество портов PoE+",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231641",
+            "externalSid": "c5d2d582-dd4b-42bf-bd0f-7dce6e3961af",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "12"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668465",
+          "externalSid": "43498e03-db80-4817-a3df-c791cec0d277",
+          "code": "59497c27-6",
+          "name": "Количество портов в одном LAG",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231642",
+            "externalSid": "1cf80da2-72d2-49d8-8828-7ea35822569e",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greater",
+              "min": "4",
+              "maxMathNotation": "lessOrEqual",
+              "max": "8"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668466",
+          "externalSid": "44a61233-3217-45cf-a992-19cac5574bb0",
+          "code": "4af226a6-1",
+          "name": "Конфигурация коммутатора",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231643",
+            "externalSid": "2b6f686e-dfbe-447a-9f8a-939d13bc75c2",
+            "qualityDescription": "Фиксированный"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668467",
+          "externalSid": "f07c33c8-06e1-4598-b713-9d4ea8ca2c77",
+          "code": "d5bf6587-f",
+          "name": "Критерии фильтрации ACL",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231644",
+             "externalSid": "6927d01c-dc55-49ef-8318-b347a84bd1e0",
+             "qualityDescription": "IPv6 source address"
+            },
+            {
+             "sid": "436231645",
+             "externalSid": "290c09c5-d27a-4273-8373-db502eaaf11c",
+             "qualityDescription": "TCP/UDP source port"
+            },
+            {
+             "sid": "436231646",
+             "externalSid": "b422c5d1-2062-4c07-a929-39a00b503bc6",
+             "qualityDescription": "IPv4 protocol numbers"
+            },
+            {
+             "sid": "436231647",
+             "externalSid": "84b4fa44-29d4-4fa0-8a4e-3cd6e2e80d3a",
+             "qualityDescription": "IPv4 custom field"
+            },
+            {
+             "sid": "436231648",
+             "externalSid": "197b3a2b-363b-450e-a1bb-69f55027b903",
+             "qualityDescription": "CoS"
+            },
+            {
+             "sid": "436231649",
+             "externalSid": "285c4ee0-fb44-4d6c-90ed-8ef739ca0f35",
+             "qualityDescription": "Port"
+            },
+            {
+             "sid": "436231650",
+             "externalSid": "b1a3031b-0de8-4db7-9d23-d770c187e4cb",
+             "qualityDescription": "IPv4 Preference"
+            },
+            {
+             "sid": "436231651",
+             "externalSid": "0f90a9b0-a9b4-4d37-a4e0-e1dba99de651",
+             "qualityDescription": "Time-base"
+            },
+            {
+             "sid": "436231652",
+             "externalSid": "97805d97-bdb7-48ac-a6fe-fac45ec462a8",
+             "qualityDescription": "TCP/UDP flags"
+            },
+            {
+             "sid": "436231653",
+             "externalSid": "15dfb9f1-c19e-4510-ad35-0f78a2d71102",
+             "qualityDescription": "IPv4 ToS"
+            },
+            {
+             "sid": "436231654",
+             "externalSid": "f4699feb-6ec5-4985-b64f-01ae82c05177",
+             "qualityDescription": "TCP/UDP destination port"
+            },
+            {
+             "sid": "436231655",
+             "externalSid": "2d98d1ec-a011-4226-b5da-99468727f388",
+             "qualityDescription": "IPv4 source address"
+            },
+            {
+             "sid": "436231656",
+             "externalSid": "d7dc4386-ad13-40ae-8ba7-07440a5a24ec",
+             "qualityDescription": "MAC destination address"
+            },
+            {
+             "sid": "436231657",
+             "externalSid": "2e33c5a0-42ea-494b-910d-eb0c2a090e3b",
+             "qualityDescription": "Vlan ID"
+            },
+            {
+             "sid": "436231658",
+             "externalSid": "3bce3ffc-9f56-43d3-93c3-bc558318eea6",
+             "qualityDescription": "IPv4 DSCP"
+            },
+            {
+             "sid": "436231659",
+             "externalSid": "a18a7c35-ff8f-4963-9e1d-1583b47d222a",
+             "qualityDescription": "Ethertype"
+            },
+            {
+             "sid": "436231660",
+             "externalSid": "dd1d18c3-63c3-43d6-a365-0baed3fea2b9",
+             "qualityDescription": "IPv4 destination address"
+            },
+            {
+             "sid": "436231661",
+             "externalSid": "bab589db-23c5-4b40-bbfa-5ef912c9a1bc",
+             "qualityDescription": "IPv6 destination address"
+            },
+            {
+             "sid": "436231662",
+             "externalSid": "b14a93ee-5506-41da-b99a-2e22323b51fe",
+             "qualityDescription": "MAC source address"
+            },
+            {
+             "sid": "436231663",
+             "externalSid": "0c33b17e-6e5c-467b-8a89-58302804121c",
+             "qualityDescription": "IPv4 security option"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "337668468",
+          "externalSid": "3782e36b-c37f-44b1-b786-9fec39728740",
+          "code": "785eeb08-8",
+          "name": "Максимальная потребляемая мощность",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231664",
+            "externalSid": "c3781b87-14f2-4024-bd6c-cf6432087fa1",
+            "OKEI": {
+             "code": "212",
+             "nationalCode": "Вт",
+             "name": "Ватт"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "maxMathNotation": "lessOrEqual",
+              "max": "450"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668469",
+          "externalSid": "4d275dea-04aa-4888-a41b-85c80deaa5e5",
+          "code": "43f6c4f8-8",
+          "name": "Наличие встроенного температурного датчика",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231665",
+            "externalSid": "57aa7327-edda-4567-8b10-62d766d27886",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668470",
+          "externalSid": "c0198ac7-bb58-4bf3-a316-f386d4f96b34",
+          "code": "cad882e3-0",
+          "name": "Наличие защиты от DoS-атак",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231666",
+            "externalSid": "ee644510-5bdd-41da-8de7-87cfbefcee51",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668471",
+          "externalSid": "653ef25f-3ae6-466d-8c20-bb9f9065763f",
+          "code": "c144e472-3",
+          "name": "Наличие защиты от смены корневого коммутатора в домене STP (Root Guard/Protection)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231667",
+            "externalSid": "97653f8e-dfb0-4b57-b7b6-13705294ecfa",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668472",
+          "externalSid": "9de9d246-3d53-4211-87ab-e2f875f95360",
+          "code": "c571dfb7-2",
+          "name": "Наличие интерфейсов управления",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231668",
+             "externalSid": "175762f4-dbad-41f2-af1c-28b458380c55",
+             "qualityDescription": "CLI"
+            },
+            {
+             "sid": "436231669",
+             "externalSid": "9c51e43e-d1b4-4164-ba9e-f3be3a4aa5a2",
+             "qualityDescription": "WEB"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "337668473",
+          "externalSid": "42817d7a-2407-4b24-968f-dca5aff805d8",
+          "code": "b778ef8e-7",
+          "name": "Наличие механизма блокировки портов при получении сообщений BPDU (Bridge Protocol Data Unit)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231670",
+            "externalSid": "ec19c978-5d60-4900-9e9c-0a50c167584b",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668474",
+          "externalSid": "f403781c-4954-4e6e-8019-74d1fb8eadb0",
+          "code": "f2485218-4",
+          "name": "Наличие механизма фильтрации сообщений BPDU (Bridge Protocol Data Unit) на портах",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231671",
+            "externalSid": "fa6a0750-40ae-481f-b18d-89593d209c5f",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668475",
+          "externalSid": "017c8387-702d-4365-a8fb-dbad98ce2ee9",
+          "code": "41c0bef6-a",
+          "name": "Наличие отдельного консольного (последовательного/серийного) порта для управления и диагностики",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231672",
+            "externalSid": "06eb5191-8a9c-4cd6-91fa-8c572edc74e9",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668476",
+          "externalSid": "d232dd76-9006-4afe-a7a9-298cf893648e",
+          "code": "add3c330-7",
+          "name": "Наличие функции DHCP Snooping (защита от атак, связанных с протоколом DHCP)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231673",
+            "externalSid": "26c6d873-b18a-46a2-afe0-6f30c6d029c4",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668477",
+          "externalSid": "11107cf6-edfb-4832-801c-f0fa3f668017",
+          "code": "d0e1a406-f",
+          "name": "Наличие функций защиты от атак, связанных с протоколом ARP",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231674",
+            "externalSid": "c6ed7d44-2cd0-467d-b127-60cfcce1c7bb",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668478",
+          "externalSid": "92bef2da-c97e-4f88-a108-172158ee2a10",
+          "code": "5570571d-2",
+          "name": "Объем оперативной памяти",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231675",
+            "externalSid": "09989d5e-a1d6-450a-b23b-ca4b0bf491f3",
+            "OKEI": {
+             "code": "257",
+             "nationalCode": "Мбайт",
+             "name": "Мегабайт"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "2048"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668479",
+          "externalSid": "e62a4294-03fc-4dfd-b92b-c5f29e04ac20",
+          "code": "6f5b89b0-8",
+          "name": "Объем постоянного запоминающего устройства",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231676",
+            "externalSid": "f103483f-87e1-42c1-98cb-16827bf10ab4",
+            "OKEI": {
+             "code": "257",
+             "nationalCode": "Мбайт",
+             "name": "Мегабайт"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "512"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668480",
+          "externalSid": "0d9b3ba1-8fbb-43f2-bc91-9f264fbc166e",
+          "code": "5e62bb8e-f",
+          "name": "Поддерживаемые типы очередей",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231677",
+             "externalSid": "2f3379db-034f-4184-b104-a1eec17bc5ec",
+             "qualityDescription": "PQ"
+            },
+            {
+             "sid": "436231678",
+             "externalSid": "183d0091-69b0-4448-90df-8db542a5f154",
+             "qualityDescription": "FIFO"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "337668481",
+          "externalSid": "94fc6c8f-d870-4b2b-a8f1-ab47a9036ee7",
+          "code": "708dd6a5-8",
+          "name": "Поддержка Dynamic ARP Inspection",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231679",
+            "externalSid": "27cd8b9c-98a9-4467-898f-516b3b6d62d1",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668482",
+          "externalSid": "dbad73e9-00d0-42b4-b5d9-040404041da3",
+          "code": "e1834b84-b",
+          "name": "Поддержка IP Source Guard",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231680",
+            "externalSid": "85f5a479-8e45-4936-aca1-03aa57970e3f",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668483",
+          "externalSid": "2610de49-c25c-4e1c-bfba-c3330564dcb7",
+          "code": "a161c46c-6",
+          "name": "Поддержка IPv6",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231681",
+            "externalSid": "3985f9b3-1208-4005-9f5f-8bb96c6bfc06",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668484",
+          "externalSid": "5f74ef63-4726-4e7a-bc80-442d2e47c45a",
+          "code": "90a2b77e-3",
+          "name": "Поддержка Radius EAP (RFC 3579)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231682",
+            "externalSid": "ba5844ea-509e-4e39-89b5-dedaa4ba5212",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668485",
+          "externalSid": "c7a01889-a314-4d96-922e-5b420f295292",
+          "code": "f58b652b-d",
+          "name": "Поддержка автосогласования (autonegotiation)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231683",
+            "externalSid": "c81edfe8-6706-45f9-af52-27d882838932",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668486",
+          "externalSid": "72fa90c0-8303-4294-817d-d146a16b062d",
+          "code": "9561364d-a",
+          "name": "Поддержка алгоритма управления очередями WRR (weighted round robin)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231684",
+            "externalSid": "5089faa4-82a0-43c0-9361-9c2e8070a4c1",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668487",
+          "externalSid": "0571ac4d-9bcf-4911-8dd7-511969749cbf",
+          "code": "ae06d5a5-b",
+          "name": "Поддержка безопасности протоколов связующего дерева",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231685",
+             "externalSid": "7fcf4399-2ab2-491c-805d-86bae1e28877",
+             "qualityDescription": "Loopback Detection"
+            },
+            {
+             "sid": "436231686",
+             "externalSid": "4ed3e7bb-3cc8-4ffb-8c65-162537b2b9dc",
+             "qualityDescription": "STP Root Guard"
+            },
+            {
+             "sid": "436231687",
+             "externalSid": "aadebe7c-202d-4ed6-960f-8406f7d8a8b9",
+             "qualityDescription": "Spanning Tree Fast Link option"
+            },
+            {
+             "sid": "436231688",
+             "externalSid": "4ef039ba-2192-4e2e-96c6-9dea50a563af",
+             "qualityDescription": "STP BPDU Guard"
+            },
+            {
+             "sid": "436231689",
+             "externalSid": "bedc51a2-70d0-4bf3-a5c5-b9761f26a3b5",
+             "qualityDescription": "BPDU Filtering"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "337668488",
+          "externalSid": "d16712d4-8458-49ce-b270-d93134216c84",
+          "code": "07d9a0ca-8",
+          "name": "Поддержка выделенных VLAN",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231690",
+             "externalSid": "094c179a-4b18-4a7f-9cd6-a29653e2c256",
+             "qualityDescription": "Voice VLAN"
+            },
+            {
+             "sid": "436231691",
+             "externalSid": "ffc89ab0-5092-47a5-b1d4-4f5afd64dd9f",
+             "qualityDescription": "Guest VLAN"
+            },
+            {
+             "sid": "436231692",
+             "externalSid": "3665ba82-4dd5-4f8d-8bea-d78761e61a59",
+             "qualityDescription": "Private VLAN"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "337668489",
+          "externalSid": "358bdbf2-312d-4e79-9aed-bd47f1a114a0",
+          "code": "864b0ec9-5",
+          "name": "Поддержка доступа к веб-интерфейсу по SSL",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231693",
+            "externalSid": "a3293919-68c6-458e-89ab-48bd186ecd57",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668490",
+          "externalSid": "cfb46a15-9b36-40a8-b419-086ef272f9ca",
+          "code": "fcaa0ec9-8",
+          "name": "Поддержка доступа к консоли по SSH",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231694",
+            "externalSid": "9c666796-15b8-4131-a983-ee37869bb5e8",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668491",
+          "externalSid": "04a0f0d4-7aac-4089-a485-5ba1837ede0c",
+          "code": "8442cb73-8",
+          "name": "Поддержка зеркалирования портов (port mirroring) в рамках одного устройства",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231695",
+            "externalSid": "951c112f-e9a0-49ee-9851-c969a63f6410",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668492",
+          "externalSid": "674a6274-ad69-4f81-95a0-83146f1c4057",
+          "code": "b03a3316-7",
+          "name": "Поддержка зеркалирования трафика",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231696",
+             "externalSid": "ae8b338a-fba5-4256-b896-7d4227a39a94",
+             "qualityDescription": "RSPAN"
+            },
+            {
+             "sid": "436231697",
+             "externalSid": "05d808d0-6ba3-423d-89d5-a1ca7b18e6d7",
+             "qualityDescription": "sFlow"
+            },
+            {
+             "sid": "436231698",
+             "externalSid": "ae04e7e3-b814-4fc5-828a-c6dfdc0d7063",
+             "qualityDescription": "SPAN"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "337668493",
+          "externalSid": "6d3a76a3-285d-477f-93cc-9a1ff33c55e4",
+          "code": "b9718548-3",
+          "name": "Поддержка механизма маркировки трафика Class of Service (CoS; стандарт IEEE 802.1p)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231699",
+            "externalSid": "17fc636e-d4b7-4450-b635-769c2bbf0a4a",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668494",
+          "externalSid": "264c6b68-a4e9-4afd-bdc2-3b4dab52ad8b",
+          "code": "b835e49a-d",
+          "name": "Поддержка механизма маркировки трафика Differentiated Services (DiffServ)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231700",
+            "externalSid": "0e28a53f-1824-4a68-85ba-5fcf981587f0",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668495",
+          "externalSid": "e23eb7cb-542a-48ec-b85c-5887eac63426",
+          "code": "45f66879-b",
+          "name": "Поддержка отправки системных событий (логов) на удаленное хранилище (например, syslog-сервер)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231701",
+            "externalSid": "eb0c874e-44da-4f5e-823f-836b51af5263",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668496",
+          "externalSid": "4af73969-bfd6-4391-b471-ffe6067865c1",
+          "code": "cff952c8-e",
+          "name": "Поддержка приема и передачи и тегированного и нетегированного трафика одновременно",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231702",
+            "externalSid": "956610c6-14d7-48a1-a295-646fd88a96b9",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668497",
+          "externalSid": "5ad864ce-fff3-457f-8ce7-df45ec1e17cf",
+          "code": "42965b8b-8",
+          "name": "Поддержка протоколов ААА",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231703",
+             "externalSid": "8d6274d7-8528-44bc-a0e2-97f56dfc639e",
+             "qualityDescription": "802.1x"
+            },
+            {
+             "sid": "436231704",
+             "externalSid": "5f183901-36f6-44f0-93c9-462d2f6db41e",
+             "qualityDescription": "Radius"
+            },
+            {
+             "sid": "436231705",
+             "externalSid": "2ddb4203-d4ea-41f9-8f9f-807160f362ca",
+             "qualityDescription": "Tacacs+"
+            },
+            {
+             "sid": "436231706",
+             "externalSid": "8e6c731f-24e7-4858-beab-2522fac27f28",
+             "qualityDescription": "Local"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "337668498",
+          "externalSid": "b40b471f-cc8d-4c3b-9afc-2442585d475b",
+          "code": "8b0749b5-b",
+          "name": "Поддержка протоколов бесшовного резервирования высокой доступности",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": {
+            "sid": "436231707",
+            "externalSid": "692f5a07-b744-43b7-97e3-be5e48a6bd2f",
+            "qualityDescription": "ERPS"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668499",
+          "externalSid": "eb959f2f-175a-435f-ba39-18d337f53a60",
+          "code": "2fba6ae1-9",
+          "name": "Поддержка протоколов и средств управления",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231743",
+             "externalSid": "adab13f7-0fc8-4bda-ba81-10848fd770a2",
+             "qualityDescription": "SSHv2"
+            },
+            {
+             "sid": "436231747",
+             "externalSid": "14dec30c-8552-4d31-b652-d0d9ac001d7a",
+             "qualityDescription": "DHCPv6 client"
+            },
+            {
+             "sid": "436231748",
+             "externalSid": "3bcd69b9-6223-45ff-9a38-5f81927bc84b",
+             "qualityDescription": "DHCP"
+            },
+            {
+             "sid": "436231749",
+             "externalSid": "01d14612-eb49-4bb0-8c73-67b178ddeb37",
+             "qualityDescription": "PIM"
+            },
+            {
+             "sid": "436231750",
+             "externalSid": "1faf2077-e874-432e-a9bf-4d8bd4a4523d",
+             "qualityDescription": "RMON"
+            },
+            {
+             "sid": "436231751",
+             "externalSid": "58cda0c8-8f46-4a72-b5bb-fb52d7f2d6b6",
+             "qualityDescription": "IGMP Proxy"
+            },
+            {
+             "sid": "436231744",
+             "externalSid": "a6c7fc35-1594-4a60-9e9a-df6247c577cf",
+             "qualityDescription": "IGMP"
+            },
+            {
+             "sid": "436231708",
+             "externalSid": "19bcfb61-5961-4ee0-b21c-0d48000edc87",
+             "qualityDescription": "LACP"
+            },
+            {
+             "sid": "436231709",
+             "externalSid": "0826cc38-3386-426c-83c6-d11b1fe7ff8e",
+             "qualityDescription": "SCP"
+            },
+            {
+             "sid": "436231710",
+             "externalSid": "1a01f28c-c7a5-454e-a4a1-50dd1e2f847f",
+             "qualityDescription": "IS-IS"
+            },
+            {
+             "sid": "436231711",
+             "externalSid": "e2cd3dd6-392f-4833-acb2-309590f2fc6e",
+             "qualityDescription": "DNS"
+            },
+            {
+             "sid": "436231712",
+             "externalSid": "a07ee0a3-04d1-453a-8999-a8e8e164d596",
+             "qualityDescription": "RIPv2"
+            },
+            {
+             "sid": "436231713",
+             "externalSid": "ea1e4770-d5fa-40a8-9b8c-bd23b662d708",
+             "qualityDescription": "DHCP relay"
+            },
+            {
+             "sid": "436231714",
+             "externalSid": "a6335ff5-dfaf-40f6-966f-da55f2242999",
+             "qualityDescription": "DHСP client"
+            },
+            {
+             "sid": "436231715",
+             "externalSid": "4a45310e-3137-493b-8aad-1fe982569262",
+             "qualityDescription": "SNMP"
+            },
+            {
+             "sid": "436231716",
+             "externalSid": "ac3c24b2-f972-4689-a617-d56dd9fca9d8",
+             "qualityDescription": "ICMP"
+            },
+            {
+             "sid": "436231717",
+             "externalSid": "dceb32c3-8f30-4a74-a798-dd023c0f7e40",
+             "qualityDescription": "AAA"
+            },
+            {
+             "sid": "436231718",
+             "externalSid": "f032750b-5958-42d9-924a-12625cea377e",
+             "qualityDescription": "DHCP server"
+            },
+            {
+             "sid": "436231719",
+             "externalSid": "d4acd415-2805-489e-8a51-c503e41afa83",
+             "qualityDescription": "BootP client"
+            },
+            {
+             "sid": "436231720",
+             "externalSid": "4ccb580f-05a3-457d-b4f9-1686b5124168",
+             "qualityDescription": "SNMPv1"
+            },
+            {
+             "sid": "436231721",
+             "externalSid": "3c3508ee-1a9e-4015-b4ba-6ea98917f09f",
+             "qualityDescription": "Local"
+            },
+            {
+             "sid": "436231722",
+             "externalSid": "207bf22a-d905-4b52-a5d3-bdad37ab71ca",
+             "qualityDescription": "SFTP"
+            },
+            {
+             "sid": "436231723",
+             "externalSid": "cf38c928-b5b5-4eb8-86ce-9854dfbd0220",
+             "qualityDescription": "SNMPv3"
+            },
+            {
+             "sid": "436231724",
+             "externalSid": "e5641a74-55a5-4652-9635-3b1b2dc228f5",
+             "qualityDescription": "HTTP"
+            },
+            {
+             "sid": "436231725",
+             "externalSid": "b9cf60ee-115a-4c69-abeb-0cdd61773715",
+             "qualityDescription": "Стандарт MSTP IEE 802.1s"
+            },
+            {
+             "sid": "436231726",
+             "externalSid": "4400c28a-0748-4467-9b80-b8126a8c7dc8",
+             "qualityDescription": "PIM SM"
+            },
+            {
+             "sid": "436231727",
+             "externalSid": "3c16d5dd-c5c9-4957-8c06-2f1258a136a5",
+             "qualityDescription": "LLDP"
+            },
+            {
+             "sid": "436231728",
+             "externalSid": "9f6ca9c3-435d-481b-830b-6003dcba4c6c",
+             "qualityDescription": "802.1X"
+            },
+            {
+             "sid": "436231729",
+             "externalSid": "6dac4d96-b09d-43ae-8480-345a8fd101ba",
+             "qualityDescription": "RADIUS"
+            },
+            {
+             "sid": "436231730",
+             "externalSid": "894bd247-1df1-4985-96ad-15ea930fe74f",
+             "qualityDescription": "sFlow"
+            },
+            {
+             "sid": "436231731",
+             "externalSid": "4bc7a8be-f4f5-4194-a9db-72563d4c1093",
+             "qualityDescription": "Static"
+            },
+            {
+             "sid": "436231732",
+             "externalSid": "58bdc0f7-6312-4b30-a68a-2194d8b5a2d2",
+             "qualityDescription": "TCP"
+            },
+            {
+             "sid": "436231733",
+             "externalSid": "7c8ef6f1-a021-4dfe-a416-560e0d5a5026",
+             "qualityDescription": "FTP"
+            },
+            {
+             "sid": "436231734",
+             "externalSid": "6fcf053d-bb04-4feb-84de-dfcf17f6794c",
+             "qualityDescription": "Стандарт ERPS"
+            },
+            {
+             "sid": "436231735",
+             "externalSid": "06a4692a-d12c-454c-9762-9ca2897363c3",
+             "qualityDescription": "SNTP client"
+            },
+            {
+             "sid": "436231736",
+             "externalSid": "0a7f4acf-bd7e-42ac-add6-852f332e9b19",
+             "qualityDescription": "IPv4"
+            },
+            {
+             "sid": "436231737",
+             "externalSid": "2560f4be-20a9-430f-8a28-ff402f993381",
+             "qualityDescription": "SNMPv2c"
+            },
+            {
+             "sid": "436231738",
+             "externalSid": "9025e8b0-3b3a-42b1-9286-96d78b7f4563",
+             "qualityDescription": "NTP"
+            },
+            {
+             "sid": "436231739",
+             "externalSid": "ed7c4231-016b-4540-bcbd-80acf7434e32",
+             "qualityDescription": "OSPFv3"
+            },
+            {
+             "sid": "436231740",
+             "externalSid": "e714a190-ef1e-4683-8df3-68f5abfddb40",
+             "qualityDescription": "OSPFv2"
+            },
+            {
+             "sid": "436231741",
+             "externalSid": "53a524ed-2de2-4525-a896-ad74076f9631",
+             "qualityDescription": "HTTPS"
+            },
+            {
+             "sid": "436231742",
+             "externalSid": "c48b8fe2-a05f-4ebc-9b1b-5bea786bc690",
+             "qualityDescription": "Telnet"
+            },
+            {
+             "sid": "436231745",
+             "externalSid": "0dffcde3-9993-4540-ba2a-de7b28417488",
+             "qualityDescription": "SSH"
+            },
+            {
+             "sid": "436231746",
+             "externalSid": "c833f9a1-ba8a-4e3f-ae35-1722eff81eb7",
+             "qualityDescription": "NTP client"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "337668500",
+          "externalSid": "e8e06d40-56fe-479a-a581-308f9bb054ca",
+          "code": "cd16b3e5-c",
+          "name": "Поддержка работы протокола связующего дерева, при котором в каждом VLAN работает отдельный экземпляр STP",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231752",
+            "externalSid": "1dd0160d-807d-40c2-a97d-30e456771753",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668501",
+          "externalSid": "dddae708-5cb7-4021-86c7-3309d21022a9",
+          "code": "e5b4a815-d",
+          "name": "Поддержка стандарта GVRP",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231753",
+            "externalSid": "fb86e8a2-cffb-4d50-9cd4-c1e47959695e",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668502",
+          "externalSid": "20f53a50-5cad-4955-a1c9-fca42551d375",
+          "code": "4b64cd1b-c",
+          "name": "Поддержка стандарта IEEE 802.1Q (VLAN)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231754",
+            "externalSid": "8d990cc4-6505-4a42-a4a4-fbf8aafc1bfb",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668503",
+          "externalSid": "57955ab3-47a6-499a-9b7a-8e8e2e534880",
+          "code": "0e15d118-5",
+          "name": "Поддержка стандарта IEEE 802.1ad (QinQ)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231755",
+            "externalSid": "c7421501-caeb-49f0-b553-ada7bfeb6473",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668504",
+          "externalSid": "ebe35981-7152-4cf7-a4f4-520d1b03bd87",
+          "code": "af5722f1-5",
+          "name": "Поддержка стандарта Multicast VLAN registration",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231756",
+            "externalSid": "e4e36572-7ff5-49ef-ac9e-24b010a1d942",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668505",
+          "externalSid": "5625b9cd-79ca-45c6-94c7-9e8620bd8473",
+          "code": "0b904474-4",
+          "name": "Поддержка стандарта Rapid Spanning Tree Protocol IEE 802.1w",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231757",
+            "externalSid": "933f1e40-c617-4a1f-98d7-a52c2165ab25",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668506",
+          "externalSid": "1c31f2d1-b0da-457a-9444-1bdc78a1eb22",
+          "code": "42eba827-2",
+          "name": "Поддержка стандарта STP Loopback Detection",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231758",
+            "externalSid": "b19ee6c7-bd33-4c22-a691-c151bc33c917",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668507",
+          "externalSid": "1ed856a2-8b30-49b7-9a14-372e107ed443",
+          "code": "f08bb43a-c",
+          "name": "Поддержка стандарта Selective Double (VLAN)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231759",
+            "externalSid": "a6c343ed-eb66-48e5-a99d-dd37d2fe0dcc",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668508",
+          "externalSid": "bda42cd4-93a8-4ad8-9f02-73670bf04de8",
+          "code": "50313b18-5",
+          "name": "Поддержка стандарта Spanning Tree Protocol IEE 802.1d",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231760",
+            "externalSid": "72c00c96-911a-457d-af76-8b3c24b8139f",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668509",
+          "externalSid": "6b0e9aaa-3367-49b0-b9f5-134c45991582",
+          "code": "2170392d-5",
+          "name": "Поддержка статической маршрутизации IPv4",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231761",
+            "externalSid": "f5e58c0d-df8c-4e02-9578-34b60f0eee9a",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668510",
+          "externalSid": "5b882bb0-da0a-4974-b9f4-90e806a95686",
+          "code": "3fa00b14-0",
+          "name": "Поддержка технологии Auto MDI-X (Auto Medium Dependent Interface Crossover)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231762",
+            "externalSid": "4ed86bc7-e478-441f-9b04-8a1993f5f9f7",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668511",
+          "externalSid": "cd7207a9-47a0-4ff8-86cd-4c7b1f6096b7",
+          "code": "29ecfc3a-1",
+          "name": "Проверка подлинности на основе MAC-адреса Port Security",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231763",
+            "externalSid": "e0b9a872-d7e2-4385-ac47-c3ef2249bd59",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668512",
+          "externalSid": "47a8b6c9-745f-491f-b247-43309097e8c6",
+          "code": "ca71c5f2-d",
+          "name": "Производительность (Full Duplex)",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231764",
+            "externalSid": "4a8b3961-c647-4242-a8fe-c34b95791a8b",
+            "OKEI": {
+             "code": "2547",
+             "nationalCode": "Гбит/с",
+             "name": "Гигабит в секунду"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "128"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668513",
+          "externalSid": "39c240b1-5d64-4ab5-9883-c5986dacff09",
+          "code": "99505a7d-4",
+          "name": "Размер пакетного буфера",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231765",
+            "externalSid": "48e440ae-83e3-4a3a-83c3-ee475e9667d2",
+            "OKEI": {
+             "code": "257",
+             "nationalCode": "Мбайт",
+             "name": "Мегабайт"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "1"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668514",
+          "externalSid": "95e5e2be-0cae-4af3-ab52-a01040cea253",
+          "code": "67f8ce02-0",
+          "name": "Суммарная мощность PoE",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231766",
+            "externalSid": "d4ecb9d1-79b7-4604-8d32-a2f368767168",
+            "OKEI": {
+             "code": "212",
+             "nationalCode": "Вт",
+             "name": "Ватт"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "maxMathNotation": "lessOrEqual",
+              "max": "750"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337668515",
+          "externalSid": "4eaeb493-6c9c-4268-ba47-471166163100",
+          "code": "9854d3d6-0",
+          "name": "Тип блоков питания",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231767",
+            "externalSid": "b4a8f6df-cdd8-47ba-b617-d7bf9ff473cc",
+            "qualityDescription": "Фиксированные"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668516",
+          "externalSid": "ff52ed27-6748-4f54-bc3e-40e5cc5bb976",
+          "code": "2cf27665-6",
+          "name": "Тип коммутатора",
+          "type": "1",
+          "kind": "1",
+          "values": {
+           "value": {
+            "sid": "436231768",
+            "externalSid": "7f3e650d-2ef3-455e-8271-c0578b8bbd02",
+            "qualityDescription": "Управляемый"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668517",
+          "externalSid": "c8f45c0e-2a40-4c93-b019-332ac11ac862",
+          "code": "06002758-f",
+          "name": "Тип модуля управления по отношению к коммутационной матрице",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231769",
+            "externalSid": "1ea34205-0450-4220-8478-4b6549636a15",
+            "qualityDescription": "Совмещённый"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668518",
+          "externalSid": "af891aa5-e899-4ac4-b2f1-e03f27ef8c7f",
+          "code": "78714b37-2",
+          "name": "Тип организации списков контроля доступа",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231774",
+             "externalSid": "cca16fec-3017-49b0-ae78-94f00c7e8a69",
+             "qualityDescription": "DSCP"
+            },
+            {
+             "sid": "436231775",
+             "externalSid": "31b2391f-99a8-4494-88d3-e6f473af5556",
+             "qualityDescription": "IP-протокол"
+            },
+            {
+             "sid": "436231776",
+             "externalSid": "f37015c6-23b4-4c23-b3d9-8875d65ca5c8",
+             "qualityDescription": "Номер порта TCP/UDP"
+            },
+            {
+             "sid": "436231770",
+             "externalSid": "32b6742f-91e7-4b18-9467-52b03d65f9cf",
+             "qualityDescription": "Порт коммутатора"
+            },
+            {
+             "sid": "436231771",
+             "externalSid": "649578b6-aabd-4341-b5bf-f4d338b4f12e",
+             "qualityDescription": "VLAN ID"
+            },
+            {
+             "sid": "436231772",
+             "externalSid": "10b6c8d5-291b-4a1b-b0ce-b42ff6a4e53c",
+             "qualityDescription": "Приоритет IEEE 802.1p"
+            },
+            {
+             "sid": "436231773",
+             "externalSid": "4462ae81-fbbc-46bc-ab88-4caf2ffdf729",
+             "qualityDescription": "EtherType"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "337668519",
+          "externalSid": "cea84035-b785-4c78-81af-fea9548c2426",
+          "code": "60e54bca-3",
+          "name": "Тип охлаждения",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231777",
+            "externalSid": "cea4fe1d-90a7-48d7-9535-e26868ffe0ef",
+            "qualityDescription": "Активное"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668520",
+          "externalSid": "e68f5dfb-b0fe-4a4e-8beb-69b4a8c4efe4",
+          "code": "4196dda8-5",
+          "name": "Тип передачи данных",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231778",
+            "externalSid": "d1a732a5-3600-42ba-bcc8-65f542ac32d1",
+            "qualityDescription": "Ethernet"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668521",
+          "externalSid": "11ceed08-6c25-4f9b-ace8-d994abd6eb14",
+          "code": "a6bf6d12-5",
+          "name": "Тип размещения",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231779",
+             "externalSid": "73787015-ca09-4f5e-ae3a-1ca543c6c89c",
+             "qualityDescription": "Телекоммуникационная стойка или шкаф 19\""
+            },
+            {
+             "sid": "436231780",
+             "externalSid": "ca888080-135c-4131-ae23-41dd1dcc1a43",
+             "qualityDescription": "Настольное"
+            },
+            {
+             "sid": "436231781",
+             "externalSid": "aac37eeb-1546-4276-a260-37bda8b476e8",
+             "qualityDescription": "Настенное"
+            },
+            {
+             "sid": "436231782",
+             "externalSid": "b06101a7-4b61-463c-bd6d-7a2e4ce18ae3",
+             "qualityDescription": "Напольное"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "337668522",
+          "externalSid": "7865447e-7c84-42df-a66d-dabfb7e14412",
+          "code": "7b2eb465-5",
+          "name": "Тип электропитания",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231783",
+            "externalSid": "9d7ff6c2-f21d-4aec-b0ec-ad624b1902e1",
+            "qualityDescription": "AC"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668523",
+          "externalSid": "2e30412b-f95e-49ad-abaf-78824f2f6221",
+          "code": "ffbdaf04-7",
+          "name": "Уровень управляемого коммутатора",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436231784",
+            "externalSid": "84818f34-40a1-4474-b4ed-076cb6617eab",
+            "valueFormat": "N",
+            "valueSet": {
+             "concreteValue": "3"
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337668524",
+          "externalSid": "e1a22576-e6c5-472e-a84c-97e3ead93a5a",
+          "code": "2a44761e-f",
+          "name": "Функции L2 Multicast",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436231787",
+             "externalSid": "5c6d2500-26c4-444b-9a1e-0790345cb81d",
+             "qualityDescription": "IGMP Snooping Fast Leave"
+            },
+            {
+             "sid": "436231788",
+             "externalSid": "c58e850b-f809-40cc-9ef8-0f42f1549325",
+             "qualityDescription": "MLD Snooping v1,2"
+            },
+            {
+             "sid": "436231789",
+             "externalSid": "e4c803f1-3a2e-4699-9bf4-813e3ad9194b",
+             "qualityDescription": "MVR"
+            },
+            {
+             "sid": "436231785",
+             "externalSid": "b5eac2bf-bf11-4b2b-866d-640766c4db47",
+             "qualityDescription": "IGMP и MLD Snooping Querier"
+            },
+            {
+             "sid": "436231786",
+             "externalSid": "6824fb64-c487-4775-84e0-e8a923858a7f",
+             "qualityDescription": "IGMP Snooping v1,2,3"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         }
+        ]
+       },
+       "OKPD2": {
+        "OKPDCode": "26.30.11.119",
+        "OKPDName": "Средства связи, выполняющие функцию систем коммутации, прочие"
+       }
+      },
+      "name": "Коммутатор",
+      "OKEI": {
+       "code": "796",
+       "nationalCode": "шт",
+       "name": "Штука"
+      },
+      "customerQuantities": {
+       "customerQuantity": {
+        "customer": {
+         "regNum": "98005000010",
+         "consRegistryNum": "372D1865",
+         "fullName": "ДЕПАРТАМЕНТ СОЦИАЛЬНОЙ ПОЛИТИКИ КУРГАНСКОЙ ОБЛАСТИ"
+        },
+        "quantity": "8"
+       }
+      },
+      "price": "225162.00",
+      "volumeSpecifyingMethod": "QF",
+      "quantity": {
+       "value": "8.00000000000"
+      },
+      "sum": "1801296.00",
+      "type": "PRODUCT",
+      "hierarchyType": "ND",
+      "restrictionsInfo": {
+       "isRestrictForeignPurchaseObjects": "true"
+      }
+     },
+     "totalSum": "1801296.00",
+     "quantityUndefined": "false"
+    }
+   },
+   "preferensesInfo": {
+    "preferenseInfo": {
+     "preferenseRequirementInfo": {
+      "shortName": "PVS33044",
+      "name": "Преимущество в соответствии с ч. 3 ст. 30 Закона № 44-ФЗ"
+     }
+    }
+   },
+   "requirementsInfo": {
+    "requirementInfo": [
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "ET44",
+       "name": "Единые требования к участникам закупок в соответствии с ч. 1 ст. 31 Закона № 44-ФЗ"
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TR442",
+       "name": "Требования к участникам закупок в соответствии с ч. 1.1 ст. 31 Закона № 44-ФЗ"
+      }
+     }
+    ]
+   }
+  },
+  "printFormFieldsInfo": {
+   "is449Features": "false"
+  },
+  "@schemeVersion": "16.3"
+ }
+}

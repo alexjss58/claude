@@ -59,10 +59,18 @@ def parse_value(text: str, name: str = "", unit_hint: str = "") -> Requirement:
     eq = detect_equiv(raw)
     if eq is not None:
         r.equiv = eq
-    t = raw.lower().replace("ё", "е")
-    t = EQUIV_YES.sub("", t)
-    t = re.sub(r"\(?\s*или\s+эквивалент\s*\)?", "", t).strip()
+    clean = re.sub(r"\(?\s*(?:или\s+эквивалент\w*|или\s+аналог\w*|эквивалент\s+допускается)\s*\)?", "", raw, flags=re.I).strip(" ,;")
+    t = clean.lower().replace("ё", "е")
     hint = unit_hint or ""
+
+    def setnum(op, vmin=None, vmax=None, unit="", smin=False, smax=False):
+        r.op, r.vmin, r.vmax, r.min_strict, r.max_strict = op, vmin, vmax, smin, smax
+        r.unit = unit or hint
+        if op == "диапазон":
+            r.value = f"{fmt(vmin)}–{fmt(vmax)}"
+        else:
+            r.value = fmt(vmin if vmin is not None else vmax)
+        return r
 
     # 1) разрешение 1920x1080
     m = RES_RE.search(t)
@@ -80,72 +88,52 @@ def parse_value(text: str, name: str = "", unit_hint: str = "") -> Requirement:
 
     # 2) диапазоны
     pats = [
-        rf"от\s*{NUM}{UNIT}\s*до\s*{NUM}{UNIT}",
-        rf"(?:≥|>=|не\s+менее|не\s+меньше|не\s+ниже)\s*{NUM}{UNIT}\s*(?:и|,|;)?\s*(?:≤|<=|не\s+более|не\s+больше|не\s+выше)\s*{NUM}{UNIT}",
-        rf"в\s+диапазоне\s+(?:от\s*)?{NUM}{UNIT}\s*(?:до|[-–—…]|\.\.\.)\s*{NUM}{UNIT}",
+        rf"от\s*{NUM}{UNIT}\s*до\s*{NUM}",
+        rf"(?:≥|>=|не\s+менее|не\s+меньше|не\s+ниже)\s*{NUM}{UNIT}\s*(?:и|,|;)?\s*(?:≤|<=|не\s+более|не\s+больше|не\s+выше)\s*{NUM}",
+        rf"в\s+диапазоне\s+(?:от\s*)?{NUM}{UNIT}\s*(?:до|[-–—…]|\.\.\.)\s*{NUM}",
     ]
     for p in pats:
         m = re.search(p, t, re.I)
         if m:
-            a, ua, b, ub = m.group(1), m.group(2), m.group(3), m.group(4)
-            u = _unit_ok(ub) or _unit_ok(ua) or hint
-            r.op, r.vmin, r.vmax, r.unit = "диапазон", _num(a), _num(b), u
-            r.value = f"{fmt(r.vmin)}–{fmt(r.vmax)}"
-            return r
-    m = re.fullmatch(rf"{NUM}\s*[-–—]\s*{NUM}{UNIT}", t)
-    if m and _unit_ok(m.group(3)):
-        r.op, r.vmin, r.vmax, r.unit = "диапазон", _num(m.group(1)), _num(m.group(2)), _unit_ok(m.group(3))
-        r.value = f"{fmt(r.vmin)}–{fmt(r.vmax)}"
-        return r
+            u = _ua(t, m, 3) or _ua(t, m, 1)
+            return setnum("диапазон", _num(m.group(1)), _num(m.group(3)), u)
+    m = re.fullmatch(rf"{NUM}\s*[-–—]\s*{NUM}(.*)", t)
+    if m and _ua(t, m, 2):
+        return setnum("диапазон", _num(m.group(1)), _num(m.group(2)), _ua(t, m, 2))
 
     # 3) нижняя граница
-    m = re.search(rf"(не\s+менее|не\s+меньше|не\s+ниже|не\s+хуже|не\s+уже|минимум|минимально|min\.?|≥|>=|⩾)\s*:?\s*{NUM}{UNIT}", t)
+    m = re.search(rf"(не\s+менее|не\s+меньше|не\s+ниже|не\s+хуже|не\s+уже|минимум|минимально|min\.?|≥|>=|⩾)\s*:?\s*{NUM}", t)
     if m:
-        r.op, r.vmin, r.unit = ">=", _num(m.group(2)), _unit_ok(m.group(3)) or hint
-        r.value = fmt(r.vmin)
-        return r
+        return setnum(">=", _num(m.group(2)), None, _ua(t, m, 2))
     m = re.search(rf"{NUM}{UNIT}\s*(и\s+более|и\s+выше|и\s+больше|или\s+более|или\s+выше|\+(?!\w))", t)
     if m:
-        r.op, r.vmin, r.unit = ">=", _num(m.group(1)), _unit_ok(m.group(2)) or hint
-        r.value = fmt(r.vmin)
-        return r
-    m = re.search(rf"(?<!не\s)(?<!не)\b(более|больше|свыше|выше)\s*{NUM}{UNIT}|(?<![<>])>\s*{NUM}{UNIT}", t)
+        return setnum(">=", _num(m.group(1)), None, _ua(t, m, 1))
+    m = re.search(rf"(?<!не\s)(?<!не)\b(более|больше|свыше|выше)\s*{NUM}", t) or re.search(rf"(?<![<>])>\s*{NUM}", t)
     if m:
-        n, u = (m.group(2), m.group(3)) if m.group(2) else (m.group(4), m.group(5))
-        r.op, r.vmin, r.min_strict, r.unit = ">=", _num(n), True, _unit_ok(u) or hint
-        r.value = fmt(r.vmin)
-        return r
+        gi = 2 if m.re.groups >= 2 else 1
+        return setnum(">=", _num(m.group(gi)), None, _ua(t, m, gi), smin=True)
 
     # 4) верхняя граница
-    m = re.search(rf"(не\s+более|не\s+больше|не\s+выше|не\s+превыша\w*|максимум|максимально|max\.?|≤|<=|⩽)\s*:?\s*{NUM}{UNIT}", t)
+    m = re.search(rf"(не\s+более|не\s+больше|не\s+выше|не\s+превыша\w*|максимум|максимально|max\.?|≤|<=|⩽)\s*:?\s*{NUM}", t)
     if m:
-        r.op, r.vmax, r.unit = "<=", _num(m.group(2)), _unit_ok(m.group(3)) or hint
-        r.value = fmt(r.vmax)
-        return r
+        return setnum("<=", None, _num(m.group(2)), _ua(t, m, 2))
     m = re.search(rf"{NUM}{UNIT}\s*(и\s+менее|и\s+ниже|и\s+меньше|или\s+менее)", t)
     if m:
-        r.op, r.vmax, r.unit = "<=", _num(m.group(1)), _unit_ok(m.group(2)) or hint
-        r.value = fmt(r.vmax)
-        return r
-    m = re.search(rf"(?<!не\s)(?<!не)\b(менее|меньше|ниже)\s*{NUM}{UNIT}|(?<![<>])<\s*{NUM}{UNIT}", t)
+        return setnum("<=", None, _num(m.group(1)), _ua(t, m, 1))
+    m = re.search(rf"(?<!не\s)(?<!не)\b(менее|меньше|ниже)\s*{NUM}", t) or re.search(rf"(?<![<>])<\s*{NUM}", t)
     if m:
-        n, u = (m.group(2), m.group(3)) if m.group(2) else (m.group(4), m.group(5))
-        r.op, r.vmax, r.max_strict, r.unit = "<=", _num(n), True, _unit_ok(u) or hint
-        r.value = fmt(r.vmax)
-        return r
-    m = re.fullmatch(rf"до\s*{NUM}{UNIT}", t)
+        gi = 2 if m.re.groups >= 2 else 1
+        return setnum("<=", None, _num(m.group(gi)), _ua(t, m, gi), smax=True)
+    m = re.fullmatch(rf"до\s*{NUM}(.*)", t)
     if m:
-        r.op, r.vmax, r.unit = "<=", _num(m.group(1)), _unit_ok(m.group(2)) or hint
-        r.value = fmt(r.vmax)
-        return r
+        return setnum("<=", None, _num(m.group(1)), _ua(t, m, 1))
 
-    # 5) одно число с единицей -> равно
-    m = re.fullmatch(rf"=?\s*{NUM}{UNIT}", t)
-    if m and (len(_unit_ok(m.group(2))) or not m.group(2).strip()):
-        r.op, r.vmin, r.unit = "=", _num(m.group(1)), _unit_ok(m.group(2)) or hint
-        r.vmax = r.vmin
-        r.value = fmt(r.vmin)
-        return r
+    # 5) одно число (с единицей или без) -> равно
+    m = re.fullmatch(rf"=?\s*{NUM}(.*)", t)
+    if m and (not m.group(2).strip() or _ua(t, m, 1)):
+        r2 = setnum("=", _num(m.group(1)), None, _ua(t, m, 1))
+        r2.vmax = r2.vmin
+        return r2
 
     # 6) да / нет
     tt = t.strip(" .;:")
@@ -157,10 +145,10 @@ def parse_value(text: str, name: str = "", unit_hint: str = "") -> Requirement:
         return r
 
     # 7) перечень значений
-    parts = split_list(raw)
+    parts = split_list(clean)
     if len(parts) > 1:
         r.values = parts
-        any_of = bool(re.search(r"\s(или|либо)\s|/", raw.lower()))
+        any_of = bool(re.search(r"\s(или|либо)\s|/", clean.lower()))
         name_l = (name or "").lower()
         if not any_of and re.search(r"наличие|интерфейс|порт|разъем|разъём|функци|комплект|поддерж|режим", name_l):
             r.all_values, r.op = True, "="
@@ -171,7 +159,8 @@ def parse_value(text: str, name: str = "", unit_hint: str = "") -> Requirement:
 
     # 8) просто текст
     r.op = "текст"
-    r.values = [raw]
+    r.values = [clean]
+    r.value = clean
     return r
 
 

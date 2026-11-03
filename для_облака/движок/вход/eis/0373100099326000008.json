@@ -1,0 +1,3374 @@
+{
+ "_meta": {
+  "purchase_number": "0373100099326000008",
+  "source": "структурированное извещение ЕИС (через открытое API ГосПлан, v2test.gosplan.info)",
+  "retrieved": "2026-11-03",
+  "api_url": "https://v2test.gosplan.info/fz44/purchases/0373100099326000008",
+  "customer_inn": "7710059925",
+  "region_code": 77,
+  "stage": 2,
+  "purchase_type": "epNotificationEF2020"
+ },
+ "doc_type": "epNotificationEF2020",
+ "source": {
+  "id": "44353025",
+  "versionNumber": "1",
+  "commonInfo": {
+   "purchaseNumber": "0373100099326000008",
+   "docNumber": "№0373100099326000008",
+   "directDT": "2026-10-21T18:55:31.507+03:00",
+   "plannedPublishDate": "2026-10-22+03:00",
+   "publishDTInEIS": "2026-10-22T18:03:22.791+03:00",
+   "href": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0373100099326000008",
+   "placingWay": {
+    "code": "EAP20",
+    "name": "Электронный аукцион"
+   },
+   "ETP": {
+    "code": "ETP_EETP",
+    "name": "РОСЭЛТОРГ (АО«ЕЭТП»)",
+    "url": "http://roseltorg.ru"
+   },
+   "contractConclusionOnSt83Ch2": "true",
+   "purchaseObjectInfo": "Поставка звукового оборудования с целью обновления и дооснащения звукового оборудования Основной,  Малой и Новой сцен МХАТ имени А.П. Чехова"
+  },
+  "purchaseResponsibleInfo": {
+   "responsibleOrgInfo": {
+    "regNum": "03731000993",
+    "consRegistryNum": "001X7290",
+    "fullName": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ КУЛЬТУРЫ \"МОСКОВСКИЙ ХУДОЖЕСТВЕННЫЙ АКАДЕМИЧЕСКИЙ ТЕАТР ИМЕНИ А.П. ЧЕХОВА\"",
+    "shortName": "МХАТ ИМЕНИ А.П. ЧЕХОВА",
+    "postAddress": "Российская Федерация, 125009, Москва г, Камергерский пер, Д.3",
+    "factAddress": "Российская Федерация, 125009, Москва г, Камергерский пер, Д.3",
+    "INN": "7710059925",
+    "KPP": "771001001"
+   },
+   "responsibleRole": "CU",
+   "responsibleInfo": {
+    "orgPostAddress": "Российская Федерация, 125009, Москва г, Камергерский пер, Д.3",
+    "orgFactAddress": "Российская Федерация, 125009, Москва г, Камергерский пер, Д.3"
+   }
+  },
+  "printFormInfo": {
+   "url": "https://zakupki.gov.ru/epz/order/notice/printForm/view.html?regNumber=0373100099326000008"
+  },
+  "attachmentsInfo": {
+   "attachmentInfo": [
+    {
+     "publishedContentId": "01A15EFC1BEB7FFD806DFB47BF2CD94B",
+     "fileName": "Приложение 2_НМЦК звук.pdf",
+     "fileSize": "169149",
+     "docDescription": "Приложение 2_НМЦК звук",
+     "docDate": "2026-10-21T18:02:22+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15EFC1BEB7FFD806DFB47BF2CD94B",
+     "docKindInfo": {
+      "code": "MRJ",
+      "name": "Обоснование начальной (максимальной) цены контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A15F001F7E7BACA79707D59CE48372",
+     "fileName": "Приложение 4 проект Контракта поставка ЗВУК ОБОРУДОВАНИЯ.docx",
+     "fileSize": "92165",
+     "docDescription": "Приложение 4 проект Контракта поставка ЗВУК ОБОРУДОВАНИЯ",
+     "docDate": "2026-10-21T18:06:46+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15F001F7E7BACA79707D59CE48372",
+     "docKindInfo": {
+      "code": "CP",
+      "name": "Проект контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A15F0054977B9FAE98C341AD87FBD1",
+     "fileName": "Приложение_1_описание_объекта_закупки.docx",
+     "fileSize": "143322",
+     "docDescription": "Приложение_1_описание_объекта_закупки",
+     "docDate": "2026-10-21T18:06:59+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15F0054977B9FAE98C341AD87FBD1",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A15F006F1F7E54A26A323A699CA019",
+     "fileName": "Приложение 3_Требования к заявке аукцион.docx",
+     "fileSize": "32422",
+     "docDescription": "Приложение 3_Требования к заявке аукцион",
+     "docDate": "2026-10-21T18:07:06+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15F006F1F7E54A26A323A699CA019",
+     "docKindInfo": {
+      "code": "CAR",
+      "name": "Требование к содержанию, составу заявки на участие в закупке"
+     }
+    },
+    {
+     "publishedContentId": "01A15F00E8407FBBA211CD75511F5D80",
+     "fileName": "1875 антенна радиосистемы.pdf",
+     "fileSize": "79655",
+     "docDescription": "1875 антенна радиосистемы",
+     "docDate": "2026-10-21T18:07:37+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15F00E8407FBBA211CD75511F5D80",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    },
+    {
+     "publishedContentId": "01A15F01BA77763F84ECCFA8F5DE4A4B",
+     "fileName": "1875 микш пульт.pdf",
+     "fileSize": "89082",
+     "docDescription": "1875 микш пульт",
+     "docDate": "2026-10-21T18:08:31+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15F01BA77763F84ECCFA8F5DE4A4B",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    },
+    {
+     "publishedContentId": "01A15F011BAD7988A18136100B35773C",
+     "fileName": "1875 аудиоинтерфейсная карта.pdf",
+     "fileSize": "83746",
+     "docDescription": "1875 аудиоинтерфейсная карта",
+     "docDate": "2026-10-21T18:07:50+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15F011BAD7988A18136100B35773C",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    },
+    {
+     "publishedContentId": "01A15F01037C78F289AED5CA5D02C0E8",
+     "fileName": "1875 аудиоинтерфейс.pdf",
+     "fileSize": "86301",
+     "docDescription": "1875 аудиоинтерфейс",
+     "docDate": "2026-10-21T18:07:44+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15F01037C78F289AED5CA5D02C0E8",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    },
+    {
+     "publishedContentId": "01A15F01DB927916AC5E91D80D392C91",
+     "fileName": "1875 передатчик радиосистемы.pdf",
+     "fileSize": "84580",
+     "docDescription": "1875 передатчик радиосистемы",
+     "docDate": "2026-10-21T18:08:39+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15F01DB927916AC5E91D80D392C91",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    },
+    {
+     "publishedContentId": "01A15F0135317857A00973DD97D946B6",
+     "fileName": "1875 контроллер расширения.pdf",
+     "fileSize": "75501",
+     "docDescription": "1875 контроллер расширения",
+     "docDate": "2026-10-21T18:07:57+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15F0135317857A00973DD97D946B6",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    },
+    {
+     "publishedContentId": "01A15F019A6779EB9F1546044718A2B7",
+     "fileName": "1875 микрофон радиосистемы 4088.pdf",
+     "fileSize": "85104",
+     "docDescription": "1875 микрофон радиосистемы 4088",
+     "docDate": "2026-10-21T18:08:23+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15F019A6779EB9F1546044718A2B7",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    },
+    {
+     "publishedContentId": "01A15F01570F74BDABE334F1ABA93ADB",
+     "fileName": "1875 микрофон радиосистемы 4061.pdf",
+     "fileSize": "85099",
+     "docDescription": "1875 микрофон радиосистемы 4061",
+     "docDate": "2026-10-21T18:08:05+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15F01570F74BDABE334F1ABA93ADB",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    },
+    {
+     "publishedContentId": "01A15F016E2C74EBBE835FB47311C072",
+     "fileName": "1875 микрофон радиосистемы 4066.pdf",
+     "fileSize": "83690",
+     "docDescription": "1875 микрофон радиосистемы 4066",
+     "docDate": "2026-10-21T18:08:11+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15F016E2C74EBBE835FB47311C072",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    },
+    {
+     "publishedContentId": "01A15F01FAB87824A33FC2B01730E29F",
+     "fileName": "1875 приемник радиосистемы.pdf",
+     "fileSize": "110812",
+     "docDescription": "1875 приемник радиосистемы",
+     "docDate": "2026-10-21T18:08:47+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A15F01FAB87824A33FC2B01730E29F",
+     "docKindInfo": {
+      "code": "AD",
+      "name": "Дополнительная информация и документы"
+     }
+    }
+   ]
+  },
+  "serviceSigns": {
+   "isIncludeKOKS": "false",
+   "isControlP1Ch5St99": "true"
+  },
+  "notificationInfo": {
+   "procedureInfo": {
+    "collectingInfo": {
+     "startDT": "2026-10-22T18:03:22+03:00",
+     "endDT": "2026-10-30T09:00:00+03:00"
+    },
+    "biddingDate": "2026-10-30+03:00",
+    "summarizingDate": "2026-11-03+03:00"
+   },
+   "contractConditionsInfo": {
+    "maxPriceInfo": {
+     "maxPrice": "23898365.00",
+     "currency": {
+      "code": "RUB",
+      "name": "РОССИЙСКИЙ РУБЛЬ"
+     }
+    },
+    "standardContractNumber": "1400700000520009"
+   },
+   "customerRequirementsInfo": {
+    "customerRequirementInfo": {
+     "customer": {
+      "regNum": "03731000993",
+      "consRegistryNum": "001X7290",
+      "fullName": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ КУЛЬТУРЫ \"МОСКОВСКИЙ ХУДОЖЕСТВЕННЫЙ АКАДЕМИЧЕСКИЙ ТЕАТР ИМЕНИ А.П. ЧЕХОВА\""
+     },
+     "applicationGuarantee": {
+      "amount": "238983.65",
+      "account": {
+       "bik": "000000000",
+       "settlementAccount": "00000000000000000000",
+       "personalAccount": "См. прилагаемые документы"
+      },
+      "procedureInfo": "а) путем блокирования денежных средств на специальном счете в соответствии с подп. а) п.1 ч.5 ст.44 Закона № 44-ФЗ; б) путем предоставления независимой гарантии, соответствующей требованиям ст. 45 Закона № 44-ФЗ",
+      "part": "1.0"
+     },
+     "contractGuarantee": {
+      "amount": "7169509.50",
+      "account": {
+       "bik": "000000000",
+       "settlementAccount": "00000000000000000000",
+       "personalAccount": "См. прилагаемые документы"
+      },
+      "procedureInfo": "утем предоставления независимой гарантии, соответствующей требованиям статьи 45 Федерального закона № 44-ФЗ, или внесением денежных средств на указанный заказчиком счет, на котором в соответствии с законодательством Российской Федерации учитываются операции со средствами, поступающими заказчику. С учетом положений ст.37 44-ФЗ",
+      "part": "30.0"
+     },
+     "contractConditionsInfo": {
+      "maxPriceInfo": {
+       "maxPrice": "23898365.00"
+      },
+      "mustPublicDiscussion": "false",
+      "IKZInfo": {
+       "purchaseCode": "261771005992577100100100190012640244",
+       "publishYear": "2026",
+       "OKPD2Info": {
+        "OKPD2": {
+         "OKPDCode": "26.40",
+         "OKPDName": "Техника бытовая электронная"
+        }
+       },
+       "KVRInfo": {
+        "KVR": {
+         "code": "244",
+         "name": "Прочая закупка товаров, работ и услуг"
+        }
+       },
+       "customerCode": "17710059925771001001",
+       "purchaseNumber": "0019",
+       "purchaseOrderNumber": "001"
+      },
+      "tenderPlan2020Info": {
+       "plan2020Number": "202603731000993001",
+       "position2020Number": "202603731000993001000019"
+      },
+      "contractExecutionPaymentPlan": {
+       "contractExecutionTermsInfo": {
+        "relativeTermsInfo": {
+         "start": "0",
+         "startDayType": "calendar",
+         "term": "44",
+         "termDayType": "working"
+        }
+       },
+       "financingSourcesInfo": {
+        "nonbudgetFinancingsInfo": {
+         "selfFunds": "true"
+        },
+        "currentYear": "2026",
+        "financeInfo": {
+         "total": "23898365.00",
+         "currentYear": "23898365.00",
+         "firstYear": "0.00",
+         "secondYear": "0.00",
+         "subsecYears": "0.00"
+        }
+       },
+       "stagesInfo": {
+        "stageInfo": {
+         "sid": "22281045",
+         "termsInfo": {
+          "relativeTermsInfo": {
+           "start": "0",
+           "startDayType": "calendar",
+           "term": "44",
+           "termDayType": "working"
+          }
+         },
+         "nonbudgetFinancingInfo": {
+          "paymentYearInfo": {
+           "total": "23898365.00",
+           "currentYear": "23898365.00",
+           "firstYear": "0.00",
+           "secondYear": "0.00",
+           "subsecYears": "0.00"
+          },
+          "KVRsInfo": {
+           "currentYear": "2026",
+           "KVRInfo": {
+            "KVR": {
+             "code": "244",
+             "name": "Прочая закупка товаров, работ и услуг"
+            },
+            "KVRYearsInfo": {
+             "total": "23898365.00",
+             "currentYear": "23898365.00",
+             "firstYear": "0.00",
+             "secondYear": "0.00",
+             "subsecYears": "0.00"
+            }
+           },
+           "totalSum": "23898365.00"
+          }
+         }
+        }
+       }
+      },
+      "deliveryPlacesInfo": {
+       "byGARInfo": {
+        "sid": "62171325",
+        "countryInfo": {
+         "countryCode": "643",
+         "countryFullName": "Российская Федерация"
+        },
+        "GARInfo": {
+         "GARGuid": "3cc01c54-23ca-46ab-8a25-4afde206c11f",
+         "GARAddress": "г. Москва, вн.тер.г. муниципальный округ Тверской, пер. Камергерский, д. 3 стр. 1"
+        }
+       }
+      },
+      "isOneSideRejectionSt95": "true",
+      "isExecutionStagesTerms": "false"
+     },
+     "warrantyInfo": {
+      "warrantyTerm": "Срок действия гарантии Поставщика должен быть не менее срока действия гарантии производителя товара, установленного в документации на товар и составлять не менее 12 месяцев"
+     },
+     "provisionWarranty": {
+      "amount": "2389836.50",
+      "part": "10.0",
+      "procedureInfo": "Путем предоставления независимой гарантии, соответствующей требованиям статьи 45 Федерального закона № 44-ФЗ, или внесением денежных средств на указанный заказчиком счет, на котором в соответствии с законодательством Российской Федерации учитываются операции со средствами, поступающими заказчику",
+      "account": {
+       "bik": "000000000",
+       "settlementAccount": "00000000000000000000",
+       "personalAccount": "См. прилагаемые документы"
+      }
+     }
+    }
+   },
+   "purchaseObjectsInfo": {
+    "notDrugPurchaseObjectsInfo": {
+     "purchaseObject": [
+      {
+       "sid": "224934566",
+       "KTRU": {
+        "code": "26.40.31.190-00000035",
+        "name": "Микрофон радиосистемы",
+        "versionId": "170701",
+        "versionNumber": "1",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "334527169",
+           "code": "ea7a9165-0",
+           "name": "Максимальный уровень звукового давления",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056465",
+             "OKEI": {
+              "code": "3135",
+              "nationalCode": "дБ",
+              "name": "Децибел"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "140"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334527175",
+           "code": "c703bee5-3",
+           "name": "Цвет микрофона",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056471",
+             "qualityDescription": "Бежевый (телесный)"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334527168",
+           "code": "668bff0f-7",
+           "name": "Длина кабеля",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056464",
+             "OKEI": {
+              "code": "006",
+              "nationalCode": "м",
+              "name": "Метр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334527174",
+           "code": "ce2f8ca9-3",
+           "name": "Тип разъема",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "432056470",
+             "qualityDescription": "Lemo"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334527167",
+           "code": "26f9630a-9",
+           "name": "Внутреннее сопротивление (Импеданс)",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056463",
+             "OKEI": {
+              "code": "274",
+              "nationalCode": "Ом",
+              "name": "Ом"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "600"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334527166",
+           "code": "02a87361-6",
+           "name": "Верхняя граница частотного диапазона",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056462",
+             "OKEI": {
+              "code": "290",
+              "nationalCode": "Гц",
+              "name": "Герц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "20000"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334527170",
+           "code": "cab27b57-1",
+           "name": "Нижняя граница частотного диапазона",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056466",
+             "OKEI": {
+              "code": "290",
+              "nationalCode": "Гц",
+              "name": "Герц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "20"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334527171",
+           "code": "e3f9025a-6",
+           "name": "Пространственная направленность",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "432056467",
+             "qualityDescription": "Круговой"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334527172",
+           "code": "b71ff11d-4",
+           "name": "Тип микрофона",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056468",
+             "qualityDescription": "Конденсаторный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334527173",
+           "code": "3c4e3abe-0",
+           "name": "Тип микрофона по назначению",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056469",
+             "qualityDescription": "Головной"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.40.31.190",
+         "OKPDName": "Аппаратура для воспроизведения звука прочая"
+        }
+       },
+       "name": "Микрофон радиосистемы",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "134867.00",
+       "trademarkInfo": {
+        "trademark": "DPA 4066-OP-A-F03-LH",
+        "isEquivalentDeliveryAllowed": "true"
+       },
+       "quantity": {
+        "value": "15.00000000000"
+       },
+       "sum": "2023005.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      },
+      {
+       "sid": "224867324",
+       "OKPD2": {
+        "OKPDCode": "26.40.31.190",
+        "OKPDName": "Аппаратура для воспроизведения звука прочая",
+        "characteristics": {
+         "characteristicsUsingTextForm": [
+          {
+           "sid": "334209905",
+           "name": "Тип устройства",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "433102745",
+             "qualityDescription": "Цифровой"
+            }
+           }
+          },
+          {
+           "sid": "334209909",
+           "name": "Количество портов OpticalCON",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "433102749",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "334209910",
+           "name": "Количество разъёмов BNC",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "433102750",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "5"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "334209911",
+           "name": "Наличие протокола MADI",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "433102751",
+             "qualityDescription": "Да"
+            }
+           }
+          },
+          {
+           "sid": "334209912",
+           "name": "Функция преобразования частоты дискретизации",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "433102752",
+             "qualityDescription": "Да"
+            }
+           }
+          },
+          {
+           "sid": "334209913",
+           "name": "Вес",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "433102753",
+             "OKEI": {
+              "code": "166",
+              "nationalCode": "кг",
+              "name": "Килограмм"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "0.5"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "334209906",
+           "name": "Количество входных каналов",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "433102746",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "128"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "334209907",
+           "name": "Количество выходных каналов",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "433102747",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "128"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "334209908",
+           "name": "Форм-фактор",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "433102748",
+             "qualityDescription": "Рэковое исполнение"
+            }
+           }
+          }
+         ]
+        }
+       },
+       "name": "Аудиоинтерфейсная карта",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "732427.00",
+       "trademarkInfo": {
+        "trademark": "Yamaha HY128-MD"
+       },
+       "quantity": {
+        "value": "1.00000000000"
+       },
+       "sum": "732427.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "true",
+        "reasonImposibilityProhibition": "Необходимо обеспечить взаимодействие закупаемого товара с товарами, используемыми заказчиком, а именно возможность интеграции с микшерной системой Yamaha RIVAGE PM и её процессором DSP RX-EX и программным обеспечением RIVAGE PM Editor, используемым для контроля и управления системой"
+       }
+      },
+      {
+       "sid": "224866415",
+       "KTRU": {
+        "code": "26.40.31.190-00000003",
+        "name": "Микшерный пульт",
+        "versionId": "164368",
+        "versionNumber": "9",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "334203250",
+           "code": "60fb89e2-e",
+           "name": "Общее количество шин микширования",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432065273",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "40"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334203226",
+           "code": "0ca11699-3",
+           "name": "Количество слотов для карт расширения",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432065267",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334203224",
+           "code": "492361eb-5",
+           "name": "Количество сетевых портов для подключения внешних устройств по цифровому протоколу для передачи аудиосигнала",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432065266",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334203227",
+           "code": "0453e99c-a",
+           "name": "Количество физических фейдеров",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432065268",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "24"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334203259",
+           "code": "b812c882-8",
+           "name": "Удаленное управление с использованием мобильной рабочей станции",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432065274",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334203249",
+           "code": "32eee56d-b",
+           "name": "Наличие USB-аудиоинтерфейса",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432065272",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334203215",
+           "code": "080ef759-3",
+           "name": "Количество дисплеев с сенсорным управлением",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432065263",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "3"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334203230",
+           "code": "a56748d0-b",
+           "name": "Количество Matrix шин",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432065269",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "8"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334203246",
+           "code": "3509f599-8",
+           "name": "Наличие протокола Dante",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432065271",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334203231",
+           "code": "b0dfcdca-9",
+           "name": "Количество VCA/DCA-групп",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432065270",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "24"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334203220",
+           "code": "736a1821-6",
+           "name": "Количество микрофонных входов",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432065265",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "32"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334203214",
+           "code": "4d160fe7-c",
+           "name": "Вид микшерного пульта",
+           "type": "1",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "432065262",
+             "qualityDescription": "Цифровой"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334203217",
+           "code": "fccef6a1-e",
+           "name": "Количество каналов микширования",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432065264",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "96"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.40.31.190",
+         "OKPDName": "Аппаратура для воспроизведения звука прочая"
+        }
+       },
+       "name": "Микшерный пульт",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "5270233.00",
+       "trademarkInfo": {
+        "trademark": "Yamaha DM7"
+       },
+       "quantity": {
+        "value": "1.00000000000"
+       },
+       "sum": "5270233.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "true",
+        "reasonImposibilityProhibition": "Необходимо обеспечить взаимодействие закупаемого товара с товарами, используемыми заказчиком, а именно возможность интеграции с микшерной системой Yamaha и её компонентами: аудиоинтерфейсами Rio3224, Rio1608, коммутаторами аудиосети SWR2310, Swp 1-8, программным обеспечением Yamaha Monitor Mix, Audinate Dante Controller, Dante Virtual Soundcard, используемым для контроля и управления системой"
+       }
+      },
+      {
+       "sid": "224929456",
+       "KTRU": {
+        "code": "26.40.31.190-00000039",
+        "name": "Приемник радиосистемы",
+        "versionId": "178963",
+        "versionNumber": "3",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "334495050",
+           "code": "951652a4-6",
+           "name": "Динамический диапазон",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060304",
+             "OKEI": {
+              "code": "3135",
+              "nationalCode": "дБ",
+              "name": "Децибел"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "120"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334495060",
+           "code": "3dec0275-7",
+           "name": "Конструктивные особенности",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": [
+             {
+              "sid": "434060305",
+              "qualityDescription": "Индикатор качества соединения"
+             },
+             {
+              "sid": "434060306",
+              "qualityDescription": "Автоматическая настройка частоты"
+             },
+             {
+              "sid": "434060307",
+              "qualityDescription": "Встроенный антенный сплиттер"
+             }
+            ]
+           },
+           "characteristicsFillingInstruction": {
+            "code": "5",
+            "name": "Участник закупки указывает в заявке все значения характеристики"
+           }
+          },
+          {
+           "sid": "334495059",
+           "code": "91df616e-2",
+           "name": "Количество цифровых выходов DANTE",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060308",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "valueSet": {
+              "concreteValue": "2"
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495058",
+           "code": "0142e067-b",
+           "name": "Количество цифровых выходов AES-3",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060309",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "valueSet": {
+              "concreteValue": "2"
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495054",
+           "code": "346711ed-b",
+           "name": "Количество дисплеев",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060310",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "valueSet": {
+              "concreteValue": "1"
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495056",
+           "code": "cdb55592-7",
+           "name": "Количество разъемов типа BNC",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060311",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "valueSet": {
+              "concreteValue": "6"
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495053",
+           "code": "0a0cda65-6",
+           "name": "Количество входов синхронизации WorldClock",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060312",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "valueSet": {
+              "concreteValue": "2"
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495057",
+           "code": "e310e655-4",
+           "name": "Количество разъемов типа XLR",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060313",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "valueSet": {
+              "concreteValue": "4"
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495071",
+           "code": "5c4deca5-9",
+           "name": "Ширина",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060314",
+             "OKEI": {
+              "code": "003",
+              "nationalCode": "мм",
+              "name": "Миллиметр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "450",
+               "maxMathNotation": "less",
+               "max": "500"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334495048",
+           "code": "125abb94-1",
+           "name": "Глубина",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060315",
+             "OKEI": {
+              "code": "003",
+              "nationalCode": "мм",
+              "name": "Миллиметр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "300",
+               "maxMathNotation": "less",
+               "max": "350"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334495047",
+           "code": "093ad1b8-5",
+           "name": "Высота",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060316",
+             "OKEI": {
+              "code": "003",
+              "nationalCode": "мм",
+              "name": "Миллиметр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "less",
+               "max": "45"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334495062",
+           "code": "2d593961-4",
+           "name": "Метод шифрования",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060317",
+             "qualityDescription": "AES-256"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495072",
+           "code": "aa23a9db-4",
+           "name": "Шифрование канала",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060318",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495069",
+           "code": "998ce541-3",
+           "name": "Удаленное управление с использованием рабочей станции",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060319",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495064",
+           "code": "633d3fe0-9",
+           "name": "Наличие входа синхронизации WorldClock",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060320",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495046",
+           "code": "85e8ab32-f",
+           "name": "Возможность передачи аудиосигнала с приемника в систему звукоусиления посредством цифрового протокола",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060321",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495061",
+           "code": "021190d2-2",
+           "name": "Коэффициент нелинейных искажений",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060322",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "0.01"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334495068",
+           "code": "a9cc3e68-9",
+           "name": "Типы разъемов на приемнике",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": [
+             {
+              "sid": "434060323",
+              "qualityDescription": "BNC"
+             },
+             {
+              "sid": "434060324",
+              "qualityDescription": "RJ45"
+             },
+             {
+              "sid": "434060325",
+              "qualityDescription": "Jack"
+             },
+             {
+              "sid": "434060326",
+              "qualityDescription": "XLR"
+             }
+            ]
+           },
+           "characteristicsFillingInstruction": {
+            "code": "5",
+            "name": "Участник закупки указывает в заявке все значения характеристики"
+           }
+          },
+          {
+           "sid": "334495045",
+           "code": "22c836c7-1",
+           "name": "Возможность монтажа приемника в рэковую стойку",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060327",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495052",
+           "code": "d3a9993d-a",
+           "name": "Индикатор заряда передатчика на дисплее приемника",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060328",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495051",
+           "code": "4feeae68-0",
+           "name": "Дисплей на приемнике",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060329",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495070",
+           "code": "fbe83db2-e",
+           "name": "Функция синхронизации приемника и передатчика",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060330",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495066",
+           "code": "3d0edfe1-3",
+           "name": "Разнесенный прием",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060331",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495049",
+           "code": "88e5d6e8-d",
+           "name": "Диапазон радиочастот",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060332",
+             "qualityDescription": "UHF (от 470 до 805 МГц)"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495065",
+           "code": "87d33645-e",
+           "name": "Нижний частотный диапазон",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060333",
+             "OKEI": {
+              "code": "290",
+              "nationalCode": "Гц",
+              "name": "Герц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "20"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334495044",
+           "code": "638a6c71-2",
+           "name": "Верхний частотный диапазон",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060334",
+             "OKEI": {
+              "code": "290",
+              "nationalCode": "Гц",
+              "name": "Герц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "20000"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334495063",
+           "code": "131d7620-b",
+           "name": "Модуляция",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060335",
+             "qualityDescription": "Цифровая"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334495055",
+           "code": "5cc6c4a6-c",
+           "name": "Количество каналов",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060336",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "4"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334495067",
+           "code": "127044ce-b",
+           "name": "Тип радиосистемы",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060337",
+             "qualityDescription": "Комбинированная"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.40.31.190",
+         "OKPDName": "Аппаратура для воспроизведения звука прочая"
+        }
+       },
+       "name": "Приемник радиосистемы",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "1257901.00",
+       "trademarkInfo": {
+        "trademark": "Shure AD4QE=-A"
+       },
+       "quantity": {
+        "value": "3.00000000000"
+       },
+       "sum": "3773703.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "true",
+        "reasonImposibilityProhibition": "Товар должен быть полностью совместим на аппаратном, программном и системном уровнях с имеющимся у Заказчика товаром, а именно - парком радиосистем Shure модельного ряда Axient, и интегрироваться в единую цифровую сеть радиочастотного менеджмента, координации частот и мониторинга под управлением программного обеспечения Shure Wireless Workbench. Рабочий радиочастотный диапазон должен полностью совпадать с частотным диапазоном и техническими параметрами эксплуатируемых Заказчиком приемников Shure AD4QE=-A"
+       }
+      },
+      {
+       "sid": "224935183",
+       "KTRU": {
+        "code": "26.40.31.190-00000035",
+        "name": "Микрофон радиосистемы",
+        "versionId": "170701",
+        "versionNumber": "1",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "334529321",
+           "code": "ea7a9165-0",
+           "name": "Максимальный уровень звукового давления",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056454",
+             "OKEI": {
+              "code": "3135",
+              "nationalCode": "дБ",
+              "name": "Децибел"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "140"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334529327",
+           "code": "c703bee5-3",
+           "name": "Цвет микрофона",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056460",
+             "qualityDescription": "Бежевый (телесный)"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334529320",
+           "code": "668bff0f-7",
+           "name": "Длина кабеля",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056453",
+             "OKEI": {
+              "code": "006",
+              "nationalCode": "м",
+              "name": "Метр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334529326",
+           "code": "ce2f8ca9-3",
+           "name": "Тип разъема",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "432056459",
+             "qualityDescription": "Lemo"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334529319",
+           "code": "26f9630a-9",
+           "name": "Внутреннее сопротивление (Импеданс)",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056452",
+             "OKEI": {
+              "code": "274",
+              "nationalCode": "Ом",
+              "name": "Ом"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "600"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334529328",
+           "code": "a64e5a7a-8",
+           "name": "Чувствительность звукового давления",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056461",
+             "OKEI": {
+              "code": "3135",
+              "nationalCode": "дБ",
+              "name": "Децибел"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "-54"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334529318",
+           "code": "02a87361-6",
+           "name": "Верхняя граница частотного диапазона",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056451",
+             "OKEI": {
+              "code": "290",
+              "nationalCode": "Гц",
+              "name": "Герц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "20000"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334529322",
+           "code": "cab27b57-1",
+           "name": "Нижняя граница частотного диапазона",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056455",
+             "OKEI": {
+              "code": "290",
+              "nationalCode": "Гц",
+              "name": "Герц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "20"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334529323",
+           "code": "e3f9025a-6",
+           "name": "Пространственная направленность",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "432056456",
+             "qualityDescription": "Круговой"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334529324",
+           "code": "b71ff11d-4",
+           "name": "Тип микрофона",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056457",
+             "qualityDescription": "Конденсаторный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334529325",
+           "code": "3c4e3abe-0",
+           "name": "Тип микрофона по назначению",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056458",
+             "qualityDescription": "Петличный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.40.31.190",
+         "OKPDName": "Аппаратура для воспроизведения звука прочая"
+        }
+       },
+       "name": "Микрофон радиосистемы",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "89180.00",
+       "trademarkInfo": {
+        "trademark": "DPA 4061-OP-C-F03",
+        "isEquivalentDeliveryAllowed": "true"
+       },
+       "quantity": {
+        "value": "56.00000000000"
+       },
+       "sum": "4994080.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      },
+      {
+       "sid": "224867176",
+       "OKPD2": {
+        "OKPDCode": "26.40.31.190",
+        "OKPDName": "Аппаратура для воспроизведения звука прочая",
+        "characteristics": {
+         "characteristicsUsingTextForm": [
+          {
+           "sid": "334209163",
+           "name": "Тип устройства",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "433086083",
+             "qualityDescription": "Цифровой"
+            }
+           }
+          },
+          {
+           "sid": "334209172",
+           "name": "Вес",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "433086093",
+             "OKEI": {
+              "code": "166",
+              "nationalCode": "кг",
+              "name": "Килограмм"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "5"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "334209171",
+           "name": "Наличие портов OpticalCON",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "433086092",
+             "qualityDescription": "Да"
+            }
+           }
+          },
+          {
+           "sid": "334209165",
+           "name": "Количество входных каналов",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "433086085",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "64"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "334209166",
+           "name": "Количество выходных каналов",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "433086086",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "64"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "334209167",
+           "name": "Количество портов RJ45",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "433086087",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "334209168",
+           "name": "Наличие протоколов",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "5",
+            "name": "Участник закупки указывает в заявке все значения характеристики"
+           },
+           "values": {
+            "value": [
+             {
+              "sid": "433086089",
+              "qualityDescription": "MADI"
+             },
+             {
+              "sid": "433086088",
+              "qualityDescription": "Dante"
+             }
+            ]
+           }
+          },
+          {
+           "sid": "334209169",
+           "name": "Наличие разъёма etherCON",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "433086090",
+             "qualityDescription": "Да"
+            }
+           }
+          },
+          {
+           "sid": "334209164",
+           "name": "Форм-фактор",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "433086084",
+             "qualityDescription": "Рэковое исполнение"
+            }
+           }
+          },
+          {
+           "sid": "334209170",
+           "name": "Количество разъёмов etherCON для протокола Dante",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "433086091",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           }
+          }
+         ]
+        }
+       },
+       "name": "Аудиоинтерфейс",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "775547.00",
+       "trademarkInfo": {
+        "trademark": "Yamaha RMio64-D"
+       },
+       "quantity": {
+        "value": "1.00000000000"
+       },
+       "sum": "775547.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "true",
+        "reasonImposibilityProhibition": "Необходимо обеспечить взаимодействие закупаемого товара с товарами, используемыми заказчиком, а именно c пультами Yamaha CL5, QL5, DM7, программным обеспечением Yamaha R Remote, Audinate Dante Controller, Dante Virtual Soundcard, Yamaha DM7 Editor, используемыми для контроля и управления системой"
+       }
+      },
+      {
+       "sid": "224930890",
+       "KTRU": {
+        "code": "26.40.31.190-00000037",
+        "name": "Передатчик радиосистемы",
+        "versionId": "185586",
+        "versionNumber": "2",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "334502135",
+           "code": "96fa78cd-0",
+           "name": "Шифрование канала",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060338",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334502129",
+           "code": "b2907d70-0",
+           "name": "Мощность передатчика, мВт",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060339",
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "30"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334502133",
+           "code": "a0c6a868-6",
+           "name": "Типы разъемов на передатчике",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "434060340",
+             "qualityDescription": "Lemo"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334502128",
+           "code": "151b5e76-c",
+           "name": "Индикатор заряда микрофона на передатчике",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060341",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334502127",
+           "code": "8110601a-d",
+           "name": "Дисплей на передатчике",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060342",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334502134",
+           "code": "6848f9e9-b",
+           "name": "Функция синхронизации приемника и передатчика",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060343",
+             "qualityDescription": "Да"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334502126",
+           "code": "e1d001bb-d",
+           "name": "Диапазон радиочастот",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060344",
+             "qualityDescription": "UHF (от 470 до 805 МГц)"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334502130",
+           "code": "e8bfc535-a",
+           "name": "Нижний частотный диапазон",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060345",
+             "OKEI": {
+              "code": "290",
+              "nationalCode": "Гц",
+              "name": "Герц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "20"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334502125",
+           "code": "50e1eca5-f",
+           "name": "Верхний частотный диапазон",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060346",
+             "OKEI": {
+              "code": "290",
+              "nationalCode": "Гц",
+              "name": "Герц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "20000"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334502131",
+           "code": "2d40b6f9-4",
+           "name": "Радиус действия передатчика",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060347",
+             "OKEI": {
+              "code": "006",
+              "nationalCode": "м",
+              "name": "Метр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "100"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334502132",
+           "code": "f69104ac-3",
+           "name": "Тип передатчика",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060348",
+             "qualityDescription": "Поясной передатчик"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.40.31.190",
+         "OKPDName": "Аппаратура для воспроизведения звука прочая"
+        }
+       },
+       "name": "Передатчик радиосистемы",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "180495.00",
+       "trademarkInfo": {
+        "trademark": "SHURE AD1LEMO3=-G56"
+       },
+       "quantity": {
+        "value": "16.00000000000"
+       },
+       "sum": "2887920.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "true",
+        "reasonImposibilityProhibition": "Товар должен быть полностью совместим на аппаратном, системном и программном уровнях с имеющимися у Заказчика товарами, а именно - цифровыми приемниками Shure серии AD4QE=-A и  интегрироваться в  единую сеть радиочастотного менеджмента и мониторинга под управлением ПО Shure Wireless Workbench. Рабочий радиочастотный диапазон должен полностью совпадать с частотным диапазоном и техническими параметрами эксплуатируемых Заказчиком приемников Shure AD4QE=-A"
+       }
+      },
+      {
+       "sid": "224932623",
+       "KTRU": {
+        "code": "26.40.31.190-00000035",
+        "name": "Микрофон радиосистемы",
+        "versionId": "170701",
+        "versionNumber": "1",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "334513528",
+           "code": "ea7a9165-0",
+           "name": "Максимальный уровень звукового давления",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056443",
+             "OKEI": {
+              "code": "3135",
+              "nationalCode": "дБ",
+              "name": "Децибел"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "140"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334513540",
+           "code": "c703bee5-3",
+           "name": "Цвет микрофона",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056449",
+             "qualityDescription": "Бежевый (телесный)"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334513526",
+           "code": "668bff0f-7",
+           "name": "Длина кабеля",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056442",
+             "OKEI": {
+              "code": "006",
+              "nationalCode": "м",
+              "name": "Метр"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334513538",
+           "code": "ce2f8ca9-3",
+           "name": "Тип разъема",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "432056448",
+             "qualityDescription": "Lemo"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334513524",
+           "code": "26f9630a-9",
+           "name": "Внутреннее сопротивление (Импеданс)",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056441",
+             "OKEI": {
+              "code": "274",
+              "nationalCode": "Ом",
+              "name": "Ом"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "600"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334513542",
+           "code": "a64e5a7a-8",
+           "name": "Чувствительность звукового давления",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056450",
+             "OKEI": {
+              "code": "3135",
+              "nationalCode": "дБ",
+              "name": "Децибел"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "-58.1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334513522",
+           "code": "02a87361-6",
+           "name": "Верхняя граница частотного диапазона",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056440",
+             "OKEI": {
+              "code": "290",
+              "nationalCode": "Гц",
+              "name": "Герц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "20000"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334513530",
+           "code": "cab27b57-1",
+           "name": "Нижняя граница частотного диапазона",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056444",
+             "OKEI": {
+              "code": "290",
+              "nationalCode": "Гц",
+              "name": "Герц"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "20"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334513533",
+           "code": "e3f9025a-6",
+           "name": "Пространственная направленность",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "432056445",
+             "qualityDescription": "Кардиоидный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334513534",
+           "code": "b71ff11d-4",
+           "name": "Тип микрофона",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056446",
+             "qualityDescription": "Конденсаторный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334513536",
+           "code": "3c4e3abe-0",
+           "name": "Тип микрофона по назначению",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "432056447",
+             "qualityDescription": "Головной"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.40.31.190",
+         "OKPDName": "Аппаратура для воспроизведения звука прочая"
+        }
+       },
+       "name": "Микрофон радиосистемы",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "157536.00",
+       "trademarkInfo": {
+        "trademark": "DPA 4088-DP-A-F03-LH",
+        "isEquivalentDeliveryAllowed": "true"
+       },
+       "quantity": {
+        "value": "15.00000000000"
+       },
+       "sum": "2363040.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      },
+      {
+       "sid": "224867346",
+       "KTRU": {
+        "code": "26.40.31.190-00000033",
+        "name": "Антенна радиосистемы",
+        "versionId": "170699",
+        "versionNumber": "1",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "334210204",
+           "code": "d2960c40-d",
+           "name": "Исполнение антенны",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060349",
+             "qualityDescription": "Внутренняя"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334210202",
+           "code": "c51fa6f1-b",
+           "name": "Диапазон радиочастот",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060350",
+             "qualityDescription": "UHF (от 470 до 805 МГц)"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334210201",
+           "code": "ea50ddcf-d",
+           "name": "Входное сопротивление",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060351",
+             "OKEI": {
+              "code": "274",
+              "nationalCode": "Ом",
+              "name": "Ом"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "50"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334210203",
+           "code": "5bb3ee9d-c",
+           "name": "Диафрагма направленности",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "434060352",
+             "qualityDescription": "Направленная (узконаправленная)"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334210206",
+           "code": "b2f86f18-5",
+           "name": "Разъем подключения",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "434060353",
+             "qualityDescription": "BNC"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "334210205",
+           "code": "81d12106-0",
+           "name": "Количество антенн",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060354",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "1"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          },
+          {
+           "sid": "334210207",
+           "code": "9dbb68cb-b",
+           "name": "Тип антенны",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "434060355",
+             "qualityDescription": "Пассивная"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          }
+         ]
+        },
+        "OKPD2": {
+         "OKPDCode": "26.40.31.190",
+         "OKPDName": "Аппаратура для воспроизведения звука прочая"
+        }
+       },
+       "name": "Антенна радиосистемы",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "55455.00",
+       "trademarkInfo": {
+        "trademark": "SHURE PA805SWB",
+        "isEquivalentDeliveryAllowed": "true"
+       },
+       "quantity": {
+        "value": "2.00000000000"
+       },
+       "sum": "110910.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      },
+      {
+       "sid": "224866619",
+       "OKPD2": {
+        "OKPDCode": "26.40.31.190",
+        "OKPDName": "Аппаратура для воспроизведения звука прочая",
+        "characteristics": {
+         "characteristicsUsingTextForm": [
+          {
+           "sid": "334204576",
+           "name": "Количество портов RJ45",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "433086095",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "334204578",
+           "name": "Вес",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "433086096",
+             "OKEI": {
+              "code": "166",
+              "nationalCode": "кг",
+              "name": "Килограмм"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "maxMathNotation": "lessOrEqual",
+               "max": "7"
+              }
+             }
+            }
+           }
+          },
+          {
+           "sid": "334204574",
+           "name": "Количество физических фейдеров",
+           "type": "2",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "433086094",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "2"
+              }
+             }
+            }
+           }
+          }
+         ]
+        }
+       },
+       "name": "Контроллер расширения",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "967500.00",
+       "trademarkInfo": {
+        "trademark": "Yamaha CTLDM7//E"
+       },
+       "quantity": {
+        "value": "1.00000000000"
+       },
+       "sum": "967500.00",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "true",
+        "reasonImposibilityProhibition": "Необходимо обеспечить взаимодействие закупаемого товара с товарами, используемыми заказчиком, а именно возможность интеграции с системой микширования Yamaha DM7 и программным обеспечением Yamaha DM7 Editor, используемым для контроля и управления системой"
+       }
+      }
+     ],
+     "totalSum": "23898365.00",
+     "quantityUndefined": "false"
+    }
+   },
+   "requirementsInfo": {
+    "requirementInfo": [
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "ET44",
+       "name": "Единые требования к участникам закупок в соответствии с ч. 1 ст. 31 Закона № 44-ФЗ"
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TR442",
+       "name": "Требования к участникам закупок в соответствии с ч. 1.1 ст. 31 Закона № 44-ФЗ"
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TU1131",
+       "name": "Требование к участникам закупок в соответствии с п. 1 ч. 1 ст. 31 Закона № 44-ФЗ"
+      },
+      "content": "Участник закупки не может являться лицом, находящимся под санкциями (Указ Президента РФ от 03.05.2022 № 252)"
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TPS44530",
+       "name": "Требование к поставщику (подрядчику, исполнителю), не являющемуся субъектом малого предпринимательства или социально ориентированной некоммерческой организацией, о привлечении к исполнению контракта субподрядчиков, соисполнителей из числа субъектов малого предпринимательства, социально ориентированных некоммерческих организаций в соответствии с ч. 5 ст. 30 Закона № 44 ФЗ"
+      },
+      "reqValue": "80.0"
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "ETP44312",
+       "name": "Требования к участникам закупок в соответствии с ч. 2.1 ст. 31 Закона № 44-ФЗ"
+      },
+      "addRequirements": {
+       "addRequirement": {
+        "shortName": "TVS3BN",
+        "name": "Требования в соответствии c пунктом 4 ПП РФ от 29.12.2021 №2571",
+        "content": "Наличие у участника закупки опыта  исполнения (с учетом правопреемства)  в течение трех лет  до даты подачи заявки на участие в закупке контракта или договора, заключенного в соответствии с Федеральным законом от 18 июля 2011 года № 223-ФЗ «О закупках товаров, работ, услуг отдельными видами юридических лиц» при условии исполнения таким участником закупки требований об уплате неустоек (штрафов, пеней), предъявленных при исполнении таких контракта, договора. Стоимость исполненных обязательств по таким контракту, договору должна составлять не менее двадцати процентов начальной (максимальной) цены контракта.\nИнформация и документы, подтверждающие соответствие участника закупки дополнительному требованию, установленному в соответствии с частью 2.1 ст. 31 Закона о контрактной системе, являются информация и документы, предусмотренные хотя бы одним из следующих подпунктов:\nа) номер реестровой записи в предусмотренном Законом о контрактной системе реестре контрактов, заключенных заказчиками (в случае исполнения участником закупки контракта, информация и документы в отношении которого включены в установленном порядке в такой реестр и размещены на официальном сайте единой информационной системы в информационно-телекоммуникационной сети \"Интернет\");\nб) выписка из предусмотренного Законом о контрактной системе реестра контрактов, содержащего сведения, составляющие государственную тайну (в случае исполнения участником закупки контракта, информация о котором включена в установленном порядке в такой реестр);\nв) исполненный контракт, заключенный в соответствии с Законом о контрактной системе, или договор, заключенный в соответствии с Федеральным законом \"О закупках товаров, работ, услуг отдельными видами юридических лиц\", а также акт приемки поставленных товаров, выполненных работ, оказанных услуг, подтверждающий цену поставленных товаров, выполненных работ, оказанных услуг."
+       }
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TOVNPIVR",
+       "name": "Требование об отсутствии в реестре недобросовестных поставщиков (подрядчиков, исполнителей) информации, включенной в такой реестр в связи отказом поставщика (подрядчика, исполнителя) от исполнения контракта по причине введения в отношении заказчика санкций и (или) мер ограничительного характера"
+      }
+     }
+    ]
+   },
+   "flags": {
+    "purchaseObjectsCh9St37": "false"
+   }
+  },
+  "@schemeVersion": "16.3"
+ }
+}
