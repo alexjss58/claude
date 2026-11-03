@@ -334,6 +334,30 @@ def paragraphs(flat, line):
     return out
 
 
+def load_input():
+    """Читает вход v2. В v2 числа записаны строками — приводим к числам."""
+    data = json.loads(IN_JSON.read_text(encoding="utf-8"))
+    for rec in data:
+        for k in ["Участий за квартал", "Побед", "Контрактов на сумму, ₽"]:
+            rec[k] = int(str(rec[k]).replace(" ", ""))
+        v = rec.get("Среднее снижение, %")
+        rec["Среднее снижение, %"] = None if v in (None, "") else float(str(v).replace(",", "."))
+        for k in ["Руководитель", "Почта", "Телефон", "Сайт", "Профиль", "Надёжность почты"]:
+            if rec.get(k) in ("", "None"):
+                rec[k] = None
+    return data
+
+
+def needs_check(reliab):
+    """Почту обязательно сверить перед отправкой."""
+    return bool(reliab) and (reliab.startswith("найдено на сайте") or reliab == "предположение")
+
+
+def is_mobile(phone):
+    d = re.sub(r"\D", "", phone or "")
+    return len(d) == 11 and d[0] in "78" and d[1] == "9"
+
+
 def site_url(s):
     if not s:
         return None
@@ -344,7 +368,7 @@ def site_url(s):
 # Сборка записей
 # ---------------------------------------------------------------------------
 def build_records():
-    data = json.loads(IN_JSON.read_text(encoding="utf-8"))
+    data = load_input()
     best, cards = niche_link_map()
     base = base_template()
     rows = []
@@ -369,7 +393,7 @@ def build_records():
         tp_link = card.get("Карточка в Тендерплане")
         if rec["Почта"]:
             to = rec["Почта"]
-            reliab = b.get("Надёжность почты") or ""
+            reliab = rec.get("Надёжность почты") or b.get("Надёжность почты") or ""
         else:
             to = ("почту взять в Тендерплане: " + tp_link) if tp_link else \
                  "почту взять в Тендерплане (найти по названию: ссылки на карточку в файле нет)"
