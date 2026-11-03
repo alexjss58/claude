@@ -1,8 +1,8 @@
-import { useState, type FormEvent } from 'react';
+import { useEffect, useState, type FormEvent } from 'react';
 import { DemoMark, Emblem, Fleuron, Frame, Kicker, ScaleSwitch, SectionHead, SourceNote } from '../components/ui';
 import { firstSverkaKey, market, SOURCE_NOTE, tendersMeta } from '../data';
 import { num, pct, roman } from '../lib/format';
-import { href } from '../router';
+import { href, useRoute } from '../router';
 
 const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
@@ -24,6 +24,13 @@ const STEPS = [
 ];
 
 export default function Landing() {
+  const { path } = useRoute();
+  // Ссылки «#pilot» из статей ведут сюда (#/pilot): прокручиваем к форме
+  useEffect(() => {
+    if (path !== '/pilot') return;
+    const id = window.setTimeout(() => scrollTo('pilot'), 80);
+    return () => window.clearTimeout(id);
+  }, [path]);
   return (
     <div className="landing">
       <a className="skip" href="#main" onClick={(e) => { e.preventDefault(); scrollTo('main'); }}>К содержанию</a>
@@ -44,6 +51,7 @@ export default function Landing() {
             </a>
             <div className="mast-side right">
               <button type="button" className="mast-link hide-sm" onClick={() => scrollTo('usloviya')}>Условия</button>
+              <a className="mast-link" href={href('/stati')}>Статьи</a>
               <a className="mast-link" href={href('/demo/assortiment')}>Демо-кабинет</a>
             </div>
           </nav>
@@ -229,6 +237,7 @@ export default function Landing() {
             <p>Шрифты: Old Standard TT, PT Serif, IBM Plex Sans и IBM Plex Mono (свободная лицензия SIL OFL).</p>
           </div>
           <div>
+            <p><a href={href('/stati')}>Статьи для поставщиков</a> · <a href={href('/voprosy')}>Частые вопросы</a></p>
             <a className="btn btn-solid" href={href('/demo/assortiment')}>Демо-кабинет</a>
           </div>
         </div>

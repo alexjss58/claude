@@ -19,15 +19,23 @@ const out = join(root, 'скриншоты');
 mkdirSync(out, { recursive: true });
 const base = pathToFileURL(join(root, 'dist', 'index.html')).href;
 
-const firstSverka = 's-ДЕМО-0001';
+// Ключ первой закупки со сверкой берём из самого сайта (первая карточка в блоке «Реальные закупки со сверкой»)
+const probe = await chromium.launch(process.env.PW_CHROMIUM ? { executablePath: process.env.PW_CHROMIUM } : {});
+const pp = await probe.newPage();
+await pp.goto(base + '#/demo/tendery');
+await pp.waitForSelector('.ready-item');
+const firstSverka = decodeURIComponent((await pp.locator('.ready-item').first().getAttribute('href')).replace('#/demo/tender/', ''));
+await probe.close();
+const k = encodeURIComponent(firstSverka);
+
 const screens = [
   { name: '01_лендинг', hash: '#/' },
-  { name: '02_ассортимент', hash: '#/demo/assortiment', action: async (p) => { await p.getByRole('button', { name: 'Взять пример прайса' }).click(); await p.waitForTimeout(300); } },
+  { name: '02_ассортимент', hash: '#/demo/assortiment' },
   { name: '03_подходящие_тендеры', hash: '#/demo/tendery' },
-  { name: '04_карточка_тендера_со_сверкой', hash: `#/demo/tender/${encodeURIComponent(firstSverka)}` },
+  { name: '04_карточка_тендера_со_сверкой', hash: `#/demo/tender/${k}` },
   { name: '05_карточка_тендера_из_выгрузки', hash: '#/demo/tendery', action: async (p) => { await p.locator('.tender-row .tr-title').first().click(); await p.waitForTimeout(300); } },
-  { name: '06_черновик_заявки', hash: `#/demo/zayavka/${encodeURIComponent(firstSverka)}` },
-  { name: '07_сроки_и_деньги', hash: `#/demo/sroki/${encodeURIComponent(firstSverka)}` },
+  { name: '06_черновик_заявки', hash: `#/demo/zayavka/${k}` },
+  { name: '07_сроки_и_деньги', hash: `#/demo/sroki/${k}` },
   { name: '08_форма_пилота_спасибо', hash: '#/', action: async (p) => {
     await p.locator('input[name=name]').fill('Иван (тест)');
     await p.locator('input[name=contact]').fill('test@example.com');
@@ -35,8 +43,14 @@ const screens = [
     await p.waitForTimeout(200);
     await p.locator('.thanks').scrollIntoViewIfNeeded();
   }, viewportOnly: true },
+  { name: '10_статьи_список', hash: '#/stati' },
+  { name: '11_статья', hash: '#/stati/kak-proverit-tovar-po-nacrezhimu' },
+  { name: '12_частые_вопросы', hash: '#/voprosy', action: async (p) => { await p.getByRole('button', { name: 'Раскрыть все' }).click(); await p.waitForTimeout(200); } },
+  { name: '13_нацрежим_в_карточке', hash: `#/demo/tender/${k}`, action: async (p) => { await p.locator('.natreg').scrollIntoViewIfNeeded(); await p.evaluate(() => document.querySelector('.natreg')?.scrollIntoView({ block: 'start' })); await p.waitForTimeout(200); }, viewportOnly: true },
+  { name: '14_ассортимент_разбор_примера', hash: '#/demo/assortiment', action: async (p) => { await p.getByRole('button', { name: 'Разобрать пример прайса' }).click(); await p.waitForTimeout(300); } },
+  { name: '15_ссылка_pilot_из_статьи', hash: '#/stati/kak-proverit-tovar-po-nacrezhimu', action: async (p) => { await p.locator('.prose a[href="#/pilot"], .article-cta a[href="#/pilot"]').first().click(); await p.waitForTimeout(900); }, viewportOnly: true },
   // Последним: крупный текст (А++) — настройка запоминается, поэтому этот экран снимаем в конце
-  { name: '09_крупный_текст_карточка', hash: `#/demo/tender/${encodeURIComponent(firstSverka)}`, action: async (p) => {
+  { name: '09_крупный_текст_карточка', hash: `#/demo/tender/${k}`, action: async (p) => {
     await p.getByRole('button', { name: 'А++' }).click();
     await p.waitForTimeout(200);
   }, viewportOnly: true },
@@ -68,7 +82,7 @@ for (const d of devices) {
     const overflow = await page.evaluate(() => {
       const w = window.innerWidth;
       const bad = [...document.querySelectorAll('body *')].filter((e) => {
-        if (e.closest('.table-scroll')) return false; // таблицы листаются внутри своей рамки — это нормально
+        if (e.closest('.table-scroll') || e.closest('.prose table')) return false; // таблицы листаются внутри своей рамки — это нормально
         const r = e.getBoundingClientRect();
         return r.width > 0 && r.right > w + 1;
       }).slice(0, 5).map((e) => `${e.tagName.toLowerCase()}.${String(e.className).split(' ')[0]} (${Math.round(e.getBoundingClientRect().right)}px)`);

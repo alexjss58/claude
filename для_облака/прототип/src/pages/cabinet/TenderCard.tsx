@@ -2,10 +2,11 @@ import { useMemo, useState } from 'react';
 import { Badge, DemoMark, Frame, SectionHead, SourceNote, Status } from '../../components/ui';
 import { analyzeTz, getMode } from '../../ai';
 import { recheck, SAMPLE_TZ } from '../../ai/rules';
-import { getTenderView, NICHE_NAMES, priceSource, sverkaViews } from '../../data';
+import { ACCURACY_NOTE, getTenderView, NET_NOTE, NICHE_NAMES, priceSource, sverkaFromEngine, sverkaViews } from '../../data';
+import { MODE_MEANING, MODE_TITLE, modeCounts, natInfo, whatToDo, type NatMode } from '../../lib/natreg';
 import { expectedParticipants, lookupPrice, proposal } from '../../lib/price';
 import { findItem, matchHint } from '../../lib/match';
-import { num, pct, rub, rubShort } from '../../lib/format';
+import { niceName, num, pct, rub, rubShort } from '../../lib/format';
 import { href } from '../../router';
 import { useApp } from '../../state';
 import type { CatalogItem, Sverka, TenderView } from '../../types';
@@ -26,7 +27,7 @@ export default function TenderCard({ id }: { id?: string }) {
 }
 
 function Card({ t }: { t: TenderView }) {
-  const { catalog, isSample } = useApp();
+  const { catalog, isSample, isEngineCatalog } = useApp();
   const [custom, setCustom] = useState<Sverka | null>(null);
   const [rechecked, setRechecked] = useState(false);
   const base = t.sverka;
@@ -40,7 +41,7 @@ function Card({ t }: { t: TenderView }) {
           <DemoMark>{t.kind === 'сверка' ? t.источник : 'реальная закупка, завершена'}</DemoMark>
         </div>
         <h1 className="card-title">{t.предмет}</h1>
-        <p className="card-customer">{t.заказчик}{t.инн_заказчика ? `, ИНН ${t.инн_заказчика}` : ''} · {t.регион}</p>
+        <p className="card-customer">{t.kind === 'сверка' ? niceName(t.заказчик) : t.заказчик}{t.инн_заказчика ? `, ИНН ${t.инн_заказчика}` : ''} · {t.регион}</p>
         <dl className="facts">
           {t.номер && <div><dt>Номер</dt><dd className="mono">{t.номер}</dd></div>}
           <div><dt>НМЦ (начальная цена)</dt><dd>{rub(t.нмц)}</dd></div>
@@ -51,6 +52,7 @@ function Card({ t }: { t: TenderView }) {
           <div><dt>Статус</dt><dd>{t.статус}</dd></div>
         </dl>
         <div className="badges">{t.бейджи.map((b, i) => <Badge key={i} b={b} />)}</div>
+        {t.ссылка && <p className="notice-link"><a href={t.ссылка} target="_blank" rel="noopener noreferrer">Извещение на zakupki.gov.ru ↗</a> <span className="muted">открывается на сайте ЕИС, нужен интернет</span></p>}
         <div className="cta-row">
           <a className="btn btn-solid" href={href(`/demo/zayavka/${t.key}`)}>Собрать черновик заявки</a>
           <a className="btn" href={href(`/demo/sroki/${t.key}`)}>Сроки и деньги</a>
@@ -67,10 +69,18 @@ function Card({ t }: { t: TenderView }) {
                 <><span>Показан разбор вставленного текста ({custom.режим === 'живой' ? 'Claude' : 'демо-правила'}).</span> <button type="button" className="btn btn-small" onClick={() => setCustom(null)}>Вернуть исходную сверку</button></>
               ) : base && (
                 rechecked
-                  ? <><span>Пересчитано по текущему ассортименту простыми правилами.</span> <button type="button" className="btn btn-small" onClick={() => setRechecked(false)}>Показать исходную сверку</button></>
-                  : <><span>Сверка: {t.источник}.</span> <button type="button" className="btn btn-small" onClick={() => setRechecked(true)}>Пересчитать по {isSample ? 'текущему (примеру)' : 'вашему'} ассортименту</button></>
+                  ? <><span>Пересчитано по вашему ассортименту простыми правилами: это приблизительно, настоящий движок точнее.</span> <button type="button" className="btn btn-small" onClick={() => setRechecked(false)}>Показать исходную сверку</button></>
+                  : isEngineCatalog && sverkaFromEngine
+                    ? <span>Сверка сделана по демо-каталогу из раздела «Ваш ассортимент» — это тот же список моделей.</span>
+                    : <><span>Сверка: {t.источник}.</span> <button type="button" className="btn btn-small" onClick={() => setRechecked(true)}>Пересчитать по {isSample ? 'текущему (примеру)' : 'вашему'} ассортименту</button></>
               )}
             </div>
+            {!custom && base && sverkaFromEngine && (
+              <SourceNote>
+                {ACCURACY_NOTE} {NET_NOTE}
+                {base.закупка.ссылка ? <> Источник: <a href={base.закупка.ссылка} target="_blank" rel="noopener noreferrer">извещение в ЕИС ↗</a>{base.закупка.источник_документа ? `, ${base.закупка.источник_документа}` : ''}{base.закупка.разобрано ? `; разобрано ${base.закупка.разобрано}` : ''}.</> : ' Ссылки на извещение в данных нет.'}
+              </SourceNote>
+            )}
             <SverkaTable s={sverka} catalog={catalog} />
           </>
         ) : (
@@ -124,11 +134,19 @@ function condText(c: Sverka['позиции'][number]['характеристи�
   return `${c.имя}: ${v}${c.эквивалент_допускается ? '' : ' (без эквивалента)'}`;
 }
 
+/** «Модель (примечание про конфигурацию)» -> имя и примечание отдельно */
+function splitProduct(full: string): { name: string; note: string } {
+  const i = full.indexOf(' (');
+  if (i < 0 || !full.endsWith(')')) return { name: full, note: '' };
+  return { name: full.slice(0, i), note: full.slice(i + 2, -1) };
+}
+
 export function SverkaTable({ s, catalog }: { s: Sverka; catalog: CatalogItem[] }) {
   return (
     <ol className="sverka-list">
       {s.позиции.map((p) => {
         const item = findItem(catalog, p.сверка.артикул, p.сверка.товар_из_каталога);
+        const prod = splitProduct(p.сверка.товар_из_каталога);
         const cls = p.сверка.статус === 'подходит' ? 'ok' : p.сверка.статус === 'почти' ? 'almost' : 'no';
         return (
           <li key={p['№']} className={`sv-row sv-${cls}`}>
@@ -136,17 +154,30 @@ export function SverkaTable({ s, catalog }: { s: Sverka; catalog: CatalogItem[] 
             <div className="sv-pos">
               <h4>{p.наименование} <span className="qty">{num(p.количество)} {p.единица}</span></h4>
               {(p.окпд2 || p.ктру) && <div className="codes mono">{p.окпд2 && `ОКПД2 ${p.окпд2}`}{p.ктру && ` · КТРУ ${p.ктру}`}</div>}
-              <ul className="reqs">{p.характеристики.map((c, i) => <li key={i}>{condText(c)}</li>)}</ul>
+              <ul className="reqs">{p.характеристики.slice(0, 5).map((c, i) => <li key={i}>{condText(c)}</li>)}</ul>
+              {p.характеристики.length > 5 && <details className="sv-more"><summary>Ещё требований: {p.характеристики.length - 5}</summary><ul className="reqs">{p.характеристики.slice(5).map((c, i) => <li key={i}>{condText(c)}</li>)}</ul></details>}
             </div>
             <div className="sv-result">
               <Status s={p.сверка.статус} />
               {p.сверка.товар_из_каталога ? (
-                <p className="sv-item"><b>{p.сверка.товар_из_каталога}</b>{p.сверка.артикул && <span className="mono"> · {p.сверка.артикул}</span>}{item?.цена ? <span> · {rub(item.цена)}/шт</span> : null}</p>
+                <p className="sv-item">
+                  {p.сверка.статус === 'нет' && <span className="muted">Ближайший в каталоге: </span>}
+                  <b>{prod.name}</b>{p.сверка.артикул && <span className="mono"> · {p.сверка.артикул}</span>}{item?.цена ? <span> · {rub(item.цена)}/шт</span> : null}
+                  {prod.note && <span className="prod-note">{prod.note}</span>}
+                </p>
               ) : <p className="sv-item">Подходящего товара нет в ассортименте.</p>}
-              {p.сверка.расхождения.length > 0 && p.сверка.статус !== 'нет' && (
+              {p.сверка.причина && <p className="sv-reason">{p.сверка.причина}.</p>}
+              {p.сверка.расхождения.length > 0 && (
                 <ul className="diffs">
-                  {p.сверка.расхождения.map((d, i) => <li key={i}><b>{d.характеристика}:</b> нужно {d.требуется}, у товара {d.у_товара}</li>)}
+                  {p.сверка.расхождения.slice(0, 3).map((d, i) => <li key={i}><b>{d.характеристика}:</b> нужно {d.требуется}, у товара {d.у_товара}</li>)}
                 </ul>
+              )}
+              {(p.сверка.расхождения.length > 3 || (p.сверка.проверить && p.сверка.проверить.length > 0)) && (
+                <details className="sv-more">
+                  <summary>Ещё: {p.сверка.расхождения.length > 3 ? `расхождений ${p.сверка.расхождения.length - 3}` : ''}{p.сверка.расхождения.length > 3 && p.сверка.проверить?.length ? ', ' : ''}{p.сверка.проверить?.length ? `проверить вручную ${p.сверка.проверить.length}` : ''}</summary>
+                  {p.сверка.расхождения.length > 3 && <ul className="diffs">{p.сверка.расхождения.slice(3).map((d, i) => <li key={i}><b>{d.характеристика}:</b> нужно {d.требуется}, у товара {d.у_товара}</li>)}</ul>}
+                  {p.сверка.проверить && p.сверка.проверить.length > 0 && <><p className="hint">Движок не смог проверить сам, смотреть по паспорту товара:</p><ul className="diffs">{p.сверка.проверить.map((x, i) => <li key={i}>{x}</li>)}</ul></>}
+                </details>
               )}
             </div>
           </li>
@@ -205,39 +236,61 @@ function TzBox({ t, onResult, hasBase }: { t: TenderView; onResult: (s: Sverka) 
   );
 }
 
+function ModeChip({ m }: { m: NatMode }) {
+  return <span className={`mode-chip mode-${m === 'запрет' ? 'ban' : m === 'ограничение' ? 'limit' : m === 'преимущество' ? 'pref' : 'unk'}`}>{MODE_TITLE[m]}</span>;
+}
+
 function NatReg({ t, s, catalog }: { t: TenderView; s?: Sverka | null; catalog: CatalogItem[] }) {
+  const rows = (s?.позиции || []).map((p) => ({ p, info: natInfo(p.окпд2) }));
+  const counts = modeCounts((s?.позиции || []).map((p) => p.окпд2));
+  const inNotice = s?.закупка.нацрежим_в_извещении;
   return (
     <div className="natreg">
-      <p>Для компьютерной техники, оборудования связи, аудио-видеотехники и измерительных приборов могут действовать <b>запрет</b>, <b>ограничение</b> или <b>преимущество</b> для российских товаров — по постановлению Правительства РФ от 23.12.2024 № 1875 («национальный режим»). Какая мера действует, сказано в извещении {t.закон === '223-ФЗ' ? 'и документации о закупке' : 'о закупке'}.</p>
-      <ol className="check-steps">
-        <li>Найти в извещении, какая мера применяется: запрет, ограничение или преимущество.</li>
-        <li>Проверить коды ОКПД2 и КТРУ позиций: попадают ли они в перечни постановления № 1875.</li>
-        <li>Проверить товар в реестрах: российской промышленной продукции (ГИСП), российской радиоэлектронной продукции, евразийской промышленной продукции.</li>
-        <li>Выписать номер реестровой записи и срок её действия — их указывают в заявке.</li>
-        <li>При запрете иностранный товар не подавать. При преимуществе у российского товара выгода при сравнении цен — размер в извещении.</li>
-      </ol>
+      <p>Для компьютерной техники, связи, аудио-видеотехники и измерительных приборов действует национальный режим по постановлению Правительства РФ от 23.12.2024 № 1875. Мера зависит от кода ОКПД2 позиции: для оргтехники (26.20) это почти всегда <b>ограничение</b>, а не запрет. Окончательно меру определяют по извещению {t.закон === '223-ФЗ' ? 'и документации о закупке' : 'о закупке'}.</p>
+      <ul className="mode-legend">
+        {(['запрет', 'ограничение', 'преимущество', 'неизвестно'] as NatMode[]).map((m) => (
+          <li key={m}><ModeChip m={m} /> <span>{MODE_MEANING[m]}</span></li>
+        ))}
+      </ul>
       {s && (
-        <div className="table-scroll" tabIndex={0} role="region" aria-label="Происхождение товаров">
-          <table className="data-table stack-sm">
-            <thead><tr><th scope="col">Позиция</th><th scope="col">Товар</th><th scope="col">Страна (из прайса)</th><th scope="col">Что сделать</th></tr></thead>
-            <tbody>
-              {s.позиции.filter((p) => p.сверка.статус !== 'нет').map((p) => {
-                const item = findItem(catalog, p.сверка.артикул, p.сверка.товар_из_каталога);
-                const ru = item && /росси/i.test(item.страна);
-                return (
-                  <tr key={p['№']}>
-                    <td data-label="Позиция"><b>{p.наименование}</b></td>
-                    <td data-label="Товар">{p.сверка.товар_из_каталога}</td>
-                    <td data-label="Страна (из прайса)">{item?.страна || 'нет в прайсе'}</td>
-                    <td data-label="Что сделать">{ru ? 'Найти номер реестровой записи в ГИСП и срок действия' : 'Иностранный товар: при запрете не подходит — подобрать российский аналог'}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+        <>
+          <p className="nat-sum">
+            {inNotice === true && <><b>В извещении указан национальный режим.</b> </>}
+            {inNotice === false && <><b>В извещении нацрежим не указан</b>, всё равно проверьте условия. </>}
+            По позициям: {(['запрет', 'ограничение', 'преимущество', 'неизвестно'] as NatMode[]).filter((m) => counts[m] > 0).map((m) => `${MODE_TITLE[m].toLowerCase()} — ${counts[m]}`).join(', ') || 'нет позиций'}.
+          </p>
+          <div className="table-scroll" tabIndex={0} role="region" aria-label="Нацрежим по позициям">
+            <table className="data-table nat-table stack-sm">
+              <thead><tr><th scope="col">Позиция</th><th scope="col">Режим по ОКПД2</th><th scope="col">Товар и реестры</th><th scope="col">Что сделать</th></tr></thead>
+              <tbody>
+                {rows.map(({ p, info }) => {
+                  const item = findItem(catalog, p.сверка.артикул, p.сверка.товар_из_каталога);
+                  const claim = item?.реестр || (item && /росси/i.test(item.страна) ? `страна: ${item.страна}` : '');
+                  return (
+                    <tr key={p['№']}>
+                      <td data-label="Позиция"><b>{p.наименование}</b><br /><span className="mono muted">{p.окпд2 ? `ОКПД2 ${p.окпд2}` : 'код ОКПД2 не указан'}</span></td>
+                      <td data-label="Режим"><ModeChip m={info.mode} />{info.rule && <><br /><span className="muted small">{info.rule.что}; {info.rule.где}</span></>}</td>
+                      <td data-label="Товар и реестры">
+                        {item ? <>{splitProduct(item.наименование).name}<br /><span className="muted small">{claim ? `Заявлено производителем: ${claim}. Номер записи проверить в ГИСП.` : 'Данных о реестре в каталоге нет: проверить в ГИСП.'}</span></> : <span className="muted">товар не подобран</span>}
+                      </td>
+                      <td data-label="Что сделать">{whatToDo(info, t.закон)}{info.rule?.заметка && <><br /><span className="muted small">{info.rule.заметка}</span></>}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </>
       )}
-      <SourceNote>Подсказка, а не вывод. Не юридическая консультация: меру и перечни проверяют по извещению и тексту постановления.</SourceNote>
+      {!s && (
+        <ol className="check-steps">
+          <li>Найти в извещении, какая мера применяется: запрет, ограничение или преимущество.</li>
+          <li>Проверить коды ОКПД2 и КТРУ позиций по приложениям № 1 и № 2 постановления № 1875.</li>
+          <li>Проверить товар в реестре российской промышленной продукции (ГИСП) и выписать номер записи и срок её действия.</li>
+          <li>При запрете иностранный товар не подавать. При ограничении предлагать товар с записью в реестре. При преимуществе учесть 15% в цене.</li>
+        </ol>
+      )}
+      <SourceNote>Таблица режимов — из блока «Правила» (постановление № 1875 в редакции от 17.10.2026, открытая версия приложений; их хвосты обрезаны). Это подсказка, а не вывод. Не юридическая консультация: меру и перечни проверяют по извещению и тексту постановления.</SourceNote>
     </div>
   );
 }
@@ -256,6 +309,7 @@ function PriceBlock({ t, s, catalog }: { t: TenderView; s?: Sverka | null; catal
     }
     return covered ? { sum, covered } : null;
   }, [s, catalog]);
+  const noPrices = Boolean(s) && !costFromCatalog;
   const [cost, setCost] = useState<number>(() => Math.round(costFromCatalog?.sum ?? nmc * 0.72));
   if (!found || !nmc) return <p>Для этой закупки нет данных о цене.</p>;
   const row = found.row;
@@ -301,7 +355,11 @@ function PriceBlock({ t, s, catalog }: { t: TenderView; s?: Sverka | null; catal
         <label className="inline-field">Себестоимость поставки, ₽
           <input type="number" min={0} step={1000} value={cost} onChange={(e) => setCost(Number(e.target.value) || 0)} />
         </label>
-        <p className="hint">{costFromCatalog ? `Посчитано по ценам из прайса: ${partOfNmcCovered}. Добавьте доставку и прочие расходы.` : 'Пример: 72% от НМЦ. Введите свою себестоимость.'}</p>
+        <p className="hint">{costFromCatalog
+          ? `Посчитано по ценам из прайса: ${partOfNmcCovered}. Добавьте доставку и прочие расходы.`
+          : noPrices
+            ? 'Цены в демо-каталоге нет — введите свою себестоимость. Сейчас в поле стоит условный пример: 72% от НМЦ. Это не расчёт.'
+            : 'Пример: 72% от НМЦ. Введите свою себестоимость.'}</p>
         <div className="table-scroll" tabIndex={0} role="region" aria-label="Маржа">
           <table className="data-table margin-table">
             <thead><tr><th scope="col">Цена</th><th scope="col" className="num">Сумма</th><th scope="col" className="num">Маржа</th><th scope="col" className="num">Маржа, %</th></tr></thead>

@@ -1,7 +1,7 @@
 import { useMemo, useRef, useState, type DragEvent } from 'react';
 import { DemoMark, Frame, SectionHead } from '../../components/ui';
 import { analyzeRows, buildCatalog, FIELD_LABELS, parseCsvText, readFileRows, type FieldKey, type ParsedSheet } from '../../lib/catalog';
-import { samplePriceCsv } from '../../data';
+import { engineCatalog, samplePriceCsv } from '../../data';
 import { num, rub } from '../../lib/format';
 import { href } from '../../router';
 import { useApp } from '../../state';
@@ -9,7 +9,7 @@ import { useApp } from '../../state';
 const FIELDS = Object.keys(FIELD_LABELS) as FieldKey[];
 
 export default function Assortment() {
-  const { catalog, catalogSource, isSample, setCatalog, resetCatalog } = useApp();
+  const { catalog, catalogSource, catalogKind, isSample, setCatalog, useBuiltin } = useApp();
   const [parsed, setParsed] = useState<ParsedSheet | null>(null);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
@@ -36,7 +36,7 @@ export default function Assortment() {
 
   function useSample() {
     setError(''); setSaved(false);
-    setParsed(analyzeRows('пример прайса оргтехники', parseCsvText(samplePriceCsv), ['Встроенный пример: 47 позиций оргтехники, связи и аудио-видео.']));
+    setParsed(analyzeRows('пример прайса оргтехники', parseCsvText(samplePriceCsv), ['Встроенный пример прайса: 47 позиций оргтехники, связи и аудио-видео, цены условные. Он отличается от демо-каталога, по которому сделаны сверки.']));
   }
 
   function setField(i: number, f: FieldKey) {
@@ -65,7 +65,7 @@ export default function Assortment() {
 
   return (
     <>
-      <SectionHead n={1} kicker="Демо-кабинет · раздел 1 из 5" title="Ваш ассортимент" lead="Загрузите прайс в Excel (.xlsx) или CSV. Мы найдём шапку таблицы, поймём, где наименование, цена и характеристики, и будем сверять с ним техзадания." />
+      <SectionHead n={1} kicker="Демо-кабинет · раздел 1 из 5" title="Ваш ассортимент" lead="Загрузите прайс в Excel (.xlsx) или CSV. Мы найдём шапку таблицы, поймём, где наименование, цена и характеристики, и будем сверять с ним техзадания. Пока вы ничего не загрузили, в кабинете лежит демо-каталог: именно по нему сделаны сверки на реальных закупках." />
 
       <div className="assort-top">
         <div
@@ -78,7 +78,7 @@ export default function Assortment() {
           <p>или</p>
           <div className="cta-row center">
             <button type="button" className="btn btn-solid" onClick={() => input.current?.click()} disabled={busy}>{busy ? 'Читаю файл…' : 'Выбрать файл'}</button>
-            <button type="button" className="btn" onClick={useSample}>Взять пример прайса</button>
+            <button type="button" className="btn" onClick={useSample}>Разобрать пример прайса</button>
           </div>
           <input ref={input} type="file" accept=".xlsx,.csv,.txt" hidden onChange={(e) => { onFile(e.target.files?.[0]); e.target.value = ''; }} />
           <p className="dz-note">Файл обрабатывается в вашем браузере и никуда не отправляется.</p>
@@ -86,9 +86,14 @@ export default function Assortment() {
         <Frame className="assort-current">
           <h3>Сейчас в кабинете</h3>
           <p className="big-num">{num(catalog.length)} <small>позиций</small></p>
-          <p>Источник: {catalogSource} {isSample && <DemoMark>пример</DemoMark>}</p>
-          <p className="downloads">Пример прайса для проверки: <a href="./primer_praysa_orgtehniki.xlsx" download>.xlsx</a> · <a href="./primer_praysa_orgtehniki.csv" download>.csv</a></p>
-          {!isSample && <button type="button" className="btn btn-small" onClick={resetCatalog}>Вернуть пример</button>}
+          <p>Источник: {catalogSource} {isSample && <DemoMark>{catalogKind === 'движок' ? 'демо-каталог' : 'пример'}</DemoMark>}</p>
+          {catalogKind === 'движок' && <p className="hint">Цен в демо-каталоге нет: производители их не публикуют. Себестоимость вы вводите сами в карточке тендера.</p>}
+          <p className="downloads">Скачать для проверки: <a href="./katalog_demo.xlsx" download>демо-каталог движка, .xlsx</a> · пример прайса: <a href="./primer_praysa_orgtehniki.xlsx" download>.xlsx</a>, <a href="./primer_praysa_orgtehniki.csv" download>.csv</a></p>
+          <div className="cta-row">
+            {catalogKind !== 'движок' && engineCatalog.length > 0 && <button type="button" className="btn btn-small" onClick={() => useBuiltin('движок')}>Вернуть демо-каталог</button>}
+            {catalogKind === 'движок' && <button type="button" className="btn btn-small" onClick={() => useBuiltin('пример')}>Заменить на пример прайса</button>}
+            {catalogKind === 'свой' && <button type="button" className="btn btn-small" onClick={() => useBuiltin('пример')}>Заменить на пример прайса</button>}
+          </div>
         </Frame>
       </div>
 
@@ -161,6 +166,25 @@ export default function Assortment() {
           <ul className="cat-list">
             {cats.map(([c, n]) => <li key={c}><span>{c}</span><b>{n}</b></li>)}
           </ul>
+          <details className="legend all-models">
+            <summary>Показать все {catalog.length} {catalog.length === 1 ? 'позицию' : 'позиций'} ассортимента</summary>
+            <div className="table-scroll" tabIndex={0} role="region" aria-label="Все позиции ассортимента">
+              <table className="data-table stack-sm">
+                <thead><tr><th scope="col">Артикул</th><th scope="col">Модель</th><th scope="col">Категория</th><th scope="col">Что известно о реестрах</th><th scope="col" className="num">Цена</th></tr></thead>
+                <tbody>
+                  {catalog.map((p) => (
+                    <tr key={p.артикул + p.наименование}>
+                      <td className="mono" data-label="Артикул">{p.артикул}</td>
+                      <td data-label="Модель"><b>{p.наименование}</b>{p.источник_url && <> <a className="src-link" href={p.источник_url} target="_blank" rel="noopener noreferrer">страница производителя</a></>}</td>
+                      <td data-label="Категория">{p.категория}</td>
+                      <td className="specs-cell" data-label="Реестры">{p.реестр || (p.страна ? `страна: ${p.страна}` : '—')}</td>
+                      <td className="num" data-label="Цена">{p.цена ? rub(p.цена) : 'нет данных'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </details>
           <p className="hint">Дальше: <a href={href('/demo/tendery')}>подходящие тендеры →</a></p>
         </section>
       )}

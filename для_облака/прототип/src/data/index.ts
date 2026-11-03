@@ -7,11 +7,13 @@
 //    если они есть, показываем их ВМЕСТО демо-примеров;
 //  - price_table_h.json — таблица цены блока H (если есть), иначе своя оценка.
 
-import type { MarketNiche, NicheCode, PriceRow, Sverka, Tender, TenderView } from '../types';
+import type { CatalogItem, MarketNiche, NicheCode, PriceRow, Sverka, Tender, TenderView } from '../types';
 import tendersRaw from './tenders.json';
 import marketRaw from './market.json';
 import ownPrice from './price_table_own.json';
 import sampleCsv from './sample_price.csv?raw';
+import catalogDemoRaw from './catalog_demo.json';
+import articlesRaw from './articles.json';
 
 const hPriceMod = import.meta.glob('./price_table_h.json', { eager: true, import: 'default' }) as Record<string, PriceRow[]>;
 const demoMods = import.meta.glob('./sverka/*.json', { eager: true, import: 'default' }) as Record<string, Sverka>;
@@ -32,10 +34,24 @@ export const priceSource = hPrice && hPrice.length
 
 const engine = Object.values(engineMods).filter((s) => s && s.закупка && Array.isArray(s.позиции));
 export const sverkaFromEngine = engine.length > 0;
-export const sverkaList: Sverka[] = sverkaFromEngine ? engine : Object.values(demoMods);
+/** Насколько «подходит» закупка для показа: больше зелёных и жёлтых, не слишком длинное ТЗ */
+const showScore = (s: Sverka) => (s.итог.подходит * 3 + s.итог.почти * 2) * 10 - (s.позиции.length > 8 ? 100 : 0) - Math.floor(s.позиции.reduce((n, p) => n + p.характеристики.length, 0) / 4) + Math.min(s.позиции.length, 4);
+export const sverkaList: Sverka[] = (sverkaFromEngine ? [...engine].sort((a, b) => showScore(b) - showScore(a)) : Object.values(demoMods));
 export const sverkaSource = sverkaFromEngine
-  ? 'движок сверки техзадания, демо-режим'
+  ? 'движок сверки техзадания (демо-режим, правила без ИИ-ключа) по реальным извещениям ЕИС'
   : 'демо, пример: сверка подготовлена вручную в формате движка сверки';
+
+/** Точность — одной строкой, по движок/отчёт.md от 3 ноября 2026 */
+export const ACCURACY_NOTE = 'Точность: характеристики из извещения ЕИС движок прочитал верно в 102 из 102 случаев эталона; статус сверки совпал с ручной разметкой в 16 из 16 позиций, найденные расхождения настоящие в 95% случаев (107 из 113). Выборка небольшая — до продакшена нужна проверка на 100+ позиций вместе с тендерщиком.';
+export const NET_NOTE = 'Каталог — 58 реальных моделей из демо-каталога (без цен), поэтому «нет товара» чаще всего значит «нет в этом каталоге», а не «поставщик не найдёт».';
+
+/** Каталог, по которому движок делал сверку (движок/каталог_демо.xlsx), 58 моделей, без цен */
+export const engineCatalog: CatalogItem[] = catalogDemoRaw as unknown as CatalogItem[];
+
+export interface ArticleData { slug: string; title: string; заголовок: string; description: string; date: string; tags: string[]; слов: number; html: string }
+export interface FaqGroup { тема: string; вопросы: { вопрос: string; ответ: string }[] }
+export const articles: ArticleData[] = (articlesRaw as unknown as { статьи: ArticleData[] }).статьи;
+export const faq: FaqGroup[] = (articlesRaw as unknown as { faq: FaqGroup[] }).faq;
 
 export const samplePriceCsv: string = sampleCsv;
 
@@ -101,7 +117,7 @@ function viewFromSverka(s: Sverka): TenderView {
     ниша: guessNiche(s),
     закон: z.закон,
     способ: method,
-    статус: 'Подача заявок (демо)',
+    статус: sverkaFromEngine ? 'Извещение ЕИС (разобрано движком)' : 'Подача заявок (демо)',
     нмц: z.нмц || null,
     // В формате движка нет обеспечения — не выдумываем, в «Сроках и деньгах» его вводят вручную.
     обеспечение_заявки: null,
@@ -113,12 +129,14 @@ function viewFromSverka(s: Sverka): TenderView {
     цена_победителя: null,
     история_заказчика: null,
     бейджи: [
-      { код: 'natreg', текст: 'нацрежим', почему: 'группа товаров, где обычно действует нацрежим (ПП РФ № 1875) — проверить по извещению' },
+      { код: 'natreg', текст: 'нацрежим', почему: z.нацрежим_в_извещении ? 'в извещении указан национальный режим (ПП РФ № 1875)' : 'группа товаров, где обычно действует нацрежим (ПП РФ № 1875) — проверить по извещению' },
       ...(brandNoEquiv ? [{ код: 'svoy' as const, текст: 'под своего?', почему: 'есть требования без «или эквивалент»' }] : []),
     ],
     риски: risks,
     sverka: s,
-    источник: sverkaFromEngine ? 'движок сверки, демо-режим' : 'демо, пример (позиции составлены для показа)',
+    ссылка: z.ссылка || undefined,
+    источник_документа: z.источник_документа || undefined,
+    источник: sverkaFromEngine ? 'реальное извещение ЕИС, сверка движка (демо-режим)' : 'демо, пример (позиции составлены для показа)',
   };
 }
 

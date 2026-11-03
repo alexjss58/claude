@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react';
 import { Badge, DemoMark, Frame, SectionHead, SourceNote, Status } from '../../components/ui';
-import { NICHE_NAMES, regions, SOURCE_NOTE, sverkaSource, sverkaViews, tenderViews, tendersMeta } from '../../data';
+import { NET_NOTE, NICHE_NAMES, regions, SOURCE_NOTE, sverkaFromEngine, sverkaSource, sverkaViews, tenderViews, tendersMeta } from '../../data';
 import { matchHint } from '../../lib/match';
-import { num, pct, rubShort, plural } from '../../lib/format';
+import { niceName, num, pct, rubShort, plural } from '../../lib/format';
 import { href } from '../../router';
 import { useApp } from '../../state';
 import type { Badge as BadgeT, TenderView } from '../../types';
@@ -29,6 +29,7 @@ export default function Tenders() {
   const [onlyMatch, setOnlyMatch] = useState(false);
   const [sort, setSort] = useState<'date' | 'nmc' | 'match'>('match');
   const [limit, setLimit] = useState(PAGE);
+  const [showAllReady, setShowAllReady] = useState(false);
 
   const withHints = useMemo(() => tenderViews.map((t) => ({ t, hint: matchHint(t.предмет, catalog) })), [catalog]);
 
@@ -64,13 +65,16 @@ export default function Tenders() {
 
       <Frame ornate className="ready-block">
         <div className="ready-head">
-          <h3>Готова сверка техзадания</h3>
-          <DemoMark>{sverkaSource.startsWith('демо') ? 'демо, пример' : 'движок, демо-режим'}</DemoMark>
+          <h3>{sverkaFromEngine ? `Реальные закупки со сверкой техзадания: ${sverkaViews.length}` : 'Готова сверка техзадания'}</h3>
+          <DemoMark>{sverkaFromEngine ? 'сверка: демо-режим движка' : 'демо, пример'}</DemoMark>
         </div>
-        <p className="hint">{sverkaSource}. Откройте карточку, чтобы увидеть сверку по позициям, цену, риски и черновик заявки.</p>
+        <p className="hint">{sverkaSource}. Откройте карточку, чтобы увидеть сверку по позициям, нацрежим, цену, риски и черновик заявки.{sverkaFromEngine ? ` ${NET_NOTE}` : ''}</p>
         <ul className="ready-list">
-          {sverkaViews.map((t) => <ReadyItem key={t.key} t={t} />)}
+          {(showAllReady ? sverkaViews : sverkaViews.slice(0, 6)).map((t) => <ReadyItem key={t.key} t={t} />)}
         </ul>
+        {sverkaViews.length > 6 && (
+          <button type="button" className="btn btn-small" onClick={() => setShowAllReady(!showAllReady)}>{showAllReady ? 'Свернуть список' : `Показать все ${sverkaViews.length}`}</button>
+        )}
       </Frame>
 
       <h3 className="h3-rule">Закупки из выгрузки Тендерплана <DemoMark>завершённые</DemoMark></h3>
@@ -151,6 +155,7 @@ function ReadyItem({ t }: { t: TenderView }) {
     <li>
       <a href={href(`/demo/tender/${t.key}`)} className="ready-item">
         <span className="ready-title">{t.предмет}</span>
+        <span className="ready-meta">{niceName(t.заказчик)}</span>
         <span className="ready-meta">{t.закон} · {t.способ} · {rubShort(t.нмц)} · {t.регион}</span>
         <span className="ready-tally">
           <Status s="подходит" /> {s.итог.подходит}

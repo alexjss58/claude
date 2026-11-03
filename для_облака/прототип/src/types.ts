@@ -74,6 +74,10 @@ export interface Позиция {
     товар_из_каталога: string;
     артикул: string;
     расхождения: Расхождение[];
+    /** Одна строка от движка: почему такой статус */
+    причина?: string;
+    /** Что движок не смог проверить сам — смотреть вручную */
+    проверить?: string[];
   };
 }
 
@@ -90,6 +94,8 @@ export interface Sverka {
     дата_окончания: string;
     ссылка: string;
     источник_документа: string;
+    нацрежим_в_извещении?: boolean | null;
+    разобрано?: string;
   };
   позиции: Позиция[];
   итог: { подходит: number; почти: number; нет: number };
@@ -120,6 +126,11 @@ export interface CatalogItem {
   страна: string;
   цена: number | null;
   остаток: number | null;
+  /** Только у демо-каталога движка */
+  реестр?: string;
+  окпд2?: string;
+  источник_url?: string;
+  примечание?: string;
 }
 
 export interface MarketNiche {
@@ -161,5 +172,7 @@ export interface TenderView {
   риски: string[];
   номер?: string;
   sverka?: Sverka;
+  ссылка?: string; // страница извещения в ЕИС, если есть в данных
+  источник_документа?: string;
   источник: string; // откуда данные — показываем на экране
 }

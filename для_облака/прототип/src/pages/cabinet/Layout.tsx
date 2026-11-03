@@ -52,8 +52,8 @@ export default function CabinetLayout({ section, tenderId, children }: { section
           </div>
         </div>
         <div className="demo-banner" role="note">
-          <strong>ДЕМО.</strong> Поставщик «Пример-Оргтехника» — вымышленный. Закупки — реальные завершённые из выгрузки Тендерплана; сверки и прайс — примеры.
-          {' '}Ассортимент: {catalog.length} поз. {isSample ? '(пример)' : '(ваш файл)'}.
+          <strong>ДЕМО.</strong> Поставщик «Пример-Оргтехника» — вымышленный. Закупки и их извещения реальные; каталог, сверка и расчёты — демонстрационные.
+          {' '}Ассортимент: {catalog.length} поз. {isSample ? '(демо-каталог)' : '(ваш файл)'}.
         </div>
       </header>
       <div className="cab-body">

@@ -69,3 +69,11 @@ export function roman(n: number): string {
   for (const [v, s] of map) while (n >= v) { out += s; n -= v; }
   return out;
 }
+
+/** «ГОСУДАРСТВЕННОЕ УЧРЕЖДЕНИЕ "ИМЯ"» -> «Государственное учреждение "Имя"»: ЕИС отдаёт названия заглавными буквами */
+export function niceName(s: string): string {
+  const letters = s.replace(/[^A-Za-zА-Яа-яЁё]/g, '');
+  if (!letters || letters !== letters.toUpperCase()) return s.replace(/\s+/g, ' ').trim();
+  const low = s.toLowerCase().replace(/\s+/g, ' ').trim();
+  return low.replace(/(^|["«(]\s?)(\p{L})/gu, (_m, a: string, b: string) => a + b.toUpperCase());
+}
