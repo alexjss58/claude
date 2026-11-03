@@ -259,7 +259,7 @@ def build_model(ws, col, title):
     add("ncf", "Денежный поток за месяц (EBITDA − налог)", "₽", lambda c, p, i: f"={c}{R['ebitda']}-{c}{R['tax']}", NF_INT, True, True)
     add("cum", "Накопленный денежный поток (без стартового капитала)", "₽", lambda c, p, i: f"={c}{R['ncf']}" if p is None else f"={p}{R['cum']}+{c}{R['ncf']}", NF_INT, False, True)
     add("cash", "Остаток денег (со стартовым капиталом)", "₽", lambda c, p, i: f"={a('cash0')}+{c}{R['cum']}", NF_INT, False, True)
-    add("flag", "Метка: EBITDA > 0", "1/0", lambda c, p, i: f"=IF({c}{R['ebitda']}>0,1,0)", '0', False)
+    add("flag", "Метка: EBITDA > 0 в этом и во всех следующих месяцах", "1/0", lambda c, p, i: f"=IF(MIN({c}{R['ebitda']}:${CL}{R['ebitda']})>0,1,0)", '0', False)
     add("flagc", "Метка: накопленный поток ≥ 0", "1/0", lambda c, p, i: f"=IF({c}{R['cum']}>=0,1,0)", '0', False)
     add("hc", "Всего сотрудников", "чел", lambda c, p, i: f"=1+1+IF({c}$3>={a('sale_m')},1,0)+{c}{R['hc_cm']}+{c}{R['hc_rev']}", '0', False)
     add("arpu", "Справка: выручка на активного клиента", "₽", lambda c, p, i: f"=IF({c}{R['active']}=0,0,{c}{R['rev']}/{c}{R['active']})", NF_INT, False)
@@ -326,7 +326,7 @@ metrics = [
  ("Валовая маржа, 24-й месяц", lambda sh, c: f"={cell_(sh,'gmp',24)}", NF_PCT, "после переменных расходов, включая штат проверяющих"),
  ("EBITDA, 12-й месяц, ₽", lambda sh, c: f"={cell_(sh,'ebitda',12)}", NF_INT, ""),
  ("EBITDA, 24-й месяц, ₽", lambda sh, c: f"={cell_(sh,'ebitda',24)}", NF_INT, ""),
- ("Точка безубыточности: первый месяц с EBITDA > 0 (№ месяца)", lambda sh, c: f'=IFERROR(MATCH(1,{rng_(sh,"flag")},0),"не за 24 мес.")', '0', "месяц 1 = декабрь 2026; проверить, что дальше EBITDA не уходит снова в минус"),
+ ("Точка безубыточности: месяц, с которого EBITDA > 0 и не падает ниже (№)", lambda sh, c: f'=IFERROR(MATCH(1,{rng_(sh,"flag")},0),"не за 24 мес.")', '0', "месяц 1 = декабрь 2026; ступени найма могут давать временные провалы, поэтому берём устойчивый плюс"),
  ("Окупаемость: первый месяц, когда накопленный поток ≥ 0 (№)", lambda sh, c: f'=IFERROR(MATCH(1,{rng_(sh,"flagc")},0),"не за 24 мес.")', '0', "может не наступить в первые 24 месяца"),
  ("ПИК ОТРИЦАТЕЛЬНОГО КЭША (минимум накопленного потока), ₽", lambda sh, c: f"=MIN(0,MIN({rng_(sh,'cum')}))", NF_INT, "столько денег нужно привлечь, чтобы дожить до выхода в плюс (без запаса)"),
  ("Месяц пика (№)", lambda sh, c: f"=IF(MIN({rng_(sh,'cum')})>=0,0,MATCH(MIN({rng_(sh,'cum')}),{rng_(sh,'cum')},0))", '0', ""),
