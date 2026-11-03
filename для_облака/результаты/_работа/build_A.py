@@ -140,7 +140,11 @@ def build():
     all_rows = getattr(build, "all_rows", {})
     for sh in SHEETS:
         cand = [(row, c) for s, row, c in best_rows if s == sh and c.get("профиль")]
-        cand.sort(key=lambda rc: (order.get(rc[1].get("малый_без_тендерного_отдела") or "неясно", 1), -rc[0][3]))
+        def mail_tier(c):
+            r = (c.get("надёжность") or {}).get("почта") or ""
+            return 0 if r in ("подтверждено на сайте компании", "из справочника") else 1
+        # Сначала надёжные почты (сайт/справочник), затем «малый без тендерного отдела», затем по победам.
+        cand.sort(key=lambda rc: (mail_tier(rc[1]), order.get(rc[1].get("малый_без_тендерного_отдела") or "неясно", 1), -rc[0][3]))
         chosen = cand[:10]
         # Добор до 10: лидеры ниши без найденной почты — почту взять из карточки Тендерплана / ЕИС (из России).
         taken = {row[0] for row, _ in chosen}

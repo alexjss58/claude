@@ -403,6 +403,18 @@ def deep_clean(o):
     return nn(o)
 
 
+def leaders() -> list[dict]:
+    """Топ-5 поставщиков по победам за квартал (файл Suppliers_top3_niches_3nov.xlsx), без названий компаний."""
+    path = ROOT / "данные" / "Suppliers_top3_niches_3nov.xlsx"
+    out = []
+    for sheet, key in (("Связь и аудио-видео 26.3-26.4", "svyaz"), ("Приборы 26.51", "pribory")):
+        d = pd.read_excel(path, sheet_name=sheet)
+        d = d[d["Участий за квартал"].notna()].head(5)
+        out.append({"код": key, "поставщики": [
+            {"место": int(r["№"]), "участий": int(r["Участий за квартал"]), "побед": int(r["Побед"])} for _, r in d.iterrows()]})
+    return out
+
+
 def stable_id(row) -> str:
     key = f"{row['Предмет закупки']}|{row['Заказчик']}|{row['НМЦ']}|{row['Дата окончания']}"
     return "T" + hashlib.sha1(key.encode("utf-8")).hexdigest()[:8]
@@ -473,7 +485,10 @@ def main():
     (OUT_DIR / "tenders.json").write_text(
         json.dumps(deep_clean({"meta": meta, "закупки": tenders}), ensure_ascii=False, separators=(",", ":"), allow_nan=False), encoding="utf-8")
     (OUT_DIR / "price_table_own.json").write_text(json.dumps(pt, ensure_ascii=False, indent=1), encoding="utf-8")
-    (OUT_DIR / "market.json").write_text(json.dumps(market(df), ensure_ascii=False, indent=1), encoding="utf-8")
+    m = market(df)
+    m["лидеры"] = leaders()
+    m["лидеры_источник"] = "данные/Suppliers_top3_niches_3nov.xlsx: Тендерплан, лист «Подрядчики» за квартал; названия компаний скрыты"
+    (OUT_DIR / "market.json").write_text(json.dumps(m, ensure_ascii=False, indent=1), encoding="utf-8")
 
     print(f"Закупок в демо: {len(tenders)}  (связь: {sum(t['ниша'] == 'svyaz' for t in tenders)}, "
           f"приборы: {sum(t['ниша'] == 'pribory' for t in tenders)})")

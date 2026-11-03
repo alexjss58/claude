@@ -176,7 +176,11 @@ const CATEGORY_BY_NAME: [RegExp, string][] = [
   [/телевизор/i, 'Телевизор'], [/(радиостанц|рация)/i, 'Радиостанция'], [/планшет/i, 'Планшет'],
 ];
 
+// Аксессуар «для IP-телефона» — не IP-телефон: если название начинается с такого слова, категорию не угадываем.
+const ACCESSORY_RE = /^\s*(консол|кронштейн|кабел|картридж|тонер|блок\w* питани|сумк|чехол|адаптер|переходник|креплени|держател|запчаст|комплектующ|лицензи)/i;
+
 export function categoryFromName(name: string): string {
+  if (ACCESSORY_RE.test(name)) return 'Прочее';
   for (const [re, c] of CATEGORY_BY_NAME) if (re.test(name)) return c;
   return 'Прочее';
 }
