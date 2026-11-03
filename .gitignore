@@ -7,3 +7,8 @@ market_dr_card_scan/downloaded manually/
 *.xlsx
 ~$*
 market_dr_card_scan/cashback_design/cashback-playbook*.html
+
+# Тендер под ключ: результаты в Excel нужно коммитить
+!для_облака/**/*.xlsx
+для_облака/**/node_modules/
+для_облака/**/.venv/
