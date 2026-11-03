@@ -50,6 +50,11 @@ def _col_type(cell: str) -> str | None:
     for t, pats in COLS:
         if any(re.search(p, c) for p in pats):
             return t
+    # PDF рвёт слова в узких колонках («Количе ство») — сравниваем без пробелов
+    c2 = re.sub(r"\s+", "", c)
+    for t, pats in COLS:
+        if any(re.search(p.replace(" ", ""), c2) for p in pats):
+            return t
     return None
 
 
@@ -71,7 +76,10 @@ def _num(s: str) -> float | None:
 
 
 def _codes(text: str) -> tuple[str, str]:
+    text = re.sub(r"(\d)\s*-\s*(\d{8})", r"\1-\2", text or "")
     k = KTRU_RE.search(text or "")
+    if not k:
+        k = KTRU_RE.search(re.sub(r"(?<=\d)\s+(?=\d)", "", text or ""))
     o = OKPD_RE.search(text or "") or OKPD_BARE.search(text or "")
     ktru = k.group(1) if k else ""
     okpd = (o.group(1) if o else "") or (ktru.split("-")[0] if ktru else "")
@@ -101,6 +109,12 @@ class _Builder:
         if unit and not r.unit and r.op in (">=", "<=", "=", "диапазон") and r.vmin is not None or (unit and not r.unit and r.vmax is not None):
             r.unit = unit.strip()
         r.instruction = instr
+        il = (instr or "").lower()
+        if r.values and len(r.values) > 1 and il:
+            if "не может изменяться" in il or "все значения" in il:
+                r.all_values, r.op = True, "="
+            elif "одно" in il or "конкретное" in il:
+                r.all_values, r.op = False, "из_списка"
         self.cur.requirements.append(r)
         return r
 
@@ -143,11 +157,20 @@ def _parse_table(rows: list[list[str]], b: _Builder, context_name: str | None) -
 
 
 HEAD_RE = re.compile(r"^(?:позиция\s*)?(?:№\s*)?(\d{1,3})[.)]\s+(.{3,200})$", re.I)
-NAME_LINE_RE = re.compile(r"^(?:наименование товара|наименование позиции|товар|позиция(?:\s*№?\s*\d+)?)\s*[:—–-]\s*(.{3,200})$", re.I)
-CHAR_COLON_RE = re.compile(r"^[-–•*·]?\s*(?P<name>[A-Za-zА-Яа-яЁё0-9(][^:]{1,140}?)\s*(?::|\s[–—]\s)\s*(?P<val>.+)$")
+NAME_LINE_RE = re.compile(r"^(?:наименование товара|наименование позиции|(?:товар|позиция)(?:\s*№?\s*\d+)?)\s*[:—–-]\s*(.{3,200})$", re.I)
+CHAR_COLON_RE = re.compile(r"^[-–•*·]?\s*(?P<name>[A-Za-zА-Яа-яЁё0-9(].{1,160}?)\s*(?::\s|:$|\s[–—]\s)\s*(?P<val>.+)$")
 CHAR_COND_RE = re.compile(r"^[-–•*·]?\s*(?P<name>[A-Za-zА-Яа-яЁё][^:]{2,100}?)\s+(?P<val>(?:не\s+менее|не\s+более|не\s+ниже|не\s+выше|не\s+хуже|≥|≤|>=|<=|от\s+\d|более\s+\d|менее\s+\d|наличие|отсутствие)\b.*)$", re.I)
 QTY_LINE_RE = re.compile(r"^(?:количество|кол-во)\w*\s*(?:товара)?\s*[:—–-]?\s*(\d+(?:[.,]\d+)?)\s*([а-яa-z.]*)", re.I)
-SKIP_CHAR = re.compile(r"^(срок|место|адрес|условия|порядок|оплата|заказчик|поставщик|ктру|окпд|код|количество|кол-во|итого|всего|цена|стоимость|нмц|примечание)", re.I)
+SKIP_CHAR = re.compile(r"^(срок|место|адрес|условия|порядок|оплата|заказчик|поставщик|ктру|окпд|код\b|итого|всего|цена|стоимость|нмц|примечание)", re.I)
+SECTION_LINE = re.compile(r"^(требования к (сроку|месту|поставке|упаковке|гаранти|качеству|безопасности|маркировке)|срок поставки|место поставки|гарантийн|условия поставки|порядок)", re.I)
+
+
+def _clean_name(text: str) -> str:
+    """«Монитор (КТРУ …), количество: 10 шт.» -> «Монитор»."""
+    n = re.sub(r"\(\s*(?:код\s+)?(?:ктру|окпд)[^)]*\)", "", text, flags=re.I)
+    n = re.split(r"[,;]?\s*(?:количество|кол-во)\b|\s[—–]\s*\d|\s-\s\d|,\s*(?:ктру|окпд)|\s[—–-]\s*$", n, flags=re.I)[0]
+    n = QTY_RE.sub("", n)
+    return n.strip(" .,:;—–-")
 
 
 def _parse_paragraph(line: str, b: _Builder) -> None:
@@ -158,23 +181,26 @@ def _parse_paragraph(line: str, b: _Builder) -> None:
         name = m.group(1)
         ktru, okpd = _codes(name)
         q = QTY_RE.search(name)
-        name = re.sub(r"\(.*?(ктру|окпд).*?\)", "", name, flags=re.I)
-        name = QTY_RE.sub("", name) if q else name
-        b.start(re.split(r"\s[—–-]\s|,\s*КТРУ|\(КТРУ", name)[0], ktru, okpd, float(q.group(1).replace(",", ".")) if q else None)
+        b.start(_clean_name(name), ktru, okpd, float(q.group(1).replace(",", ".")) if q else None)
         return
     m = HEAD_RE.match(t)
     if m and len(t) < 220:
         body = m.group(2)
         bl = body.lower()
-        if re.search(PRODUCT_WORDS, bl) and not re.search(r"^(" + SECTION_WORDS + r")", bl) and ":" not in body.split("—")[0][:60]:
+        has_qty_or_code = bool(QTY_RE.search(body) or KTRU_RE.search(body) or OKPD_RE.search(body))
+        if (re.search(PRODUCT_WORDS, bl) or has_qty_or_code) and not re.search(r"^(" + SECTION_WORDS + r")", bl) \
+                and ":" not in body.split("—")[0][:60]:
             ktru, okpd = _codes(body)
             q = QTY_RE.search(body)
-            name = re.split(r"\s[—–-]\s|\(|,\s*(?:КТРУ|ОКПД)", body)[0]
+            name = _clean_name(body)
             b.start(name, ktru, okpd, float(q.group(1).replace(",", ".")) if q else None, (q.group(2) if q else "шт"))
             return
         if re.search(r"^(" + SECTION_WORDS + r")", bl):
             b.cur = None
             return
+    if SECTION_LINE.match(t):
+        b.cur = None
+        return
     if b.cur is None:
         return
     if KTRU_RE.search(t) and not b.cur.ktru:

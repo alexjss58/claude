@@ -1,0 +1,902 @@
+{
+ "_meta": {
+  "purchase_number": "0156100003026000067",
+  "source": "структурированное извещение ЕИС (через открытое API ГосПлан, v2test.gosplan.info)",
+  "retrieved": "2026-11-03",
+  "api_url": "https://v2test.gosplan.info/fz44/purchases/0156100003026000067",
+  "customer_inn": "5902293474",
+  "region_code": 59,
+  "stage": 1,
+  "purchase_type": "epNotificationEF2020"
+ },
+ "doc_type": "epNotificationEF2020",
+ "source": {
+  "id": "44428952",
+  "versionNumber": "1",
+  "commonInfo": {
+   "purchaseNumber": "0156100003026000067",
+   "docNumber": "№0156100003026000067",
+   "directDT": "2026-10-30T12:30:05.288+05:00",
+   "plannedPublishDate": "2026-11-02+05:00",
+   "publishDTInEIS": "2026-11-02T19:06:40.360+05:00",
+   "href": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0156100003026000067",
+   "placingWay": {
+    "code": "EAP20",
+    "name": "Электронный аукцион"
+   },
+   "ETP": {
+    "code": "ETP_SBAST",
+    "name": "АО «Сбербанк-АСТ»",
+    "url": "http://www.sberbank-ast.ru"
+   },
+   "contractConclusionOnSt83Ch2": "true",
+   "purchaseObjectInfo": "Поставка источников бесперебойного питания"
+  },
+  "purchaseResponsibleInfo": {
+   "responsibleOrgInfo": {
+    "regNum": "01561000030",
+    "consRegistryNum": "001А9045",
+    "fullName": "АРБИТРАЖНЫЙ СУД ПЕРМСКОГО КРАЯ",
+    "postAddress": "Российская Федерация, 614068, Пермский край, Пермь г, Екатерининская ул, Д. 177",
+    "factAddress": "Российская Федерация, 614068, Пермский край, Пермь г, Екатерининская ул, Д. 177",
+    "INN": "5902293474",
+    "KPP": "590301001"
+   },
+   "responsibleRole": "CU",
+   "responsibleInfo": {
+    "orgPostAddress": "Российская Федерация, 614068, Пермский край, Пермь г, Екатерининская ул, Д. 177",
+    "orgFactAddress": "Российская Федерация, 614068, Пермский край, Пермь г, Екатерининская ул, Д. 177"
+   }
+  },
+  "printFormInfo": {
+   "url": "https://zakupki.gov.ru/epz/order/notice/printForm/view.html?regNumber=0156100003026000067"
+  },
+  "attachmentsInfo": {
+   "attachmentInfo": [
+    {
+     "publishedContentId": "01A18BB4158F7CAFB5062B3D63558FD0",
+     "fileName": "НМЦК.xls",
+     "fileSize": "42496",
+     "docDescription": "НМЦК",
+     "docDate": "2026-10-30T10:26:37+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18BB4158F7CAFB5062B3D63558FD0",
+     "docKindInfo": {
+      "code": "MRJ",
+      "name": "Обоснование начальной (максимальной) цены контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A18BB444C57E9F812A11277B254FD9",
+     "fileName": "Проект контракта.doc",
+     "fileSize": "111104",
+     "docDescription": "Проект контракта",
+     "docDate": "2026-10-30T10:26:49+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18BB444C57E9F812A11277B254FD9",
+     "docKindInfo": {
+      "code": "CP",
+      "name": "Проект контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A18BB473647A8483EDB0BC612C735F",
+     "fileName": "ТЗ на ИБП для сервера.docx",
+     "fileSize": "49028",
+     "docDescription": "ТЗ на ИБП для сервера",
+     "docDate": "2026-10-30T10:27:01+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18BB473647A8483EDB0BC612C735F",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A18BB49E5B7CF1AC70752BED1C7F50",
+     "fileName": "Требование к составу заявки.docx",
+     "fileSize": "28060",
+     "docDescription": "Требование к составу заявки",
+     "docDate": "2026-10-30T10:27:12+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18BB49E5B7CF1AC70752BED1C7F50",
+     "docKindInfo": {
+      "code": "CAR",
+      "name": "Требование к содержанию, составу заявки на участие в закупке"
+     }
+    }
+   ]
+  },
+  "serviceSigns": {
+   "isControlP1Ch5St99": "true"
+  },
+  "notificationInfo": {
+   "procedureInfo": {
+    "collectingInfo": {
+     "startDT": "2026-11-02T19:06:40+05:00",
+     "endDT": "2026-11-10T08:00:00+05:00"
+    },
+    "biddingDate": "2026-11-10+05:00",
+    "summarizingDate": "2026-11-11+05:00"
+   },
+   "contractConditionsInfo": {
+    "maxPriceInfo": {
+     "maxPrice": "747333.33",
+     "currency": {
+      "code": "RUB",
+      "name": "РОССИЙСКИЙ РУБЛЬ"
+     }
+    }
+   },
+   "customerRequirementsInfo": {
+    "customerRequirementInfo": {
+     "customer": {
+      "regNum": "01561000030",
+      "consRegistryNum": "001А9045",
+      "fullName": "АРБИТРАЖНЫЙ СУД ПЕРМСКОГО КРАЯ"
+     },
+     "contractGuarantee": {
+      "account": {
+       "bik": "000000000",
+       "settlementAccount": "00000000000000000000",
+       "personalAccount": "См. прилагаемые документы"
+      },
+      "procedureInfo": "Способ обеспечения исполнения контракта определяется участником электронного аукциона самостоятельно. Обеспечение исполнения контракта предоставляется участником электронного аукциона, с которым заключается контракт, путем внесения денежных средств на расчетный  счет заказчика, указанный в документации об электронном аукционе или независимой гарантией. Независимая гарантия, предоставляемая в качестве обеспечения исполнения контракта, должна соответствовать требованиям статьи 45 Федерального закона от 05.04.2013 ФЗ № 44.",
+      "part": "10.0"
+     },
+     "contractConditionsInfo": {
+      "maxPriceInfo": {
+       "maxPrice": "747333.33"
+      },
+      "mustPublicDiscussion": "false",
+      "IKZInfo": {
+       "purchaseCode": "261590229347459030100100870012620242",
+       "publishYear": "2026",
+       "OKPD2Info": {
+        "OKPD2": {
+         "OKPDCode": "26.20",
+         "OKPDName": "Компьютеры и периферийное оборудование"
+        }
+       },
+       "KVRInfo": {
+        "KVR": {
+         "code": "242",
+         "name": "Закупка товаров, работ и услуг в сфере информационно-коммуникационных технологий"
+        }
+       },
+       "customerCode": "15902293474590301001",
+       "purchaseNumber": "0087",
+       "purchaseOrderNumber": "001"
+      },
+      "tenderPlan2020Info": {
+       "plan2020Number": "202601561000030001",
+       "position2020Number": "202601561000030001000123"
+      },
+      "contractExecutionPaymentPlan": {
+       "contractExecutionTermsInfo": {
+        "notRelativeTermsInfo": {
+         "isFromConclusionDate": "true",
+         "endDate": "2026-12-31+03:00"
+        }
+       },
+       "financingSourcesInfo": {
+        "budgetFinancingsInfo": {
+         "budgetInfo": {
+          "code": "99010001",
+          "name": "Федеральный бюджет"
+         },
+         "budgetLevelInfo": {
+          "code": "10",
+          "name": "федеральный бюджет"
+         },
+         "OKTMOInfo": {
+          "code": "00000001",
+          "name": "Раздел 1. Муниципальные образования субъектов Российской Федерации / Федеральный бюджет"
+         }
+        },
+        "currentYear": "2026",
+        "financeInfo": {
+         "total": "747333.33",
+         "currentYear": "747333.33",
+         "firstYear": "0.00",
+         "secondYear": "0.00",
+         "subsecYears": "0.00"
+        }
+       },
+       "stagesInfo": {
+        "stageInfo": {
+         "sid": "22517987",
+         "termsInfo": {
+          "notRelativeTermsInfo": {
+           "isFromConclusionDate": "true",
+           "endDate": "2026-12-31+03:00"
+          }
+         },
+         "budgetFinancingsInfo": {
+          "budgetFinancingInfo": {
+           "KBK": "43801059090090020242",
+           "paymentYearInfo": {
+            "total": "747333.33",
+            "currentYear": "747333.33",
+            "firstYear": "0.00",
+            "secondYear": "0.00",
+            "subsecYears": "0.00"
+           }
+          }
+         }
+        }
+       }
+      },
+      "deliveryPlacesInfo": {
+       "byGARInfo": {
+        "sid": "62452336",
+        "countryInfo": {
+         "countryCode": "643",
+         "countryFullName": "Российская Федерация"
+        },
+        "GARInfo": {
+         "GARGuid": "1a6ac483-abae-4f61-980c-c02753e314b7",
+         "GARAddress": "край Пермский, г.о. Пермский, г. Пермь, ул. Екатерининская, д. 177"
+        }
+       }
+      },
+      "isOneSideRejectionSt95": "true",
+      "isExecutionStagesTerms": "false"
+     }
+    }
+   },
+   "purchaseObjectsInfo": {
+    "notDrugPurchaseObjectsInfo": {
+     "purchaseObject": {
+      "sid": "226218290",
+      "KTRU": {
+       "code": "26.20.40.110-00000001",
+       "name": "Источник бесперебойного питания",
+       "versionId": "375841",
+       "versionNumber": "20",
+       "characteristics": {
+        "characteristicsUsingReferenceInfo": [
+         {
+          "sid": "337934878",
+          "code": "1e9dcb18-5",
+          "name": "Активная мощность",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436594993",
+            "OKEI": {
+             "code": "212",
+             "nationalCode": "Вт",
+             "name": "Ватт"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "8000"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337934879",
+          "code": "65d1607b-3",
+          "name": "Возможность замены аккумуляторной батареи пользователем",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436594994",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337934880",
+          "code": "6f88d751-3",
+          "name": "Встроенное N+1 резервирование (на уровне модулей) для модульногоисточника бесперебойного питания",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436594995",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337934881",
+          "code": "db4719df-3",
+          "name": "Встроенный байпас",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": {
+            "sid": "436594996",
+            "qualityDescription": "Электронный"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337934882",
+          "code": "608f75c7-f",
+          "name": "Интерфейс связи",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436594997",
+             "qualityDescription": "Ethernet"
+            },
+            {
+             "sid": "436594998",
+             "qualityDescription": "USB"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337934883",
+          "code": "95990170-c",
+          "name": "Количество выходных розеток IEC 60320 C13",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436594999",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "6"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337934884",
+          "code": "4d3ffb4c-d",
+          "name": "Коэффициент нелинейных искажений напряжения на выходе (THDv) при линейной нагрузке",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436595000",
+            "OKEI": {
+             "code": "744",
+             "nationalCode": "ПРОЦ",
+             "name": "Процент"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "maxMathNotation": "lessOrEqual",
+              "max": "2"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337934885",
+          "code": "bc06f698-5",
+          "name": "Модульная архитектура батарей источника бесперебойного питания",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436595001",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337934886",
+          "code": "e117ce61-f",
+          "name": "Мощность зарядного устройства при расчётной мощности нагрузки относительно номинала источника бесперебойного питания, не менее",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436595002",
+            "OKEI": {
+             "code": "744",
+             "nationalCode": "ПРОЦ",
+             "name": "Процент"
+            },
+            "valueFormat": "N",
+            "valueSet": {
+             "concreteValue": "15"
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337934887",
+          "code": "b0e1109e-6",
+          "name": "Наличие АКБ в комплектации",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436595003",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337934888",
+          "code": "56e532e2-f",
+          "name": "Наличие дисплея",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436595004",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337934889",
+          "code": "9428cc68-b",
+          "name": "Наличие функции холодного старта",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436595005",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337934890",
+          "code": "f1e00e9a-8",
+          "name": "Номинальная входная частота",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436595006",
+            "OKEI": {
+             "code": "290",
+             "nationalCode": "Гц",
+             "name": "Герц"
+            },
+            "valueFormat": "N",
+            "valueSet": {
+             "concreteValue": "50"
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337934891",
+          "code": "0d16e5a6-a",
+          "name": "Номинальная выходная частота",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436595007",
+            "OKEI": {
+             "code": "290",
+             "nationalCode": "Гц",
+             "name": "Герц"
+            },
+            "valueFormat": "N",
+            "valueSet": {
+             "concreteValue": "50"
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337934892",
+          "code": "1434f370-0",
+          "name": "Номинальное входное напряжение",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436595008",
+            "OKEI": {
+             "code": "222",
+             "nationalCode": "В",
+             "name": "Вольт"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "220",
+              "maxMathNotation": "less",
+              "max": "240"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337934893",
+          "code": "39b4345e-c",
+          "name": "Номинальное выходное напряжение",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436595009",
+            "OKEI": {
+             "code": "222",
+             "nationalCode": "В",
+             "name": "Вольт"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "220",
+              "maxMathNotation": "less",
+              "max": "240"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337934894",
+          "code": "4e488795-c",
+          "name": "Тип",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436595010",
+            "qualityDescription": "С двойным преобразованием (on-line)"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337934895",
+          "code": "2e9be781-a",
+          "name": "Физические размеры высоты источника бесперебойного питания при установке в телекоммуникационную стойку, U",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436595011",
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "maxMathNotation": "lessOrEqual",
+              "max": "5"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         }
+        ],
+        "characteristicsUsingTextForm": [
+         {
+          "sid": "337934896",
+          "name": "Ожидаемый срок службы батареи",
+          "type": "1",
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          },
+          "values": {
+           "value": {
+            "sid": "436595012",
+            "qualityDescription": "3-5 лет"
+           }
+          }
+         },
+         {
+          "sid": "337934897",
+          "name": "Физические параметры",
+          "type": "1",
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          },
+          "values": {
+           "value": {
+            "sid": "436595013",
+            "qualityDescription": "установка в серверную стойку"
+           }
+          }
+         },
+         {
+          "sid": "337934898",
+          "name": "Network manageable",
+          "type": "1",
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          },
+          "values": {
+           "value": {
+            "sid": "436595014",
+            "qualityDescription": "да"
+           }
+          }
+         },
+         {
+          "sid": "337934899",
+          "name": "Рабочий диапазон входного переменного напряжения при работе от сети",
+          "type": "1",
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          },
+          "values": {
+           "value": {
+            "sid": "436595015",
+            "qualityDescription": "1 фаза: 160-275 В"
+           }
+          }
+         },
+         {
+          "sid": "337934900",
+          "name": "Тип формы напряжения",
+          "type": "1",
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          },
+          "values": {
+           "value": {
+            "sid": "436595016",
+            "qualityDescription": "синусоидальный сигнал"
+           }
+          }
+         },
+         {
+          "sid": "337934901",
+          "name": "Тип батарей",
+          "type": "1",
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          },
+          "values": {
+           "value": {
+            "sid": "436595017",
+            "qualityDescription": "свинцово-кислотная батарея"
+           }
+          }
+         },
+         {
+          "sid": "337934902",
+          "name": "Автоматическая самодиагностика",
+          "type": "1",
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          },
+          "values": {
+           "value": {
+            "sid": "436595018",
+            "qualityDescription": "да"
+           }
+          }
+         },
+         {
+          "sid": "337934903",
+          "name": "Автоматический внутренний байпас",
+          "type": "1",
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          },
+          "values": {
+           "value": {
+            "sid": "436595019",
+            "qualityDescription": "да"
+           }
+          }
+         },
+         {
+          "sid": "337934904",
+          "name": "Автоматический перезапуск нагрузок после выключения",
+          "type": "1",
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          },
+          "values": {
+           "value": {
+            "sid": "436595020",
+            "qualityDescription": "да"
+           }
+          }
+         },
+         {
+          "sid": "337934905",
+          "name": "Емкость батареи",
+          "type": "2",
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          },
+          "values": {
+           "value": {
+            "sid": "436595021",
+            "OKEI": {
+             "code": "226",
+             "nationalCode": "В.А",
+             "name": "Вольт-ампер"
+            },
+            "rangeSet": {
+             "valueRange": {
+              "maxMathNotation": "lessOrEqual",
+              "max": "1728"
+             }
+            }
+           }
+          }
+         },
+         {
+          "sid": "337934906",
+          "name": "Типовое время перезарядки",
+          "type": "2",
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          },
+          "values": {
+           "value": {
+            "sid": "436595022",
+            "OKEI": {
+             "code": "356",
+             "nationalCode": "ч",
+             "name": "Час"
+            },
+            "valueSet": {
+             "concreteValue": "1.5"
+            }
+           }
+          }
+         }
+        ],
+        "addCharacteristicInfoReason": "Дополнительные характеристики указываются Заказчиком по причине того, что в позиции КТРУ 86.90.19.140-00000002 приведена только общая информация, отсутствует конкретизирующее описание характеристик товара, а также отсутствуют конкретизирующие показатели. Таким образом, в соответствии с п. 5 Правил использования каталога товаров, работ, услуг для обеспечения государственных и муниципальных нужд (утв. постановлением Правительства РФ от 08.02.2017 № 145), ст. 33 Федерального закона от 05.04.2013 № 44-ФЗ, в целях обеспечения соответствия закупаемого товара потребностям заказчика в описании объекта закупки используются дополнительные потребительские свойства, в том числе функциональные, технические, качественные, эксплуатационные характеристики товара, которые не предусмотрены в позициях каталога."
+       },
+       "OKPD2": {
+        "OKPDCode": "26.20.40.110",
+        "OKPDName": "Устройства и блоки питания вычислительных машин"
+       }
+      },
+      "name": "Источник бесперебойного питания",
+      "OKEI": {
+       "code": "796",
+       "nationalCode": "шт",
+       "name": "Штука"
+      },
+      "price": "747333.33",
+      "quantity": {
+       "value": "1.00000000000"
+      },
+      "sum": "747333.33",
+      "type": "PRODUCT",
+      "hierarchyType": "ND",
+      "restrictionsInfo": {
+       "isProhibitionForeignPurchaseObjects": "false",
+       "isRestrictForeignPurchaseObjects": "true",
+       "isPreferenseRFPurchaseObjects": "false",
+       "isImposibilityProhibition": "false"
+      }
+     },
+     "totalSum": "747333.33",
+     "quantityUndefined": "false"
+    }
+   },
+   "preferensesInfo": {
+    "preferenseInfo": {
+     "preferenseRequirementInfo": {
+      "shortName": "PVS33044",
+      "name": "Преимущество в соответствии с ч. 3 ст. 30 Закона № 44-ФЗ"
+     }
+    }
+   },
+   "requirementsInfo": {
+    "requirementInfo": [
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "ET44",
+       "name": "Единые требования к участникам закупок в соответствии с ч. 1 ст. 31 Закона № 44-ФЗ"
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TR442",
+       "name": "Требования к участникам закупок в соответствии с ч. 1.1 ст. 31 Закона № 44-ФЗ"
+      }
+     }
+    ]
+   },
+   "flags": {
+    "purchaseObjectsCh9St37": "false"
+   }
+  },
+  "@schemeVersion": "16.3"
+ }
+}

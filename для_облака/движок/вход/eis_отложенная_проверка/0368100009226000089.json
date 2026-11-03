@@ -1,0 +1,1067 @@
+{
+ "_meta": {
+  "purchase_number": "0368100009226000089",
+  "source": "структурированное извещение ЕИС (через открытое API ГосПлан, v2test.gosplan.info)",
+  "retrieved": "2026-11-03",
+  "api_url": "https://v2test.gosplan.info/fz44/purchases/0368100009226000089",
+  "customer_inn": "7303014781",
+  "region_code": 73,
+  "stage": 1,
+  "purchase_type": "epNotificationEZK2020"
+ },
+ "doc_type": "epNotificationEZK2020",
+ "source": {
+  "id": "44453704",
+  "versionNumber": "1",
+  "commonInfo": {
+   "purchaseNumber": "0368100009226000089",
+   "docNumber": "№0368100009226000089",
+   "directDT": "2026-11-02T11:53:40.355+04:00",
+   "plannedPublishDate": "2026-11-02+04:00",
+   "publishDTInEIS": "2026-11-02T17:01:06.552+04:00",
+   "href": "https://zakupki.gov.ru/epz/order/notice/zk20/view/common-info.html?regNumber=0368100009226000089",
+   "placingWay": {
+    "code": "ZKP20",
+    "name": "Запрос котировок в электронной форме"
+   },
+   "ETP": {
+    "code": "ETP_SBAST",
+    "name": "АО «Сбербанк-АСТ»",
+    "url": "http://www.sberbank-ast.ru"
+   },
+   "contractConclusionOnSt83Ch2": "true",
+   "purchaseObjectInfo": "Поставка коммутаторов для нужд Арбитражного суда Ульяновской области (в сфере ИКТ)"
+  },
+  "purchaseResponsibleInfo": {
+   "responsibleOrgInfo": {
+    "regNum": "03681000092",
+    "consRegistryNum": "001А9085",
+    "fullName": "АРБИТРАЖНЫЙ СУД УЛЬЯНОВСКОЙ ОБЛАСТИ",
+    "postAddress": "Российская Федерация, 432017, Ульяновская обл, Ульяновск г, Железнодорожная, 14, -",
+    "factAddress": "Российская Федерация, 432017, Ульяновская обл, Ульяновск г, Железнодорожная ул, Д.14",
+    "INN": "7303014781",
+    "KPP": "732601001"
+   },
+   "responsibleRole": "CU",
+   "responsibleInfo": {
+    "orgPostAddress": "Российская Федерация, 432017, Ульяновская обл, Ульяновск г, Железнодорожная, 14, -",
+    "orgFactAddress": "Российская Федерация, 432017, Ульяновская обл, Ульяновск г, Железнодорожная ул, Д.14"
+   }
+  },
+  "printFormInfo": {
+   "url": "https://zakupki.gov.ru/epz/order/notice/printForm/view.html?regNumber=0368100009226000089"
+  },
+  "attachmentsInfo": {
+   "attachmentInfo": [
+    {
+     "publishedContentId": "01A19ACE7CAB79899C0FCEB1E7AA21F5",
+     "fileName": "НМЦК коммутаторы.docx",
+     "fileSize": "25581",
+     "docDescription": "НМЦК коммутаторы",
+     "docDate": "2026-11-02T08:49:46+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A19ACE7CAB79899C0FCEB1E7AA21F5",
+     "docKindInfo": {
+      "code": "MRJ",
+      "name": "Обоснование начальной (максимальной) цены контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A19C56DA437C0C8D3C73D1679729A6",
+     "fileName": "Проект контракта коммутаторы.docx",
+     "fileSize": "76169",
+     "docDescription": "Проект контракта коммутаторы",
+     "docDate": "2026-11-02T15:58:20+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A19C56DA437C0C8D3C73D1679729A6",
+     "docKindInfo": {
+      "code": "CP",
+      "name": "Проект контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A19C56FF8F753DA9B6C2D1304D657B",
+     "fileName": "ООЗ коммутаторы.docx",
+     "fileSize": "33989",
+     "docDescription": "ООЗ коммутаторы",
+     "docDate": "2026-11-02T15:58:29+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A19C56FF8F753DA9B6C2D1304D657B",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A19ACEB970795B980A55330F959B9B",
+     "fileName": "Требования к составу заявки коммутаторы.docx",
+     "fileSize": "74037",
+     "docDescription": "Требования к составу заявки коммутаторы",
+     "docDate": "2026-11-02T08:50:01+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A19ACEB970795B980A55330F959B9B",
+     "docKindInfo": {
+      "code": "CAR",
+      "name": "Требование к содержанию, составу заявки на участие в закупке"
+     }
+    }
+   ]
+  },
+  "serviceSigns": {
+   "isIncludeKOKS": "false",
+   "isControlP1Ch5St99": "true"
+  },
+  "notificationInfo": {
+   "procedureInfo": {
+    "collectingInfo": {
+     "startDT": "2026-11-02T17:01:06+04:00",
+     "endDT": "2026-11-10T07:00:00+04:00"
+    },
+    "summarizingDate": "2026-11-11+04:00"
+   },
+   "contractConditionsInfo": {
+    "maxPriceInfo": {
+     "maxPrice": "373799.99",
+     "currency": {
+      "code": "RUB",
+      "name": "РОССИЙСКИЙ РУБЛЬ"
+     }
+    }
+   },
+   "customerRequirementsInfo": {
+    "customerRequirementInfo": {
+     "customer": {
+      "regNum": "03681000092",
+      "consRegistryNum": "001А9085",
+      "fullName": "АРБИТРАЖНЫЙ СУД УЛЬЯНОВСКОЙ ОБЛАСТИ"
+     },
+     "contractGuarantee": {
+      "amount": "18690.00",
+      "account": {
+       "bik": "000000000",
+       "settlementAccount": "00000000000000000000",
+       "personalAccount": "См. прилагаемые документы"
+      },
+      "procedureInfo": "Исполнение контракта обеспечивается предоставлением независимой гарантии, соответствующей требованиям статьи 45 Федерального закона от 05.04.2013 № 44-ФЗ, или внесением денежных средств на счёт, на котором в соответствии с законодательством Российской Федерации учитываются операции со средствами, поступающими заказчику. Способ обеспечения исполнения контракта, срок действия независимой гарантии определяются в соответствии с требованиями Федерального закона от 05.04.2013 № 44-ФЗ участником закупки, с которым заключается контракт, самостоятельно. При этом срок действия независимой гарантии должен превышать предусмотренный контрактом срок исполнения обязательств, которые должны быть обеспечены такой независимой гарантией, не менее чем на один месяц, в том числе в случае его изменения в соответствии со статьей 95 Федерального закона от 05.04.2013 № 44-ФЗ. 2. Контракт заключается после предоставления участником закупки, с которым заключается контракт, обеспечения исполнения контракта в соответствии с Федеральным законом от 05.04.2013 № 44-ФЗ. При этом в случае заключения контракта жизненного цикла контракт заключается после предоставления таким участником закупки обеспечения исполнения контракта в части, предусмотренной пунктом 1 части 1.1 статьи 96 Федерального закона от 05.04.2013 № 44-ФЗ. 3. В случае непредоставления участником закупки, с которым заключается контракт, обеспечения исполнения контракта в срок, установленный для заключения контракта, такой участник считается уклонившимся от заключения контракта. 4. В случае, если предложенные в заявке участника закупки цена, сумма цен единиц товара, работы, услуги снижены на двадцать пять и более процентов по отношению к начальной (максимальной) цене контракта, начальной сумме цен единиц товара, работы, услуги, участник закупки, с которым заключается контракт, предоставляет обеспечение исполнения контракта с учётом положений статьи 37 Федерального закона от 05.04.2013 № 44-ФЗ.",
+      "part": "5.0"
+     },
+     "contractConditionsInfo": {
+      "maxPriceInfo": {
+       "maxPrice": "373799.99"
+      },
+      "IKZInfo": {
+       "purchaseCode": "261730301478173260100101460012630242",
+       "publishYear": "2026",
+       "OKPD2Info": {
+        "OKPD2": {
+         "OKPDCode": "26.30",
+         "OKPDName": "Оборудование коммуникационное"
+        }
+       },
+       "KVRInfo": {
+        "KVR": {
+         "code": "242",
+         "name": "Закупка товаров, работ и услуг в сфере информационно-коммуникационных технологий"
+        }
+       },
+       "customerCode": "17303014781732601001",
+       "purchaseNumber": "0146",
+       "purchaseOrderNumber": "001"
+      },
+      "tenderPlan2020Info": {
+       "plan2020Number": "202603681000092001",
+       "position2020Number": "202603681000092001000202"
+      },
+      "contractExecutionPaymentPlan": {
+       "contractExecutionTermsInfo": {
+        "notRelativeTermsInfo": {
+         "startDate": "2026-11-16+03:00",
+         "isNotEarlierConclusionDate": "true",
+         "endDate": "2026-12-31+03:00"
+        }
+       },
+       "financingSourcesInfo": {
+        "budgetFinancingsInfo": {
+         "budgetInfo": {
+          "code": "99010001",
+          "name": "Федеральный бюджет"
+         },
+         "budgetLevelInfo": {
+          "code": "10",
+          "name": "федеральный бюджет"
+         },
+         "OKTMOInfo": {
+          "code": "00000001",
+          "name": "Раздел 1. Муниципальные образования субъектов Российской Федерации / Федеральный бюджет"
+         }
+        },
+        "currentYear": "2026",
+        "financeInfo": {
+         "total": "373799.99",
+         "currentYear": "373799.99",
+         "firstYear": "0.00",
+         "secondYear": "0.00",
+         "subsecYears": "0.00"
+        }
+       },
+       "stagesInfo": {
+        "stageInfo": {
+         "sid": "22524129",
+         "termsInfo": {
+          "notRelativeTermsInfo": {
+           "startDate": "2026-11-16+03:00",
+           "isNotEarlierConclusionDate": "true",
+           "endDate": "2026-12-31+03:00"
+          }
+         },
+         "budgetFinancingsInfo": {
+          "budgetFinancingInfo": {
+           "KBK": "43801059090090020242",
+           "paymentYearInfo": {
+            "total": "373799.99",
+            "currentYear": "373799.99",
+            "firstYear": "0.00",
+            "secondYear": "0.00",
+            "subsecYears": "0.00"
+           }
+          }
+         }
+        }
+       }
+      },
+      "BOInfo": {
+       "BONumber": "001А908526000000493",
+       "BODate": "2026-11-02T00:00:00+03:00",
+       "inputBOFlag": "auto"
+      },
+      "deliveryPlacesInfo": {
+       "byGARInfo": {
+        "sid": "62458269",
+        "countryInfo": {
+         "countryCode": "643",
+         "countryFullName": "Российская Федерация"
+        },
+        "GARInfo": {
+         "GARGuid": "bf6e3e88-0747-4ec0-8a5a-a2cecda6836d",
+         "GARAddress": "обл. Ульяновская, г.о. город Ульяновск, г. Ульяновск, ул. Железнодорожная, д. 14"
+        },
+        "deliveryPlace": "Здание Арбитражного суда Ульяновской области, 6 этаж, 609 кабинет"
+       }
+      },
+      "isOneSideRejectionSt95": "true",
+      "isExecutionStagesTerms": "false"
+     },
+     "warrantyInfo": {
+      "warrantyTerm": "Гарантийный срок хранения не менее 24 месяцев с момента подписания документов о приемке"
+     }
+    }
+   },
+   "purchaseObjectsInfo": {
+    "notDrugPurchaseObjectsInfo": {
+     "purchaseObject": [
+      {
+       "sid": "226221771",
+       "KTRU": {
+        "code": "26.30.11.110-00000041",
+        "name": "Коммутатор",
+        "versionId": "403161",
+        "versionNumber": "30",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "337947411",
+           "code": "10c0424a-1",
+           "name": "Материал корпуса",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437316378",
+             "qualityDescription": "Металл"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338476912",
+           "code": "76379562-8",
+           "name": "Блок питания",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437316379",
+             "qualityDescription": "Встроенный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338476913",
+           "code": "1607e1b5-7",
+           "name": "Количество блоков питания",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437316380",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "valueSet": {
+              "concreteValue": "1"
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338476914",
+           "code": "9854d3d6-0",
+           "name": "Тип блоков питания",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437316381",
+             "qualityDescription": "Фиксированные"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338476915",
+           "code": "2cf27665-6",
+           "name": "Тип коммутатора",
+           "type": "1",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "437316382",
+             "qualityDescription": "Управляемый"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338476916",
+           "code": "4196dda8-5",
+           "name": "Тип передачи данных",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437316383",
+             "qualityDescription": "Ethernet"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338476917",
+           "code": "7b2eb465-5",
+           "name": "Тип электропитания",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437316384",
+             "qualityDescription": "AC"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338476918",
+           "code": "d9b1e1ae-f",
+           "name": "Внешний интерфейс управления",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "437316385",
+             "qualityDescription": "RJ-45"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338476919",
+           "code": "f0a58ace-e",
+           "name": "Внутренняя пропускная способность",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437316386",
+             "OKEI": {
+              "code": "2547",
+              "nationalCode": "Гбит/с",
+              "name": "Гигабит в секунду"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "100"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          }
+         ],
+         "characteristicsUsingTextForm": [
+          {
+           "sid": "338260290",
+           "name": "Марка, модель",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437316377",
+             "qualityDescription": "Управляемый PoE коммутатор уровня 2+ SNR-S5110G-24TX-POE или эквивалент"
+            }
+           }
+          },
+          {
+           "sid": "338476920",
+           "name": "Количество портов доступа (LAN),  шт.",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "437316387",
+             "qualityDescription": "24"
+            }
+           }
+          },
+          {
+           "sid": "338476921",
+           "name": "Скорость пересылки пакетов, Mpps",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437316388",
+             "qualityDescription": "≥ 95"
+            }
+           }
+          },
+          {
+           "sid": "338476922",
+           "name": "Размер таблицы MAC-адресов",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437316389",
+             "qualityDescription": "≥16 000"
+            }
+           }
+          },
+          {
+           "sid": "338476923",
+           "name": "Количество статических IPv4 маршрутов",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437316390",
+             "qualityDescription": "≥512"
+            }
+           }
+          },
+          {
+           "sid": "338476924",
+           "name": "Суммарный бюджет мощности PoE, Вт",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437316391",
+             "qualityDescription": "≥250"
+            }
+           }
+          },
+          {
+           "sid": "338476925",
+           "name": "Максимальная мощность PoE на один порт,  Вт",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437316392",
+             "qualityDescription": "≥30"
+            }
+           }
+          },
+          {
+           "sid": "338476926",
+           "name": "Возможность электропитания PoE",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "437316393",
+             "qualityDescription": "Наличие"
+            }
+           }
+          },
+          {
+           "sid": "338476927",
+           "name": "Конструктивное исполнение",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "437316394",
+             "qualityDescription": "Для монтажа в 19\" стойку (1U), крепеж в комплекте"
+            }
+           }
+          },
+          {
+           "sid": "338476928",
+           "name": "Тип и скорость портов доступа",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "437316395",
+             "qualityDescription": "10/100/1000Base-T (Gigabit Ethernet)"
+            }
+           }
+          },
+          {
+           "sid": "338476929",
+           "name": "Количество портов Uplink, шт.",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437316396",
+             "qualityDescription": "≥4"
+            }
+           }
+          },
+          {
+           "sid": "338476930",
+           "name": "Встроенная грозозащита на медных портах,  кВ",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437316397",
+             "qualityDescription": "≥4"
+            }
+           }
+          }
+         ],
+         "addCharacteristicInfoReason": "Дополнительные характеристики включены в описание товаров в соответствии с положениями ст. 33 Федерального закона от 05.04.2013 № 44-ФЗ «О контрактной системе в сфере закупок товаров, работ и услуг для обеспечения государственных и муниципальных нужд» согласно пунктам 5 и 6 Правил использования каталога товаров, работ, услуг для обеспечения государственных и муниципальных нужд, утвержденных Постановлением Правительства от 08.02.2017 № 145, ввиду того, что каталог товаров, работ, услуг для обеспечения государственных и муниципальных нужд не содержит в полной мере все необходимые государственному заказчику функциональные, технические, качественные, характеристики товаров и не позволяет определить соответствие товара, предлагаемого к поставке, а также в целях более полного и подробного описания потребительских свойств, в том числе функциональных, технических, качественных характеристик товаров для более точного отражения функциональных характеристик требуемых товаров, имеющих существенное значение для заказчика."
+        },
+        "OKPD2": {
+         "OKPDCode": "26.30.11.110",
+         "OKPDName": "Средства связи, выполняющие функцию систем коммутации"
+        }
+       },
+       "name": "Коммутатор",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "44066.67",
+       "quantity": {
+        "value": "2.00000000000"
+       },
+       "sum": "88133.34",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      },
+      {
+       "sid": "226322838",
+       "KTRU": {
+        "code": "26.30.11.110-00000041",
+        "name": "Коммутатор",
+        "versionId": "403161",
+        "versionNumber": "30",
+        "characteristics": {
+         "characteristicsUsingReferenceInfo": [
+          {
+           "sid": "338252330",
+           "code": "d9b1e1ae-f",
+           "name": "Внешний интерфейс управления",
+           "type": "1",
+           "kind": "3",
+           "values": {
+            "value": {
+             "sid": "437332148",
+             "qualityDescription": "RJ-45"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338260302",
+           "code": "10c0424a-1",
+           "name": "Материал корпуса",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437332149",
+             "qualityDescription": "Металл"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338252336",
+           "code": "7b2eb465-5",
+           "name": "Тип электропитания",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437332150",
+             "qualityDescription": "AC"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338252332",
+           "code": "1607e1b5-7",
+           "name": "Количество блоков питания",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437332151",
+             "OKEI": {
+              "code": "796",
+              "nationalCode": "шт",
+              "name": "Штука"
+             },
+             "valueFormat": "N",
+             "valueSet": {
+              "concreteValue": "1"
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338252333",
+           "code": "9854d3d6-0",
+           "name": "Тип блоков питания",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437332152",
+             "qualityDescription": "Фиксированные"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338252329",
+           "code": "76379562-8",
+           "name": "Блок питания",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437332153",
+             "qualityDescription": "Встроенный"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338252335",
+           "code": "4196dda8-5",
+           "name": "Тип передачи данных",
+           "type": "1",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437332154",
+             "qualityDescription": "Ethernet"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338252334",
+           "code": "2cf27665-6",
+           "name": "Тип коммутатора",
+           "type": "1",
+           "kind": "1",
+           "values": {
+            "value": {
+             "sid": "437332155",
+             "qualityDescription": "Управляемый"
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           }
+          },
+          {
+           "sid": "338252331",
+           "code": "f0a58ace-e",
+           "name": "Внутренняя пропускная способность",
+           "type": "2",
+           "kind": "2",
+           "values": {
+            "value": {
+             "sid": "437332156",
+             "OKEI": {
+              "code": "2547",
+              "nationalCode": "Гбит/с",
+              "name": "Гигабит в секунду"
+             },
+             "valueFormat": "N",
+             "rangeSet": {
+              "valueRange": {
+               "minMathNotation": "greaterOrEqual",
+               "min": "200"
+              }
+             }
+            }
+           },
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           }
+          }
+         ],
+         "characteristicsUsingTextForm": [
+          {
+           "sid": "338260296",
+           "name": "Возможность электропитания PoE",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "437332143",
+             "qualityDescription": "Наличие"
+            }
+           }
+          },
+          {
+           "sid": "338260301",
+           "name": "Конструктивное исполнение",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "437332144",
+             "qualityDescription": "Для монтажа в 19\" стойку (1U), крепеж в комплекте"
+            }
+           }
+          },
+          {
+           "sid": "338252337",
+           "name": "Количество портов доступа (LAN),  шт.",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "437332145",
+             "qualityDescription": "48"
+            }
+           }
+          },
+          {
+           "sid": "338252339",
+           "name": "Тип и скорость портов доступа",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "437332146",
+             "qualityDescription": "10/100/1000Base-T (Gigabit Ethernet)"
+            }
+           }
+          },
+          {
+           "sid": "338252338",
+           "name": "Марка, модель",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "6",
+            "name": "Значение характеристики не может изменяться участником закупки"
+           },
+           "values": {
+            "value": {
+             "sid": "437332147",
+             "qualityDescription": "Управляемый PoE коммутатор уровня 2+ SNR-S5110G-48 TX-POE или эквивалент"
+            }
+           }
+          },
+          {
+           "sid": "338489990",
+           "name": "Скорость пересылки пакетов, Mpps",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437332157",
+             "qualityDescription": "≥162"
+            }
+           }
+          },
+          {
+           "sid": "338489991",
+           "name": "Суммарный бюджет мощности PoE, Вт",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437332158",
+             "qualityDescription": "≥370"
+            }
+           }
+          },
+          {
+           "sid": "338489992",
+           "name": "Встроенная грозозащита на медных портах,  кВ",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437332159",
+             "qualityDescription": "≥4"
+            }
+           }
+          },
+          {
+           "sid": "338489993",
+           "name": "Количество портов Uplink, шт.",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437332160",
+             "qualityDescription": "≥6"
+            }
+           }
+          },
+          {
+           "sid": "338489994",
+           "name": "Размер таблицы MAC-адресов",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437332161",
+             "qualityDescription": "≥32 000"
+            }
+           }
+          },
+          {
+           "sid": "338489995",
+           "name": "Количество статических IPv4 маршрутов",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437332162",
+             "qualityDescription": "≥12 000"
+            }
+           }
+          },
+          {
+           "sid": "338489996",
+           "name": "Максимальная мощность PoE на один порт,  Вт",
+           "type": "1",
+           "characteristicsFillingInstruction": {
+            "code": "2",
+            "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+           },
+           "values": {
+            "value": {
+             "sid": "437332163",
+             "qualityDescription": "≥30"
+            }
+           }
+          }
+         ],
+         "addCharacteristicInfoReason": "*Дополнительные характеристики включены в описание товаров в соответствии с положениями ст. 33 Федерального закона от 05.04.2013 № 44-ФЗ «О контрактной системе в сфере закупок товаров, работ и услуг для обеспечения государственных и муниципальных нужд» согласно пунктам 5 и 6 Правил использования каталога товаров, работ, услуг для обеспечения государственных и муниципальных нужд, утвержденных Постановлением Правительства от 08.02.2017 № 145, ввиду того, что каталог товаров, работ, услуг для обеспечения государственных и муниципальных нужд не содержит в полной мере все необходимые государственному заказчику функциональные, технические, качественные, характеристики товаров и не позволяет определить соответствие товара, предлагаемого к поставке, а также в целях более полного и подробного описания потребительских свойств, в том числе функциональных, технических, качественных характеристик товаров для более точного отражения функциональных характеристик требуемых товаров, имеющих существенное значение для заказчика."
+        },
+        "OKPD2": {
+         "OKPDCode": "26.30.11.110",
+         "OKPDName": "Средства связи, выполняющие функцию систем коммутации"
+        }
+       },
+       "name": "Коммутатор",
+       "OKEI": {
+        "code": "796",
+        "nationalCode": "шт",
+        "name": "Штука"
+       },
+       "price": "57133.33",
+       "quantity": {
+        "value": "5.00000000000"
+       },
+       "sum": "285666.65",
+       "type": "PRODUCT",
+       "hierarchyType": "ND",
+       "restrictionsInfo": {
+        "isProhibitionForeignPurchaseObjects": "false",
+        "isRestrictForeignPurchaseObjects": "true",
+        "isPreferenseRFPurchaseObjects": "false",
+        "isImposibilityProhibition": "false"
+       }
+      }
+     ],
+     "totalSum": "373799.99",
+     "quantityUndefined": "false"
+    }
+   },
+   "requirementsInfo": {
+    "requirementInfo": [
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "ET44",
+       "name": "Единые требования к участникам закупок в соответствии с ч. 1 ст. 31 Закона № 44-ФЗ"
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TR442",
+       "name": "Требования к участникам закупок в соответствии с ч. 1.1 ст. 31 Закона № 44-ФЗ"
+      }
+     }
+    ]
+   }
+  },
+  "printFormFieldsInfo": {
+   "is449Features": "false"
+  },
+  "@schemeVersion": "16.3"
+ }
+}

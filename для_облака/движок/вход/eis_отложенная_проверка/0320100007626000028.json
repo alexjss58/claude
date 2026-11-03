@@ -1,0 +1,732 @@
+{
+ "_meta": {
+  "purchase_number": "0320100007626000028",
+  "source": "структурированное извещение ЕИС (через открытое API ГосПлан, v2test.gosplan.info)",
+  "retrieved": "2026-11-03",
+  "api_url": "https://v2test.gosplan.info/fz44/purchases/0320100007626000028",
+  "customer_inn": "2540015767",
+  "region_code": 25,
+  "stage": 1,
+  "purchase_type": "epNotificationEF2020"
+ },
+ "doc_type": "epNotificationEF2020",
+ "source": {
+  "id": "44429723",
+  "versionNumber": "1",
+  "commonInfo": {
+   "purchaseNumber": "0320100007626000028",
+   "docNumber": "№0320100007626000028",
+   "directDT": "2026-11-02T14:19:40.284+10:00",
+   "plannedPublishDate": "2026-11-03+10:00",
+   "publishDTInEIS": "2026-11-02T16:40:41.537+10:00",
+   "href": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0320100007626000028",
+   "placingWay": {
+    "code": "EAP20",
+    "name": "Электронный аукцион"
+   },
+   "ETP": {
+    "code": "ETP_SBAST",
+    "name": "АО «Сбербанк-АСТ»",
+    "url": "http://www.sberbank-ast.ru"
+   },
+   "contractConclusionOnSt83Ch2": "true",
+   "purchaseObjectInfo": "Поставка SIP-телефонов"
+  },
+  "purchaseResponsibleInfo": {
+   "responsibleOrgInfo": {
+    "regNum": "03201000076",
+    "consRegistryNum": "00145153",
+    "fullName": "ВЛАДИВОСТОКСКАЯ ТАМОЖНЯ",
+    "shortName": "ВЛАДИВОСТОКСКАЯ ТАМОЖНЯ",
+    "postAddress": "Российская Федерация, 690003, Приморский край, Владивосток г, Посьетская ул, Д. 21А",
+    "factAddress": "Российская Федерация, 690003, Приморский край, Владивосток г, Посьетская ул, Д. 21А",
+    "INN": "2540015767",
+    "KPP": "254001001"
+   },
+   "responsibleRole": "CU",
+   "responsibleInfo": {
+    "orgPostAddress": "Российская Федерация, 690003, Приморский край, Владивосток г, Посьетская ул, Д. 21А",
+    "orgFactAddress": "Российская Федерация, 690003, Приморский край, Владивосток г, Посьетская ул, Д. 21А"
+   }
+  },
+  "printFormInfo": {
+   "url": "https://zakupki.gov.ru/epz/order/notice/printForm/view.html?regNumber=0320100007626000028"
+  },
+  "attachmentsInfo": {
+   "attachmentInfo": [
+    {
+     "publishedContentId": "01A19A51E0B5721A848AA0D8EC08628D",
+     "fileName": "4. Обоснование НМЦК.docx",
+     "fileSize": "23411",
+     "docDescription": "4. Обоснование НМЦК",
+     "docDate": "2026-11-02T06:33:39+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A19A51E0B5721A848AA0D8EC08628D",
+     "docKindInfo": {
+      "code": "MRJ",
+      "name": "Обоснование начальной (максимальной) цены контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A19A524B4474529EE41D4EA5BF797A",
+     "fileName": "2. Проект контракта_sip телефоны.docx",
+     "fileSize": "54223",
+     "docDescription": "2. Проект контракта_sip телефоны",
+     "docDate": "2026-11-02T06:34:06+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A19A524B4474529EE41D4EA5BF797A",
+     "docKindInfo": {
+      "code": "CP",
+      "name": "Проект контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A19A52A4067A78929DAE6D8DE72F1A",
+     "fileName": "3. Описание объекта закупки.docx",
+     "fileSize": "18234",
+     "docDescription": "3. Описание объекта закупки",
+     "docDate": "2026-11-02T06:34:29+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A19A52A4067A78929DAE6D8DE72F1A",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A19A538BA876F6BAE129495D9376B1",
+     "fileName": "1. Извещение.docx",
+     "fileSize": "98663",
+     "docDescription": "1. Извещение",
+     "docDate": "2026-11-02T06:35:28+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A19A538BA876F6BAE129495D9376B1",
+     "docKindInfo": {
+      "code": "CAR",
+      "name": "Требование к содержанию, составу заявки на участие в закупке"
+     }
+    }
+   ]
+  },
+  "serviceSigns": {
+   "isControlP1Ch5St99": "true"
+  },
+  "notificationInfo": {
+   "procedureInfo": {
+    "collectingInfo": {
+     "startDT": "2026-11-02T16:40:41+10:00",
+     "endDT": "2026-11-11T09:00:00+10:00"
+    },
+    "biddingDate": "2026-11-11+10:00",
+    "summarizingDate": "2026-11-12+10:00"
+   },
+   "contractConditionsInfo": {
+    "maxPriceInfo": {
+     "maxPrice": "106000.00",
+     "currency": {
+      "code": "RUB",
+      "name": "РОССИЙСКИЙ РУБЛЬ"
+     }
+    }
+   },
+   "customerRequirementsInfo": {
+    "customerRequirementInfo": {
+     "customer": {
+      "regNum": "03201000076",
+      "consRegistryNum": "00145153",
+      "fullName": "ВЛАДИВОСТОКСКАЯ ТАМОЖНЯ"
+     },
+     "contractGuarantee": {
+      "amount": "10600.00",
+      "account": {
+       "bik": "010507002",
+       "settlementAccount": "03212643000000012000",
+       "personalAccount": "05201451530",
+       "creditOrgName": "ОКЦ № 1 ДГУ Банка России//УФК по Приморскому краю, г Владивосток",
+       "corrAccountNumber": "40102810545370000012"
+      },
+      "procedureInfo": "п. 26 извещения",
+      "part": "10.0"
+     },
+     "contractConditionsInfo": {
+      "maxPriceInfo": {
+       "maxPrice": "106000.00"
+      },
+      "mustPublicDiscussion": "false",
+      "IKZInfo": {
+       "purchaseCode": "261254001576725400100100760012630242",
+       "publishYear": "2026",
+       "OKPD2Info": {
+        "OKPD2": {
+         "OKPDCode": "26.30",
+         "OKPDName": "Оборудование коммуникационное"
+        }
+       },
+       "KVRInfo": {
+        "KVR": {
+         "code": "242",
+         "name": "Закупка товаров, работ и услуг в сфере информационно-коммуникационных технологий"
+        }
+       },
+       "customerCode": "12540015767254001001",
+       "purchaseNumber": "0076",
+       "purchaseOrderNumber": "001"
+      },
+      "tenderPlan2020Info": {
+       "plan2020Number": "202603201000076001",
+       "position2020Number": "202603201000076001000157"
+      },
+      "contractExecutionPaymentPlan": {
+       "contractExecutionTermsInfo": {
+        "notRelativeTermsInfo": {
+         "isFromConclusionDate": "true",
+         "endDate": "2026-12-31+03:00"
+        }
+       },
+       "financingSourcesInfo": {
+        "budgetFinancingsInfo": {
+         "budgetInfo": {
+          "code": "99010001",
+          "name": "Федеральный бюджет"
+         },
+         "budgetLevelInfo": {
+          "code": "10",
+          "name": "федеральный бюджет"
+         },
+         "OKTMOInfo": {
+          "code": "00000001",
+          "name": "Раздел 1. Муниципальные образования субъектов Российской Федерации / Федеральный бюджет"
+         }
+        },
+        "currentYear": "2026",
+        "financeInfo": {
+         "total": "106000.00",
+         "currentYear": "106000.00",
+         "firstYear": "0.00",
+         "secondYear": "0.00",
+         "subsecYears": "0.00"
+        }
+       },
+       "stagesInfo": {
+        "stageInfo": {
+         "sid": "22519384",
+         "termsInfo": {
+          "notRelativeTermsInfo": {
+           "isFromConclusionDate": "true",
+           "endDate": "2026-12-31+03:00"
+          }
+         },
+         "budgetFinancingsInfo": {
+          "budgetFinancingInfo": {
+           "KBK": "15301063941590049242",
+           "paymentYearInfo": {
+            "total": "106000.00",
+            "currentYear": "106000.00",
+            "firstYear": "0.00",
+            "secondYear": "0.00",
+            "subsecYears": "0.00"
+           }
+          }
+         }
+        }
+       }
+      },
+      "BOInfo": {
+       "BONumber": "0014515326000000962",
+       "BODate": "2026-11-02T00:00:00+03:00",
+       "inputBOFlag": "auto"
+      },
+      "deliveryPlacesInfo": {
+       "byGARInfo": {
+        "sid": "62453789",
+        "countryInfo": {
+         "countryCode": "643",
+         "countryFullName": "Российская Федерация"
+        },
+        "GARInfo": {
+         "GARGuid": "5eedfb07-6c40-4cc0-9a73-c900cf07946e",
+         "GARAddress": "край Приморский, г.о. Владивостокский, г. Владивосток, ул. Посьетская, д. 21а"
+        },
+        "deliveryPlace": "В рабочие дни с 09.00 до 16.00"
+       }
+      },
+      "isOneSideRejectionSt95": "true",
+      "isExecutionStagesTerms": "false"
+     },
+     "warrantyInfo": {
+      "warrantyServiceRequirement": "В соответствии с условиями контракта",
+      "manufacturersWarrantyRequirement": "В соответствии с условиями контракта",
+      "warrantyTerm": "Поставщик должен обеспечить гарантийные обязательства на весь поставляемый товар в течение не менее 12 (двенадцати) месяцев."
+     },
+     "provisionWarranty": {
+      "amount": "3180.00",
+      "part": "3.0",
+      "procedureInfo": "п. 26 извещения",
+      "account": {
+       "bik": "010507002",
+       "settlementAccount": "03212643000000012000",
+       "personalAccount": "05201451530",
+       "creditOrgName": "ОКЦ № 1 ДГУ Банка России//УФК по Приморскому краю, г Владивосток",
+       "corrAccountNumber": "40102810545370000012"
+      }
+     }
+    }
+   },
+   "purchaseObjectsInfo": {
+    "notDrugPurchaseObjectsInfo": {
+     "purchaseObject": {
+      "sid": "226208000",
+      "KTRU": {
+       "code": "26.30.11.110-00000047",
+       "name": "Терминал IP телефонии",
+       "versionId": "312597",
+       "versionNumber": "13",
+       "characteristics": {
+        "characteristicsUsingReferenceInfo": [
+         {
+          "sid": "337917751",
+          "code": "2d74f0ea-d",
+          "name": "Количество дисплеев",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "437002804",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "valueSet": {
+             "concreteValue": "1"
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337917752",
+          "code": "c10e5541-d",
+          "name": "Количество клавиш быстрого набора",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "437002805",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "20"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337917753",
+          "code": "926abf4c-6",
+          "name": "Количество поддерживаемых SIP-линий",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "437002806",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "16"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337917754",
+          "code": "ff1cebed-6",
+          "name": "Комплектация",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": {
+            "sid": "437002807",
+            "qualityDescription": "Блок питания"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337917755",
+          "code": "fced0f0e-5",
+          "name": "Конструктивные особенности дисплея 1",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "437002808",
+             "qualityDescription": "Цветной"
+            },
+            {
+             "sid": "437002809",
+             "qualityDescription": "Сенсорный"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337917756",
+          "code": "d2b655d3-9",
+          "name": "Конструкция",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": {
+            "sid": "437002810",
+            "qualityDescription": "Кнопочный номеронабиратель"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337917757",
+          "code": "f7ef3c5c-0",
+          "name": "Наличие модулей, портов и интерфейсов",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "437002811",
+             "qualityDescription": "USB"
+            },
+            {
+             "sid": "437002812",
+             "qualityDescription": "Порт Ethernet для подключения к АРМ"
+            },
+            {
+             "sid": "437002813",
+             "qualityDescription": "Порт Ethernet для подключения к ЛВС"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337917758",
+          "code": "9708c52f-c",
+          "name": "Поддержка аудиокодеков",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "437002814",
+             "qualityDescription": "G.711A"
+            },
+            {
+             "sid": "437002815",
+             "qualityDescription": "G.729"
+            },
+            {
+             "sid": "437002816",
+             "qualityDescription": "G.722"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337917759",
+          "code": "87e82e6c-4",
+          "name": "Размер дисплея 1",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "437002817",
+            "OKEI": {
+             "code": "039",
+             "nationalCode": "дюйм",
+             "name": "Дюйм (25,4 мм)"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "7"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337917760",
+          "code": "c737e733-a",
+          "name": "Сетевые функции",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "437002818",
+             "qualityDescription": "Поддержка получения ip-адреса по протоколу DHCP"
+            },
+            {
+             "sid": "437002819",
+             "qualityDescription": "WEB-интерфейс управления"
+            },
+            {
+             "sid": "437002820",
+             "qualityDescription": "Автоматическая настройка (TR-069, DHCP)"
+            },
+            {
+             "sid": "437002821",
+             "qualityDescription": "Поддержка синхронизации даты и времени по протоколу NTP"
+            },
+            {
+             "sid": "437002822",
+             "qualityDescription": "Поддержка QoS: 802.1p/Q tagging (VLAN)"
+            },
+            {
+             "sid": "437002823",
+             "qualityDescription": "Поддержка стандарта IEEE 802.1X"
+            },
+            {
+             "sid": "437002824",
+             "qualityDescription": "Управление HTTPS-сертификатами"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337917761",
+          "code": "ba12d167-2",
+          "name": "Скорость портов Ethernet",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "437002825",
+            "OKEI": {
+             "code": "2545",
+             "nationalCode": "Мбит/с",
+             "name": "Мегабит в секунду"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "1000"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "337917762",
+          "code": "ef1afe46-a",
+          "name": "Тип устройства",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": {
+            "sid": "437002826",
+            "qualityDescription": "Стационарный телефон"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "337917763",
+          "code": "c56c6bb5-6",
+          "name": "Функции устройства",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "437002842",
+             "qualityDescription": "Запись разговора"
+            },
+            {
+             "sid": "437002843",
+             "qualityDescription": "Выбор рингтона"
+            },
+            {
+             "sid": "437002828",
+             "qualityDescription": "Поддержка подключения консолей расширения"
+            },
+            {
+             "sid": "437002829",
+             "qualityDescription": "Встроенные клавиши быстрого набора"
+            },
+            {
+             "sid": "437002830",
+             "qualityDescription": "Поддержка аудиоконференций"
+            },
+            {
+             "sid": "437002831",
+             "qualityDescription": "Удержание вызова"
+            },
+            {
+             "sid": "437002832",
+             "qualityDescription": "Перенаправление вызова"
+            },
+            {
+             "sid": "437002833",
+             "qualityDescription": "Переадресация вызова"
+            },
+            {
+             "sid": "437002837",
+             "qualityDescription": "Переадресация по неответу"
+            },
+            {
+             "sid": "437002838",
+             "qualityDescription": "Громкая связь"
+            },
+            {
+             "sid": "437002839",
+             "qualityDescription": "Локальная записная книжка"
+            },
+            {
+             "sid": "437002840",
+             "qualityDescription": "Сетевая записная книжка"
+            },
+            {
+             "sid": "437002841",
+             "qualityDescription": "История вызовов"
+            },
+            {
+             "sid": "437002834",
+             "qualityDescription": "Отключение микрофона"
+            },
+            {
+             "sid": "437002835",
+             "qualityDescription": "Функция не беспокоить"
+            },
+            {
+             "sid": "437002836",
+             "qualityDescription": "Переадресация по занятости"
+            },
+            {
+             "sid": "437002827",
+             "qualityDescription": "Отображение номера и имени вызывающего абонента"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         }
+        ]
+       },
+       "OKPD2": {
+        "OKPDCode": "26.30.11.110",
+        "OKPDName": "Средства связи, выполняющие функцию систем коммутации"
+       }
+      },
+      "name": "Терминал IP телефонии",
+      "OKEI": {
+       "code": "796",
+       "nationalCode": "шт",
+       "name": "Штука"
+      },
+      "price": "26500.00",
+      "quantity": {
+       "value": "4.00000000000"
+      },
+      "sum": "106000.00",
+      "type": "PRODUCT",
+      "hierarchyType": "ND",
+      "restrictionsInfo": {
+       "isProhibitionForeignPurchaseObjects": "false",
+       "isRestrictForeignPurchaseObjects": "true",
+       "isPreferenseRFPurchaseObjects": "false",
+       "isImposibilityProhibition": "false"
+      }
+     },
+     "totalSum": "106000.00",
+     "quantityUndefined": "false"
+    }
+   },
+   "requirementsInfo": {
+    "requirementInfo": [
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "ET44",
+       "name": "Единые требования к участникам закупок в соответствии с ч. 1 ст. 31 Закона № 44-ФЗ"
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TR442",
+       "name": "Требования к участникам закупок в соответствии с ч. 1.1 ст. 31 Закона № 44-ФЗ"
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TOVNPIVR",
+       "name": "Требование об отсутствии в реестре недобросовестных поставщиков (подрядчиков, исполнителей) информации, включенной в такой реестр в связи отказом поставщика (подрядчика, исполнителя) от исполнения контракта по причине введения в отношении заказчика санкций и (или) мер ограничительного характера"
+      }
+     }
+    ]
+   },
+   "flags": {
+    "purchaseObjectsCh9St37": "false"
+   }
+  },
+  "@schemeVersion": "16.3"
+ }
+}

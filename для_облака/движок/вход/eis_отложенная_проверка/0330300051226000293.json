@@ -1,0 +1,868 @@
+{
+ "_meta": {
+  "purchase_number": "0330300051226000293",
+  "source": "структурированное извещение ЕИС (через открытое API ГосПлан, v2test.gosplan.info)",
+  "retrieved": "2026-11-03",
+  "api_url": "https://v2test.gosplan.info/fz44/purchases/0330300051226000293",
+  "customer_inn": "3525482751",
+  "region_code": 35,
+  "stage": 1,
+  "purchase_type": "epNotificationEF2020"
+ },
+ "doc_type": "epNotificationEF2020",
+ "source": {
+  "id": "44439915",
+  "externalId": "0017002600635",
+  "versionNumber": "1",
+  "commonInfo": {
+   "purchaseNumber": "0330300051226000293",
+   "docNumber": "№0330300051226000293",
+   "directDT": "2026-10-30T16:46:00.337+03:00",
+   "plannedPublishDate": "2026-11-02+03:00",
+   "publishDTInEIS": "2026-11-02T12:14:05.516+03:00",
+   "href": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0330300051226000293",
+   "placingWay": {
+    "code": "EAP20",
+    "name": "Электронный аукцион"
+   },
+   "ETP": {
+    "code": "ETP_RTS",
+    "name": "РТС-тендер",
+    "url": "http://www.rts-tender.ru"
+   },
+   "contractConclusionOnSt83Ch2": "true",
+   "purchaseObjectInfo": "Поставка мониторов"
+  },
+  "purchaseResponsibleInfo": {
+   "responsibleOrgInfo": {
+    "regNum": "03303000512",
+    "consRegistryNum": "193D0185",
+    "fullName": "МУНИЦИПАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ \"ЦЕНТРАЛИЗОВАННАЯ БУХГАЛТЕРИЯ, ОБСЛУЖИВАЮЩАЯ МУНИЦИПАЛЬНЫЕ УЧРЕЖДЕНИЯ ГОРОДА ВОЛОГДЫ\"",
+    "shortName": "МКУ \"ЦБОМУ\"",
+    "postAddress": "Российская Федерация, 160019, Вологодская обл, Вологда г, УЛ. ЧЕРНЫШЕВСКОГО, Д. 63",
+    "factAddress": "160019, Вологодская, Вологда, г Вологда, ул Чернышевского, дом 63",
+    "INN": "3525119989",
+    "KPP": "352501001"
+   },
+   "responsibleRole": "AI",
+   "responsibleInfo": {
+    "orgPostAddress": "Российская Федерация, 160019, Вологодская обл, Вологда г, УЛ. ЧЕРНЫШЕВСКОГО, Д. 63",
+    "orgFactAddress": "160019, Вологодская, Вологда, г Вологда, ул Чернышевского, дом 63"
+   }
+  },
+  "printFormInfo": {
+   "url": "https://zakupki.gov.ru/epz/order/notice/printForm/view.html?regNumber=0330300051226000293"
+  },
+  "attachmentsInfo": {
+   "attachmentInfo": [
+    {
+     "publishedContentId": "01A18CE39A4A7711BA143577F624EF55",
+     "fileName": "Приложение 1 Обоснование НМЦК.docx",
+     "fileSize": "31465",
+     "docDescription": "Приложение 1 Обоснование НМЦК.docx",
+     "docDate": "2026-10-30T16:00:09+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18CE39A4A7711BA143577F624EF55",
+     "docKindInfo": {
+      "code": "MRJ",
+      "name": "Обоснование начальной (максимальной) цены контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A18CE39EFE74D2AA50F61E96F4E82C",
+     "fileName": "Приложение 4 Проект контракта.docx",
+     "fileSize": "55676",
+     "docDescription": "Приложение 4 Проект контракта.docx",
+     "docDate": "2026-10-30T16:00:09+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18CE39EFE74D2AA50F61E96F4E82C",
+     "docKindInfo": {
+      "code": "CP",
+      "name": "Проект контракта"
+     }
+    },
+    {
+     "publishedContentId": "01A18CE39BFE7FFAB93AD772A132037D",
+     "fileName": "Приложение 2 Описание объекта закупки.docx",
+     "fileSize": "46548",
+     "docDescription": "Приложение 2 Описание объекта закупки.docx",
+     "docDate": "2026-10-30T16:00:09+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18CE39BFE7FFAB93AD772A132037D",
+     "docKindInfo": {
+      "code": "POD",
+      "name": "Описание объекта закупки"
+     }
+    },
+    {
+     "publishedContentId": "01A18CE3A09B75509A3FA595F8B4E69F",
+     "fileName": "Приложение 3 Требования к заявке.docx",
+     "fileSize": "32458",
+     "docDescription": "Приложение 3 Требования к заявке.docx",
+     "docDate": "2026-10-30T16:00:09+03:00",
+     "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A18CE3A09B75509A3FA595F8B4E69F",
+     "docKindInfo": {
+      "code": "CAR",
+      "name": "Требование к содержанию, составу заявки на участие в закупке"
+     }
+    }
+   ]
+  },
+  "serviceSigns": {
+   "isIncludeKOKS": "false",
+   "isControlP1Ch5St99": "true"
+  },
+  "notificationInfo": {
+   "procedureInfo": {
+    "collectingInfo": {
+     "startDT": "2026-11-02T12:14:05+03:00",
+     "endDT": "2026-11-10T07:00:00+03:00"
+    },
+    "biddingDate": "2026-11-10+03:00",
+    "summarizingDate": "2026-11-12+03:00"
+   },
+   "contractConditionsInfo": {
+    "maxPriceInfo": {
+     "maxPrice": "157080.00",
+     "currency": {
+      "code": "RUB",
+      "name": "РОССИЙСКИЙ РУБЛЬ"
+     }
+    }
+   },
+   "customerRequirementsInfo": {
+    "customerRequirementInfo": {
+     "customer": {
+      "regNum": "08306000026",
+      "consRegistryNum": "193J0616",
+      "fullName": "МУНИЦИПАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ \"ЦЕНТР ЦИФРОВОГО РАЗВИТИЯ ГОРОДА ВОЛОГДЫ\""
+     },
+     "contractGuarantee": {
+      "account": {
+       "bik": "012202102",
+       "settlementAccount": "03232643197010003200",
+       "personalAccount": "053J0616000",
+       "creditOrgName": "ОКЦ № 1 ВВГУ Банка России//УФК по Нижегородской области, г Нижний Новгород",
+       "corrAccountNumber": "40102810745370000024"
+      },
+      "procedureInfo": "Исполнение контракта может обеспечиваться предоставлением независимой гарантии (далее – НГ),соответствующей требованиям ст.45ФЗ,или внесением денежных средств на указанный заказчиком счет,на котором в соответствии с закон-вом РФ учитываются операции со средствами,поступающими заказчику.НГ должна быть безотзывной и должна соответствовать требованиям устан-ым ст.45ФЗ.Способ обеспечения исполнения контракта, срок действия НГ определяются в соответствии с треб-ми ФЗ участником закупки,с которым заключается контракт,самостоятельно.Срок действия НГ должен превышать предус-ый контрактом срок исполнения обяз-в,которые должны быть обеспечены такой НГ,не менее чем на 1 месяц,в т.ч. в случае его изменения в соответствии со ст.95ФЗ. В НГ включается условие об обяз-ти гаранта уплатить заказчику (бенефициару) денежн. сумму по НГ не позднее 10 раб. дн. со дня, следующего за днем получения гарантом требования заказчика (бенефициара), соответствующего условиям такой НГ, при отсутствии предусмотренных ГК РФ оснований для отказа в удовлетворении этого требования. Запрещается включение в условия НГ требования о пред-ии заказчиком гаранту судебных актов,подтвер-их неисполнение принципалом обязательств,обеспечиваемых НГ.НГ,используемая для целей ФЗ, информация о ней и документы,предус-ые ч.9ст.45ФЗ,должны быть вкл. в реестр НГ, размещенный в ЕИС,за исключением НГ,указанных в ч.8.1ст.45ФЗ. В случае, если предложенная в заявке участника закупки цена снижена на 25 и более % по отношению к НМЦК, участник закупки, с которым заключается контракт, предоставляет обеспечение исполнения контракта с учетом ст.37ФЗ.Банк.и казнач.сопровождение контракта не осуществляется. Участник закупки, с которым закл. контракт по результатам определения поставщика в соответствии с п.1ч.1ст.30ФЗ,освобождается от предоставления обеспечения исполнения контракта в случае, предус-ом ч.8.1.ст.96ФЗ.",
+      "part": "5.0"
+     },
+     "contractConditionsInfo": {
+      "maxPriceInfo": {
+       "maxPrice": "157080.00"
+      },
+      "mustPublicDiscussion": "false",
+      "IKZInfo": {
+       "purchaseCode": "263352548275135250100100670012620244",
+       "publishYear": "2026",
+       "OKPD2Info": {
+        "OKPD2": {
+         "OKPDCode": "26.20",
+         "OKPDName": "Компьютеры и периферийное оборудование"
+        }
+       },
+       "KVRInfo": {
+        "KVR": {
+         "code": "244",
+         "name": "Прочая закупка товаров, работ и услуг"
+        }
+       },
+       "customerCode": "33525482751352501001",
+       "purchaseNumber": "0067",
+       "purchaseOrderNumber": "001"
+      },
+      "tenderPlan2020Info": {
+       "plan2020Number": "202608306000026001",
+       "position2020Number": "202608306000026001000066"
+      },
+      "contractExecutionPaymentPlan": {
+       "contractExecutionTermsInfo": {
+        "relativeTermsInfo": {
+         "start": "0",
+         "startDayType": "working",
+         "term": "25",
+         "termDayType": "working"
+        }
+       },
+       "financingSourcesInfo": {
+        "budgetFinancingsInfo": {
+         "budgetInfo": {
+          "code": "30030040",
+          "name": "Бюджет города Вологды"
+         },
+         "budgetLevelInfo": {
+          "code": "30",
+          "name": "местный бюджет"
+         },
+         "OKTMOInfo": {
+          "code": "19701000",
+          "name": "Муниципальные образования Вологодской области / Городские округа Вологодской области/ / город Вологда"
+         }
+        },
+        "currentYear": "2026",
+        "financeInfo": {
+         "total": "157080.00",
+         "currentYear": "157080.00",
+         "firstYear": "0.00",
+         "secondYear": "0.00",
+         "subsecYears": "0.00"
+        }
+       },
+       "stagesInfo": {
+        "stageInfo": {
+         "sid": "22537413",
+         "externalSid": "99cdf096-b08e-439f-be8a-6897613d5474-1",
+         "termsInfo": {
+          "relativeTermsInfo": {
+           "start": "0",
+           "startDayType": "working",
+           "term": "25",
+           "termDayType": "working"
+          }
+         },
+         "budgetFinancingsInfo": {
+          "budgetFinancingInfo": {
+           "KBK": "92504101440390000244",
+           "paymentYearInfo": {
+            "total": "157080.00",
+            "currentYear": "157080.00",
+            "firstYear": "0.00",
+            "secondYear": "0.00",
+            "subsecYears": "0.00"
+           }
+          }
+         }
+        }
+       }
+      },
+      "BOInfo": {
+       "BONumber": "193J061626300000144",
+       "BODate": "2026-11-02T00:00:00+03:00",
+       "inputBOFlag": "auto"
+      },
+      "deliveryPlacesInfo": {
+       "byGARInfo": {
+        "sid": "62474625",
+        "externalSid": "9c1d59d3-0997-4dc9-8492-fdd7ee8e2bf2",
+        "countryInfo": {
+         "countryCode": "643",
+         "countryFullName": "Российская Федерация"
+        },
+        "GARInfo": {
+         "GARGuid": "575bfac5-bdda-4eaf-bdd7-84b75a29e635",
+         "GARAddress": "обл. Вологодская, г.о. город Вологда, г. Вологда, ул. Козленская, д. 33"
+        },
+        "deliveryPlace": "3 этаж, левое крыло, склад"
+       }
+      },
+      "isOneSideRejectionSt95": "true",
+      "isExecutionStagesTerms": "false"
+     },
+     "warrantyInfo": {
+      "warrantyServiceRequirement": "В течение гарантийного срока при обнаружении неисправности, скрытых недостатков во время его эксплуатации, при установлении Поставщиком невозможности осуществления гарантийного ремонта, Поставщик осуществляет замену поставляемого Товара на Товар надлежащего качества в течение 5 (Пяти) рабочих дней со дня установления гарантийного случая.",
+      "manufacturersWarrantyRequirement": "Срок предоставления гарантии качества Товара должен соответствовать срокам, установленным заводом-изготовителем и (или) Поставщиком, но не менее 12 (Двенадцати) месяцев с даты подписания Заказчиком документов о приемке Товара.",
+      "warrantyTerm": "12 (Двенадцать) месяцев"
+     }
+    }
+   },
+   "purchaseObjectsInfo": {
+    "notDrugPurchaseObjectsInfo": {
+     "purchaseObject": {
+      "sid": "226277988",
+      "externalSid": "1",
+      "KTRU": {
+       "code": "26.20.17.110-00000007",
+       "name": "Монитор, подключаемый к компьютеру",
+       "versionId": "356261",
+       "versionNumber": "17",
+       "characteristics": {
+        "characteristicsUsingReferenceInfo": [
+         {
+          "sid": "338147130",
+          "code": "4d32caf9-6",
+          "name": "Блок питания",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880808",
+            "qualityDescription": "Встроенный"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338147131",
+          "code": "83867a5a-d",
+          "name": "Интерфейс подключения",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436880809",
+             "qualityDescription": "Display Port"
+            },
+            {
+             "sid": "436880810",
+             "qualityDescription": "HDMI"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "338147132",
+          "code": "29c0bb44-b",
+          "name": "Количество встроенных в корпус портов HDMI",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880811",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "1"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "338147133",
+          "code": "bbf9fcd6-f",
+          "name": "Количество встроенных в корпус портов DisplayPort",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880812",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "1"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "338147134",
+          "code": "0a224ad7-3",
+          "name": "Контрастность",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880813",
+            "qualityDescription": "≥1000:1"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "338147135",
+          "code": "2c9039bd-d",
+          "name": "Количество встроенных в корпус портов USB 3.2 Gen 1 (USB 3.1 Gen 1, USB 3.0)",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880814",
+            "OKEI": {
+             "code": "796",
+             "nationalCode": "шт",
+             "name": "Штука"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "4"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "338147136",
+          "code": "6ef8f746-9",
+          "name": "Время отклика, мс",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880815",
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "maxMathNotation": "less",
+              "max": "6"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "338147137",
+          "code": "1623785d-f",
+          "name": "Частота обновления экрана",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880816",
+            "OKEI": {
+             "code": "290",
+             "nationalCode": "Гц",
+             "name": "Герц"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "100"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "338147138",
+          "code": "c7d8cb52-5",
+          "name": "Наличие встроенных динамиков",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880817",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338147139",
+          "code": "a580e650-3",
+          "name": "Наличие функции регулировки наклона",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880818",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338147140",
+          "code": "6a073721-4",
+          "name": "Наличие функции регулировки по высоте",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880819",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338147141",
+          "code": "20d87efd-4",
+          "name": "Размер диагонали",
+          "type": "2",
+          "kind": "1",
+          "values": {
+           "value": {
+            "sid": "436880820",
+            "OKEI": {
+             "code": "039",
+             "nationalCode": "дюйм",
+             "name": "Дюйм (25,4 мм)"
+            },
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "27"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "338147142",
+          "code": "3b3a4392-d",
+          "name": "Разрешение экрана, Пиксель",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880821",
+            "qualityDescription": "2560 x 1440"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338147143",
+          "code": "3652d6a3-a",
+          "name": "Разъем",
+          "type": "1",
+          "kind": "3",
+          "values": {
+           "value": [
+            {
+             "sid": "436880822",
+             "qualityDescription": "Mini-Jack (3,5 мм) выход"
+            },
+            {
+             "sid": "436880823",
+             "qualityDescription": "Mini-Jack (3,5 мм) вход"
+            }
+           ]
+          },
+          "characteristicsFillingInstruction": {
+           "code": "5",
+           "name": "Участник закупки указывает в заявке все значения характеристики"
+          }
+         },
+         {
+          "sid": "338147144",
+          "code": "6869632b-6",
+          "name": "Стандарт крепления",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880824",
+            "qualityDescription": "VESA 100 x 100"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338147145",
+          "code": "2fa21306-2",
+          "name": "Технология изготовления матрицы дисплея",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880825",
+            "qualityDescription": "IPS (PLS, ADS, AAS, FFS, SFT, New Mode2, Vistarich)"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338147146",
+          "code": "8486bc83-8",
+          "name": "Угол обзора по вертикали, градус",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880826",
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "178"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "338147147",
+          "code": "73e1008d-7",
+          "name": "Угол обзора по горизонтали, градус",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880827",
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "178"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "338147148",
+          "code": "5dba0cf0-b",
+          "name": "Яркость, кд/м2",
+          "type": "2",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880828",
+            "valueFormat": "N",
+            "rangeSet": {
+             "valueRange": {
+              "minMathNotation": "greaterOrEqual",
+              "min": "300",
+              "maxMathNotation": "less",
+              "max": "350"
+             }
+            }
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "2",
+           "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+          }
+         },
+         {
+          "sid": "338147149",
+          "code": "70b043f7-7",
+          "name": "Формат изображения",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880829",
+            "qualityDescription": "16:9"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338147150",
+          "code": "99117d56-e",
+          "name": "Кабель для подключения к источнику изображения в комплекте",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880830",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338147151",
+          "code": "0717e845-5",
+          "name": "Тип кабеля для подключения к источнику изображения в комплекте",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880831",
+            "qualityDescription": "HDMI-HDMI"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338147152",
+          "code": "65cbe05f-1",
+          "name": "Возможность поворота экрана по вертикали (портретный режим)",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880832",
+            "qualityDescription": "Да"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338147153",
+          "code": "e7db0797-e",
+          "name": "Изогнутый экран",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880833",
+            "qualityDescription": "Нет"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         },
+         {
+          "sid": "338147154",
+          "code": "9baed3df-e",
+          "name": "Класс энергетической эффективности",
+          "type": "1",
+          "kind": "2",
+          "values": {
+           "value": {
+            "sid": "436880834",
+            "qualityDescription": "Не ниже A"
+           }
+          },
+          "characteristicsFillingInstruction": {
+           "code": "6",
+           "name": "Значение характеристики не может изменяться участником закупки"
+          }
+         }
+        ]
+       },
+       "OKPD2": {
+        "OKPDCode": "26.20.17.110",
+        "OKPDName": "Мониторы, подключаемые к компьютеру"
+       }
+      },
+      "name": "Монитор, подключаемый к компьютеру",
+      "OKEI": {
+       "code": "796",
+       "nationalCode": "шт",
+       "name": "Штука"
+      },
+      "customerQuantities": {
+       "customerQuantity": {
+        "customer": {
+         "regNum": "08306000026",
+         "consRegistryNum": "193J0616",
+         "fullName": "МУНИЦИПАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ \"ЦЕНТР ЦИФРОВОГО РАЗВИТИЯ ГОРОДА ВОЛОГДЫ\""
+        },
+        "quantity": "7"
+       }
+      },
+      "price": "22440.00",
+      "volumeSpecifyingMethod": "QF",
+      "quantity": {
+       "value": "7.00000000000"
+      },
+      "sum": "157080.00",
+      "type": "PRODUCT",
+      "hierarchyType": "ND",
+      "restrictionsInfo": {
+       "isProhibitionForeignPurchaseObjects": "false",
+       "isRestrictForeignPurchaseObjects": "true",
+       "isPreferenseRFPurchaseObjects": "false",
+       "isImposibilityProhibition": "false"
+      }
+     },
+     "totalSum": "157080.00",
+     "quantityUndefined": "false"
+    }
+   },
+   "preferensesInfo": {
+    "preferenseInfo": {
+     "preferenseRequirementInfo": {
+      "shortName": "PVS33044",
+      "name": "Преимущество в соответствии с ч. 3 ст. 30 Закона № 44-ФЗ"
+     }
+    }
+   },
+   "requirementsInfo": {
+    "requirementInfo": [
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "ET44",
+       "name": "Единые требования к участникам закупок в соответствии с ч. 1 ст. 31 Закона № 44-ФЗ"
+      }
+     },
+     {
+      "preferenseRequirementInfo": {
+       "shortName": "TR442",
+       "name": "Требования к участникам закупок в соответствии с ч. 1.1 ст. 31 Закона № 44-ФЗ"
+      }
+     }
+    ]
+   },
+   "flags": {
+    "purchaseObjectsCh9St37": "false"
+   }
+  },
+  "@schemeVersion": "16.3"
+ }
+}

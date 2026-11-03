@@ -96,8 +96,10 @@ def main() -> int:
     ap.add_argument("номера", nargs="*")
     ap.add_argument("--из-кэша", dest="cache", help="папка с файлами n_<номер>.json и p_<номер>.json")
     ap.add_argument("--xml", nargs="*", default=[], help="XML-извещения ЕИС: очистить и положить в вход/eis_xml")
+    ap.add_argument("--папка", dest="folder", default="eis", help="подпапка во вход/ (по умолчанию eis)")
     a = ap.parse_args()
-    OUT.mkdir(parents=True, exist_ok=True)
+    out_dir = ROOT / "вход" / a.folder
+    out_dir.mkdir(parents=True, exist_ok=True)
     numbers = list(a.номера)
     if a.cache and not numbers:
         numbers = sorted({p.stem[2:] for p in Path(a.cache).glob("p_*.json")})
@@ -115,7 +117,7 @@ def main() -> int:
             card = json.loads(fetch(f"/{law}/purchases/{n}"))
             time.sleep(7)
         data = prepare(n, notice, card)
-        (OUT / f"{n}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), "utf-8")
+        (out_dir / f"{n}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), "utf-8")
         print("готово:", n)
     if a.xml:
         xo = ROOT / "вход" / "eis_xml"

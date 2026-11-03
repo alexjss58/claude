@@ -197,6 +197,11 @@ def char_to_requirement(c: dict) -> Requirement:
             if pr.unit == "пиксель":
                 pr.instruction = instr
                 return pr
+        if len(texts) == 1 and re.fullmatch(r"\s*\d[\d\s]*(?:[.,]\d+)?\s*", texts[0]):
+            pr = parse_value(texts[0], name, unit)       # «48» текстом — это число
+            if pr.vmin is not None:
+                pr.instruction = instr
+                return pr
         if len(texts) == 1 and re.search(r"\d", texts[0]) and re.search(r"≥|≤|>|<|не менее|не более|от\s*\d|до\s*\d|более|менее|[xх×]\s*\d", texts[0].lower()):
             pr = parse_value(texts[0], name, unit)
             if pr.op in (">=", "<=", "диапазон") or pr.vmin is not None or (pr.values and pr.unit == "пиксель"):

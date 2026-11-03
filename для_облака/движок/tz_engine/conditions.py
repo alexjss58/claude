@@ -6,7 +6,7 @@ import re
 from . import units
 from .models import Requirement, fmt
 
-NUM = r"(\d{1,3}(?:[  ]\d{3})+(?:[.,]\d+)?|\d+(?:[.,]\d+)?)"
+NUM = r"((?<![\d.,])-?\d{1,3}(?:[  ]\d{3})+(?:[.,]\d+)?|(?<![\d.,])-?\d+(?:[.,]\d+)?)"
 UNIT = r"(\s*[^\d≤≥<>=;,()]{0,18}?)"
 
 EQUIV_YES = re.compile(r"или\s+эквивалент|или\s+аналог|эквивалент\s+допуска|допускается\s+эквивалент|или\s+равнозначн", re.I)
@@ -136,8 +136,8 @@ def parse_value(text: str, name: str = "", unit_hint: str = "") -> Requirement:
     if m:
         return setnum("<=", None, _num(m.group(1)), _ua(t, m, 1))
 
-    # 5) одно число (с единицей или без) -> равно
-    m = re.fullmatch(rf"=?\s*{NUM}(.*)", t)
+    # 5) одно число (с единицей или без) -> равно; номера версий («2.0») оставляем текстом
+    m = None if re.search(r"верси|ревизи|стандарт|поколени", (name or "").lower()) else re.fullmatch(rf"=?\s*{NUM}(.*)", t)
     if m and (not m.group(2).strip() or _ua(t, m, 1)):
         r2 = setnum("=", _num(m.group(1)), None, _ua(t, m, 1))
         r2.vmax = r2.vmin
@@ -165,25 +165,36 @@ def parse_value(text: str, name: str = "", unit_hint: str = "") -> Requirement:
         r.value = (" + " if r.all_values else "; ").join(parts)
         return r
 
-    # 8) просто текст
-    r.op = "текст"
+    # 8) одно текстовое значение («SSD», «Ноутбук») — это «=»; длинное описание — «текст»
+    r.op = "=" if len(clean) <= 60 and not re.search(r"[.!?]\s", clean) else "текст"
     r.values = [clean]
     r.value = clean
     return r
 
 
 def split_list(raw: str) -> list[str]:
+    """Разбить перечень значений. Не режем внутри скобок и десятичные «15,6» / «3.5»."""
     s = raw.strip().rstrip(".")
-    if re.search(r"\d+[.,]\d", s) and not re.search(r";", s):
-        # «15,6» — не разделитель
-        pieces = re.split(r"\s*;\s*|\s+или\s+|\s+либо\s+", s)
-    else:
-        pieces = re.split(r"\s*[;,]\s*|\s+или\s+|\s+либо\s+|\s*/\s*(?=[A-Za-zА-Яа-я])", s)
-    pieces = [p.strip(" .") for p in pieces if p and p.strip(" .")]
-    return pieces
+    out, buf, depth, i = [], "", 0, 0
+    seps = re.compile(r";\s*|,\s+(?=\D)|\s+или\s+|\s+либо\s+|\s*/\s*(?=[A-Za-zА-Яа-я])")
+    while i < len(s):
+        ch = s[i]
+        if ch == "(":
+            depth += 1
+        elif ch == ")":
+            depth = max(0, depth - 1)
+        if depth == 0:
+            m = seps.match(s, i)
+            if m and m.end() > i:
+                out.append(buf)
+                buf = ""
+                i = m.end()
+                continue
+        buf += ch
+        i += 1
+    out.append(buf)
+    return [p.strip(" .") for p in out if p and p.strip(" .")]
 
-
-# ---------------------------------------------------------------- сравнение
 
 def _cyr_lat(token: str) -> str:
     """В коротких кодах (А4, Wi-Fi) русские буквы-двойники -> латиница."""
@@ -209,6 +220,7 @@ FAMILIES = [
     [{"фиксированн", "fixed"}, {"модульн", "шасси", "modular"}],
     [{"сменн", "hot-swap", "горячей замен", "hot swap"}, {"несменн", "фиксированн"}],
     [{"l2", "второго уровня", "уровня 2"}, {"l3", "третьего уровня", "уровня 3"}],
+    [{"неуправляем", "unmanaged"}, {"управляем", "managed"}],
     [{"матов", "антиблик", "matte"}, {"глянц", "glossy"}],
     [{"ddr4"}, {"ddr5"}, {"ddr3"}],
     [{"планшетн", "flatbed"}, {"протяжн", "автоподатчик", "adf"}],
@@ -230,7 +242,6 @@ VALUE_SYNONYMS = [
     {"кардридер", "кард-ридер", "card reader", "карт памяти", "microsd", "sd"},
     {"poe", "802.3af", "802.3at", "poe+"},
     {"sfp+", "10gbase", "10g"},
-    {"управляем", "managed"},
     {"windows"},
     {"linux", "astra", "альт", "ред ос", "red os", "основа", "эльбрус"},
     {"usb-a", "type-a", "usb a"},
@@ -256,7 +267,19 @@ def norm_text(s: str) -> str:
 
 
 def _hit(text: str, group: set) -> bool:
-    return any(g and g in text for g in group)
+    """Есть ли в тексте слово из группы. «управляемый» внутри «неуправляемый» не считается."""
+    for g in group:
+        if not g:
+            continue
+        start = 0
+        while True:
+            i = text.find(g, start)
+            if i < 0:
+                break
+            if g.startswith("не") or text[max(0, i - 2):i] != "не":
+                return True
+            start = i + 1
+    return False
 
 
 def text_match(product_text: str, value: str, closed: bool = False) -> str:
@@ -320,9 +343,17 @@ def numbers_in(s: str) -> list[float]:
     return units.all_numbers(str(s))
 
 
-def _tol(dim: str | None) -> float:
-    return 0.025 if dim == "data" else 0.005
+def _tol(dim: str | None, factor: float = 1.0) -> float:
+    # ГБ/ТБ и «тыс.» (1000 или 1024) — допуск 2,5 %, остальное — 0,5 % на округление
+    return 0.025 if dim == "data" or (dim == "count" and factor >= 1000) else 0.005
 
+
+# текстовые столбцы, где непустое значение само означает «есть»
+PRESENCE_TEXT_KEYS = {"wifi", "bluetooth", "hs_mic", "noise_cancel", "ports_text", "video_inputs", "connection"}
+# числовые столбцы-«количества»: «есть» = больше нуля
+COUNT_KEYS = {"hdmi", "dp", "vga", "dvi", "usb_c", "usb3", "usb3a", "usb3c", "usb2", "usb_any", "usb_gen2", "rj45", "webcam",
+              "adf", "ports_rj45", "ports_sfp", "ports_sfp10", "ports_poe", "ports_combo", "eth_ports", "sip", "ups_outlets",
+              "vlan", "battery_wh", "display_in", "screen", "speakers", "tray_in", "tray_out", "card_reader"}
 
 ENERGY = ["g", "f", "e", "d", "c", "b", "a", "a+", "a++", "a+++"]
 
@@ -350,6 +381,15 @@ def compare(req: Requirement, have_raw, have_unit: str | None = None, kind: str 
     is_num_req = req.op in (">=", "<=", "диапазон") or (req.op == "=" and req.vmin is not None and not req.values)
     yesno = bool(req.values) and len(req.values) == 1 and req.values[0] in ("да", "нет")
 
+    if key == "vesa":
+        need = re.findall(r"(\d{2,3})\s*[xх×*]\s*(\d{2,3})", " ".join(req.values) or req.raw)
+        got = re.findall(r"(\d{2,3})\s*[xх×*]\s*(\d{2,3})", have)
+        if need and got:
+            return ("ok" if any(n in got for n in need) else "fail"), shown
+        if not need and yesno:
+            pass
+        elif need:
+            return "unknown", shown
     if key == "energy_class":
         rq, rh = _energy_rank(" ".join(req.values) or req.raw), _energy_rank(have)
         if rq is None or rh is None:
@@ -378,9 +418,10 @@ def compare(req: Requirement, have_raw, have_unit: str | None = None, kind: str 
             return "unknown", shown
         nw, nh = int(need.group(1)), int(need.group(2))
         gw, gh = int(got.group(1)), int(got.group(2))
-        if req.op == ">=":
+        op = ">=" if key == "proj_supported_res" else req.op   # «поддерживает до» — достаточно не меньше
+        if op == ">=":
             ok = max(gw, gh) >= max(nw, nh) and min(gw, gh) >= min(nw, nh)
-        elif req.op == "<=":
+        elif op == "<=":
             ok = max(gw, gh) <= max(nw, nh) and min(gw, gh) <= min(nw, nh)
         else:
             ok = {gw, gh} == {nw, nh}
@@ -407,10 +448,12 @@ def compare(req: Requirement, have_raw, have_unit: str | None = None, kind: str 
         if not conv:
             return "unknown", shown
         lk = units.lookup(ru) or units.lookup(hu)
-        tol = _tol(lk[0] if lk else None)
+        tol = _tol(lk[0] if lk else None, lk[1] if lk else 1.0)
         if req.op == ">=":
             v = max(conv)
             ok = v > req.vmin if req.min_strict else v >= req.vmin * (1 - tol)
+            if not ok and re.match(r"^\s*(от|from)\s", have.lower()):
+                return "unknown", shown + " (в каталоге только нижняя граница)"
         elif req.op == "<=":
             v = min(conv)
             ok = v < req.vmax if req.max_strict else v <= req.vmax * (1 + tol)
@@ -422,9 +465,21 @@ def compare(req: Requirement, have_raw, have_unit: str | None = None, kind: str 
                 ok = lo <= req.vmax and hi >= req.vmin   # диапазон товара перекрывает требуемый
         else:
             ok = any(abs(v - req.vmin) <= abs(req.vmin) * tol + 1e-9 for v in conv)
+            if not ok and len(conv) >= 2 and re.search(r"\d\s*[–—-]\s*\d", have):
+                ok = min(conv) <= req.vmin <= max(conv)      # «= 50 Гц» при диапазоне товара 45–65 Гц
         return ("ok" if ok else "fail"), shown
 
     # да / нет
+    if yesno and kind == "text" and key not in PRESENCE_TEXT_KEYS:
+        # «Поддержка DHCP-сервера: да» — ищем саму функцию в описании, а не просто непустую ячейку
+        toks = [t.lower().rstrip("-") for t in re.findall(r"[A-Za-z][A-Za-z0-9.+\-]{1,}", req.name)]
+        toks = [t for t in toks if len(t) >= 2]
+        hl = have.lower()
+        if toks and all(t in hl for t in toks):
+            return ("ok" if req.values[0] == "да" else "fail"), shown
+        return "unknown", shown
+    if yesno and kind == "num" and key and key not in COUNT_KEYS:
+        return "unknown", shown
     if yesno:
         hl = have.lower()
         want = req.values[0] == "да"

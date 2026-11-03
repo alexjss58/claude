@@ -36,16 +36,17 @@ def _read(path: Path) -> pd.DataFrame:
     else:
         raw = None
         for enc in ("utf-8-sig", "cp1251"):
-            for sep in (",", ";", "\t"):
-                try:
-                    df = pd.read_csv(path, header=None, dtype=str, encoding=enc, sep=sep)
-                    if df.shape[1] > 2:
-                        raw = df
-                        break
-                except Exception:
-                    continue
-            if raw is not None:
+            try:
+                first = path.read_bytes().decode(enc).splitlines()[0]
+            except (UnicodeDecodeError, IndexError):
+                continue
+            # разделитель — тот, которого в строке заголовков больше всего (в заголовках бывают запятые: «ОЗУ, Гб»)
+            sep = max([";", "\t", ","], key=first.count)
+            try:
+                raw = pd.read_csv(path, header=None, dtype=str, encoding=enc, sep=sep)
                 break
+            except Exception:
+                continue
         if raw is None:
             raise ValueError(f"не удалось прочитать {path}")
     # строка заголовков — первая, где есть «модель/наименование»
