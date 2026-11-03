@@ -1,6 +1,7 @@
 // Черновик заявки: модель документа (для предпросмотра на экране) и выгрузка в .docx и .csv.
 // Все тексты документов — ШАБЛОНЫ. Перед подачей их проверяет юрист. Не юридическая консультация.
 
+import { saveFile } from './save';
 import type { CatalogItem, Sverka, TenderView } from '../types';
 import { findItem } from './match';
 import { specValue } from '../ai/rules';
@@ -128,14 +129,7 @@ export function buildDraft(t: TenderView, sverka: Sverka | undefined, catalog: C
 }
 
 function download(blob: Blob, name: string) {
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = name;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 2000);
+  void saveFile(blob, name);
 }
 
 const TR: Record<string, string> = { а: 'a', б: 'b', в: 'v', г: 'g', д: 'd', е: 'e', ё: 'e', ж: 'zh', з: 'z', и: 'i', й: 'y', к: 'k', л: 'l', м: 'm', н: 'n', о: 'o', п: 'p', р: 'r', с: 's', т: 't', у: 'u', ф: 'f', х: 'h', ц: 'ts', ч: 'ch', ш: 'sh', щ: 'sch', ъ: '', ы: 'y', ь: '', э: 'e', ю: 'yu', я: 'ya' };

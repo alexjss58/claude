@@ -5,6 +5,21 @@ import { engineCatalog, samplePriceCsv } from '../../data';
 import { num, rub } from '../../lib/format';
 import { href } from '../../router';
 import { useApp } from '../../state';
+import { insideClaude, saveFile } from '../../lib/save';
+
+/** CSV из встроенных данных: на claude.ai файлы .xlsx рядом со страницей не публикуются. */
+function toCsv(items: object[]): string {
+  if (!items.length) return '';
+  const keys = Object.keys(items[0]);
+  const cell = (v: unknown) => {
+    const t = v === null || v === undefined ? '' : typeof v === 'object' ? JSON.stringify(v) : String(v);
+    return /[";\n]/.test(t) ? '"' + t.replace(/"/g, '""') + '"' : t;
+  };
+  return '\uFEFF' + [keys.join(';'), ...items.map((it) => keys.map((k) => cell((it as Record<string, unknown>)[k])).join(';'))].join('\n');
+}
+function saveCsv(text: string, name: string) {
+  void saveFile(new Blob([text], { type: 'text/csv;charset=utf-8' }), name);
+}
 
 const FIELDS = Object.keys(FIELD_LABELS) as FieldKey[];
 
@@ -88,7 +103,11 @@ export default function Assortment() {
           <p className="big-num">{num(catalog.length)} <small>позиций</small></p>
           <p>Источник: {catalogSource} {isSample && <DemoMark>{catalogKind === 'движок' ? 'демо-каталог' : 'пример'}</DemoMark>}</p>
           {catalogKind === 'движок' && <p className="hint">Цен в демо-каталоге нет: производители их не публикуют. Себестоимость вы вводите сами в карточке тендера.</p>}
-          <p className="downloads">Скачать для проверки: <a href="./katalog_demo.xlsx" download>демо-каталог движка, .xlsx</a> · пример прайса: <a href="./primer_praysa_orgtehniki.xlsx" download>.xlsx</a>, <a href="./primer_praysa_orgtehniki.csv" download>.csv</a></p>
+          {insideClaude() ? (
+            <p className="downloads">Скачать для проверки (CSV): <button type="button" className="linklike" onClick={() => saveCsv(toCsv(engineCatalog), 'katalog_demo.csv')}>демо-каталог движка</button> · <button type="button" className="linklike" onClick={() => saveCsv(samplePriceCsv, 'primer_praysa_orgtehniki.csv')}>пример прайса</button></p>
+          ) : (
+            <p className="downloads">Скачать для проверки: <a href="./katalog_demo.xlsx" download>демо-каталог движка, .xlsx</a> · пример прайса: <a href="./primer_praysa_orgtehniki.xlsx" download>.xlsx</a>, <a href="./primer_praysa_orgtehniki.csv" download>.csv</a></p>
+          )}
           <div className="cta-row">
             {catalogKind !== 'движок' && engineCatalog.length > 0 && <button type="button" className="btn btn-small" onClick={() => useBuiltin('движок')}>Вернуть демо-каталог</button>}
             {catalogKind === 'движок' && <button type="button" className="btn btn-small" onClick={() => useBuiltin('пример')}>Заменить на пример прайса</button>}

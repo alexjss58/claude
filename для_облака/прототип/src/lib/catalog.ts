@@ -63,7 +63,7 @@ function cellToString(v: unknown): string {
 async function readText(file: File): Promise<{ text: string; enc: string }> {
   const buf = await file.arrayBuffer();
   const utf = new TextDecoder('utf-8').decode(buf);
-  const bad = (utf.match(/�/g) || []).length;
+  const bad = (utf.match(/\uFFFD/g) || []).length;
   if (bad > 3) return { text: new TextDecoder('windows-1251').decode(buf), enc: 'Windows-1251' };
   return { text: utf.replace(/^﻿/, ''), enc: 'UTF-8' };
 }
