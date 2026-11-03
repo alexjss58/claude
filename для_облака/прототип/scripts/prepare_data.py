@@ -391,6 +391,15 @@ def nn(v):
     return v
 
 
+def deep_clean(o):
+    """Рекурсивно убирает NaN из словарей и списков (например, пустой регион)."""
+    if isinstance(o, dict):
+        return {k: deep_clean(v) for k, v in o.items()}
+    if isinstance(o, list):
+        return [deep_clean(v) for v in o]
+    return nn(o)
+
+
 def stable_id(row) -> str:
     key = f"{row['Предмет закупки']}|{row['Заказчик']}|{row['НМЦ']}|{row['Дата окончания']}"
     return "T" + hashlib.sha1(key.encode("utf-8")).hexdigest()[:8]
@@ -459,7 +468,7 @@ def main():
         "чистая_поставка_строк": int(df["чистая_поставка"].sum()),
     }
     (OUT_DIR / "tenders.json").write_text(
-        json.dumps({"meta": meta, "закупки": tenders}, ensure_ascii=False, separators=(",", ":"), allow_nan=False), encoding="utf-8")
+        json.dumps(deep_clean({"meta": meta, "закупки": tenders}), ensure_ascii=False, separators=(",", ":"), allow_nan=False), encoding="utf-8")
     (OUT_DIR / "price_table_own.json").write_text(json.dumps(pt, ensure_ascii=False, indent=1), encoding="utf-8")
     (OUT_DIR / "market.json").write_text(json.dumps(market(df), ensure_ascii=False, indent=1), encoding="utf-8")
 
