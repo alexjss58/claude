@@ -215,6 +215,10 @@ def load() -> pd.DataFrame:
         lambda v: str(int(v)) if clean_num(v) is not None else "")
     df["Предмет закупки"] = (df["Предмет закупки"].astype(str).str.replace("_x000D_", " ", regex=False)
                             .str.replace(r"\s+", " ", regex=True).str.strip())
+    # Пустые числа держим как None (а не NaN), чтобы проверки «is not None» работали честно.
+    for c in ["НМЦ", "Обеспечение заявки", "Обеспечение контракта", "Падения цены, %",
+              "Кол-во участников", "Цена победителя"]:
+        df[c] = df[c].astype(object).where(df[c].notna(), None)
     # Файлы (11) и (4), (10) и (5) пересекаются по 223-ФЗ за октябрь — убираем дубли.
     before = len(df)
     df = df.drop_duplicates(subset=["Предмет закупки", "Заказчик", "НМЦ", "Дата окончания", "ниша"])
