@@ -36,7 +36,7 @@ export default function Assortment() {
 
   function useSample() {
     setError(''); setSaved(false);
-    setParsed(analyzeRows('пример_прайса_оргтехники.csv', parseCsvText(samplePriceCsv), ['Встроенный пример: 47 позиций оргтехники, связи и аудио-видео.']));
+    setParsed(analyzeRows('пример прайса оргтехники', parseCsvText(samplePriceCsv), ['Встроенный пример: 47 позиций оргтехники, связи и аудио-видео.']));
   }
 
   function setField(i: number, f: FieldKey) {
@@ -87,7 +87,7 @@ export default function Assortment() {
           <h3>Сейчас в кабинете</h3>
           <p className="big-num">{num(catalog.length)} <small>позиций</small></p>
           <p>Источник: {catalogSource} {isSample && <DemoMark>пример</DemoMark>}</p>
-          <p className="downloads">Пример прайса для проверки: <a href="./пример_прайса_оргтехники.xlsx" download>.xlsx</a> · <a href="./пример_прайса_оргтехники.csv" download>.csv</a></p>
+          <p className="downloads">Пример прайса для проверки: <a href="./primer_praysa_orgtehniki.xlsx" download>.xlsx</a> · <a href="./primer_praysa_orgtehniki.csv" download>.csv</a></p>
           {!isSample && <button type="button" className="btn btn-small" onClick={resetCatalog}>Вернуть пример</button>}
         </Frame>
       </div>

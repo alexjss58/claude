@@ -138,15 +138,19 @@ function download(blob: Blob, name: string) {
   setTimeout(() => URL.revokeObjectURL(url), 2000);
 }
 
+const TR: Record<string, string> = { а: 'a', б: 'b', в: 'v', г: 'g', д: 'd', е: 'e', ё: 'e', ж: 'zh', з: 'z', и: 'i', й: 'y', к: 'k', л: 'l', м: 'm', н: 'n', о: 'o', п: 'p', р: 'r', с: 's', т: 't', у: 'u', ф: 'f', х: 'h', ц: 'ts', ч: 'ch', ш: 'sh', щ: 'sch', ъ: '', ы: 'y', ь: '', э: 'e', ю: 'yu', я: 'ya' };
+
+/** Имя файла латиницей: некоторые браузеры и системы теряют кириллицу в имени скачиваемого файла */
 export function safeName(s: string) {
-  return s.replace(/[^\p{L}\p{N}]+/gu, '_').slice(0, 60).replace(/_+$/, '');
+  const lat = s.toLowerCase().split('').map((ch) => (ch in TR ? TR[ch] : ch)).join('');
+  return lat.replace(/[^a-z0-9-]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 50).replace(/_+$/, '') || 'zakupka';
 }
 
 export function downloadCsv(m: DraftModel, base: string) {
   const lines = [['№', 'Позиция по техзаданию', 'Предлагаемый товар', 'Характеристика', 'Требование заказчика', 'Значение у товара', 'Страна происхождения', 'Количество']];
   for (const r of m.rows) for (const c of r.характеристики) lines.push([String(r.n), r.позиция, r.товар, c.имя, c.требование, c.значение, r.страна, r.количество]);
   const csv = '﻿' + lines.map((l) => l.map((x) => `"${String(x).replace(/"/g, '""')}"`).join(';')).join('\r\n');
-  download(new Blob([csv], { type: 'text/csv;charset=utf-8' }), `${base}_характеристики.csv`);
+  download(new Blob([csv], { type: 'text/csv;charset=utf-8' }), `${base}_harakteristiki.csv`);
 }
 
 export async function downloadDocx(m: DraftModel, base: string) {
@@ -189,5 +193,5 @@ export async function downloadDocx(m: DraftModel, base: string) {
   for (const c of [...m.warnings, ...m.checklist]) children.push(p('☐ ' + c));
   const doc = new Document({ creator: 'Тендер под ключ (демо)', title: m.title, sections: [{ children }] });
   const blob = await Packer.toBlob(doc);
-  download(blob, `${base}_черновик_заявки.docx`);
+  download(blob, `${base}_chernovik_zayavki.docx`);
 }

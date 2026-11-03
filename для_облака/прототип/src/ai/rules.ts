@@ -133,7 +133,8 @@ export function matchPosition(p: Omit<Позиция, 'сверка'>, catalog: 
       checked++;
       if (!r.ok) bad.push({ характеристика: c.имя, требуется: describe(c), у_товара: r.have });
     }
-    if (!best || bad.length < best.bad.length || (bad.length === best.bad.length && checked > best.checked)) best = { item, bad, checked };
+    const cheaper = (item.цена ?? Infinity) < (best?.item.цена ?? Infinity);
+    if (!best || bad.length < best.bad.length || (bad.length === best.bad.length && (checked > best.checked || (checked === best.checked && cheaper)))) best = { item, bad, checked };
   }
   const b = best!;
   if (b.checked === 0 && p.характеристики.length > 0) {

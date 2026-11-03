@@ -1,6 +1,7 @@
 """Демо-файлы для прототипа «Тендер под ключ».
 
-1. Пример прайса оргтехники (47 позиций) — public/пример_прайса_оргтехники.csv и .xlsx.
+1. Пример прайса оргтехники (47 позиций) — public/primer_praysa_orgtehniki.csv и .xlsx
+   (имена латиницей: так их надёжнее скачивать и выкладывать на хостинг).
    Модели реальные, но характеристики и цены — ПРИБЛИЗИТЕЛЬНЫЕ, по памяти, без проверки на сайтах
    производителей (поиск в этой сессии был недоступен). Цена — условная. Файл помечен «пример».
 2. Демо-результаты сверки техзадания — src/data/sverka/*.json, строго в формате «G → F» из ПОТОКИ.md.
@@ -132,7 +133,7 @@ def write_price():
     PUBLIC.mkdir(parents=True, exist_ok=True)
     rows = [list(it) + [NOTE] for it in ITEMS]
     # CSV: разделитель «;», UTF-8 с BOM — так его правильно открывает Excel в России.
-    with open(PUBLIC / "пример_прайса_оргтехники.csv", "w", encoding="utf-8-sig", newline="") as f:
+    with open(PUBLIC / "primer_praysa_orgtehniki.csv", "w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f, delimiter=";")
         w.writerow(HEADER)
         w.writerows(rows)
@@ -156,7 +157,7 @@ def write_price():
     for row in ws.iter_rows(min_row=4):
         row[5].alignment = Alignment(wrap_text=True, vertical="top")
     ws.freeze_panes = "A4"
-    wb.save(PUBLIC / "пример_прайса_оргтехники.xlsx")
+    wb.save(PUBLIC / "primer_praysa_orgtehniki.xlsx")
     # Та же таблица для встроенного примера в приложении (без сети и без сервера).
     (BASE / "src" / "data").mkdir(parents=True, exist_ok=True)
     with open(BASE / "src" / "data" / "sample_price.csv", "w", encoding="utf-8", newline="") as f:
@@ -216,9 +217,9 @@ def write_sverka():
             pos(3, "МФУ лазерное монохромное", "26.20.18.000", 3, "шт", [
                 ch("Формат печати", "=", "A4"), ch("Скорость печати", ">=", "40", "стр/мин"),
                 ch("Двусторонняя печать", "=", "да"), ch("Сетевой интерфейс Ethernet", "=", "да"),
-                ch("Автоподатчик оригиналов", ">=", "50", "листов")],
-                "почти", "МФУ HP LaserJet Pro MFP M428fdn", "OT-015",
-                [("Скорость печати", "не менее 40 стр/мин", "38 стр/мин")]),
+                ch("Автоподатчик оригиналов", ">=", "75", "листов")],
+                "почти", "МФУ Kyocera ECOSYS M2040dn", "OT-017",
+                [("Автоподатчик оригиналов", "не менее 75 листов", "50 листов")]),
             pos(4, "Источник бесперебойного питания", "", 4, "шт", [
                 ch("Полная мощность", ">=", "1500", "ВА"), ch("Активная мощность", ">=", "900", "Вт"),
                 ch("Форма выходного сигнала", "=", "чистая синусоида"), ch("Количество выходных розеток", ">=", "6", "шт")],
@@ -292,7 +293,7 @@ def write_sverka():
             pos(4, "Ноутбук для обработки данных", "26.20.11.110", 1, "шт", [
                 ch("Объём оперативной памяти", ">=", "16", "ГБ"), ch("Объём накопителя SSD", ">=", "512", "ГБ"),
                 ch("Диагональ экрана", "диапазон", "14–15.6", "дюйм")],
-                "подходит", "Ноутбук Lenovo ThinkPad E14 Gen 5", "OT-003"),
+                "подходит", "Ноутбук HP ProBook 450 G10", "OT-002"),
         ])
     for name, data in files.items():
         (SVERKA / name).write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")

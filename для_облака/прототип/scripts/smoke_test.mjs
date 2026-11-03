@@ -24,9 +24,9 @@ page.on('pageerror', (e) => errors.push(e.message));
 await page.goto(base + '#/demo/assortiment');
 // Файл передаём буфером: Playwright молча не передаёт файл, если в пути есть кириллица.
 await page.setInputFiles('input[type=file]', {
-  name: 'пример_прайса_оргтехники.xlsx',
+  name: 'пример_прайса_оргтехники.xlsx', // кириллица в имени — как у реальных пользователей
   mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-  buffer: readFileSync(join(root, 'public', 'пример_прайса_оргтехники.xlsx')),
+  buffer: readFileSync(join(root, 'public', 'primer_praysa_orgtehniki.xlsx')),
 });
 await page.waitForSelector('.parse-result', { timeout: 10000 });
 const notes = await page.locator('.parse-result .notes').innerText();
@@ -51,7 +51,7 @@ await page.goto(base + '#/demo/tender/' + encodeURIComponent('s-ДЕМО-0001'))
 const before = await page.locator('.tally').innerText();
 await page.getByRole('button', { name: /Пересчитать/ }).click();
 const after = await page.locator('.tally').innerText();
-ok('Пересчёт сверки по ассортименту', after.length > 0, `было: ${before.replace(/\s+/g, ' ')} / стало: ${after.replace(/\s+/g, ' ')}`);
+ok('Пересчёт по тому же прайсу совпадает с демо-сверкой', after.replace(/\s+/g, ' ') === before.replace(/\s+/g, ' '), `было: ${before.replace(/\s+/g, ' ')} / стало: ${after.replace(/\s+/g, ' ')}`);
 await page.locator('.tz-box summary').click();
 await page.getByRole('button', { name: 'Вставить пример техзадания' }).click();
 await page.getByRole('button', { name: 'Разобрать и сверить' }).click();

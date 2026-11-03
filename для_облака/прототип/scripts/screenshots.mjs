@@ -35,6 +35,11 @@ const screens = [
     await p.waitForTimeout(200);
     await p.locator('.thanks').scrollIntoViewIfNeeded();
   }, viewportOnly: true },
+  // Последним: крупный текст (А++) — настройка запоминается, поэтому этот экран снимаем в конце
+  { name: '09_крупный_текст_карточка', hash: `#/demo/tender/${encodeURIComponent(firstSverka)}`, action: async (p) => {
+    await p.getByRole('button', { name: 'А++' }).click();
+    await p.waitForTimeout(200);
+  }, viewportOnly: true },
 ];
 
 const devices = [

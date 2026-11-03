@@ -192,6 +192,11 @@ def char_to_requirement(c: dict) -> Requirement:
         for t in texts:
             tl = t.lower().strip()
             norm.append("да" if tl in ("да", "наличие", "есть") else "нет" if tl in ("нет", "отсутствует") else t)
+        if len(texts) == 1 and "разрешени" in name.lower() and "печат" not in name.lower() and "скан" not in name.lower():
+            pr = parse_value(texts[0], name, unit)
+            if pr.unit == "пиксель":
+                pr.instruction = instr
+                return pr
         if len(texts) == 1 and re.search(r"\d", texts[0]) and re.search(r"≥|≤|>|<|не менее|не более|от\s*\d|до\s*\d|более|менее|[xх×]\s*\d", texts[0].lower()):
             pr = parse_value(texts[0], name, unit)
             if pr.op in (">=", "<=", "диапазон") or pr.vmin is not None or (pr.values and pr.unit == "пиксель"):

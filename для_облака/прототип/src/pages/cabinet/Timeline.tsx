@@ -112,6 +112,7 @@ function TimelineInner({ id }: { id?: string }) {
           <label>Ставка банковской гарантии, % в год<input type="number" value={rate} min={0} max={30} step={0.5} onChange={(e) => setRate(Number(e.target.value) || 0)} /></label>
           <label className="check span2"><input type="checkbox" checked={useG} onChange={(e) => setUseG(e.target.checked)} /> Обеспечение контракта — банковской гарантией (иначе деньгами)</label>
         </div>
+        {t.sverka && t.sverka.итог.нет > 0 && <p className="hint">Себестоимость посчитана по прайсу без {t.sverka.итог.нет} поз. «нет товара» — добавьте их стоимость у партнёра.</p>}
         <p className="hint">Обеспечение {t.обеспечение_контракта ? 'взято из выгрузки' : 'по умолчанию — пример: 1% заявки и 5% контракта от НМЦ'}. Ставка гарантии {rate}% — условный пример для расчёта, не рыночная ставка: уточните в банке.</p>
       </Frame>
       <SourceNote>Сроки — ориентиры по 44-ФЗ и 223-ФЗ; точные — в извещении, документации и проекте контракта. Праздники не учтены. Не юридическая консультация.</SourceNote>

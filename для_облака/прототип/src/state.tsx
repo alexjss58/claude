@@ -21,7 +21,7 @@ function save(key: string, v: unknown) {
   try { localStorage.setItem(key, JSON.stringify(v)); } catch { /* нет доступа к хранилищу — работаем без сохранения */ }
 }
 
-export const sampleCatalog: CatalogItem[] = buildCatalog(analyzeRows('пример_прайса_оргтехники.csv', parseCsvText(samplePriceCsv)));
+export const sampleCatalog: CatalogItem[] = buildCatalog(analyzeRows('пример прайса оргтехники', parseCsvText(samplePriceCsv)));
 
 interface Stored { items: CatalogItem[]; source: string; isSample: boolean }
 
@@ -38,7 +38,7 @@ interface Ctx {
 const AppCtx = createContext<Ctx | null>(null);
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [stored, setStored] = useState<Stored>(() => load<Stored>(KEY_CATALOG, { items: sampleCatalog, source: 'пример_прайса_оргтехники.csv (демо)', isSample: true }));
+  const [stored, setStored] = useState<Stored>(() => load<Stored>(KEY_CATALOG, { items: sampleCatalog, source: 'пример прайса оргтехники (демо)', isSample: true }));
   const [scale, setScaleState] = useState<number>(() => load<number>(KEY_SCALE, 1));
 
   useEffect(() => {
@@ -55,7 +55,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       save(KEY_CATALOG, s);
     },
     resetCatalog: () => {
-      const s = { items: sampleCatalog, source: 'пример_прайса_оргтехники.csv (демо)', isSample: true };
+      const s = { items: sampleCatalog, source: 'пример прайса оргтехники (демо)', isSample: true };
       setStored(s);
       save(KEY_CATALOG, s);
     },

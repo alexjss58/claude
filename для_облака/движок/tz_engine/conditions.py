@@ -15,6 +15,9 @@ EQUIV_NO = re.compile(r"эквивалент\s+не\s+допуска|без\s+э
 TRUE_WORDS = {"да", "есть", "наличие", "имеется", "присутствует", "поддерживается", "yes", "+", "требуется", "должен быть", "должна быть", "должно быть", "предусмотрен", "предусмотрена", "в наличии"}
 FALSE_WORDS = {"нет", "отсутствует", "no", "-", "—", "не поддерживается", "не требуется", "без", "не предусмотрен", "не предусмотрена", "отсутствие"}
 
+NAMED_RES = [(r"\b(4k|uhd|ultra hd)\b", "3840x2160"), (r"\bwuxga\b", "1920x1200"), (r"\b(wqhd|qhd|2k)\b", "2560x1440"),
+             (r"full ?hd|\bfhd\b|1080p", "1920x1080"), (r"\bwxga\b", "1280x800"), (r"\bxga\b", "1024x768"),
+             (r"\bhd\b|720p", "1366x768")]
 RES_RE = re.compile(r"(\d{3,4})\s*[xх×*]\s*(\d{3,4})", re.I)
 
 
@@ -72,7 +75,12 @@ def parse_value(text: str, name: str = "", unit_hint: str = "") -> Requirement:
             r.value = fmt(vmin if vmin is not None else vmax)
         return r
 
-    # 1) разрешение 1920x1080
+    # 1) разрешение 1920x1080 (или названием: Full HD, WUXGA, 4K…)
+    if not RES_RE.search(t):
+        for pat, wh in NAMED_RES:
+            if re.search(pat, t):
+                t = t + " " + wh
+                break
     m = RES_RE.search(t)
     if m:
         r.values = [f"{m.group(1)}x{m.group(2)}"]
@@ -183,53 +191,61 @@ def _cyr_lat(token: str) -> str:
     return token.translate(table)
 
 
+# Группы синонимов. Группы внутри одного «семейства» взаимоисключают друг друга
+# (если требование «цветная», а у товара «черно-белая» — это явное несоответствие).
+FAMILIES = [
+    [{"черно-бел", "монохром", "ч/б", "чб", "mono", "черно бел"}, {"цветн", "colou", "color"}],
+    [{"лазерн", "электрографическ", "laser", "электрофотографическ"}, {"струйн", "inkjet"}],
+    [{"line-interactive", "линейно-интерактив", "интерактивн"}, {"online", "двойным преобразован", "двойного преобразован", "on-line", "онлайн", "двойное преобразование"}, {"резервн", "off-line", "offline", "standby"}],
+    [{"чистая синусоида", "sine wave", "синусоида"}, {"модифицированная синусоида", "аппроксимированная синусоида", "ступенчат", "modified sine"}],
+    [{"ips", "ips-type", "ahva", "pls", "ads"}, {" va ", "mva", "va-"}, {" tn", "tn+"}, {"oled"}],
+    [{"dlp"}, {"3lcd", " lcd"}],
+    [{"a4", "а4"}, {"a3", "а3"}],
+    [{"ssd", "твердотельн", "nvme", "solid state"}, {"hdd", "жестк", "магнитн"}],
+    [{"интегрированн", "встроенн", "integrated"}, {"дискретн", "discrete"}],
+    [{"внешн", "external"}, {"встроенн", "внутренн", "internal"}],
+    [{"моно", "mono", "одним наушник", "один наушник", "одного наушник", "монаур"}, {"стерео", "stereo", "duo", "двумя наушник", "два наушник", "двух наушник", "бинаур"}],
+    [{"напольн", "отдельно стоящ", "tower"}, {"стоечн", "rack", "в стойку"}],
+    [{"фиксированн", "fixed"}, {"модульн", "шасси", "modular"}],
+    [{"сменн", "hot-swap", "горячей замен", "hot swap"}, {"несменн", "фиксированн"}],
+    [{"l2", "второго уровня", "уровня 2"}, {"l3", "третьего уровня", "уровня 3"}],
+    [{"матов", "антиблик", "matte"}, {"глянц", "glossy"}],
+    [{"ddr4"}, {"ddr5"}, {"ddr3"}],
+    [{"планшетн", "flatbed"}, {"протяжн", "автоподатчик", "adf"}],
+]
+
+# Группы-«интерфейсы»: для закрытых перечней (все порты товара перечислены) отсутствие = несоответствие
 VALUE_SYNONYMS = [
-    {"ssd", "твердотельн", "nvme", "solid state"},
-    {"hdd", "жестк", "жёстк"},
     {"wi-fi", "wifi", "802.11", "wlan", "wi fi"},
     {"bluetooth", "bt "},
-    {"type-c", "usb-c", "usb c", "type c", "typec"},
-    {"rj-45", "rj45", "8p8c", "ethernet", "gigabit lan", "lan"},
-    {"displayport", "display port", " dp"},
+    {"type-c", "usb-c", "usb c", "type c", "typec", "usb4"},
+    {"rj-45", "rj45", "8p8c", "ethernet", "gigabit lan", " lan", "медн", "base-t", "витая пара"},
+    {"displayport", "display port", " dp", "minidp"},
     {"vga", "d-sub", "dsub"},
-    {"лазерн", "электрографическ", "laser", "электрофотографическ"},
-    {"светодиодн", "led"},
-    {"струйн", "inkjet"},
-    {"черно-бел", "монохром", "ч/б", "чб", "mono", "черно бел"},
-    {"цветн", "colou", "color"},
-    {"line-interactive", "линейно-интерактив", "интерактивн"},
-    {"online", "двойным преобразован", "двойного преобразован", "on-line", "онлайн", "двойное преобразование"},
-    {"резервн", "off-line", "offline", "standby", "back"},
-    {"чистая синусоида", "синусоида", "sine"},
-    {"модифицированная синусоида", "аппроксимированная синусоида", "ступенчат", "modified sine"},
-    {"напольн", "tower"},
-    {"стоечн", "rack", "в стойку", "19"},
-    {"планшетн", "flatbed"},
-    {"протяжн", "автоподатчик", "adf"},
-    {"ips", "ips-type", "ahva"},
-    {"va", "mva"},
-    {"tn"},
-    {"oled"},
-    {"dlp"},
-    {"lcd", "3lcd", "жк"},
-    {"лазерный источник", "laser phosphor", "лазер"},
-    {"usb"},
     {"hdmi"},
-    {"l2", "второго уровня", "уровня 2"},
-    {"l3", "третьего уровня", "уровня 3"},
-    {"управляем", "managed"},
+    {"dvi"},
+    {"usb"},
+    {"mini-jack", "minijack", "mini jack", "jack", "3,5 мм", "3.5 мм", "аудиовыход", "аудиовход", "аудио", "audio"},
+    {"m.2"},
+    {"кардридер", "кард-ридер", "card reader", "карт памяти", "microsd", "sd"},
     {"poe", "802.3af", "802.3at", "poe+"},
     {"sfp+", "10gbase", "10g"},
-    {"ddr4"}, {"ddr5"}, {"ddr3"},
+    {"управляем", "managed"},
     {"windows"},
     {"linux", "astra", "альт", "ред ос", "red os", "основа", "эльбрус"},
     {"usb-a", "type-a", "usb a"},
-    {"моно", "mono", "одно ух"},
-    {"стерео", "stereo", "duo", "два уха", "двух ух"},
-    {"матов", "антиблик", "matte"},
-    {"глянц", "glossy"},
-    {"a4", "а4"}, {"a3", "а3"},
+    {"лазерный источник", "laser phosphor", "лазер"},
+    {"накладн", "on-ear"},
+    {"полноразмерн", "over-ear"},
+    {"вкладыш", "внутриканальн", "in-ear"},
 ]
+for _fam in FAMILIES:
+    VALUE_SYNONYMS.extend(_fam)
+INTERFACE_GROUPS = VALUE_SYNONYMS[:13]
+_FAMILY_OF = {}
+for _fam in FAMILIES:
+    for _g in _fam:
+        _FAMILY_OF[id(_g)] = _fam
 
 
 def norm_text(s: str) -> str:
@@ -239,22 +255,54 @@ def norm_text(s: str) -> str:
     return " " + s + " "
 
 
-def text_has(product_text: str, value: str) -> bool:
-    """Есть ли значение value (с синонимами) в тексте товара."""
+def _hit(text: str, group: set) -> bool:
+    return any(g and g in text for g in group)
+
+
+def text_match(product_text: str, value: str, closed: bool = False) -> str:
+    """Сравнить текстовое значение с описанием товара -> ok | fail | unknown."""
     p = norm_text(product_text)
     v = norm_text(value).strip()
     if not v:
-        return False
+        return "unknown"
+    vv = " " + v + " "
     if v in p:
-        return True
-    for group in VALUE_SYNONYMS:
-        if any(g.strip() and g.strip() in v for g in group):
-            if any(g.strip() and g.strip() in p for g in group):
-                # для групп «моно/стерео», «ч/б/цвет» проверяем, что значение именно из этой группы
-                return True
-    # все значимые слова значения есть в тексте товара
-    words = [w for w in re.findall(r"[a-zа-я0-9+\-.]{3,}", v)]
-    return bool(words) and all(w in p for w in words)
+        return "ok"
+    hit = [grp for grp in VALUE_SYNONYMS if _hit(vv, grp)]
+    if hit and all(_hit(p, grp) for grp in hit):
+        return "ok"
+    # короткие коды (RAID 1, «5») — как отдельное слово
+    if len(v) <= 3 and not hit:
+        return "ok" if re.search(r"(?<![\w.])" + re.escape(v) + r"(?![\w.])", p) else ("fail" if closed else "unknown")
+    # явное противоречие внутри семейства (цветная / ч/б, A3 / A4, встроенный / внешний…)
+    for grp in hit:
+        fam = _FAMILY_OF.get(id(grp))
+        if fam and not _hit(p, grp) and any(_hit(p, g2) for g2 in fam if g2 is not grp):
+            return "fail"
+    words = [stem(w) for w in re.findall(r"[a-zа-я0-9+\-.]{3,}", v)]
+    words = [w for w in words if w and w not in ("или", "для", "при", "без", "наличие")]
+    if words:
+        found = sum(w in p for w in words)
+        need = len(words) if len(words) <= 2 else max(2, -(-2 * len(words) // 3))
+        if found >= need:
+            return "ok"
+    if closed and any(grp in INTERFACE_GROUPS for grp in hit):
+        return "fail"
+    return "unknown"
+
+
+def text_has(product_text: str, value: str) -> bool:
+    return text_match(product_text, value) == "ok"
+
+
+_END = re.compile(r"(ого|его|ему|ому|ыми|ими|ее|ие|ые|ое|ей|ий|ый|ой|ем|им|ым|ом|их|ых|ую|юю|ая|яя|ою|ею|ам|ям|ах|ях|ов|ев|а|я|ы|и|е|о|у|ю|ь)$")
+
+
+def stem(w: str) -> str:
+    if re.search(r"\d", w) or len(w) <= 4:
+        return w
+    s = _END.sub("", w)
+    return s if len(s) >= 3 else w
 
 
 def truthy(s: str) -> bool | None:
@@ -276,14 +324,51 @@ def _tol(dim: str | None) -> float:
     return 0.025 if dim == "data" else 0.005
 
 
-def compare(req: Requirement, have_raw, have_unit: str | None = None) -> tuple[str, str]:
-    """Проверить значение товара. -> (ok|fail|unknown, текст значения товара)."""
+ENERGY = ["g", "f", "e", "d", "c", "b", "a", "a+", "a++", "a+++"]
+
+
+def _energy_rank(s: str) -> int | None:
+    m = re.search(r"\b([a-gа-г])\s*(\+{0,3})", norm_text(s).replace("а", "a"))
+    if not m:
+        return None
+    k = m.group(1).replace("а", "a") + m.group(2)
+    return ENERGY.index(k) if k in ENERGY else None
+
+
+def compare(req: Requirement, have_raw, have_unit: str | None = None, kind: str = "", key: str = "",
+            closed: bool = False) -> tuple[str, str]:
+    """Проверить значение товара. -> (ok|fail|unknown, текст значения товара).
+
+    kind — тип столбца каталога (num/text/bool/res); при несовпадении типа требования и столбца
+    честно возвращаем «нет данных», а не «не подходит»."""
     if have_raw is None:
         return "unknown", ""
     have = str(have_raw).strip()
     if have == "" or have.lower() == "nan":
         return "unknown", ""
     shown = have + (f" {have_unit}" if have_unit and not re.search(r"[a-zа-я]", have.lower()) else "")
+    is_num_req = req.op in (">=", "<=", "диапазон") or (req.op == "=" and req.vmin is not None and not req.values)
+    yesno = bool(req.values) and len(req.values) == 1 and req.values[0] in ("да", "нет")
+
+    if key == "energy_class":
+        rq, rh = _energy_rank(" ".join(req.values) or req.raw), _energy_rank(have)
+        if rq is None or rh is None:
+            return "unknown", shown
+        if re.search(r"не ниже|не хуже|≥|>=", (req.raw or "").lower()) or req.op == ">=":
+            return ("ok" if rh >= rq else "fail"), shown
+        return ("ok" if rh == rq else "fail"), shown
+    if kind == "text" and is_num_req and not numbers_in(have):
+        return "unknown", shown
+    if kind in ("text",) and is_num_req and key not in ("ups_in_voltage",):
+        # в текстовом описании числа могут относиться к другому — не судим
+        if key in ("lamp_life", "throw", "cpu_cores", "duty", "poe_budget"):
+            pass
+        else:
+            return "unknown", shown
+    if kind == "num" and not is_num_req and not yesno and not (req.unit == "пиксель"):
+        return "unknown", shown
+    if kind == "bool" and not yesno and not is_num_req:
+        return "unknown", shown
 
     # разрешение
     if req.unit == "пиксель" and req.values and RES_RE.search(req.values[0]):
@@ -331,30 +416,40 @@ def compare(req: Requirement, have_raw, have_unit: str | None = None) -> tuple[s
             ok = v < req.vmax if req.max_strict else v <= req.vmax * (1 + tol)
         elif req.op == "диапазон":
             ok = any(req.vmin * (1 - tol) <= v <= req.vmax * (1 + tol) for v in conv)
+            rng = re.search(r"\d\s*[–—-]\s*\d", have)
+            if not ok and rng and len(conv) >= 2:
+                lo, hi = min(conv), max(conv)
+                ok = lo <= req.vmax and hi >= req.vmin   # диапазон товара перекрывает требуемый
         else:
             ok = any(abs(v - req.vmin) <= abs(req.vmin) * tol + 1e-9 for v in conv)
         return ("ok" if ok else "fail"), shown
 
     # да / нет
-    if req.values and req.values[0] in ("да", "нет") and len(req.values) == 1:
+    if yesno:
+        hl = have.lower()
+        want = req.values[0] == "да"
+        if want and re.search(r"опци", hl):
+            return "ok", shown + " — опция, заказать"
+        if not want and re.search(r"\bбез\b|или без|опци", hl):
+            return "ok", shown
         tv = truthy(have)
         if tv is None:
             return "unknown", shown
-        want = req.values[0] == "да"
         return ("ok" if tv == want else "fail"), shown
 
     # текстовые значения
     vals = req.values or ([req.value] if req.value else [])
     if not vals:
         return "unknown", shown
-    hits = [text_has(have, v) for v in vals]
+    res = [text_match(have, v, closed) for v in vals]
     if req.all_values:
-        ok = all(hits)
-    else:
-        ok = any(hits)
-    if ok:
-        return "ok", shown
-    if req.op == "текст":
-        # свободный текст сравнить надёжно нельзя
+        if all(r == "ok" for r in res):
+            return "ok", shown
+        if any(r == "fail" for r in res):
+            return "fail", shown
         return "unknown", shown
-    return "fail", shown
+    if any(r == "ok" for r in res):
+        return "ok", shown
+    if all(r == "fail" for r in res) and req.op != "текст":
+        return "fail", shown
+    return "unknown", shown
