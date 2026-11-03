@@ -12,3 +12,6 @@ market_dr_card_scan/cashback_design/cashback-playbook*.html
 !для_облака/**/*.xlsx
 для_облака/**/node_modules/
 для_облака/**/.venv/
+
+# Клиентский сайт: сырой кэш извещений (пересобирается скриптом)
+для_облака/клиент/data/_кэш/
