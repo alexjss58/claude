@@ -21,7 +21,8 @@ export const SOURCE_NOTE = 'по данным Тендерплана, ноябр
 
 export const tendersMeta = (tendersRaw as unknown as { meta: Record<string, string | number> }).meta;
 export const tenders: Tender[] = (tendersRaw as unknown as { закупки: Tender[] }).закупки;
-export const market = marketRaw as unknown as { подпись: string; ниши: MarketNiche[] };
+export interface Leaders { код: NicheCode; поставщики: { место: number; участий: number; побед: number }[] }
+export const market = marketRaw as unknown as { подпись: string; ниши: MarketNiche[]; лидеры?: Leaders[] };
 
 const hPrice = Object.values(hPriceMod)[0];
 export const priceTable: PriceRow[] = hPrice && hPrice.length ? hPrice : (ownPrice as PriceRow[]);
@@ -139,3 +140,6 @@ export const regions: string[] = (() => {
   for (const t of tenders) if (t.регион) c.set(t.регион, (c.get(t.регион) || 0) + 1);
   return [...c.entries()].sort((a, b) => b[1] - a[1]).map(([r]) => r);
 })();
+
+/** Первая закупка с готовой сверкой — на неё ведут ссылки «посмотреть в демо» */
+export const firstSverkaKey: string = sverkaViews[0]?.key || tenderViews[0]?.key || '';
